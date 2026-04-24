@@ -1,0 +1,29 @@
+# Nexus SEO — robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://nexus-seo.app/sitemap.xml
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+Allow: /services
+Allow: /about
+Allow: /pricing
+Allow: /faq
+Allow: /blog
+Disallow: /api/
+Disallow: /dashboard/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

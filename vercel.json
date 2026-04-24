@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npx prisma generate && next build",
+  "framework": "nextjs",
+  "regions": [
+    "cdg1"
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/ai-monitoring",
+      "schedule": "0 6 * * *"
+    }
+  ],
+  "experimentalServices": {
+    "web": {
+      "routePrefix": "/",
+      "framework": "nextjs"
+    }
+  }
+}

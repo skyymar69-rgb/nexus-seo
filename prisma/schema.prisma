@@ -1,0 +1,385 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+// ==================== AUTH ====================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  password      String?
+  image         String?
+  company       String?
+  role          String    @default("user")
+  plan          String    @default("free")
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  websites      Website[]
+  keywords      Keyword[]
+  reports       Report[]
+  notifications Notification[]
+  subscription  Subscription?
+  auditCredits  Int       @default(5)
+  apiKey        String?   @unique
+
+  @@index([email])
+  @@index([plan])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ==================== PROJECTS ====================
+
+model Website {
+  id        String   @id @default(cuid())
+  domain    String
+  name      String?
+  userId    String
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user            User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  audits          Audit[]
+  crawlSessions   CrawlSession[]
+  keywordTracking KeywordTracking[]
+  backlinks       Backlink[]
+  aiQueries       AIVisibilityQuery[]
+  contentPages    ContentPage[]
+  performanceData PerformanceData[]
+  scanSessions    ScanSession[]
+
+  @@unique([domain, userId])
+  @@index([userId])
+  @@index([domain])
+}
+
+// ==================== AUDIT ====================
+
+model Audit {
+  id        String   @id @default(cuid())
+  websiteId String
+  url       String
+  score     Int
+  grade     String
+  status    String   @default("completed")
+  metaData     String?
+  contentData  String?
+  technicalData String?
+  categories   String?
+  checks       String?
+  createdAt DateTime @default(now())
+
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@index([websiteId])
+  @@index([createdAt])
+}
+
+// ==================== CRAWL ====================
+
+model CrawlSession {
+  id        String   @id @default(cuid())
+  websiteId String
+  status    String   @default("running")
+  pagesFound Int     @default(0)
+  pagesCrawled Int   @default(0)
+  startedAt DateTime @default(now())
+  completedAt DateTime?
+  config    String?
+
+  website   Website     @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+  pages     CrawledPage[]
+
+  @@index([websiteId])
+}
+
+model CrawledPage {
+  id            String   @id @default(cuid())
+  crawlSessionId String
+  url           String
+  statusCode    Int
+  contentType   String?
+  contentLength Int      @default(0)
+  responseTime  Int      @default(0)
+  title         String?
+  metaDescription String?
+  h1Count       Int      @default(0)
+  h2Count       Int      @default(0)
+  internalLinks Int      @default(0)
+  externalLinks Int      @default(0)
+  images        Int      @default(0)
+  imagesNoAlt   Int      @default(0)
+  issues        String?
+  crawledAt     DateTime @default(now())
+
+  crawlSession CrawlSession @relation(fields: [crawlSessionId], references: [id], onDelete: Cascade)
+
+  @@index([crawlSessionId])
+  @@index([url])
+}
+
+// ==================== KEYWORDS ====================
+
+model Keyword {
+  id         String   @id @default(cuid())
+  term       String
+  volume     Int?
+  difficulty Int?
+  cpc        Float?
+  intent     String?
+  language   String   @default("fr")
+  userId     String
+  createdAt  DateTime @default(now())
+
+  user     User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tracking KeywordTracking[]
+
+  @@unique([term, userId, language])
+  @@index([userId])
+  @@index([term])
+}
+
+model KeywordTracking {
+  id              String   @id @default(cuid())
+  keywordId       String
+  websiteId       String
+  position        Int?
+  previousPosition Int?
+  url             String?
+  serpFeatures    String?
+  date            DateTime @default(now())
+
+  keyword Keyword @relation(fields: [keywordId], references: [id], onDelete: Cascade)
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@unique([keywordId, websiteId, date])
+  @@index([keywordId])
+  @@index([websiteId])
+  @@index([date])
+}
+
+// ==================== BACKLINKS ====================
+
+model Backlink {
+  id           String   @id @default(cuid())
+  websiteId    String
+  sourceUrl    String
+  sourceDomain String
+  targetUrl    String
+  anchorText   String?
+  da           Int?
+  dr           Int?
+  linkType     String   @default("dofollow")
+  status       String   @default("active")
+  spamScore    Int?
+  firstSeen    DateTime @default(now())
+  lastChecked  DateTime @default(now())
+
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@index([websiteId])
+  @@index([sourceDomain])
+  @@index([status])
+}
+
+// ==================== AI VISIBILITY ====================
+
+model AIVisibilityQuery {
+  id          String   @id @default(cuid())
+  websiteId   String
+  prompt      String
+  llm         String
+  mentioned   Boolean  @default(false)
+  position    Int?
+  context     String?
+  sentiment   String?
+  competitors String?
+  sources     String?
+  response    String?
+  date        DateTime @default(now())
+
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@index([websiteId])
+  @@index([llm])
+  @@index([date])
+}
+
+// ==================== CONTENT ====================
+
+model ContentPage {
+  id            String   @id @default(cuid())
+  websiteId     String
+  url           String
+  title         String?
+  score         Int?
+  wordCount     Int?
+  readability   Float?
+  keywordDensity Float?
+  targetKeyword String?
+  suggestions   String?
+  content       String?
+  lastAnalyzed  DateTime @default(now())
+
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@unique([websiteId, url])
+  @@index([websiteId])
+}
+
+// ==================== PERFORMANCE ====================
+
+model PerformanceData {
+  id          String   @id @default(cuid())
+  websiteId   String
+  url         String
+  score       Int
+  grade       String
+  lcp         Float?
+  fid         Float?
+  cls         Float?
+  ttfb        Float?
+  fcp         Float?
+  tti         Float?
+  tbt         Float?
+  speedIndex  Float?
+  pageSize    Int?
+  requests    Int?
+  resources   String?
+  opportunities String?
+  device      String   @default("desktop")
+  testedAt    DateTime @default(now())
+
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@index([websiteId])
+  @@index([testedAt])
+}
+
+// ==================== REPORTS ====================
+
+model Report {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  type      String
+  format    String   @default("json")
+  data      String?
+  status    String   @default("completed")
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([type])
+}
+
+// ==================== NOTIFICATIONS ====================
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  data      String?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([read])
+}
+
+// ==================== SCAN ====================
+
+model ScanSession {
+  id             String   @id @default(cuid())
+  websiteId      String
+  url            String
+  status         String   @default("pending") // pending | running | completed | failed
+  progress       Int      @default(0)
+  totalSteps     Int      @default(6)
+  currentStep    String?  // nom de l'etape en cours
+  results        String?  // JSON — AEO, GEO, GEO engine scores
+  auditScore     Int?
+  auditGrade     String?
+  aeoScore       Int?
+  geoScore       Int?
+  perfScore      Int?
+  crawlPages     Int?
+  error          String?
+  startedAt      DateTime @default(now())
+  completedAt    DateTime?
+
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@index([websiteId])
+  @@index([status])
+  @@index([startedAt])
+}
+
+// ==================== SUBSCRIPTION ====================
+
+model Subscription {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  plan               String   @default("free")
+  status             String   @default("active")
+  stripeCustomerId   String?  @unique
+  stripeSubscriptionId String? @unique
+  currentPeriodEnd   DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

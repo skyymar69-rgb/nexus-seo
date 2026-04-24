@@ -1,0 +1,20 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Kayzen Lyon//Nexus SEO 2026//FR
+REV:20260424T000000Z
+N:Kayzen;Lyon;;;
+FN:Kayzen Lyon — Nexus SEO
+ORG:Kayzen Lyon
+TITLE:Agence SEO · GEO · AEO · LLMO
+ROLE:Agence de référencement & visibilité IA
+TEL;TYPE=WORK,VOICE:+33487776861
+EMAIL;TYPE=WORK,PREF:contact@kayzen-lyon.fr
+ADR;TYPE=WORK,PREF:;;6 rue Pierre Termier;Lyon;;69009;France
+URL;TYPE=PREF:https://nexus-seo.app
+URL;TYPE=site:https://kayzen-lyon.fr
+GEO:45.7787;4.8069
+CATEGORIES:SEO,GEO,AEO,LLMO,Agence digitale,Marketing IA
+X-SOCIALPROFILE;type=linkedin:https://linkedin.com/company/kayzen-lyon
+X-SOCIALPROFILE;type=twitter:https://twitter.com/kayzen_lyon
+NOTE:Plateforme SEO IA tout-en-un — GEO · AEO · LLMO · Audit technique.\nDémo gratuite sans CB : https://nexus-seo.app\nLyonnais depuis 2019. Référencement naturel et visibilité dans les LLMs (ChatGPT\, Claude\, Gemini\, Perplexity).
+END:VCARD
