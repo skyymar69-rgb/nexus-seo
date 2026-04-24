@@ -84,3 +84,7 @@ prisma/dev.db-journal
 .AppleDB
 .DS_Store
 .vercel
+
+# Claude Code internal
+.claude/
+.github/
