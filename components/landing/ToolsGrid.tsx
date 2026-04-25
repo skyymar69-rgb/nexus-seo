@@ -56,7 +56,7 @@ const categories = [
 
 export function ToolsGrid() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-950" id="outils">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950" id="outils">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <div className="section-badge mx-auto mb-4">Boîte à outils</div>

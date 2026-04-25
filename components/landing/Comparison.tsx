@@ -34,7 +34,7 @@ function Cell({ val }: { val: boolean | 'partial' }) {
 
 export function Comparison() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-950">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-14">

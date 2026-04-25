@@ -38,7 +38,7 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-950 border-y border-white/5">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-950 border-y border-surface-200 dark:border-white/5">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -58,7 +58,7 @@ export function Problem() {
           {problems.map((p, i) => {
             const Icon = p.icon
             return (
-              <div key={i} className="group rounded-2xl p-8 border border-white/10 dark:border-white/5 bg-white/60 dark:bg-white/[0.03] backdrop-blur-xl hover:border-white/20 dark:hover:border-white/10 transition-all duration-300 hover:shadow-glow">
+              <div key={i} className="group rounded-2xl p-8 border border-surface-200 dark:border-white/5 bg-white dark:bg-white/[0.03] hover:border-surface-300 dark:hover:border-white/10 transition-all duration-300 hover:shadow-glow shadow-sm dark:shadow-none">
                 <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${p.bg} border ${p.border}`}>
                   <Icon className={`w-6 h-6 ${p.color}`} />
                 </div>
