@@ -113,19 +113,22 @@ export function Footer() {
           <p className="text-xs text-surface-500 dark:text-white/50">
             © {currentYear} Nexus — By <a href="https://kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">Kayzen Lyon</a>. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-1.5">
-            {[
-              { label: 'RGPD', color: 'text-brand-600 dark:text-brand-400' },
-              { label: 'Hébergé en Europe', color: 'text-violet-600 dark:text-violet-400' },
-              { label: '100% Gratuit', color: 'text-emerald-600 dark:text-emerald-400' },
-            ].map((badge) => (
-              <span
-                key={badge.label}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 ${badge.color}`}
-              >
-                {badge.label}
-              </span>
-            ))}
+          <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-end">
+            <span className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-brand-600 dark:text-brand-400">
+              RGPD
+            </span>
+            <a
+              href="https://www.ex2.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="EX2 Inc. — Serveurs NVMe en France, hébergement éco-responsable sans carbone"
+              className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-emerald-600 dark:text-emerald-400 hover:border-emerald-400 transition-colors"
+            >
+              Hébergé par EX2 · France
+            </a>
+            <span className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-emerald-600 dark:text-emerald-400">
+              100% Gratuit
+            </span>
           </div>
         </div>
       </div>

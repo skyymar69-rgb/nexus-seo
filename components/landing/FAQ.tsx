@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "Mes données sont-elles sécurisées ?",
-    answer: "Oui. Nexus est hébergé sur des serveurs en Europe via Vercel et Railway, et respecte le RGPD. Vos données ne sont jamais partagées avec des tiers ni utilisées pour entraîner des modèles IA.",
+    answer: "Oui. Nexus est hébergé par EX2 Inc. sur des serveurs NVMe situés en France (data center français), avec SSL/TLS inclus, sauvegardes quotidiennes externes et hébergement sans carbone éco-responsable. Vos données restent en Europe et ne sont jamais partagées avec des tiers ni utilisées pour entraîner des modèles IA.",
   },
   {
     question: "Quel est le lien entre Nexus et Kayzen Web ?",
