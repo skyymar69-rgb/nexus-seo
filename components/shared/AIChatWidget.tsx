@@ -171,39 +171,39 @@ export default function AIChatWidget() {
     <div className="fixed bottom-4 right-4 z-[9998]">
       {/* Chat panel */}
       {open && (
-        <div className="absolute bottom-16 right-0 w-[350px] h-[500px] flex flex-col rounded-2xl border border-amber-500/20 bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-amber-900/10 animate-fade-in overflow-hidden">
+        <div className="absolute bottom-16 right-0 w-[350px] h-[500px] flex flex-col rounded-2xl border border-surface-200 dark:border-amber-500/20 bg-white dark:bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-surface-900/10 dark:shadow-amber-900/10 animate-fade-in overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 bg-zinc-800/80 border-b border-zinc-700/50">
+          <div className="flex items-center justify-between px-4 py-3 bg-surface-50 dark:bg-zinc-800/80 border-b border-surface-200 dark:border-zinc-700/50">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-amber-500 flex items-center justify-center text-white font-bold text-xs">
                 N
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-white">Assistant SEO Nexus</h3>
-                <p className="text-[10px] text-zinc-500">Propuls&eacute; par Nexus AI</p>
+                <h3 className="text-sm font-semibold text-surface-900 dark:text-white">Assistant SEO Nexus</h3>
+                <p className="text-[10px] text-surface-500 dark:text-zinc-500">Propuls&eacute; par Nexus AI</p>
               </div>
             </div>
             <button
               onClick={() => setOpen(false)}
               aria-label="Fermer le chat"
-              className="w-7 h-7 rounded-lg hover:bg-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
+              className="w-7 h-7 rounded-lg hover:bg-surface-200 dark:hover:bg-zinc-700 flex items-center justify-center text-surface-500 dark:text-zinc-400 hover:text-surface-900 dark:hover:text-white transition-colors"
             >
               &#x2715;
             </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-3 space-y-3" aria-live="polite" aria-label="Messages du chat">
+          <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-white dark:bg-transparent" aria-live="polite" aria-label="Messages du chat">
             {messages.length === 0 && (
               <div className="space-y-2">
-                <p className="text-xs text-zinc-500 mb-3">
+                <p className="text-xs text-surface-500 dark:text-zinc-500 mb-3">
                   Posez-moi vos questions SEO, GEO ou AEO :
                 </p>
                 {SUGGESTIONS.map((s) => (
                   <button
                     key={s}
                     onClick={() => sendMessage(s)}
-                    className="block w-full text-left rounded-lg border border-purple-500/20 bg-purple-500/5 px-3 py-2 text-xs text-purple-300 hover:bg-purple-500/10 transition-colors"
+                    className="block w-full text-left rounded-lg border border-purple-200 dark:border-purple-500/20 bg-purple-50 dark:bg-purple-500/5 px-3 py-2 text-xs text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-500/10 transition-colors"
                   >
                     {s}
                   </button>
@@ -220,7 +220,7 @@ export default function AIChatWidget() {
                   className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
                     msg.role === 'user'
                       ? 'bg-purple-600 text-white'
-                      : 'bg-zinc-800 text-zinc-300'
+                      : 'bg-surface-100 dark:bg-zinc-800 text-surface-800 dark:text-zinc-300'
                   }`}
                 >
                   {renderContent(msg.content)}
@@ -230,7 +230,7 @@ export default function AIChatWidget() {
 
             {typing && (
               <div className="flex justify-start">
-                <div className="bg-zinc-800 rounded-xl px-4 py-2 text-xs text-zinc-400">
+                <div className="bg-surface-100 dark:bg-zinc-800 rounded-xl px-4 py-2 text-xs text-surface-500 dark:text-zinc-400">
                   <span className="inline-flex gap-1">
                     <span className="animate-bounce" style={{ animationDelay: '0ms' }}>&#8226;</span>
                     <span className="animate-bounce" style={{ animationDelay: '150ms' }}>&#8226;</span>
@@ -249,7 +249,7 @@ export default function AIChatWidget() {
               e.preventDefault()
               sendMessage(input)
             }}
-            className="flex items-center gap-2 px-3 py-3 border-t border-zinc-700/50"
+            className="flex items-center gap-2 px-3 py-3 border-t border-surface-200 dark:border-zinc-700/50 bg-white dark:bg-transparent"
           >
             <input
               type="text"
@@ -257,7 +257,7 @@ export default function AIChatWidget() {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Posez votre question SEO..."
               aria-label="Question pour l'assistant SEO"
-              className="flex-1 rounded-lg bg-zinc-800 border border-zinc-700 px-3 py-2 text-xs text-white placeholder-zinc-500 outline-none focus:border-purple-500 transition-colors"
+              className="flex-1 rounded-lg bg-surface-100 dark:bg-zinc-800 border border-surface-300 dark:border-zinc-700 px-3 py-2 text-xs text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-zinc-500 outline-none focus:border-purple-500 transition-colors"
             />
             <button
               type="submit"

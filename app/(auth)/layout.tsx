@@ -59,12 +59,12 @@ export default function AuthLayout({
       </div>
 
       {/* Right side - Form */}
-      <div className="flex items-center justify-center bg-surface-950 p-6 sm:p-8">
+      <div className="flex items-center justify-center bg-white dark:bg-surface-950 p-6 sm:p-8">
         <div className="w-full max-w-md">
           {/* Mobile logo */}
           <div className="lg:hidden flex justify-center mb-8">
             <Link href="/">
-              <AnimatedLogo size={48} lightText />
+              <AnimatedLogo size={48} />
             </Link>
           </div>
           {children}
