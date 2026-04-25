@@ -3,7 +3,22 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
+const EMPTY_STATS = {
+  latestScanId: null,
+  websites: { total: 0 },
+  audits: { total: 0, latestScore: null },
+  keywords: { total: 0, avgPosition: null },
+  backlinks: { total: 0, dofollowRatio: 0 },
+  aiVisibility: { totalQueries: 0, mentionRate: 0 },
+  notifications: { unread: 0 },
+  recentActivity: { audits: [], notifications: [] },
+}
+
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json(EMPTY_STATS)
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {

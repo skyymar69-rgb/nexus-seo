@@ -10,6 +10,10 @@ import { v4 as uuidv4 } from 'uuid'
  * Returns: { shareUrl: string, shareId: string }
  */
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée' }, { status: 503 })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {

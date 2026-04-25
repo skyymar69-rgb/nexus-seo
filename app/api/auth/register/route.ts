@@ -10,6 +10,10 @@ const registerSchema = z.object({
 })
 
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée. Inscription impossible.' }, { status: 503 })
+  }
+
   try {
     const body = await request.json()
 

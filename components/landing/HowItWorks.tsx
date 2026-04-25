@@ -35,7 +35,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-950">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
       <div className="max-w-7xl mx-auto">
 
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -64,7 +64,7 @@ export function HowItWorks() {
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
                       <Icon className="w-7 h-7 text-white" />
                     </div>
-                    <span className="absolute -top-2 -right-2 text-xs font-black text-surface-300 dark:text-surface-600">
+                    <span className="absolute -top-2 -right-2 text-xs font-black text-surface-500 dark:text-surface-600">
                       {step.number}
                     </span>
                   </div>

@@ -31,7 +31,7 @@ export default function AuthLayout({
           <h2 className="text-2xl font-bold text-white mb-3">
             La plateforme SEO & IA de référence
           </h2>
-          <p className="text-white/50 mb-10">
+          <p className="text-white/70 mb-10">
             Analysez, optimisez et dominez les moteurs de recherche traditionnels et génératifs.
           </p>
 
@@ -43,15 +43,15 @@ export default function AuthLayout({
               { emoji: '📊', text: 'Rapports complets avec recommandations actionnables' },
               { emoji: '⚡', text: 'Scan complet de votre site en moins de 2 minutes' },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/[0.06] border border-white/15">
                 <span className="text-lg">{item.emoji}</span>
-                <span className="text-sm text-white/70">{item.text}</span>
+                <span className="text-sm text-white/85">{item.text}</span>
               </div>
             ))}
           </div>
 
           <div className="mt-10">
-            <Link href="/" className="text-sm text-white/30 hover:text-white/50 transition-colors">
+            <Link href="/" className="text-sm text-white/60 hover:text-white/80 transition-colors">
               ← Retour à l&apos;accueil
             </Link>
           </div>

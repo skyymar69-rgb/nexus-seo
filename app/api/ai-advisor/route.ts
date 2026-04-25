@@ -13,6 +13,13 @@ import {
 } from '@/lib/ai-advisor'
 
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({
+      empty: true,
+      message: 'Base de données non configurée. Connectez une base de données pour accéder aux recommandations IA personnalisées.',
+    })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {

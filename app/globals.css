@@ -1435,3 +1435,287 @@ a:focus-visible,
     animation: none !important;
   }
 }
+
+/* ============================================================
+   AMÉLIORATION #51 — LAZY LOADING BLUR-UP SYSTEM
+   ============================================================ */
+
+/* Applies to all Next.js <Image> components automatically */
+img[data-lazy] {
+  filter: blur(20px) saturate(0.8);
+  transform: scale(1.04);
+  transition: filter 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+img[data-lazy].loaded,
+img[data-nimg] {
+  filter: blur(0) saturate(1);
+  transform: scale(1);
+}
+
+/* Native lazy loading enhancement */
+img[loading="lazy"] {
+  transition: opacity 0.4s ease, filter 0.5s ease;
+}
+
+/* ============================================================
+   AMÉLIORATION #52 — ADVANCED IMAGE RENDERING (RETINA)
+   ============================================================ */
+
+/* Force high-quality rendering on all images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Logos & icons: pixel-perfect at any scale */
+.img-crisp {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* Photos & illustrations: smooth scaling */
+.img-smooth {
+  image-rendering: smooth;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* srcset hint: always render at device pixel ratio */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .img-premium {
+    filter: saturate(1.08) contrast(1.03);
+  }
+}
+
+/* ============================================================
+   AMÉLIORATION #53 — CINEMATIC CARD HOVER SYSTEM
+   ============================================================ */
+
+/* Base card with premium shadow progression */
+.card-cinema {
+  position: relative;
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s ease,
+    border-color 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-cinema::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%, rgba(254,205,77,0.04) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-cinema:hover::before { opacity: 1; }
+
+.card-cinema:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow:
+    0 4px 6px -1px rgba(0,0,0,0.1),
+    0 20px 40px -8px rgba(0,0,0,0.25),
+    0 0 0 1px rgba(124,58,237,0.12),
+    0 0 60px rgba(124,58,237,0.06);
+}
+
+/* ============================================================
+   AMÉLIORATION #54 — SVG ADVANCED FILTERS
+   ============================================================ */
+
+/* Icon with glow on hover */
+.icon-glow-brand:hover {
+  filter: drop-shadow(0 0 6px rgba(59,130,246,0.8));
+}
+.icon-glow-gold:hover {
+  filter: drop-shadow(0 0 6px rgba(254,205,77,0.8));
+}
+.icon-glow-violet:hover {
+  filter: drop-shadow(0 0 6px rgba(124,58,237,0.8));
+}
+
+/* Dashboard SVG : enhanced depth */
+.svg-dashboard {
+  filter:
+    drop-shadow(0 2px 4px rgba(0,0,0,0.3))
+    drop-shadow(0 8px 24px rgba(0,0,0,0.4))
+    drop-shadow(0 0 60px rgba(124,58,237,0.1));
+}
+
+/* SVG stroke normalisation */
+svg.icon-stroke { stroke-width: 1.5; }
+svg.icon-stroke-thick { stroke-width: 2; }
+svg.icon-stroke-thin { stroke-width: 1; }
+
+/* ============================================================
+   AMÉLIORATION #55 — GRADIENT BORDERS (no outline)
+   ============================================================ */
+
+.border-gradient-brand {
+  position: relative;
+  border: none;
+  background-clip: padding-box;
+}
+.border-gradient-brand::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.5), rgba(124,58,237,0.3), rgba(254,205,77,0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ============================================================
+   AMÉLIORATION #56 — CLIP-PATH SHAPES
+   ============================================================ */
+
+.clip-diagonal  { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+.clip-diagonal-r{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+.clip-wave      { clip-path: ellipse(100% 95% at 50% 0%); }
+.clip-hex       { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+.clip-shield    { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
+/* ============================================================
+   AMÉLIORATION #57 — BLEND MODES PREMIUM
+   ============================================================ */
+
+.blend-screen    { mix-blend-mode: screen; }
+.blend-overlay   { mix-blend-mode: overlay; }
+.blend-multiply  { mix-blend-mode: multiply; }
+.blend-soft-light{ mix-blend-mode: soft-light; }
+.blend-luminosity{ mix-blend-mode: luminosity; }
+
+/* Overlay tint for image compositions */
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(9,9,11,0.8) 100%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   AMÉLIORATION #58 — GLASS VARIANTS EXTENDED
+   ============================================================ */
+
+.glass-dark {
+  backdrop-filter: blur(20px) saturate(150%) brightness(0.9);
+  -webkit-backdrop-filter: blur(20px) saturate(150%) brightness(0.9);
+  background: rgba(9, 9, 11, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-frosted {
+  backdrop-filter: blur(24px) saturate(180%) brightness(1.05);
+  -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.05);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.glass-iridescent {
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background: linear-gradient(135deg,
+    rgba(59,130,246,0.08) 0%,
+    rgba(124,58,237,0.06) 50%,
+    rgba(254,205,77,0.04) 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* ============================================================
+   AMÉLIORATION #59 — MICRO-ANIMATIONS POUR IMAGES
+   ============================================================ */
+
+/* Zoom progressif au survol */
+.img-zoom-wrap {
+  overflow: hidden;
+  border-radius: inherit;
+}
+.img-zoom-wrap img,
+.img-zoom-wrap [data-nimg] {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.img-zoom-wrap:hover img,
+.img-zoom-wrap:hover [data-nimg] {
+  transform: scale(1.06);
+}
+
+/* Ombre décalée au survol */
+.img-shadow-lift {
+  transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.img-shadow-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* Teinte subtile au survol */
+.img-tint-hover {
+  transition: filter 0.4s ease;
+}
+.img-tint-hover:hover {
+  filter: saturate(1.15) brightness(1.05) contrast(1.02);
+}
+
+/* ============================================================
+   AMÉLIORATION #60 — CONTENU HERO AMÉLIORÉ
+   ============================================================ */
+
+/* Badge premium avec animation */
+.badge-live {
+  position: relative;
+  overflow: hidden;
+}
+.badge-live::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: badge-shimmer 3s ease-in-out infinite;
+}
+@keyframes badge-shimmer {
+  0%   { transform: translateX(-100%); }
+  50%, 100% { transform: translateX(100%); }
+}
+
+/* Stats bar glassmorphism */
+.stats-glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.2);
+}
+
+/* Form input premium */
+.input-hero {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.input-hero:focus {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(254,205,77,0.5);
+  box-shadow: 0 0 0 3px rgba(254,205,77,0.1), 0 0 20px rgba(254,205,77,0.08);
+  outline: none;
+}
+.input-hero::placeholder { color: rgba(255,255,255,0.35); }

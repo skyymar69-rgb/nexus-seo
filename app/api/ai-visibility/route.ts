@@ -174,6 +174,18 @@ async function queryLLM(prompt: string, llmName: string): Promise<string> {
 
 // GET: Fetch aggregated AI visibility data
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({
+      overallMentionRate: 0,
+      totalQueries: 0,
+      mentionedQueries: 0,
+      mentionsByLlm: {},
+      sentimentBreakdown: { positive: 0, neutral: 0, negative: 0 },
+      recentQueries: [],
+      trends: [],
+    })
+  }
+
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user?.id) {
@@ -296,6 +308,10 @@ export async function GET(request: NextRequest) {
 
 // POST: Run AI visibility queries and save results
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée' }, { status: 503 })
+  }
+
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user?.id) {

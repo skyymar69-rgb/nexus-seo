@@ -53,6 +53,10 @@ function detectSentiment(response: string): 'positive' | 'neutral' | 'negative' 
 }
 
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ skipped: true, message: 'No database configured' })
+  }
+
   // Verify cron secret (Vercel sends this header)
   const authHeader = request.headers.get('authorization')
   if (CRON_SECRET && authHeader !== `Bearer ${CRON_SECRET}`) {

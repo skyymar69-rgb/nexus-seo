@@ -88,3 +88,5 @@ prisma/dev.db-journal
 # Claude Code internal
 .claude/
 .github/
+
+.vercel

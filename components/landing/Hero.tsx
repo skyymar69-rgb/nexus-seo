@@ -111,7 +111,7 @@ export function Hero() {
                   name="url"
                   placeholder="https://www.monsite.fr"
                   aria-label="URL du site web à analyser"
-                  className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-gold-400/50 focus:border-gold-400/50 backdrop-blur-sm transition-all"
+                  className="w-full pl-12 pr-4 py-4 rounded-xl input-hero text-white text-base"
                 />
               </div>
               <button
@@ -136,7 +136,7 @@ export function Hero() {
 
           {/* Stats bar */}
           <div className="mb-10" role="region" aria-label="Statistiques cl&#233;s">
-            <div className="inline-flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 px-8 py-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+            <div className="inline-flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 px-8 py-5 rounded-2xl stats-glass">
               {[
                 { value: '50+', label: 'outils gratuits', icon: TrendingUp },
                 { value: '10+', label: 'LLMs surveillés', icon: Globe },
@@ -166,129 +166,231 @@ export function Hero() {
 
         {/* ─── RIGHT COLUMN — SEO Performance Dashboard (2/5 on desktop) ─── */}
         <div className="hidden lg:flex lg:col-span-2 items-center justify-center">
+          {/* Outer glow halo */}
+          <div className="relative">
+            <div className="absolute inset-0 rounded-3xl bg-brand-500/10 blur-[60px] scale-110 pointer-events-none" />
+            <div className="absolute inset-0 rounded-3xl bg-gold-400/5 blur-[80px] scale-125 pointer-events-none" />
           <svg
-            viewBox="0 0 420 380"
+            viewBox="0 0 420 390"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full max-w-[440px] h-auto drop-shadow-2xl"
+            className="relative w-full max-w-[440px] h-auto"
+            style={{ filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.5)) drop-shadow(0 0 80px rgba(124,58,237,0.15))' }}
             role="img"
             aria-label="Dashboard de performance SEO avec graphiques animés"
           >
+            <defs>
+              {/* Area chart gradient */}
+              <linearGradient id="hero-area-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#FECD4D" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#FECD4D" stopOpacity="0" />
+              </linearGradient>
+              {/* Frame gradient */}
+              <linearGradient id="frame-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="rgba(43,18,76,0.95)" />
+                <stop offset="100%" stopColor="rgba(10,4,22,0.98)" />
+              </linearGradient>
+              {/* Titlebar gradient */}
+              <linearGradient id="titlebar-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(60,25,100,0.9)" />
+                <stop offset="100%" stopColor="rgba(35,12,65,0.9)" />
+              </linearGradient>
+              {/* Score ring gradient */}
+              <linearGradient id="score-ring-grad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stopColor="#FECD4D" />
+                <stop offset="60%" stopColor="#f59e0b" />
+                <stop offset="100%" stopColor="#FECD4D" stopOpacity="0.6" />
+              </linearGradient>
+              {/* Bar gradient */}
+              <linearGradient id="bar-grad-violet" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#a78bfa" />
+                <stop offset="100%" stopColor="rgba(124,58,237,0.4)" />
+              </linearGradient>
+              <linearGradient id="bar-grad-gold" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#fde68a" />
+                <stop offset="100%" stopColor="#FECD4D" />
+              </linearGradient>
+              {/* Glow filter */}
+              <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0.8 0 0 0  0.8 0.6 0 0 0  0 0 0 0 0  0 0 0 1.5 0" result="glow" />
+                <feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+              <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+              {/* Inner shadow */}
+              <filter id="inner-shadow">
+                <feOffset dx="0" dy="2" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in2="SourceGraphic" operator="out" result="shadow" />
+                <feColorMatrix in="shadow" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.4 0" />
+                <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+
+            {/* ── Outer ambient glow ── */}
+            <ellipse cx="210" cy="200" rx="180" ry="160" fill="rgba(124,58,237,0.04)" />
+
             {/* ── Dashboard frame ── */}
-            <rect x="10" y="10" width="400" height="360" rx="16" fill="rgba(15,5,32,0.9)" stroke="rgba(124,58,237,0.25)" strokeWidth="1" />
-            {/* Title bar */}
-            <rect x="10" y="10" width="400" height="38" rx="16" fill="rgba(43,18,76,0.8)" />
-            <rect x="10" y="38" width="400" height="10" fill="rgba(43,18,76,0.8)" />
-            {/* Window dots */}
-            <circle cx="30" cy="29" r="4" fill="#ef4444" opacity="0.8" />
-            <circle cx="44" cy="29" r="4" fill="#eab308" opacity="0.8" />
-            <circle cx="58" cy="29" r="4" fill="#22c55e" opacity="0.8" />
-            <text x="210" y="33" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9" fontFamily="system-ui">nexus.app/audit</text>
+            <rect x="10" y="10" width="400" height="368" rx="18" fill="url(#frame-grad)" />
+            {/* Frame border with gradient */}
+            <rect x="10" y="10" width="400" height="368" rx="18" fill="none" stroke="url(#frame-grad-border)" strokeWidth="1" />
+            <defs>
+              <linearGradient id="frame-grad-border" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="rgba(167,139,250,0.4)" />
+                <stop offset="50%" stopColor="rgba(124,58,237,0.15)" />
+                <stop offset="100%" stopColor="rgba(254,205,77,0.2)" />
+              </linearGradient>
+            </defs>
+            {/* Inner top highlight */}
+            <rect x="11" y="11" width="398" height="2" rx="1" fill="rgba(255,255,255,0.08)" />
+
+            {/* ── Title bar ── */}
+            <rect x="10" y="10" width="400" height="40" rx="18" fill="url(#titlebar-grad)" />
+            <rect x="10" y="40" width="400" height="10" fill="rgba(35,12,65,0.9)" />
+
+            {/* Window dots with glow */}
+            <circle cx="30" cy="30" r="5" fill="#ef4444" opacity="0.9" />
+            <circle cx="30" cy="30" r="3" fill="#fca5a5" opacity="0.4" />
+            <circle cx="46" cy="30" r="5" fill="#eab308" opacity="0.9" />
+            <circle cx="46" cy="30" r="3" fill="#fde047" opacity="0.4" />
+            <circle cx="62" cy="30" r="5" fill="#22c55e" opacity="0.9" />
+            <circle cx="62" cy="30" r="3" fill="#86efac" opacity="0.4" />
+
+            {/* URL bar */}
+            <rect x="95" y="20" width="220" height="20" rx="6" fill="rgba(0,0,0,0.25)" />
+            <circle cx="108" cy="30" r="4" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
+            <text x="210" y="34" textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="8.5" fontFamily="system-ui, monospace">nexus.kayzen-lyon.fr/audit</text>
+
+            {/* ── Separator ── */}
+            <line x1="10" y1="50" x2="410" y2="50" stroke="rgba(124,58,237,0.2)" strokeWidth="0.5" />
 
             {/* ── Score gauge (top-left) ── */}
-            <g transform="translate(70, 100)">
-              {/* Background ring */}
-              <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(124,58,237,0.15)" strokeWidth="6" />
-              {/* Progress ring — animated */}
-              <circle cx="0" cy="0" r="40" fill="none" stroke="#FECD4D" strokeWidth="6"
-                strokeDasharray="226" strokeDashoffset="30" strokeLinecap="round"
-                transform="rotate(-90)" className="hero-line-draw" />
+            <g transform="translate(74, 108)">
+              {/* Ambient glow behind gauge */}
+              <circle cx="0" cy="0" r="52" fill="rgba(254,205,77,0.04)" />
+              {/* Track ring */}
+              <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(124,58,237,0.12)" strokeWidth="7" />
+              {/* Second decorative track */}
+              <circle cx="0" cy="0" r="35" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
+              {/* Progress ring */}
+              <circle cx="0" cy="0" r="42" fill="none" stroke="url(#score-ring-grad)" strokeWidth="7"
+                strokeDasharray="226" strokeDashoffset="28" strokeLinecap="round"
+                transform="rotate(-90)" className="hero-line-draw"
+                filter="url(#glow-gold)"
+              />
               {/* Score text */}
-              <text x="0" y="-4" textAnchor="middle" fill="#FECD4D" fontSize="24" fontWeight="800" fontFamily="system-ui">94</text>
-              <text x="0" y="10" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="7" fontWeight="600" fontFamily="system-ui" letterSpacing="1">/100</text>
+              <text x="0" y="-6" textAnchor="middle" fill="#FECD4D" fontSize="26" fontWeight="900" fontFamily="system-ui" className="hero-score-text">94</text>
+              <text x="0" y="10" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="7.5" fontWeight="600" fontFamily="system-ui" letterSpacing="1.5">/100</text>
+              {/* Grade badge */}
+              <rect x="-12" y="15" width="24" height="13" rx="4" fill="rgba(254,205,77,0.15)" />
+              <text x="0" y="25" textAnchor="middle" fill="#FECD4D" fontSize="8" fontWeight="800" fontFamily="system-ui">A+</text>
             </g>
-            <text x="70" y="157" textAnchor="middle" fill="rgba(255,255,255,0.6)" fontSize="8" fontWeight="600" fontFamily="system-ui" letterSpacing="0.5">SCORE SEO</text>
+            <text x="74" y="168" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="7.5" fontWeight="700" fontFamily="system-ui" letterSpacing="1.5">SCORE SEO</text>
 
             {/* ── 3 mini KPI cards (top-right) ── */}
             {[
-              { y: 62, label: 'Performance', value: '96', color: '#22c55e', icon: '▲' },
-              { y: 98, label: 'Accessibilité', value: '91', color: '#FECD4D', icon: '●' },
-              { y: 134, label: 'Visibilité IA', value: '87', color: '#7c3aed', icon: '◆' },
+              { y: 64, label: 'Performance', value: '96', color: '#22c55e', bar: 77, icon: '▲' },
+              { y: 102, label: 'Accessibilité', value: '91', color: '#FECD4D', bar: 73, icon: '●' },
+              { y: 140, label: 'Visibilité IA', value: '87', color: '#a78bfa', bar: 70, icon: '◆' },
             ].map((kpi, i) => (
-              <g key={i} transform={`translate(145, ${kpi.y})`} style={{ animation: `hero-grow-bar 0.6s ease-out ${0.3 + i * 0.15}s both` }}>
-                <rect width="250" height="30" rx="6" fill="rgba(43,18,76,0.5)" stroke="rgba(124,58,237,0.15)" strokeWidth="0.5" />
-                <text x="12" y="19" fill={kpi.color} fontSize="9" fontFamily="system-ui">{kpi.icon}</text>
-                <text x="28" y="19" fill="rgba(255,255,255,0.7)" fontSize="9" fontFamily="system-ui">{kpi.label}</text>
-                <text x="232" y="19" textAnchor="end" fill={kpi.color} fontSize="12" fontWeight="800" fontFamily="system-ui">{kpi.value}</text>
-                {/* Progress bar */}
-                <rect x="135" y="11" width="80" height="6" rx="3" fill="rgba(255,255,255,0.06)" />
-                <rect x="135" y="11" width={parseInt(kpi.value) * 0.8} height="6" rx="3" fill={kpi.color} opacity="0.6" className="hero-bar" style={{ '--bar-delay': `${0.5 + i * 0.2}s` } as React.CSSProperties} />
+              <g key={i} transform={`translate(148, ${kpi.y})`} style={{ animation: `hero-grow-bar 0.6s ease-out ${0.3 + i * 0.15}s both` }}>
+                {/* Card background */}
+                <rect width="248" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(124,58,237,0.18)" strokeWidth="0.5" />
+                {/* Left accent line */}
+                <rect x="0" y="4" width="2.5" height="24" rx="1.5" fill={kpi.color} opacity="0.7" />
+                <text x="14" y="20" fill={kpi.color} fontSize="9" fontFamily="system-ui">{kpi.icon}</text>
+                <text x="28" y="20" fill="rgba(255,255,255,0.65)" fontSize="9" fontFamily="system-ui">{kpi.label}</text>
+                <text x="234" y="21" textAnchor="end" fill={kpi.color} fontSize="13" fontWeight="900" fontFamily="system-ui">{kpi.value}</text>
+                {/* Progress track */}
+                <rect x="130" y="13" width="85" height="5" rx="2.5" fill="rgba(255,255,255,0.05)" />
+                {/* Progress fill */}
+                <rect x="130" y="13" width={kpi.bar} height="5" rx="2.5" fill={kpi.color} opacity="0.55" className="hero-bar" style={{ '--bar-delay': `${0.5 + i * 0.2}s` } as React.CSSProperties} />
               </g>
             ))}
 
+            {/* ── Divider ── */}
+            <line x1="30" y1="182" x2="390" y2="182" stroke="rgba(124,58,237,0.1)" strokeWidth="0.5" strokeDasharray="4 4" />
+
             {/* ── Bar chart (bottom-left) ── */}
-            <g transform="translate(30, 185)">
-              <text x="0" y="10" fill="rgba(255,255,255,0.4)" fontSize="8" fontWeight="600" fontFamily="system-ui" letterSpacing="0.5">TRAFIC ORGANIQUE</text>
-              <text x="170" y="10" textAnchor="end" fill="#22c55e" fontSize="8" fontWeight="700" fontFamily="system-ui">SEO</text>
+            <g transform="translate(30, 194)">
+              <text x="0" y="10" fill="rgba(255,255,255,0.35)" fontSize="7.5" fontWeight="700" fontFamily="system-ui" letterSpacing="1">TRAFIC ORGANIQUE</text>
+              <text x="170" y="10" textAnchor="end" fill="#22c55e" fontSize="7.5" fontWeight="700" fontFamily="system-ui" filter="url(#glow-green)">+142%</text>
               {/* Grid lines */}
               {[0, 1, 2, 3].map(i => (
-                <line key={i} x1="0" y1={25 + i * 30} x2="170" y2={25 + i * 30} stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" />
+                <line key={i} x1="0" y1={22 + i * 27} x2="170" y2={22 + i * 27} stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" />
               ))}
-              {/* Bars */}
+              {/* Bars with gradients */}
               {[
-                { x: 5,   h: 25, delay: '0.3s' },
-                { x: 19,  h: 35, delay: '0.4s' },
-                { x: 33,  h: 30, delay: '0.5s' },
-                { x: 47,  h: 45, delay: '0.6s' },
-                { x: 61,  h: 40, delay: '0.7s' },
-                { x: 75,  h: 55, delay: '0.8s' },
-                { x: 89,  h: 50, delay: '0.9s' },
-                { x: 103, h: 65, delay: '1.0s' },
-                { x: 117, h: 60, delay: '1.1s' },
-                { x: 131, h: 75, delay: '1.2s' },
-                { x: 145, h: 70, delay: '1.3s' },
-                { x: 159, h: 90, delay: '1.4s' },
+                { x: 5,   h: 22, delay: '0.3s', grad: 'bar-grad-violet' },
+                { x: 19,  h: 32, delay: '0.4s', grad: 'bar-grad-violet' },
+                { x: 33,  h: 28, delay: '0.5s', grad: 'bar-grad-violet' },
+                { x: 47,  h: 42, delay: '0.6s', grad: 'bar-grad-violet' },
+                { x: 61,  h: 36, delay: '0.7s', grad: 'bar-grad-violet' },
+                { x: 75,  h: 50, delay: '0.8s', grad: 'bar-grad-violet' },
+                { x: 89,  h: 46, delay: '0.9s', grad: 'bar-grad-violet' },
+                { x: 103, h: 60, delay: '1.0s', grad: 'bar-grad-violet' },
+                { x: 117, h: 56, delay: '1.1s', grad: 'bar-grad-violet' },
+                { x: 131, h: 70, delay: '1.2s', grad: 'bar-grad-violet' },
+                { x: 145, h: 65, delay: '1.3s', grad: 'bar-grad-gold' },
+                { x: 159, h: 85, delay: '1.4s', grad: 'bar-grad-gold' },
               ].map((bar, i) => (
                 <rect
-                  key={i} x={bar.x} y={115 - bar.h} width="10" height={bar.h} rx="2"
-                  fill={i >= 10 ? '#FECD4D' : i >= 8 ? '#7c3aed' : 'rgba(124,58,237,0.5)'}
+                  key={i} x={bar.x} y={107 - bar.h} width="10" height={bar.h} rx="3"
+                  fill={`url(#${bar.grad})`}
                   className="hero-bar"
                   style={{ '--bar-delay': bar.delay } as React.CSSProperties}
                 />
               ))}
-              <line x1="0" y1="115" x2="170" y2="115" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" />
+              <line x1="0" y1="107" x2="170" y2="107" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
             </g>
 
             {/* ── Line chart (bottom-right) ── */}
-            <g transform="translate(215, 185)">
-              <text x="0" y="10" fill="rgba(255,255,255,0.4)" fontSize="8" fontWeight="600" fontFamily="system-ui" letterSpacing="0.5">POSITIONS GOOGLE</text>
-              <text x="175" y="10" textAnchor="end" fill="#FECD4D" fontSize="8" fontWeight="700" fontFamily="system-ui">Top 3</text>
+            <g transform="translate(218, 194)">
+              <text x="0" y="10" fill="rgba(255,255,255,0.35)" fontSize="7.5" fontWeight="700" fontFamily="system-ui" letterSpacing="1">POSITIONS GOOGLE</text>
+              <text x="172" y="10" textAnchor="end" fill="#FECD4D" fontSize="7.5" fontWeight="700" fontFamily="system-ui">Top 3 ↑</text>
               {/* Grid */}
               {[0, 1, 2, 3].map(i => (
-                <line key={i} x1="0" y1={25 + i * 30} x2="175" y2={25 + i * 30} stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" />
+                <line key={i} x1="0" y1={22 + i * 27} x2="172" y2={22 + i * 27} stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" />
               ))}
-              {/* Line — positions improving (going UP = lower number = better) */}
-              <polyline
-                points="0,95 15,90 30,85 45,80 60,75 75,65 90,60 105,45 120,40 135,30 150,25 165,18"
-                stroke="#FECD4D" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
-                className="hero-line-draw"
-              />
               {/* Area fill */}
               <polygon
-                points="0,95 15,90 30,85 45,80 60,75 75,65 90,60 105,45 120,40 135,30 150,25 165,18 165,115 0,115"
-                fill="url(#hero-area-grad)" opacity="0.4" className="hero-line-draw" style={{ animationDelay: '0.8s' }}
+                points="0,90 15,85 30,80 45,76 60,70 75,62 90,56 105,43 120,37 135,28 150,22 165,16 165,107 0,107"
+                fill="url(#hero-area-grad)" opacity="0.5" className="hero-line-draw" style={{ animationDelay: '0.8s' }}
               />
-              {/* End dot */}
-              <circle cx="165" cy="18" r="4" fill="#FECD4D" className="hero-score-pulse" />
-              <line x1="0" y1="115" x2="175" y2="115" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" />
+              {/* Line */}
+              <polyline
+                points="0,90 15,85 30,80 45,76 60,70 75,62 90,56 105,43 120,37 135,28 150,22 165,16"
+                stroke="#FECD4D" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
+                className="hero-line-draw"
+                filter="url(#glow-gold)"
+              />
+              {/* Dots on line */}
+              {[[0,90],[45,76],[90,56],[135,28],[165,16]].map(([cx,cy],i) => (
+                <circle key={i} cx={cx} cy={cy} r={i === 4 ? 4.5 : 2.5} fill="#FECD4D"
+                  opacity={i === 4 ? 1 : 0.5}
+                  className={i === 4 ? 'hero-score-text' : ''}
+                  filter={i === 4 ? 'url(#glow-gold)' : undefined}
+                />
+              ))}
+              <line x1="0" y1="107" x2="172" y2="107" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
             </g>
 
             {/* ── Bottom status bar ── */}
-            <g transform="translate(30, 330)">
-              <rect width="360" height="28" rx="6" fill="rgba(43,18,76,0.4)" />
-              <circle cx="16" cy="14" r="4" fill="#22c55e" />
-              <text x="26" y="18" fill="rgba(255,255,255,0.5)" fontSize="8" fontFamily="system-ui">Audit en cours... 50+ contrôles analysés</text>
-              <text x="344" y="18" textAnchor="end" fill="#FECD4D" fontSize="8" fontWeight="700" fontFamily="system-ui">94/100 ✓</text>
+            <g transform="translate(30, 338)">
+              <rect width="360" height="28" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(124,58,237,0.15)" strokeWidth="0.5" />
+              {/* Live pulse */}
+              <circle cx="16" cy="14" r="5" fill="#22c55e" opacity="0.15" className="hero-score-text" />
+              <circle cx="16" cy="14" r="3.5" fill="#22c55e" filter="url(#glow-green)" />
+              <text x="28" y="18.5" fill="rgba(255,255,255,0.4)" fontSize="8" fontFamily="system-ui">Analyse complète · 50+ contrôles validés</text>
+              <rect x="298" y="8" width="55" height="14" rx="4" fill="rgba(254,205,77,0.12)" />
+              <text x="325" y="18.5" textAnchor="middle" fill="#FECD4D" fontSize="8" fontWeight="800" fontFamily="system-ui">94/100 ✓</text>
             </g>
 
-            {/* Gradient defs */}
-            <defs>
-              <linearGradient id="hero-area-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#FECD4D" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#FECD4D" stopOpacity="0" />
-              </linearGradient>
-            </defs>
           </svg>
+          </div>
         </div>
 
         {/* ─── Mobile illustration (simplified) ─── */}

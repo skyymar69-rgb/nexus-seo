@@ -4,6 +4,10 @@ import { authOptions } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ audits: [], keywords: [], backlinks: [] })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {

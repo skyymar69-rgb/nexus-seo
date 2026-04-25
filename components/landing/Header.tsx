@@ -105,22 +105,34 @@ export function Header() {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
+  const isDark = theme === 'dark'
+  /* Header adaptatif : sombre sur hero (homepage non scrollée), blanc sinon */
+  const onDarkHero = isHomepage && !scrolled
+
   return (
     <header
+      role="banner"
       className={cn(
         'fixed top-0 inset-x-0 z-50 transition-all duration-300',
-        /* ── Toujours fond sombre, jamais blanc ── */
         solid
-          ? 'bg-[#0b1220]/95 backdrop-blur-md border-b border-white/8 shadow-lg shadow-black/20'
+          ? onDarkHero
+            ? 'bg-[#0b1220]/95 backdrop-blur-md border-b border-white/8 shadow-lg shadow-black/20'
+            : isDark
+              ? 'bg-surface-950/95 backdrop-blur-md border-b border-surface-800 shadow-lg shadow-black/20'
+              : 'bg-white/95 backdrop-blur-md border-b border-surface-200 shadow-sm'
           : 'bg-transparent border-b border-transparent'
       )}
     >
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-medium focus:ring-2 focus:ring-brand-400">
+        Aller au contenu principal
+      </a>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
-          {/* Logo — toujours texte blanc */}
-          <Link href="/" className="shrink-0">
-            <AnimatedLogo size={36} lightText={true} />
+          {/* Logo */}
+          <Link href="/" aria-label="Nexus SEO — Retour à l'accueil" className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-lg">
+            <AnimatedLogo size={36} lightText={onDarkHero || isDark} />
           </Link>
 
           {/* Desktop Nav */}
@@ -138,48 +150,60 @@ export function Header() {
                     onClick={() => setDropdown(dropdown === item.label ? null : item.label)}
                     aria-expanded={dropdown === item.label}
                     aria-haspopup="true"
-                    /* ── Toujours blanc ── */
-                    className="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all text-white/75 hover:text-white hover:bg-white/10"
+                    className={cn(
+                      'flex items-center gap-1 px-4 py-2 min-h-[44px] text-sm font-medium rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                      onDarkHero || isDark
+                        ? 'text-white/80 hover:text-white hover:bg-white/10'
+                        : 'text-surface-700 hover:text-surface-900 hover:bg-surface-100'
+                    )}
                   >
                     {item.label}
-                    <ChevronDown
-                      className={cn(
-                        'w-3.5 h-3.5 transition-transform duration-200',
-                        dropdown === item.label && 'rotate-180'
-                      )}
-                    />
+                    <ChevronDown className={cn('w-3.5 h-3.5 transition-transform duration-200', dropdown === item.label && 'rotate-180')} />
                   </button>
                 ) : (
                   <Link
                     href={item.href}
                     aria-current={isActive(pathname, item.href) ? 'page' : undefined}
-                    /* ── Toujours blanc, actif = souligné ── */
                     className={cn(
-                      'px-4 py-2 text-sm font-medium rounded-lg transition-all block',
+                      'px-4 py-2 min-h-[44px] flex items-center text-sm font-medium rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
                       isActive(pathname, item.href)
-                        ? 'text-white bg-white/12 underline underline-offset-4 decoration-2 decoration-brand-400'
-                        : 'text-white/75 hover:text-white hover:bg-white/10'
+                        ? onDarkHero || isDark
+                          ? 'text-white bg-white/12 underline underline-offset-4 decoration-2 decoration-brand-400'
+                          : 'text-brand-700 bg-brand-50 underline underline-offset-4 decoration-2 decoration-brand-600'
+                        : onDarkHero || isDark
+                          ? 'text-white/80 hover:text-white hover:bg-white/10'
+                          : 'text-surface-700 hover:text-surface-900 hover:bg-surface-100'
                     )}
                   >
                     {item.label}
                   </Link>
                 )}
 
-                {/* Dropdown — fond toujours sombre */}
+                {/* Dropdown */}
                 {item.children && dropdown === item.label && (
                   <div
                     role="menu"
                     aria-label={`Sous-menu ${item.label}`}
                     onMouseEnter={() => setDropdown(item.label)}
                     onMouseLeave={() => setDropdown(null)}
-                    className="absolute top-full left-0 mt-2 w-64 bg-[#0f1e35] border border-white/10 rounded-2xl shadow-2xl shadow-black/40 p-2 animate-slide-down backdrop-blur-xl"
+                    className={cn(
+                      'absolute top-full left-0 mt-2 w-64 rounded-2xl shadow-2xl p-2 animate-slide-down backdrop-blur-xl border',
+                      isDark
+                        ? 'bg-surface-900 border-surface-700 shadow-black/40'
+                        : 'bg-white border-surface-200 shadow-surface-200/60'
+                    )}
                   >
                     {item.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
                         role="menuitem"
-                        className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/8 rounded-xl transition-all"
+                        className={cn(
+                          'block px-4 py-2.5 min-h-[44px] flex items-center text-sm rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                          isDark
+                            ? 'text-surface-300 hover:text-white hover:bg-white/8'
+                            : 'text-surface-600 hover:text-surface-900 hover:bg-surface-100'
+                        )}
                       >
                         {child.label}
                       </Link>
@@ -192,47 +216,53 @@ export function Header() {
 
           {/* Actions droite */}
           <div className="flex items-center gap-1.5">
-
-            {/* Carte de contact numérique */}
             {mounted && <DigitalContactCard />}
 
-            {/* Theme toggle — toujours blanc */}
+            {/* Theme toggle */}
             {mounted && (
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                aria-label="Changer de thème"
-                className="p-2 rounded-xl text-white/60 hover:text-white hover:bg-white/10 transition-all"
+                onClick={() => setTheme(isDark ? 'light' : 'dark')}
+                aria-label={isDark ? 'Passer en mode clair' : 'Passer en mode sombre'}
+                className={cn(
+                  'p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                  onDarkHero || isDark
+                    ? 'text-white/70 hover:text-white hover:bg-white/10'
+                    : 'text-surface-600 hover:text-surface-900 hover:bg-surface-100'
+                )}
               >
-                {theme === 'dark'
-                  ? <Sun  className="w-4.5 h-4.5" />
-                  : <Moon className="w-4.5 h-4.5" />
-                }
+                {isDark ? <Sun className="w-[18px] h-[18px]" /> : <Moon className="w-[18px] h-[18px]" />}
               </button>
             )}
 
-            {/* CTA connexion / inscription — toujours blanc */}
             <div className="hidden sm:flex items-center gap-2 ml-1">
               <Link
                 href="/login"
-                className="px-4 py-2 text-sm font-medium rounded-xl transition-all text-white/75 hover:text-white hover:bg-white/10"
+                className={cn(
+                  'px-4 py-2 min-h-[44px] flex items-center text-sm font-medium rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                  onDarkHero || isDark
+                    ? 'text-white/80 hover:text-white hover:bg-white/10'
+                    : 'text-surface-700 hover:text-surface-900 hover:bg-surface-100'
+                )}
               >
                 Connexion
               </Link>
-              <Link
-                href="/signup"
-                className="btn-primary px-5 py-2 text-sm rounded-xl"
-              >
+              <Link href="/signup" className="btn-primary px-5 py-2 text-sm rounded-xl min-h-[44px] flex items-center">
                 Démarrer gratuitement
               </Link>
             </div>
 
-            {/* Hamburger mobile — toujours blanc */}
+            {/* Hamburger mobile */}
             <button
               onClick={() => setMobile(!mobileOpen)}
-              aria-label="Menu de navigation"
+              aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu de navigation'}
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
-              className="lg:hidden p-2.5 rounded-xl text-white/75 hover:text-white hover:bg-white/10 transition-all"
+              className={cn(
+                'lg:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                onDarkHero || isDark
+                  ? 'text-white/80 hover:text-white hover:bg-white/10'
+                  : 'text-surface-700 hover:text-surface-900 hover:bg-surface-100'
+              )}
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -240,14 +270,19 @@ export function Header() {
         </div>
       </div>
 
-      {/* ── Menu mobile — fond toujours sombre ── */}
+      {/* Menu mobile */}
       {mobileOpen && (
         <div
           id="mobile-menu"
           ref={mobileMenuRef}
           role="menu"
           aria-label="Navigation mobile"
-          className="lg:hidden border-t border-white/8 bg-[#0b1220]/98 backdrop-blur-xl px-4 py-4 space-y-1 animate-slide-down"
+          className={cn(
+            'lg:hidden border-t px-4 py-4 space-y-1 animate-slide-down',
+            isDark
+              ? 'border-surface-800 bg-surface-950/98 backdrop-blur-xl'
+              : 'border-surface-200 bg-white/98 backdrop-blur-xl shadow-lg'
+          )}
         >
           {navItems.map((item) => (
             <div key={item.label}>
@@ -256,15 +291,18 @@ export function Header() {
                 onClick={() => setMobile(false)}
                 aria-current={isActive(pathname, item.href) ? 'page' : undefined}
                 className={cn(
-                  'block px-4 py-2.5 text-sm font-medium rounded-xl transition-all',
+                  'block px-4 py-3 min-h-[44px] flex items-center text-sm font-medium rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
                   isActive(pathname, item.href)
-                    ? 'text-white bg-white/12 underline underline-offset-4 decoration-brand-400'
-                    : 'text-white/75 hover:text-white hover:bg-white/8'
+                    ? isDark
+                      ? 'text-white bg-white/12 underline underline-offset-4 decoration-brand-400'
+                      : 'text-brand-700 bg-brand-50 underline underline-offset-4 decoration-brand-600'
+                    : isDark
+                      ? 'text-surface-300 hover:text-white hover:bg-white/8'
+                      : 'text-surface-700 hover:text-surface-900 hover:bg-surface-100'
                 )}
               >
                 {item.label}
               </Link>
-
               {item.children && (
                 <div className="ml-4 mt-1 space-y-0.5">
                   {item.children.map((child) => (
@@ -272,7 +310,10 @@ export function Header() {
                       key={child.label}
                       href={child.href}
                       onClick={() => setMobile(false)}
-                      className="block px-4 py-2 text-xs text-white/50 hover:text-white/90 rounded-lg transition-all"
+                      className={cn(
+                        'block px-4 py-2 min-h-[44px] flex items-center text-xs rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                        isDark ? 'text-surface-400 hover:text-white' : 'text-surface-500 hover:text-surface-900'
+                      )}
                     >
                       {child.label}
                     </Link>
@@ -282,16 +323,21 @@ export function Header() {
             </div>
           ))}
 
-          <div className="flex gap-3 pt-4 border-t border-white/8">
+          <div className={cn('flex gap-3 pt-4 border-t', isDark ? 'border-surface-800' : 'border-surface-200')}>
             <Link
               href="/login"
-              className="flex-1 text-center py-2.5 text-sm font-medium text-white/75 border border-white/15 rounded-xl hover:bg-white/8 transition-all"
+              className={cn(
+                'flex-1 text-center py-3 min-h-[44px] flex items-center justify-center text-sm font-medium border rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500',
+                isDark
+                  ? 'text-surface-300 border-surface-700 hover:bg-white/8'
+                  : 'text-surface-700 border-surface-300 hover:bg-surface-100'
+              )}
             >
               Connexion
             </Link>
             <Link
               href="/signup"
-              className="flex-1 text-center py-2.5 text-sm font-semibold text-white rounded-xl bg-brand-600 hover:bg-brand-500 transition-colors"
+              className="flex-1 text-center py-3 min-h-[44px] flex items-center justify-center text-sm font-semibold text-white rounded-xl bg-brand-600 hover:bg-brand-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
             >
               Démarrer
             </Link>

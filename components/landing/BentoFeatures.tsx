@@ -66,7 +66,7 @@ export function BentoFeatures() {
   const smallItems = features.filter(f => f.size === 'small')
 
   return (
-    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-950">
+    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <div className="section-badge mx-auto mb-4">Fonctionnalités</div>
@@ -79,44 +79,76 @@ export function BentoFeatures() {
           </p>
         </div>
 
-        {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        {/* Bento grid — large items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
           {largeItems.map((f) => {
             const Icon = f.icon
             return (
               <div
                 key={f.id}
-                className={`group relative rounded-2xl p-8 border bg-gradient-to-br ${f.gradient} ${f.border} transition-all duration-300 hover:shadow-glow hover:-translate-y-1`}
+                className={`group relative rounded-2xl p-8 border bg-gradient-to-br ${f.gradient} ${f.border} transition-all duration-500 hover:shadow-glow hover:-translate-y-1.5 overflow-hidden`}
+                style={{ backdropFilter: 'blur(2px)' }}
               >
-                <div className={`w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-5`}>
-                  <Icon className={`w-6 h-6 ${f.iconColor}`} />
+                {/* Decorative ambient orb */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"
+                  style={{ background: `radial-gradient(circle, ${f.id === 'geo' ? 'rgba(59,130,246,0.15)' : 'rgba(124,58,237,0.15)'}, transparent)` }}
+                />
+                {/* Top-right decorative dots grid */}
+                <svg className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500" width="48" height="48" viewBox="0 0 48 48" fill="currentColor">
+                  {[0,1,2,3].map(row => [0,1,2,3].map(col => (
+                    <circle key={`${row}-${col}`} cx={col * 12 + 6} cy={row * 12 + 6} r="1.5" className={f.iconColor} />
+                  )))}
+                </svg>
+
+                {/* Icon container with glow */}
+                <div className={`relative w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}
+                  style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 0 20px rgba(0,0,0,0.1)' }}>
+                  <Icon className={`w-7 h-7 ${f.iconColor} transition-all duration-300 group-hover:drop-shadow-[0_0_8px_currentColor]`} />
                 </div>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <h3 className="text-2xl font-black text-surface-900 dark:text-white">{f.title}</h3>
-                  <span className="text-sm text-surface-500 dark:text-surface-400">{f.subtitle}</span>
+
+                <div className="flex items-baseline gap-3 mb-3">
+                  <h3 className="text-2xl font-black text-surface-900 dark:text-white tracking-tight">{f.title}</h3>
+                  <span className="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{f.subtitle}</span>
                 </div>
-                <p className="text-surface-600 dark:text-surface-400 leading-relaxed max-w-md">{f.desc}</p>
+                <p className="text-surface-600 dark:text-surface-400 leading-relaxed max-w-md text-sm">{f.desc}</p>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: `linear-gradient(to right, transparent, ${f.id === 'geo' ? 'rgba(59,130,246,0.5)' : 'rgba(124,58,237,0.5)'}, transparent)` }} />
               </div>
             )
           })}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Bento grid — small items */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {smallItems.map((f) => {
             const Icon = f.icon
             return (
               <div
                 key={f.id}
-                className={`group relative rounded-2xl p-6 border bg-gradient-to-br ${f.gradient} ${f.border} transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5`}
+                className={`group relative rounded-2xl p-6 border bg-gradient-to-br ${f.gradient} ${f.border} transition-all duration-500 hover:shadow-glow hover:-translate-y-1 overflow-hidden`}
               >
-                <div className={`w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4`}>
+                {/* Ambient glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                  style={{ background: 'radial-gradient(ellipse at top right, rgba(255,255,255,0.04), transparent 70%)' }} />
+
+                {/* Icon */}
+                <div className="relative w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
                   <Icon className={`w-5 h-5 ${f.iconColor}`} />
                 </div>
-                <div className="flex items-baseline gap-2 mb-1.5">
+
+                <div className="flex items-baseline gap-2 mb-2">
                   <h3 className="text-lg font-bold text-surface-900 dark:text-white">{f.title}</h3>
                   <span className="text-xs text-surface-500 dark:text-surface-400">{f.subtitle}</span>
                 </div>
                 <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{f.desc}</p>
+
+                {/* Corner accent */}
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-60 transition-opacity duration-300">
+                  <ArrowRight className={`w-4 h-4 ${f.iconColor}`} />
+                </div>
               </div>
             )
           })}

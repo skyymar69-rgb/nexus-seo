@@ -56,6 +56,10 @@ import { withCors, corsOptionsResponse } from '@/lib/cors'
 
 // GET: Retrieve latest crawl results for a website
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ pages: [], message: 'Base de données non configurée. Lancez un crawl pour analyser votre site.' })
+  }
+
   try {
     const { searchParams } = new URL(request.url)
     const websiteId = searchParams.get('websiteId')

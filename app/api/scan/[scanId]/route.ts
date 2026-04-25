@@ -8,6 +8,10 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { scanId: string } }
 ) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée' }, { status: 503, headers: corsHeaders() })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {

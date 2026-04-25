@@ -9,6 +9,10 @@ import { corsHeaders, corsOptionsResponse } from '@/lib/cors'
 export const maxDuration = 60
 
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée. Le scan nécessite une base de données.' }, { status: 503, headers: corsHeaders() })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {

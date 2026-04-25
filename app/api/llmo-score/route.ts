@@ -34,12 +34,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'websiteId requis' }, { status: 400 })
     }
 
-    // Verify website ownership
-    const website = await prisma.website.findFirst({
-      where: { id: websiteId, userId: session.user.id },
-    })
-    if (!website) {
-      return NextResponse.json({ error: 'Site non trouvé' }, { status: 403 })
+    // Verify website ownership (skip if no DB)
+    if (process.env.DATABASE_URL) {
+      const website = await prisma.website.findFirst({
+        where: { id: websiteId, userId: session.user.id },
+      })
+      if (!website) {
+        return NextResponse.json({ error: 'Site non trouvé' }, { status: 403 })
+      }
     }
 
     // Validate providers
@@ -49,20 +51,22 @@ export async function POST(request: NextRequest) {
     // Run LLMO analysis
     const result = await analyzeLLMO(brand, domain, queries, selectedProviders)
 
-    // Save individual query results to AIVisibilityQuery
-    for (const qr of result.queryResults) {
-      await prisma.aIVisibilityQuery.create({
-        data: {
-          websiteId,
-          prompt: qr.query,
-          llm: qr.provider,
-          mentioned: qr.mentioned,
-          position: qr.position,
-          sentiment: qr.sentiment,
-          competitors: JSON.stringify(qr.competitors),
-          response: qr.responseSnippet,
-        },
-      })
+    // Save individual query results to AIVisibilityQuery (skip if no DB)
+    if (process.env.DATABASE_URL) {
+      for (const qr of result.queryResults) {
+        await prisma.aIVisibilityQuery.create({
+          data: {
+            websiteId,
+            prompt: qr.query,
+            llm: qr.provider,
+            mentioned: qr.mentioned,
+            position: qr.position,
+            sentiment: qr.sentiment,
+            competitors: JSON.stringify(qr.competitors),
+            response: qr.responseSnippet,
+          },
+        })
+      }
     }
 
     return NextResponse.json({

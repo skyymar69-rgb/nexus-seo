@@ -4,6 +4,10 @@ import { authOptions } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ backlinks: [], pagination: { page: 1, limit: 20, total: 0, pages: 0 } })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {
@@ -82,6 +86,10 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée' }, { status: 503 })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {

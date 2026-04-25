@@ -166,6 +166,10 @@ async function queryLLM(prompt: string, llmName: string): Promise<string> {
 
 // POST: Quick check for a single prompt against one LLM
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée' }, { status: 503 })
+  }
+
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user?.id) {

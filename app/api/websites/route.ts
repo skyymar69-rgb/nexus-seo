@@ -5,6 +5,10 @@ import { prisma } from '@/lib/prisma'
 import { ensureUserExists } from '@/lib/ensure-user'
 
 export async function GET(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json([])
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {
@@ -47,6 +51,10 @@ export async function GET(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Base de données non configurée' }, { status: 503 })
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {
@@ -86,6 +94,13 @@ export async function DELETE(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json(
+      { error: 'Base de données non configurée. Contactez l\'administrateur.' },
+      { status: 503 }
+    )
+  }
+
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user) {
