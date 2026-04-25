@@ -27,8 +27,8 @@ const TABS: Array<{
     label: 'Site',
     icon: Globe,
     src: '/qr/site.svg',
-    deepLink: 'https://nexus-seo.app',
-    caption: 'Ouvrir le site Nexus SEO',
+    deepLink: 'https://nexus.kayzen-lyon.fr',
+    caption: 'Ouvrir Nexus — By Kayzen',
     accent: 'from-brand-500 to-cyan-500',
     accentFrom: '#3b82f6',
     accentTo: '#06b6d4',
@@ -127,7 +127,7 @@ export default function DigitalContactCard() {
   }
 
   async function handleShare() {
-    const data = { title: 'Kayzen Lyon — Nexus SEO', text: 'Agence SEO · GEO · AEO · LLMO', url: 'https://nexus-seo.app' }
+    const data = { title: 'Nexus — By Kayzen', text: 'La plateforme SEO de l\'ère IA · GEO · AEO · LLMO', url: 'https://nexus.kayzen-lyon.fr' }
     if (typeof navigator !== 'undefined' && 'share' in navigator) {
       try { await navigator.share(data); return } catch { /* cancelled */ }
     }

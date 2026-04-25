@@ -1,13 +1,29 @@
 {
-  "name": "Nexus SEO — Plateforme SEO & IA",
-  "short_name": "Nexus SEO",
-  "description": "La plateforme SEO IA qui combine audit technique, GEO, AEO et LLMO. Dominez Google, ChatGPT et tous les moteurs IA.",
+  "name": "Nexus — By Kayzen",
+  "short_name": "Nexus",
+  "description": "La plateforme SEO de l'ère IA : GEO, AEO, LLMO, audit technique et suivi de mots-clés en une seule plateforme.",
   "start_url": "/dashboard",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#3b82f6",
+  "theme_color": "#2563eb",
   "orientation": "portrait-primary",
   "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
     {
       "src": "/logo-48.webp",
       "sizes": "48x48",
@@ -31,5 +47,13 @@
     }
   ],
   "categories": ["business", "productivity"],
-  "lang": "fr"
+  "lang": "fr",
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Nexus — Dashboard SEO IA"
+    }
+  ]
 }

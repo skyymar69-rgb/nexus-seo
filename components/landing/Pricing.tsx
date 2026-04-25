@@ -44,7 +44,7 @@ export function Pricing() {
             <div className="p-8 sm:p-10">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles className="w-6 h-6 text-brand-500" />
-                <h3 className="text-xl font-bold text-surface-900 dark:text-white">Nexus SEO</h3>
+                <h3 className="text-xl font-bold text-surface-900 dark:text-white">Nexus</h3>
               </div>
 
               <div className="flex items-baseline gap-2 mb-2">

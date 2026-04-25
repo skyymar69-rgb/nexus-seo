@@ -1,0 +1,30 @@
+# Nexus — By Kayzen
+
+> La plateforme SEO de l'ère IA : GEO, AEO, LLMO, audit technique et suivi de mots-clés — tout en un.
+
+Nexus est une plateforme SEO nouvelle génération créée par Kayzen (Lyon, France), spécialisée dans l'optimisation pour les moteurs génératifs (Google SGE, ChatGPT, Perplexity, Claude, Gemini).
+
+## Pages principales
+
+- [Accueil](https://nexus.kayzen-lyon.fr/)
+- [Services — GEO, AEO, LLMO, SEO Technique](https://nexus.kayzen-lyon.fr/services)
+- [Tarifs](https://nexus.kayzen-lyon.fr/pricing)
+- [Blog SEO IA](https://nexus.kayzen-lyon.fr/blog)
+- [Cas clients](https://nexus.kayzen-lyon.fr/cases)
+- [Outils gratuits](https://nexus.kayzen-lyon.fr/#outils)
+- [Contact](https://nexus.kayzen-lyon.fr/contact)
+- [Audit SEO gratuit](https://nexus.kayzen-lyon.fr/audit-gratuit)
+
+## Services
+
+- [GEO — Generative Engine Optimization](https://nexus.kayzen-lyon.fr/services#geo)
+- [AEO — Answer Engine Optimization](https://nexus.kayzen-lyon.fr/services#aeo)
+- [LLMO — LLM Optimization](https://nexus.kayzen-lyon.fr/services#llmo)
+- [SEO Technique](https://nexus.kayzen-lyon.fr/services#technical)
+- [Analytics & Rapports](https://nexus.kayzen-lyon.fr/services#analytics)
+
+## Contact
+
+- Email: contact@kayzen-lyon.fr
+- Téléphone: +33 4 87 77 68 61
+- Adresse: 6, rue Pierre Termier — 69009 Lyon, France

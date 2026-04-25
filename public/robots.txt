@@ -1,4 +1,4 @@
-# Nexus SEO — robots.txt
+# Nexus — By Kayzen — robots.txt
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -6,9 +6,9 @@ Disallow: /dashboard/
 Disallow: /admin/
 
 # Sitemap
-Sitemap: https://nexus-seo.app/sitemap.xml
+Sitemap: https://nexus.kayzen-lyon.fr/sitemap.xml
 
-# AI Crawlers
+# AI Crawlers — autorisés sur tout le contenu public
 User-agent: GPTBot
 Allow: /
 Allow: /services
@@ -16,6 +16,7 @@ Allow: /about
 Allow: /pricing
 Allow: /faq
 Allow: /blog
+Allow: /cases
 Disallow: /api/
 Disallow: /dashboard/
 
@@ -27,3 +28,13 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# LLMs.txt — spec llmstxt.org
+# https://nexus.kayzen-lyon.fr/llms.txt
+# https://nexus.kayzen-lyon.fr/llms-full.txt
