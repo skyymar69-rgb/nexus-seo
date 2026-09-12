@@ -63,8 +63,8 @@ export function Comparison() {
                       {tool.highlight ? (
                         <div className="inline-flex flex-col items-center gap-1">
                           <span className="text-sm font-black gradient-text">{tool.name}</span>
-                          <span className="text-xs font-semibold text-brand-700 dark:text-brand-400">{tool.price}</span>
-                          <span className="px-2 py-0.5 text-xs font-bold bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 rounded-full border border-brand-200 dark:border-brand-800/50">
+                          <span className="text-xs font-semibold text-brand-700 dark:text-brand-300">{tool.price}</span>
+                          <span className="px-2 py-0.5 text-xs font-bold bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-300 rounded-full border border-brand-200 dark:border-brand-800/50">
                             Recommandé
                           </span>
                         </div>

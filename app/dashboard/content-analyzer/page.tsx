@@ -170,7 +170,7 @@ export default function ContentAnalyzerPage() {
                 {result.recommendations.map((rec, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <ArrowRight className="w-4 h-4 text-brand-500 mt-0.5 shrink-0" />
-                    <p className="text-sm text-brand-700 dark:text-brand-400">{rec}</p>
+                    <p className="text-sm text-brand-700 dark:text-brand-300">{rec}</p>
                   </div>
                 ))}
               </div>

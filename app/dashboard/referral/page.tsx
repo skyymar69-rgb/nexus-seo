@@ -102,7 +102,7 @@ export default function ReferralPage() {
             { step: '3', title: 'Gagnez des badges', desc: 'À chaque inscription, vous gagnez le badge Ambassadeur et des fonctionnalités exclusives à venir.' },
           ].map(item => (
             <div key={item.step} className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-sm font-bold shrink-0">
+              <div className="w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 flex items-center justify-center text-sm font-bold shrink-0">
                 {item.step}
               </div>
               <div>

@@ -82,7 +82,7 @@ function SummaryCard({
   }
 
   const iconClasses = {
-    brand: 'text-brand-600 dark:text-brand-400',
+    brand: 'text-brand-600 dark:text-brand-300',
     accent: 'text-accent-600 dark:text-accent-400',
     amber: 'text-amber-600 dark:text-amber-400',
     red: 'text-red-600 dark:text-red-400',
@@ -237,7 +237,7 @@ function LoadingSpinner() {
             stroke="currentColor"
             strokeWidth="3"
             strokeDasharray="31.4 94.2"
-            className="text-brand-600 dark:text-brand-400"
+            className="text-brand-600 dark:text-brand-300"
           />
         </svg>
       </div>
@@ -301,7 +301,7 @@ export default function AuditGratuitPage() {
           </Link>
           <Link
             href="/dashboard"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-colors"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-brand-600 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-colors"
           >
             Tableau de bord
           </Link>
@@ -353,7 +353,7 @@ export default function AuditGratuitPage() {
           <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <div className="p-6 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
+                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-300">
                   <BarChart3 className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">15+ Contrôles SEO</h3>
@@ -363,7 +363,7 @@ export default function AuditGratuitPage() {
               </div>
 
               <div className="p-6 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
+                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-300">
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Résultats Instantanés</h3>
@@ -373,7 +373,7 @@ export default function AuditGratuitPage() {
               </div>
 
               <div className="p-6 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
+                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-300">
                   <TrendingUp className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Recommandations Actionnables</h3>
@@ -397,7 +397,7 @@ export default function AuditGratuitPage() {
               </div>
               <button
                 onClick={handleNewAudit}
-                className="px-6 py-3 rounded-lg font-semibold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/30 border border-brand-200 dark:border-brand-800 transition-colors whitespace-nowrap"
+                className="px-6 py-3 rounded-lg font-semibold text-brand-600 dark:text-brand-300 hover:bg-brand-50 dark:hover:bg-brand-950/30 border border-brand-200 dark:border-brand-800 transition-colors whitespace-nowrap"
               >
                 Nouvel audit
               </button>
@@ -648,7 +648,7 @@ export default function AuditGratuitPage() {
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="p-6 sm:p-8 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
+                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-300">
                   <BarChart3 className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Audit en profondeur</h3>
@@ -658,7 +658,7 @@ export default function AuditGratuitPage() {
               </div>
 
               <div className="p-6 sm:p-8 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
+                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-300">
                   <TrendingUp className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Suivi automatique</h3>
@@ -668,7 +668,7 @@ export default function AuditGratuitPage() {
               </div>
 
               <div className="p-6 sm:p-8 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
+                <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-300">
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">AI Visibility</h3>
@@ -821,7 +821,7 @@ export default function AuditGratuitPage() {
             >
               {tool.badge && (
                 <span className={`absolute top-4 right-4 px-2 py-0.5 rounded-full text-xs font-semibold ${
-                  tool.badge === 'Nouveau' ? 'bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-400' :
+                  tool.badge === 'Nouveau' ? 'bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300' :
                   'bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-400'
                 }`}>
                   {tool.badge}
@@ -834,7 +834,7 @@ export default function AuditGratuitPage() {
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 {tool.description}
               </p>
-              <span className="text-sm font-semibold text-brand-600 dark:text-brand-400 flex items-center gap-1 group-hover:gap-2 transition-all">
+              <span className="text-sm font-semibold text-brand-600 dark:text-brand-300 flex items-center gap-1 group-hover:gap-2 transition-all">
                 Utiliser l&apos;outil <ArrowRight className="w-4 h-4" />
               </span>
             </Link>

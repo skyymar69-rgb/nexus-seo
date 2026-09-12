@@ -19,7 +19,7 @@ const posts: Record<string, {
     readTime: '12 min',
     date: '28 mars 2026',
     excerpt: 'Tout ce que vous devez savoir sur le Generative Engine Optimization : comment fonctionne Google SGE, quels signaux il utilise, et comment structurer votre contenu pour être cité.',
-    tag_color: 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40',
+    tag_color: 'text-brand-700 dark:text-brand-300 bg-brand-50 dark:bg-brand-950/40',
     content: [
       'Le Generative Engine Optimization (GEO) est devenu la priorité absolue de tout référenceur en 2026. Depuis que Google a généralisé ses AI Overviews à l\'ensemble de ses marchés, les clics organiques "classiques" ont chuté de 30 à 60% sur les requêtes informationnelles.',
       'La bonne nouvelle ? Ceux qui maîtrisent le GEO captent désormais une visibilité nouvelle, plus qualifiée, directement dans les réponses générées. Voici comment.',

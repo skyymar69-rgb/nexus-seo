@@ -748,7 +748,7 @@ export default function AIVisibilityPage() {
                           className="hover:bg-white/[0.03]/50 transition-colors"
                         >
                           <td className="py-3 px-4">
-                            <span className="font-medium text-brand-600 dark:text-brand-400">
+                            <span className="font-medium text-brand-600 dark:text-brand-300">
                               {query.prompt}
                             </span>
                           </td>

@@ -69,22 +69,22 @@
   .dark {
     --background: 213 45% 9%;
     --foreground: 213 30% 94%;
-    --surface-sunken: 213 40% 12%;
-    --surface-elevated: 213 40% 13%;
+    --surface-sunken: 213 42% 12%;
+    --surface-elevated: 213 28% 24%;
 
-    --card: 213 40% 12%;
+    --card: 213 30% 20%;
     --card-foreground: 213 30% 94%;
-    --popover: 213 40% 12%;
+    --popover: 213 30% 20%;
     --popover-foreground: 213 30% 94%;
 
     --primary: 15 72% 58%;
     --primary-foreground: 213 45% 9%;
 
-    --secondary: 213 30% 18%;
+    --secondary: 213 28% 24%;
     --secondary-foreground: 213 30% 94%;
 
-    --muted: 213 30% 20%;
-    --muted-foreground: 214 20% 72%;
+    --muted: 213 26% 29%;
+    --muted-foreground: 214 22% 76%;
 
     --accent: 41 85% 62%;
     --accent-foreground: 213 45% 10%;
@@ -97,9 +97,9 @@
     --destructive: 0 78% 62%;
     --destructive-foreground: 213 45% 9%;
 
-    --border: 213 26% 22%;
-    --border-strong: 213 18% 48%;
-    --input: 213 18% 46%;
+    --border: 213 22% 51%;
+    --border-strong: 213 22% 64%;
+    --input: 213 22% 60%;
     --ring: 213 30% 94%;
   }
 
@@ -199,8 +199,8 @@
   /* ---------- Texte accentue ----------
      Kayzen n'utilise pas de texte en degrade : une phrase du titre passe
      simplement en terracotta. On conserve les noms de classes. */
-  .gradient-text        { @apply text-primary; }
-  .gradient-text-brand  { @apply text-primary; }
+  .gradient-text        { @apply text-brand-700 dark:text-brand-300; }
+  .gradient-text-brand  { @apply text-brand-700 dark:text-brand-300; }
 
   /* ---------- Sur-titre Kayzen ---------- */
   .overline {

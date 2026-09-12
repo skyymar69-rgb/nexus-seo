@@ -77,7 +77,7 @@ export function Problem() {
         <div className="text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-card border border-surface-200 dark:border-surface-800 shadow-sm">
             <span className="text-sm font-semibold text-foreground">Nexus résout exactement ces 3 problèmes</span>
-            <Link href="#features" className="flex items-center gap-1 text-sm font-bold text-brand-600 dark:text-brand-400 hover:gap-2 transition-all">
+            <Link href="#features" className="flex items-center gap-1 text-sm font-bold text-brand-600 dark:text-brand-300 hover:gap-2 transition-all">
               Voir comment <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

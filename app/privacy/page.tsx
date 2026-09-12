@@ -30,7 +30,7 @@ export default function PrivacyPage() {
                 <div className="card p-5 mt-3 space-y-1">
                   <p><strong className="text-foreground">KAYZEN LYON</strong></p>
                   <p>6, rue Pierre Termier, 69009 LYON, France</p>
-                  <p>Email DPO : <a href="mailto:dpo@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">dpo@kayzen-lyon.fr</a></p>
+                  <p>Email DPO : <a href="mailto:dpo@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">dpo@kayzen-lyon.fr</a></p>
                   <p>SIREN : 999 418 346 000 14</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-4">Pour exercer vos droits : <a href="mailto:dpo@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">dpo@kayzen-lyon.fr</a>. Réponse sous 30 jours. En cas de litige non résolu, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-400 hover:underline">CNIL</a>.</p>
+                <p className="mt-4">Pour exercer vos droits : <a href="mailto:dpo@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">dpo@kayzen-lyon.fr</a>. Réponse sous 30 jours. En cas de litige non résolu, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-300 hover:underline">CNIL</a>.</p>
               </div>
 
               <div>

@@ -332,7 +332,7 @@ export default function SemanticAnalysisPage() {
                   <div key={item.keyword}>
                     <div className="flex justify-between mb-2">
                       <span className="font-medium text-foreground">{item.keyword}</span>
-                      <span className="text-brand-600 dark:text-brand-400 font-semibold">{item.density.toFixed(2)}%</span>
+                      <span className="text-brand-600 dark:text-brand-300 font-semibold">{item.density.toFixed(2)}%</span>
                     </div>
                     <div className="w-full h-2 bg-surface-200 dark:bg-surface-800 rounded-full overflow-hidden">
                       <div

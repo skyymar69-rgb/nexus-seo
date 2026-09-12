@@ -119,7 +119,7 @@ export function FAQ() {
                   <span className={cn(
                     'text-sm font-semibold transition-colors',
                     open === i
-                      ? 'text-brand-600 dark:text-brand-400'
+                      ? 'text-brand-600 dark:text-brand-300'
                       : 'text-foreground'
                   )}>
                     {faq.question}
@@ -149,7 +149,7 @@ export function FAQ() {
 
         <p className="text-center text-sm text-muted-foreground mt-10">
           Vous n&apos;avez pas trouvé votre réponse ?{' '}
-          <a href="/contact" className="text-brand-600 dark:text-brand-400 font-semibold hover:underline">
+          <a href="/contact" className="text-brand-600 dark:text-brand-300 font-semibold hover:underline">
             Contactez-nous
           </a>
         </p>

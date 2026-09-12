@@ -42,14 +42,14 @@ const cases = [
 ]
 
 const tagColors: Record<string, string> = {
-  'SEO':           'bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400 border-brand-200 dark:border-brand-800/50',
+  'SEO':           'bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-300 border-brand-200 dark:border-brand-800/50',
   'SEO Local':     'bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-300 border-violet-200 dark:border-violet-800/50',
-  'SEO Technique': 'bg-cyan-50 text-cyan-700 dark:bg-cyan-950/40 dark:text-cyan-400 border-cyan-200 dark:border-cyan-800/50',
-  'Performance':   'bg-accent-50 text-accent-700 dark:bg-accent-950/40 dark:text-accent-400 border-accent-200 dark:border-accent-800/50',
-  'Eco-web':       'bg-green-50 text-green-700 dark:bg-green-950/40 dark:text-green-400 border-green-200 dark:border-green-800/50',
-  'Contenu':       'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400 border-amber-200 dark:border-amber-800/50',
-  'Images':        'bg-pink-50 text-pink-700 dark:bg-pink-950/40 dark:text-pink-400 border-pink-200 dark:border-pink-800/50',
-  'Mobile':        'bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400 border-blue-200 dark:border-blue-800/50',
+  'SEO Technique': 'bg-cyan-50 text-cyan-700 dark:bg-cyan-950/40 dark:text-cyan-300 border-cyan-200 dark:border-cyan-800/50',
+  'Performance':   'bg-accent-50 text-accent-700 dark:bg-accent-950/40 dark:text-accent-300 border-accent-200 dark:border-accent-800/50',
+  'Eco-web':       'bg-green-50 text-green-700 dark:bg-green-950/40 dark:text-green-300 border-green-200 dark:border-green-800/50',
+  'Contenu':       'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border-amber-200 dark:border-amber-800/50',
+  'Images':        'bg-pink-50 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border-pink-200 dark:border-pink-800/50',
+  'Mobile':        'bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300 border-blue-200 dark:border-blue-800/50',
 }
 
 export function CaseStudies() {
@@ -71,7 +71,7 @@ export function CaseStudies() {
             href="https://internet.kayzen-lyon.fr/portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:gap-3 transition-all shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-300 hover:gap-3 transition-all shrink-0"
           >
             Voir le portfolio complet <ExternalLink className="w-4 h-4" />
           </a>

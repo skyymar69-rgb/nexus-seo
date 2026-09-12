@@ -84,7 +84,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
             <div className="text-center mt-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/30 border border-brand-200 dark:border-brand-800 rounded-full mb-6">
                 <MapPin className="w-4 h-4 text-brand-600" />
-                <span className="text-brand-700 dark:text-brand-400 text-sm font-bold">{city.name} — {city.region}</span>
+                <span className="text-brand-700 dark:text-brand-300 text-sm font-bold">{city.name} — {city.region}</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6">

@@ -361,7 +361,7 @@ export default function GeoAuditPage() {
         <div className="rounded-lg border border-white/5 bg-white/[0.02] p-12">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <div className="w-16 h-16 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center">
-              <Globe className="h-8 w-8 text-brand-600 dark:text-brand-400" />
+              <Globe className="h-8 w-8 text-brand-600 dark:text-brand-300" />
             </div>
             <div>
               <p className="text-lg font-semibold text-white">Pret pour l&apos;analyse GEO</p>
@@ -474,7 +474,7 @@ export default function GeoAuditPage() {
                     key={idx}
                     className="flex items-start gap-3 rounded-lg bg-white/[0.03] p-4"
                   >
-                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 flex items-center justify-center text-sm font-bold">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-300 flex items-center justify-center text-sm font-bold">
                       {idx + 1}
                     </span>
                     <p className="text-sm text-white/70 leading-relaxed">{rec}</p>
@@ -550,7 +550,7 @@ export default function GeoAuditPage() {
               <h2 className="text-lg font-bold text-brand-800 dark:text-brand-300 mb-3">Recommandations GEO avancees</h2>
               <div className="space-y-2">
                 {result.geoRecommendations.map((rec: string, i: number) => (
-                  <p key={i} className="text-sm text-brand-700 dark:text-brand-400 flex items-start gap-2">
+                  <p key={i} className="text-sm text-brand-700 dark:text-brand-300 flex items-start gap-2">
                     <Lightbulb className="w-4 h-4 mt-0.5 shrink-0" /> {rec}
                   </p>
                 ))}

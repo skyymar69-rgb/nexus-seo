@@ -88,7 +88,7 @@ function RecommendationCard({ rec }: { rec: ActionableRec }) {
           {/* Description + Impact */}
           <div>
             <p className="text-sm text-foreground">{rec.description}</p>
-            <p className="text-sm font-medium text-brand-600 dark:text-brand-400 mt-2">{rec.impact}</p>
+            <p className="text-sm font-medium text-brand-600 dark:text-brand-300 mt-2">{rec.impact}</p>
           </div>
 
           {/* Steps */}
@@ -98,7 +98,7 @@ function RecommendationCard({ rec }: { rec: ActionableRec }) {
               <ol className="space-y-1.5">
                 {rec.steps.map((step, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-foreground">
-                    <span className="w-5 h-5 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">{i + 1}</span>
+                    <span className="w-5 h-5 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">{i + 1}</span>
                     {step}
                   </li>
                 ))}

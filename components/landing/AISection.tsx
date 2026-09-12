@@ -125,7 +125,7 @@ export function AISection() {
                     <div key={i} className="flex items-start gap-3">
                       <span className="text-xs text-muted-foreground shrink-0 mt-0.5">{m.time}</span>
                       <div>
-                        <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{m.llm}</span>
+                        <span className="text-xs font-bold text-brand-700 dark:text-brand-300">{m.llm}</span>
                         <p className="text-xs text-muted-foreground mt-0.5 italic">{m.text}</p>
                       </div>
                     </div>

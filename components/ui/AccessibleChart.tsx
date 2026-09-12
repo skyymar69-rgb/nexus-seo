@@ -42,7 +42,7 @@ export function AccessibleChart({
           type="button"
           onClick={() => setShowTable(!showTable)}
           aria-expanded={showTable}
-          className="text-xs text-brand-600 dark:text-brand-400 hover:underline focus-visible:outline-2 focus-visible:outline-brand-500"
+          className="text-xs text-brand-600 dark:text-brand-300 hover:underline focus-visible:outline-2 focus-visible:outline-brand-500"
         >
           {showTable ? 'Masquer les donnees' : 'Voir les donnees'}
         </button>

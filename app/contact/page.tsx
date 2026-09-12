@@ -187,7 +187,7 @@ export default function ContactPage() {
                         {' '}Base légale : consentement (Art. 6-1-a RGPD).
                         {' '}Durée de conservation : <strong>3 ans</strong> après le dernier contact.
                         {' '}Vos données ne sont ni vendues ni transmises à des tiers.{' '}
-                        <Link href="/privacy" className="text-brand-600 dark:text-brand-400 underline underline-offset-2 font-medium">
+                        <Link href="/privacy" className="text-brand-600 dark:text-brand-300 underline underline-offset-2 font-medium">
                           Politique de confidentialité complète →
                         </Link>
                       </div>
@@ -306,7 +306,7 @@ export default function ContactPage() {
                           <p id="consent-main-desc" className="mt-0.5 text-xs text-muted-foreground">
                             Je consens à ce que Kayzen Lyon traite mes données (nom, email, message) pour répondre à ma demande.
                             Conformément au RGPD, je peux retirer ce consentement à tout moment.{' '}
-                            <Link href="/privacy" className="text-brand-600 dark:text-brand-400 underline underline-offset-2">
+                            <Link href="/privacy" className="text-brand-600 dark:text-brand-300 underline underline-offset-2">
                               En savoir plus
                             </Link>
                           </p>

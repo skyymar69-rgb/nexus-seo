@@ -115,9 +115,9 @@ const services = [
 const colorMap: Record<string, { bg: string; text: string; ring: string; icon: string }> = {
   brand: {
     bg: 'bg-brand-50 dark:bg-brand-950/30',
-    text: 'text-brand-600 dark:text-brand-400',
+    text: 'text-brand-600 dark:text-brand-300',
     ring: 'ring-brand-200 dark:ring-brand-800/40',
-    icon: 'text-brand-600 dark:text-brand-400',
+    icon: 'text-brand-600 dark:text-brand-300',
   },
   violet: {
     bg: 'bg-violet-50 dark:bg-violet-950/30',

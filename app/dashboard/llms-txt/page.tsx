@@ -135,19 +135,19 @@ export default function LLMSTxtPage() {
             <h3 className="font-bold text-white mb-4">Comment installer votre llms.txt</h3>
             <ol className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
                 <span>Télécharger les deux fichiers (<code className="px-1 py-0.5 bg-surface-100 dark:bg-surface-800 rounded text-xs font-mono">llms.txt</code> et <code className="px-1 py-0.5 bg-surface-100 dark:bg-surface-800 rounded text-xs font-mono">llms-full.txt</code>)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
+                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
                 <span>Placez-les à la racine de votre site web (dans <code className="px-1 py-0.5 bg-surface-100 dark:bg-surface-800 rounded text-xs font-mono">/public/</code> pour Next.js ou à la racine pour WordPress)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
+                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
                 <span>Vérifiez que <code className="px-1 py-0.5 bg-surface-100 dark:bg-surface-800 rounded text-xs font-mono">votresite.fr/llms.txt</code> est accessible</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
+                <span className="w-6 h-6 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
                 <span>Les LLMs détecteront automatiquement votre fichier lors de leurs prochains crawls</span>
               </li>
             </ol>

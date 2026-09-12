@@ -39,7 +39,7 @@ export function UpgradePrompt({ feature, requiredPlan }: UpgradePromptProps) {
         {/* Lock Icon */}
         <div className="flex justify-center mb-4">
           <div className="w-16 h-16 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center">
-            <Lock className="w-8 h-8 text-brand-600 dark:text-brand-400" />
+            <Lock className="w-8 h-8 text-brand-600 dark:text-brand-300" />
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export function UpgradePrompt({ feature, requiredPlan }: UpgradePromptProps) {
 
           <Link
             href="/#pricing"
-            className="inline-flex px-6 py-3 rounded-lg font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 border border-brand-200 dark:border-brand-800 hover:border-brand-300 dark:hover:border-brand-700 transition-all duration-200"
+            className="inline-flex px-6 py-3 rounded-lg font-semibold text-brand-600 dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-300 border border-brand-200 dark:border-brand-800 hover:border-brand-300 dark:hover:border-brand-700 transition-all duration-200"
           >
             Comparer les plans
           </Link>

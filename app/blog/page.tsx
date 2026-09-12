@@ -26,7 +26,7 @@ const posts = [
     readTime: '12 min',
     date: '28 mars 2026',
     featured: true,
-    tag_color: 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40',
+    tag_color: 'text-brand-700 dark:text-brand-300 bg-brand-50 dark:bg-brand-950/40',
   },
   {
     slug: 'llmo-chatgpt-recommande-votre-marque',
@@ -66,7 +66,7 @@ const posts = [
     readTime: '10 min',
     date: '10 mars 2026',
     featured: false,
-    tag_color: 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40',
+    tag_color: 'text-brand-700 dark:text-brand-300 bg-brand-50 dark:bg-brand-950/40',
   },
   {
     slug: 'semrush-vs-nexus-comparaison',
@@ -123,7 +123,7 @@ export default function BlogPage() {
                   {featured.title}
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">{featured.excerpt}</p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-400 group-hover:gap-2.5 transition-all">
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-300 group-hover:gap-2.5 transition-all">
                   Lire l&apos;article <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
@@ -145,7 +145,7 @@ export default function BlogPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>{post.date}</span>
-                    <span className="text-brand-700 dark:text-brand-400 font-semibold group-hover:gap-1 flex items-center gap-0.5 transition-all">
+                    <span className="text-brand-700 dark:text-brand-300 font-semibold group-hover:gap-1 flex items-center gap-0.5 transition-all">
                       Lire <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>

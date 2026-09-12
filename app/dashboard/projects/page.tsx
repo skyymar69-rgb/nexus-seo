@@ -155,7 +155,7 @@ export default function ProjectsPage() {
                 <div className="p-4 flex gap-2">
                   <button
                     onClick={(e) => { e.stopPropagation(); selectWebsite(site.id); router.push('/dashboard/audit') }}
-                    className="flex-1 px-3 py-2 rounded-lg text-xs font-medium text-brand-600 dark:text-brand-400 hover:bg-brand-500/10 transition-colors"
+                    className="flex-1 px-3 py-2 rounded-lg text-xs font-medium text-brand-600 dark:text-brand-300 hover:bg-brand-500/10 transition-colors"
                   >
                     Auditer
                   </button>

@@ -93,7 +93,7 @@ export function Testimonials() {
             href="https://internet.kayzen-lyon.fr"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-300 hover:gap-3 transition-all"
           >
             Découvrir Kayzen Web <ArrowRight className="w-4 h-4" />
           </a>

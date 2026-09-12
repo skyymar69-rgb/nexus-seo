@@ -71,7 +71,7 @@ export default function CguPage() {
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">Article 5 — Droit de rétractation et remboursement</h2>
                 <p className="mb-3">Conformément à l&apos;article L.221-18 du Code de la consommation, les consommateurs (personnes physiques agissant à titre non professionnel) bénéficient d&apos;un droit de rétractation de <strong className="text-foreground">14 jours</strong> à compter de la souscription, sans justification.</p>
-                <p className="mb-3">Pour exercer ce droit, envoyez un email à <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">contact@kayzen-lyon.fr</a> avec la mention &laquo; Rétractation &raquo;. Le remboursement sera effectué sous 14 jours.</p>
+                <p className="mb-3">Pour exercer ce droit, envoyez un email à <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">contact@kayzen-lyon.fr</a> avec la mention &laquo; Rétractation &raquo;. Le remboursement sera effectué sous 14 jours.</p>
                 <p>Au-delà de la période de rétractation, aucun remboursement partiel n&apos;est accordé pour la période en cours. Le Client peut mettre fin à son abonnement à tout moment ; la résiliation prend effet à la fin de la période en cours.</p>
               </div>
 
@@ -112,7 +112,7 @@ export default function CguPage() {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">Article 11 — Contact</h2>
-                <p>Pour toute question relative aux présentes CGU/CGV : <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">contact@kayzen-lyon.fr</a> — KAYZEN LYON, 6 rue Pierre Termier, 69009 LYON.</p>
+                <p>Pour toute question relative aux présentes CGU/CGV : <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">contact@kayzen-lyon.fr</a> — KAYZEN LYON, 6 rue Pierre Termier, 69009 LYON.</p>
               </div>
 
             </div>

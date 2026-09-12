@@ -193,7 +193,7 @@ function SignupForm() {
               Finalité : création et gestion de votre compte, fourniture du service.
               Base légale : exécution du contrat + consentement.
               Conservation : durée du compte + 3 ans.{' '}
-              <Link href="/privacy" className="text-brand-600 dark:text-brand-400 underline underline-offset-2">Politique complète →</Link>
+              <Link href="/privacy" className="text-brand-600 dark:text-brand-300 underline underline-offset-2">Politique complète →</Link>
             </p>
           </div>
 
@@ -209,9 +209,9 @@ function SignupForm() {
             />
             <label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
               J&apos;accepte les{' '}
-              <Link href="/cgu" className="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 underline underline-offset-2">conditions d&apos;utilisation</Link>
+              <Link href="/cgu" className="text-brand-600 dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-300 underline underline-offset-2">conditions d&apos;utilisation</Link>
               {' '}et la{' '}
-              <Link href="/privacy" className="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 underline underline-offset-2">politique de confidentialité</Link>
+              <Link href="/privacy" className="text-brand-600 dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-300 underline underline-offset-2">politique de confidentialité</Link>
               <span className="text-red-500 ml-0.5" aria-hidden="true">*</span>
             </label>
           </div>
@@ -267,11 +267,11 @@ function SignupForm() {
           <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <ShieldCheck className="w-3.5 h-3.5 text-accent-500 flex-shrink-0" aria-hidden="true" />
             Droits : accès, rectification, effacement —{' '}
-            <a href="mailto:contact@kayzen-lyon.fr?subject=Exercice%20droits%20RGPD" className="text-brand-600 dark:text-brand-400/70 underline underline-offset-2 hover:text-brand-700 dark:hover:text-brand-400">
+            <a href="mailto:contact@kayzen-lyon.fr?subject=Exercice%20droits%20RGPD" className="text-brand-600 dark:text-brand-300/70 underline underline-offset-2 hover:text-brand-700 dark:hover:text-brand-400">
               contact@kayzen-lyon.fr
             </a>
             {' '}ou{' '}
-            <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-400/70 underline underline-offset-2 hover:text-brand-700 dark:hover:text-brand-400">CNIL</a>
+            <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-300/70 underline underline-offset-2 hover:text-brand-700 dark:hover:text-brand-400">CNIL</a>
           </p>
         </fieldset>
 
@@ -287,7 +287,7 @@ function SignupForm() {
 
       <p className="text-center text-sm text-muted-foreground">
         Déjà un compte ?{' '}
-        <Link href="/login" className="font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300">Se connecter</Link>
+        <Link href="/login" className="font-medium text-brand-600 dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-300">Se connecter</Link>
       </p>
     </div>
   );

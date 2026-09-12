@@ -158,7 +158,7 @@ export default function ExitIntent() {
               </div>
               <button
                 type="submit"
-                className="px-5 py-3 rounded-xl border border-brand-600 text-brand-600 dark:text-brand-400 dark:border-brand-400 font-semibold text-sm hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-colors flex-shrink-0"
+                className="px-5 py-3 rounded-xl border border-brand-600 text-brand-600 dark:text-brand-300 dark:border-brand-400 font-semibold text-sm hover:bg-brand-50 dark:hover:bg-brand-950/30 transition-colors flex-shrink-0"
               >
                 Envoyer
               </button>

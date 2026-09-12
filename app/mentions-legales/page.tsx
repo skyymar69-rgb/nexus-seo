@@ -29,16 +29,16 @@ export default function MentionsLegalesPage() {
                   <p><strong className="text-foreground">N° TVA intracommunautaire :</strong> FR85 999 418 346</p>
                   <p><strong className="text-foreground">Code APE :</strong> 4791B</p>
                   <p><strong className="text-foreground">Siège social :</strong> 6, rue Pierre Termier, 69009 LYON, France</p>
-                  <p><strong className="text-foreground">Téléphone :</strong> <a href="tel:+33487776861" className="text-brand-600 dark:text-brand-400 hover:underline">+33 (0)4 87 77 68 61</a></p>
-                  <p><strong className="text-foreground">Email :</strong> <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">contact@kayzen-lyon.fr</a></p>
-                  <p><strong className="text-foreground">Site principal :</strong> <a href="https://www.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-400 hover:underline">www.kayzen-lyon.fr</a></p>
-                  <p><strong className="text-foreground">Agence Web :</strong> <a href="https://internet.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-400 hover:underline">internet.kayzen-lyon.fr</a></p>
+                  <p><strong className="text-foreground">Téléphone :</strong> <a href="tel:+33487776861" className="text-brand-600 dark:text-brand-300 hover:underline">+33 (0)4 87 77 68 61</a></p>
+                  <p><strong className="text-foreground">Email :</strong> <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">contact@kayzen-lyon.fr</a></p>
+                  <p><strong className="text-foreground">Site principal :</strong> <a href="https://www.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-300 hover:underline">www.kayzen-lyon.fr</a></p>
+                  <p><strong className="text-foreground">Agence Web :</strong> <a href="https://internet.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-300 hover:underline">internet.kayzen-lyon.fr</a></p>
                 </div>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">2. Directeur de la publication</h2>
-                <p className="text-sm">Le directeur de la publication est le représentant légal de KAYZEN LYON, joignable à l&apos;adresse email : <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">contact@kayzen-lyon.fr</a>.</p>
+                <p className="text-sm">Le directeur de la publication est le représentant légal de KAYZEN LYON, joignable à l&apos;adresse email : <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">contact@kayzen-lyon.fr</a>.</p>
               </div>
 
               <div>
@@ -46,7 +46,7 @@ export default function MentionsLegalesPage() {
                 <div className="card p-6 space-y-2 text-sm">
                   <p><strong className="text-foreground">Hébergeur principal :</strong> Vercel Inc.</p>
                   <p><strong className="text-foreground">Adresse :</strong> 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</p>
-                  <p><strong className="text-foreground">Site :</strong> <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-400 hover:underline">vercel.com</a></p>
+                  <p><strong className="text-foreground">Site :</strong> <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-brand-600 dark:text-brand-300 hover:underline">vercel.com</a></p>
                   <p className="text-muted-foreground italic text-xs mt-2">🌱 Nexus SEO s&apos;engage dans une démarche d&apos;éco-responsabilité numérique. Nos services privilégient les infrastructures à bilan carbone réduit.</p>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export default function MentionsLegalesPage() {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">8. Médiation et règlement des litiges</h2>
-                <p className="text-sm leading-relaxed">Conformément à l&apos;article L.612-1 du Code de la consommation, tout consommateur peut recourir gratuitement au service de médiation de la consommation. Nos coordonnées de médiateur vous seront communiquées sur simple demande à <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">contact@kayzen-lyon.fr</a>.</p>
+                <p className="text-sm leading-relaxed">Conformément à l&apos;article L.612-1 du Code de la consommation, tout consommateur peut recourir gratuitement au service de médiation de la consommation. Nos coordonnées de médiateur vous seront communiquées sur simple demande à <a href="mailto:contact@kayzen-lyon.fr" className="text-brand-600 dark:text-brand-300 hover:underline">contact@kayzen-lyon.fr</a>.</p>
               </div>
 
             </div>
