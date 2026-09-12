@@ -58,7 +58,7 @@ export default function AboutPage() {
               <div key={s.label} className="text-center">
                 <p className="text-4xl font-black gradient-text mb-1">{s.value}</p>
                 <p className="font-semibold text-surface-900 dark:text-white text-sm">{s.label}</p>
-                <p className="text-xs text-surface-400 mt-0.5">{s.desc}</p>
+                <p className="text-xs text-surface-600 dark:text-surface-400 mt-0.5">{s.desc}</p>
               </div>
             ))}
           </div>

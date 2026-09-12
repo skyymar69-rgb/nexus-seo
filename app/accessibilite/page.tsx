@@ -125,7 +125,7 @@ export default function AccessibilityStatementPage() {
                 <li>Envoyer un courrier par la poste (gratuit) : Defenseur des droits — Libre reponse 71120 — 75342 Paris CEDEX 07</li>
               </ul>
 
-              <p className="text-sm text-surface-400 mt-8">
+              <p className="text-sm text-surface-600 dark:text-surface-400 mt-8">
                 Cette declaration a ete etablie le 16 avril 2026.
               </p>
             </div>

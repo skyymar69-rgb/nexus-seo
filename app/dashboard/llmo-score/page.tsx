@@ -125,7 +125,7 @@ function MetricCard({
       </div>
       <p className="text-2xl font-bold text-white">
         {value}
-        {suffix && <span className="text-sm text-surface-400 font-normal ml-1">{suffix}</span>}
+        {suffix && <span className="text-sm text-surface-600 dark:text-surface-400 font-normal ml-1">{suffix}</span>}
       </p>
     </div>
   )
@@ -342,7 +342,7 @@ export default function LLMOScorePage() {
 
           <div>
             <label className="block text-sm font-medium text-white/70 mb-1.5">
-              Requetes a analyser <span className="text-surface-400 font-normal">(une par ligne, max 5)</span>
+              Requetes a analyser <span className="text-surface-600 dark:text-surface-400 font-normal">(une par ligne, max 5)</span>
             </label>
             <textarea
               value={queriesText}
@@ -389,7 +389,7 @@ export default function LLMOScorePage() {
             className={cn(
               'w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm transition-all',
               isLoading
-                ? 'bg-surface-200 dark:bg-surface-700 text-surface-400 cursor-not-allowed'
+                ? 'bg-surface-200 dark:bg-surface-700 text-surface-600 dark:text-surface-400 cursor-not-allowed'
                 : 'bg-gradient-to-r from-purple-500 to-purple-600 text-white hover:shadow-lg hover:from-purple-600 hover:to-purple-700'
             )}
           >

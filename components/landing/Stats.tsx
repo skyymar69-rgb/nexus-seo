@@ -71,7 +71,7 @@ export function Stats() {
               <p className="text-4xl sm:text-5xl font-black text-white mb-1.5">
                 <Counter target={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="text-sm text-white/70 font-medium">{stat.label}</p>
+              <p className="text-sm text-white/90 font-medium">{stat.label}</p>
             </div>
           ))}
         </div>

@@ -61,7 +61,7 @@ export function UrlInput({
     <div className={cn('relative', className)}>
       <div className="flex gap-2">
         <div className="flex-1 relative">
-          <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-400" />
+          <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-600 dark:text-surface-400" />
           <input
             type="url"
             value={value}
@@ -78,7 +78,7 @@ export function UrlInput({
               onClick={() => setShowDropdown(!showDropdown)}
               className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
             >
-              <ChevronDown className={cn('w-4 h-4 text-surface-400 transition-transform', showDropdown && 'rotate-180')} />
+              <ChevronDown className={cn('w-4 h-4 text-surface-600 dark:text-surface-400 transition-transform', showDropdown && 'rotate-180')} />
             </button>
           )}
 
@@ -87,7 +87,7 @@ export function UrlInput({
             <>
               <div className="fixed inset-0 z-10" onClick={() => setShowDropdown(false)} />
               <div className="absolute top-full left-0 right-0 mt-1 z-20 bg-white dark:bg-surface-900 border border-surface-200 dark:border-surface-700 rounded-xl shadow-lg overflow-hidden">
-                <div className="px-3 py-2 text-xs font-semibold text-surface-400 uppercase tracking-wider border-b border-surface-100 dark:border-surface-800">
+                <div className="px-3 py-2 text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wider border-b border-surface-100 dark:border-surface-800">
                   Accès rapide
                 </div>
                 {quickOptions.map((opt) => (
@@ -97,7 +97,7 @@ export function UrlInput({
                     onClick={() => handleSelect(opt.url)}
                     className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-surface-700 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-800 transition-colors text-left"
                   >
-                    <opt.icon className="w-4 h-4 text-surface-400 flex-shrink-0" />
+                    <opt.icon className="w-4 h-4 text-surface-600 dark:text-surface-400 flex-shrink-0" />
                     <span className="truncate">{opt.label}</span>
                   </button>
                 ))}

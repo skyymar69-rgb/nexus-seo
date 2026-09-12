@@ -103,7 +103,7 @@ export default function AccessibilityToggle() {
 
       {/* Panel */}
       {open && (
-        <div className="absolute bottom-16 left-0 w-72 rounded-xl border border-white/12 bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-black/30 p-4 animate-fade-in">
+        <div className="absolute bottom-16 left-0 w-72 rounded-2xl border border-surface-200 dark:border-white/12 bg-white/98 dark:bg-surface-900/95 backdrop-blur-xl shadow-elev-lg p-4 animate-fade-in">
           <h3 className="text-sm font-semibold text-white mb-4">
             Accessibilit&eacute;
           </h3>
@@ -123,7 +123,7 @@ export default function AccessibilityToggle() {
                   className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                     prefs.fontSize === value
                       ? 'bg-brand-600 text-white'
-                      : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'
+                      : 'bg-surface-100 dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-surface-200 dark:hover:bg-surface-700'
                   }`}
                 >
                   {label}
@@ -146,7 +146,7 @@ export default function AccessibilityToggle() {
                   className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                     prefs.contrast === value
                       ? 'bg-brand-600 text-white'
-                      : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'
+                      : 'bg-surface-100 dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-surface-200 dark:hover:bg-surface-700'
                   }`}
                 >
                   {label}

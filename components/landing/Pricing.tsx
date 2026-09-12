@@ -66,7 +66,7 @@ export function Pricing() {
                 {features.map((feature) => (
                   <div key={feature} className="flex items-center gap-2">
                     <div className="w-5 h-5 rounded-full bg-green-50 dark:bg-green-950/40 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-green-600" />
+                      <Check className="w-3 h-3 text-green-700 dark:text-green-400" />
                     </div>
                     <span className="text-sm text-surface-700 dark:text-surface-300">{feature}</span>
                   </div>

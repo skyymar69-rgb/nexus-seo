@@ -124,7 +124,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
         {/* Hero */}
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Link href="/cases" className="inline-flex items-center gap-2 text-sm text-surface-400 hover:text-brand-500 transition-colors mb-8">
+            <Link href="/cases" className="inline-flex items-center gap-2 text-sm text-surface-600 dark:text-surface-400 hover:text-brand-500 transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
               Tous les cas clients
             </Link>
@@ -148,7 +148,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
               {c.results.map((r) => (
                 <div key={r.metric} className="card p-5 text-center">
                   <p className="text-2xl font-black gradient-text mb-1">{r.value}</p>
-                  <p className="text-xs text-surface-400">{r.metric}</p>
+                  <p className="text-xs text-surface-600 dark:text-surface-400">{r.metric}</p>
                 </div>
               ))}
             </div>
@@ -191,7 +191,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-surface-900 dark:text-white">{c.author}</p>
-                    <p className="text-xs text-surface-400">{c.role}</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400">{c.role}</p>
                   </div>
                 </div>
               </blockquote>
@@ -205,7 +205,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
                   {c.results.map((r) => (
                     <div key={r.metric}>
                       <p className="text-2xl font-black gradient-text">{r.value}</p>
-                      <p className="text-xs text-surface-400">{r.metric}</p>
+                      <p className="text-xs text-surface-600 dark:text-surface-400">{r.metric}</p>
                     </div>
                   ))}
                 </div>
@@ -215,15 +215,15 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
                 <h3 className="text-sm font-bold text-surface-900 dark:text-white uppercase tracking-wide mb-4">Infos</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-surface-400">Secteur</span>
+                    <span className="text-surface-600 dark:text-surface-400">Secteur</span>
                     <span className="text-surface-900 dark:text-white font-medium">{c.category}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-surface-400">Durée</span>
+                    <span className="text-surface-600 dark:text-surface-400">Durée</span>
                     <span className="text-surface-900 dark:text-white font-medium">{c.duration}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-surface-400">Services</span>
+                    <span className="text-surface-600 dark:text-surface-400">Services</span>
                     <div className="flex gap-1 flex-wrap justify-end">
                       {c.tags.map((tag) => (
                         <span key={tag} className="text-xs font-semibold text-brand-600 dark:text-brand-400">{tag}</span>

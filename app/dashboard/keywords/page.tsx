@@ -160,7 +160,7 @@ function KPICard({
   return (
     <div className="rounded-lg border border-surface-700 bg-surface-900/50 p-5 backdrop-blur">
       <div className="flex items-start justify-between mb-3">
-        <p className="text-sm text-surface-400 font-medium">{label}</p>
+        <p className="text-sm text-surface-600 dark:text-surface-400 font-medium">{label}</p>
         <div className="p-2 rounded-lg bg-brand-500/15">{Icon}</div>
       </div>
       <div className="flex items-baseline gap-2">
@@ -261,7 +261,7 @@ function AddKeywordsModal({
             onClick={onClose}
             className="p-1 hover:bg-surface-800 rounded-lg transition-colors"
           >
-            <X className="h-5 w-5 text-surface-400" />
+            <X className="h-5 w-5 text-surface-600 dark:text-surface-400" />
           </button>
         </div>
 
@@ -340,7 +340,7 @@ function FilterPanel({
       </h3>
 
       <div>
-        <label className="text-xs font-medium text-surface-400 uppercase tracking-wide mb-2 block">
+        <label className="text-xs font-medium text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-2 block">
           Position (#{positionRange[0]} - #{positionRange[1]})
         </label>
         <div className="space-y-2">
@@ -364,7 +364,7 @@ function FilterPanel({
       </div>
 
       <div>
-        <label className="text-xs font-medium text-surface-400 uppercase tracking-wide mb-2 block">
+        <label className="text-xs font-medium text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-2 block">
           Volume ({volumeRange[0]} - {volumeRange[1]})
         </label>
         <div className="space-y-2">
@@ -388,7 +388,7 @@ function FilterPanel({
       </div>
 
       <div>
-        <label className="text-xs font-medium text-surface-400 uppercase tracking-wide mb-2 block">
+        <label className="text-xs font-medium text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-2 block">
           Difficulté ({difficultyRange[0]} - {difficultyRange[1]})
         </label>
         <div className="space-y-2">
@@ -412,7 +412,7 @@ function FilterPanel({
       </div>
 
       <div>
-        <label className="text-xs font-medium text-surface-400 uppercase tracking-wide mb-2 block">
+        <label className="text-xs font-medium text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-2 block">
           Type d'intention
         </label>
         <div className="space-y-2">
@@ -595,7 +595,7 @@ export default function KeywordsPage() {
     return (
       <div className="flex flex-col items-center justify-center py-24 space-y-4">
         <Loader2 className="h-8 w-8 animate-spin text-brand-400" />
-        <p className="text-surface-400">Chargement des mots-clés...</p>
+        <p className="text-surface-600 dark:text-surface-400">Chargement des mots-clés...</p>
       </div>
     )
   }
@@ -608,7 +608,7 @@ export default function KeywordsPage() {
           <h1 className="text-4xl font-bold tracking-tight text-surface-100 mb-1">
             Mots-cles
           </h1>
-          <p className="text-surface-400">
+          <p className="text-surface-600 dark:text-surface-400">
             {selectedWebsite
               ? `Mots-clés suivis pour ${selectedWebsite.domain}`
               : 'Gérez et suivez les performances de vos mots-clés'}
@@ -783,11 +783,11 @@ export default function KeywordsPage() {
                       className="rounded border border-surface-600 cursor-pointer"
                     />
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase">
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase">
                     Mot-clé
                   </th>
                   <th
-                    className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase cursor-pointer hover:text-surface-200"
+                    className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase cursor-pointer hover:text-surface-200"
                     onClick={() => {
                       setSortBy('position')
                       setSortDir(sortDir === 'asc' ? 'desc' : 'asc')
@@ -800,11 +800,11 @@ export default function KeywordsPage() {
                       )}
                     </div>
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase">
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase">
                     Prés.
                   </th>
                   <th
-                    className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase cursor-pointer hover:text-surface-200"
+                    className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase cursor-pointer hover:text-surface-200"
                     onClick={() => {
                       setSortBy('volume')
                       setSortDir(sortDir === 'asc' ? 'desc' : 'asc')
@@ -818,7 +818,7 @@ export default function KeywordsPage() {
                     </div>
                   </th>
                   <th
-                    className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase cursor-pointer hover:text-surface-200"
+                    className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase cursor-pointer hover:text-surface-200"
                     onClick={() => {
                       setSortBy('difficulty')
                       setSortDir(sortDir === 'asc' ? 'desc' : 'asc')
@@ -832,7 +832,7 @@ export default function KeywordsPage() {
                     </div>
                   </th>
                   <th
-                    className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase cursor-pointer hover:text-surface-200"
+                    className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase cursor-pointer hover:text-surface-200"
                     onClick={() => {
                       setSortBy('cpc')
                       setSortDir(sortDir === 'asc' ? 'desc' : 'asc')
@@ -845,13 +845,13 @@ export default function KeywordsPage() {
                       )}
                     </div>
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase">
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase">
                     Type
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase">
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase">
                     SERP
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400 uppercase">
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase">
                     Actions
                   </th>
                 </tr>
@@ -884,7 +884,7 @@ export default function KeywordsPage() {
                       <td className="px-4 py-3">
                         <PositionBadge position={kw.position} previousPosition={kw.previousPosition} />
                       </td>
-                      <td className="px-4 py-3 text-sm text-surface-400">
+                      <td className="px-4 py-3 text-sm text-surface-600 dark:text-surface-400">
                         #{kw.previousPosition}
                       </td>
                       <td className="px-4 py-3 text-sm text-surface-300 font-medium">
@@ -905,7 +905,7 @@ export default function KeywordsPage() {
                               style={{ width: `${kw.difficulty}%` }}
                             />
                           </div>
-                          <span className="text-xs font-semibold text-surface-400">{kw.difficulty}</span>
+                          <span className="text-xs font-semibold text-surface-600 dark:text-surface-400">{kw.difficulty}</span>
                         </div>
                       </td>
                       <td className="px-4 py-3 text-sm font-medium text-surface-300">
@@ -919,25 +919,25 @@ export default function KeywordsPage() {
                           {kw.serpFeatures.slice(0, 2).map((feature, idx) => (
                             <span
                               key={idx}
-                              className="text-xs px-1.5 py-0.5 rounded bg-surface-700/50 text-surface-400"
+                              className="text-xs px-1.5 py-0.5 rounded bg-surface-700/50 text-surface-600 dark:text-surface-400"
                             >
                               {feature.substring(0, 4)}
                             </span>
                           ))}
                           {kw.serpFeatures.length > 2 && (
-                            <span className="text-xs px-1.5 py-0.5 rounded bg-surface-700/50 text-surface-400">
+                            <span className="text-xs px-1.5 py-0.5 rounded bg-surface-700/50 text-surface-600 dark:text-surface-400">
                               +{kw.serpFeatures.length - 2}
                             </span>
                           )}
                         </div>
                       </td>
                       <td className="px-4 py-3 flex gap-2">
-                        <button className="p-1.5 rounded-lg hover:bg-surface-700 transition-colors text-surface-400 hover:text-surface-200">
+                        <button className="p-1.5 rounded-lg hover:bg-surface-700 transition-colors text-surface-600 dark:text-surface-400 hover:text-surface-200">
                           <Eye className="h-4 w-4" />
                         </button>
                         <button
                           onClick={() => setKeywords(keywords.filter((k) => k.id !== kw.id))}
-                          className="p-1.5 rounded-lg hover:bg-red-500/20 transition-colors text-surface-400 hover:text-red-400"
+                          className="p-1.5 rounded-lg hover:bg-red-500/20 transition-colors text-surface-600 dark:text-surface-400 hover:text-red-400"
                         >
                           <Trash2 className="h-4 w-4" />
                         </button>
@@ -947,7 +947,7 @@ export default function KeywordsPage() {
                 ) : (
                   <tr>
                     <td colSpan={11} className="px-6 py-12 text-center">
-                      <p className="text-surface-400">
+                      <p className="text-surface-600 dark:text-surface-400">
                         {keywords.length === 0
                           ? 'Aucun mot-cle suivi. Ajoutez des mots-clés pour commencer le suivi.'
                           : 'Aucun mot-cle ne correspond aux filtres'}
@@ -961,7 +961,7 @@ export default function KeywordsPage() {
 
           {/* Pagination */}
           {sortedKeywords.length > 0 && (
-            <div className="px-4 py-3 border-t border-surface-700 bg-surface-800/20 text-sm text-surface-400">
+            <div className="px-4 py-3 border-t border-surface-700 bg-surface-800/20 text-sm text-surface-600 dark:text-surface-400">
               Affichage <span className="font-semibold text-surface-300">{sortedKeywords.length}</span> sur{' '}
               <span className="font-semibold text-surface-300">{keywords.length}</span> mots-clés
             </div>

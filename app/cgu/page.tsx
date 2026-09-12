@@ -15,7 +15,7 @@ export default function CguPage() {
           <div className="max-w-3xl mx-auto">
             <div className="section-badge mb-6">Conditions contractuelles</div>
             <h1 className="text-4xl font-black text-surface-900 dark:text-white mb-3">Conditions Générales d&apos;Utilisation et de Vente</h1>
-            <p className="text-surface-400 text-sm mb-12">En vigueur au 1er avril 2026 — Droit applicable : droit français</p>
+            <p className="text-surface-600 dark:text-surface-400 text-sm mb-12">En vigueur au 1er avril 2026 — Droit applicable : droit français</p>
 
             <div className="space-y-10 text-surface-600 dark:text-surface-400 text-sm leading-relaxed">
 

@@ -130,7 +130,7 @@ export function Hero() {
           </div>
 
           {/* Trust text */}
-          <p className="text-sm text-white/70 mb-10">
+          <p className="text-sm text-white/85 mb-10">
             Aucune inscription requise · Résultats instantanés · Export PDF, Markdown, JSON
           </p>
 
@@ -150,7 +150,7 @@ export function Hero() {
                       <p className="text-2xl sm:text-3xl font-black text-brand-300">
                         {stat.value}
                       </p>
-                      <p className="text-xs text-white/70 uppercase tracking-wider font-medium">{stat.label}</p>
+                      <p className="text-xs text-white/85 uppercase tracking-wider font-medium">{stat.label}</p>
                     </div>
                   </div>
                 )
@@ -159,7 +159,7 @@ export function Hero() {
           </div>
 
           {/* Trust signal */}
-          <p className="text-sm text-white/70 font-medium">
+          <p className="text-sm text-white/85 font-medium">
             Développé par <a href="https://internet.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-300 transition-colors">Kayzen Web</a> — Agence web Lyon
           </p>
         </div>

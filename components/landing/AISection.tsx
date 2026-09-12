@@ -80,7 +80,7 @@ export function AISection() {
                 <div className="w-2.5 h-2.5 rounded-full bg-accent-400" />
               </div>
               <span className="text-xs font-mono text-surface-600 dark:text-surface-400">AI Visibility Dashboard</span>
-              <div className="ml-auto flex items-center gap-1.5 text-xs text-accent-500 font-semibold">
+              <div className="ml-auto flex items-center gap-1.5 text-xs text-accent-700 dark:text-accent-400 font-semibold">
                 <div className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
                 Live
               </div>
@@ -119,13 +119,13 @@ export function AISection() {
 
               {/* Recent mentions */}
               <div className="rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700 p-4">
-                <p className="text-xs font-semibold text-surface-500 uppercase tracking-wide mb-3">Dernières mentions</p>
+                <p className="text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-3">Dernières mentions</p>
                 <div className="space-y-3">
                   {mentions.map((m, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <span className="text-xs text-surface-600 dark:text-surface-400 shrink-0 mt-0.5">{m.time}</span>
                       <div>
-                        <span className="text-xs font-bold text-brand-500">{m.llm}</span>
+                        <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{m.llm}</span>
                         <p className="text-xs text-surface-500 dark:text-surface-400 mt-0.5 italic">{m.text}</p>
                       </div>
                     </div>

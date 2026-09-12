@@ -116,7 +116,7 @@ function ExpandableCheck({ check }: { check: GeoCheck }) {
           <p className="text-sm text-white/50 mt-1">{check.value}</p>
         </div>
         <button className="flex-shrink-0 p-2 hover:bg-surface-200/50 dark:hover:bg-surface-700/50 rounded-lg transition-colors">
-          <ChevronDown className={cn('h-4 w-4 text-surface-400 transition-transform', isExpanded && 'rotate-180')} />
+          <ChevronDown className={cn('h-4 w-4 text-surface-600 dark:text-surface-400 transition-transform', isExpanded && 'rotate-180')} />
         </button>
       </div>
       {isExpanded && (
@@ -161,7 +161,7 @@ function CategoryCard({
           </h3>
           <div className="ml-auto flex items-center gap-2">
             <span className={cn('text-lg font-bold', getScoreColor(category.score))}>{category.score}</span>
-            <ChevronDown className={cn('h-4 w-4 text-surface-400 transition-transform', isExpanded && 'rotate-180')} />
+            <ChevronDown className={cn('h-4 w-4 text-surface-600 dark:text-surface-400 transition-transform', isExpanded && 'rotate-180')} />
           </div>
         </div>
 

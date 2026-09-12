@@ -89,7 +89,7 @@ const tabs = [
     id: 'technical',
     label: 'SEO Technique',
     icon: Wrench,
-    color: 'text-accent-500',
+    color: 'text-accent-700 dark:text-accent-400',
     title: 'Audit Technique Complet',
     subtitle: 'Le socle technique parfait pour dominer les SERP',
     desc: "Nexus crawle votre site en profondeur pour détecter tous les problèmes techniques qui freinent votre référencement : performance, indexation, architecture, liens cassés, redirections, Core Web Vitals...",
@@ -115,7 +115,7 @@ const tabs = [
     id: 'analytics',
     label: 'Analytics',
     icon: BarChart3,
-    color: 'text-amber-500',
+    color: 'text-amber-700 dark:text-amber-400',
     title: 'Analytics & Rapports Intelligents',
     subtitle: 'Toutes vos données SEO au même endroit',
     desc: "Connectez Google Search Console, Analytics et vos outils tiers. Nexus agrège tout et génère des rapports clairs, actionnables et beautifully designed pour vous et vos clients.",
@@ -260,7 +260,7 @@ export function Features() {
 
             <div className="mt-8 pt-6 border-t border-surface-200 dark:border-surface-700 flex items-center justify-between text-xs text-surface-600 dark:text-surface-400">
               <span>Mis à jour il y a 3 min</span>
-              <div className="flex items-center gap-1.5 text-accent-500 font-semibold">
+              <div className="flex items-center gap-1.5 text-accent-700 dark:text-accent-400 font-semibold">
                 <div className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
                 Actif
               </div>

@@ -80,7 +80,7 @@ export default function LoginPage() {
             Adresse e-mail
           </label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-400 dark:text-white/50" />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/50" />
             <input
               id="email"
               type="email"
@@ -100,7 +100,7 @@ export default function LoginPage() {
             Mot de passe
           </label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-400 dark:text-white/50" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/50" />
             <input
               id="password"
               type={showPassword ? 'text' : 'password'}
@@ -116,7 +116,7 @@ export default function LoginPage() {
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-400 dark:text-white/50 hover:text-surface-700 dark:hover:text-white/80"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-600 dark:text-surface-400 dark:text-white/50 hover:text-surface-700 dark:hover:text-white/80"
             >
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
@@ -127,7 +127,7 @@ export default function LoginPage() {
           type="submit"
           disabled={isLoading}
           aria-busy={isLoading}
-          className="w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
+          className="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
         >
           {isLoading ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Connexion...</>

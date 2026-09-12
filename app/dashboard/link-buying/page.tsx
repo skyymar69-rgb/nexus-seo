@@ -106,7 +106,7 @@ export default function LinkBuyingPage() {
       {/* Filters */}
       <div className="bg-white/[0.03] rounded-xl border border-white/5 p-4 flex flex-col sm:flex-row gap-3">
         <div className="flex items-center gap-2 flex-1 px-3 py-2 rounded-lg border border-white/5 bg-white/[0.02]">
-          <Search className="w-4 h-4 text-surface-400" />
+          <Search className="w-4 h-4 text-surface-600 dark:text-surface-400" />
           <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Rechercher un domaine..." className="flex-1 bg-transparent outline-none text-sm" />
         </div>
         <select value={typeFilter} onChange={e => setTypeFilter(e.target.value)} className="px-3 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-sm">
@@ -131,7 +131,7 @@ export default function LinkBuyingPage() {
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <Globe className="w-4 h-4 text-surface-400" />
+                  <Globe className="w-4 h-4 text-surface-600 dark:text-surface-400" />
                   <span className="font-bold text-white">{opp.domain}</span>
                   <span className={cn('px-2 py-0.5 text-[10px] font-bold rounded-full', typeColors[opp.type])}>
                     {typeLabels[opp.type]}
@@ -146,15 +146,15 @@ export default function LinkBuyingPage() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="text-center">
-                  <div className="text-[10px] text-surface-400 uppercase">DA</div>
+                  <div className="text-[10px] text-surface-600 dark:text-surface-400 uppercase">DA</div>
                   <DABadge value={opp.da} />
                 </div>
                 <div className="text-center">
-                  <div className="text-[10px] text-surface-400 uppercase">DR</div>
+                  <div className="text-[10px] text-surface-600 dark:text-surface-400 uppercase">DR</div>
                   <DABadge value={opp.dr} />
                 </div>
                 <div className="text-center">
-                  <div className="text-[10px] text-surface-400 uppercase">Prix</div>
+                  <div className="text-[10px] text-surface-600 dark:text-surface-400 uppercase">Prix</div>
                   <span className="text-xs font-bold text-green-600">{opp.price}</span>
                 </div>
                 <button className="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition-colors flex items-center gap-1">

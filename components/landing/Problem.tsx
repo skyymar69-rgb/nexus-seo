@@ -16,7 +16,7 @@ const problems = [
   },
   {
     icon: BrainCircuit,
-    color: 'text-amber-500',
+    color: 'text-amber-700 dark:text-amber-400',
     bg: 'bg-amber-50 dark:bg-amber-950/20',
     border: 'border-amber-200 dark:border-amber-900/40',
     title: 'ChatGPT répond à votre place',

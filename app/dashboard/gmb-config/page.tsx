@@ -121,7 +121,7 @@ export default function GMBConfigPage() {
               <div className="p-3 rounded-lg bg-white/[0.02]">
                 <p className="text-xs font-bold text-surface-500 mb-1">CATEGORIE PRINCIPALE</p>
                 <p className="text-sm text-white">{result.businessInfo.category}</p>
-                <p className="text-xs text-surface-400 mt-1">Sous-catégories suggérées: {result.businessInfo.subcategories.join(', ')}</p>
+                <p className="text-xs text-surface-600 dark:text-surface-400 mt-1">Sous-catégories suggérées: {result.businessInfo.subcategories.join(', ')}</p>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02]">
                 <div className="flex items-center justify-between mb-1">

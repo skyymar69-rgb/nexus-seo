@@ -126,7 +126,7 @@ export default function PromptTesterPage() {
           <div>
             <label className="block text-sm font-medium text-white/70 mb-1">Votre marque / domaine</label>
             <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800">
-              <Globe className="w-4 h-4 text-surface-400" />
+              <Globe className="w-4 h-4 text-surface-600 dark:text-surface-400" />
               <input type="text" value={brand} onChange={e => setBrand(e.target.value)} placeholder="kayzen" className="flex-1 bg-transparent outline-none text-sm" />
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function PromptTesterPage() {
                     <span className="font-semibold text-sm">{llmInfo?.name}</span>
                   </div>
                   {r.loading ? (
-                    <Loader2 className="w-6 h-6 animate-spin mx-auto text-surface-400" />
+                    <Loader2 className="w-6 h-6 animate-spin mx-auto text-surface-600 dark:text-surface-400" />
                   ) : r.mentioned ? (
                     <CheckCircle className="w-8 h-8 text-green-500 mx-auto" />
                   ) : (
@@ -235,7 +235,7 @@ export default function PromptTesterPage() {
                   </div>
                   <button
                     onClick={() => copyResponse(r.response, r.llm)}
-                    className="text-xs text-surface-400 hover:text-surface-600 flex items-center gap-1"
+                    className="text-xs text-surface-600 dark:text-surface-400 hover:text-surface-600 flex items-center gap-1"
                   >
                     {copied === r.llm ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
                     {copied === r.llm ? 'Copie' : 'Copier'}

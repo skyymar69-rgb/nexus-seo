@@ -119,7 +119,7 @@ function MetaInfoCard({
     return (
       <div className="p-4 rounded-lg bg-surface-50 dark:bg-surface-800/50 border border-surface-200 dark:border-surface-700">
         <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">{label}</p>
-        <p className="text-surface-400 dark:text-surface-600 text-sm italic">Non trouvé</p>
+        <p className="text-surface-600 dark:text-surface-400 dark:text-surface-600 text-sm italic">Non trouvé</p>
       </div>
     )
   }
@@ -181,7 +181,7 @@ function CheckItem({ check, expanded, onToggle }: { check: AuditCheck; expanded:
             <div className="text-xs text-surface-500 dark:text-surface-400">/100</div>
           </div>
           <svg
-            className={`w-5 h-5 transition-transform text-surface-400 dark:text-surface-500 ${expanded ? 'rotate-180' : ''}`}
+            className={`w-5 h-5 transition-transform text-surface-600 dark:text-surface-400 dark:text-surface-500 ${expanded ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -705,7 +705,7 @@ export default function AuditGratuitPage() {
                       <div className="text-sm font-semibold text-surface-900 dark:text-white group-hover:text-brand-600 transition-colors">{tool.label}</div>
                       <div className="text-xs text-surface-500 truncate">{tool.desc}</div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-surface-400 group-hover:text-brand-500 flex-shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-surface-600 dark:text-surface-400 group-hover:text-brand-500 flex-shrink-0" />
                   </Link>
                 ))}
               </div>
@@ -821,8 +821,8 @@ export default function AuditGratuitPage() {
             >
               {tool.badge && (
                 <span className={`absolute top-4 right-4 px-2 py-0.5 rounded-full text-xs font-semibold ${
-                  tool.badge === 'Nouveau' ? 'bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-400' :
-                  'bg-amber-50 text-amber-600 dark:bg-amber-950 dark:text-amber-400'
+                  tool.badge === 'Nouveau' ? 'bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-400' :
+                  'bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-400'
                 }`}>
                   {tool.badge}
                 </span>

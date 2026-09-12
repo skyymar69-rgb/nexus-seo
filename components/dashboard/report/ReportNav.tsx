@@ -82,7 +82,7 @@ export function ReportNav({ scores }: ReportNavProps) {
       </nav>
 
       {/* Mobile — horizontal pills */}
-      <nav className="lg:hidden sticky top-0 z-10 bg-zinc-950/90 backdrop-blur-sm border-b border-white/5 -mx-4 px-4 py-2 overflow-x-auto flex gap-2 scrollbar-hide">
+      <nav className="lg:hidden sticky top-0 z-10 bg-white/95 dark:bg-surface-950/95 backdrop-blur-sm border-b border-surface-200 dark:border-white/5 -mx-4 px-4 py-2 overflow-x-auto flex gap-2 scrollbar-hide">
         {NAV_ITEMS.map(({ id, label, icon: Icon, scoreKey }) => (
           <button
             key={id}

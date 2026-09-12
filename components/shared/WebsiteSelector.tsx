@@ -80,7 +80,7 @@ export function WebsiteSelector() {
               <p className="text-xs text-surface-500 truncate">{selectedWebsite.domain}</p>
             </>
           ) : (
-            <p className="text-sm text-surface-400">Selectionnez un site</p>
+            <p className="text-sm text-surface-600 dark:text-surface-400">Selectionnez un site</p>
           )}
         </div>
         {selectedWebsite?.latestAudit && (

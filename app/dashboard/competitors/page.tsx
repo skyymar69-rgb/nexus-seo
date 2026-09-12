@@ -471,7 +471,7 @@ export default function CompetitorsPage() {
               Analyse des Concurrents
             </h1>
           </div>
-          <p className="text-surface-400 mt-1 max-w-xl">
+          <p className="text-surface-600 dark:text-surface-400 mt-1 max-w-xl">
             Ajoutez des domaines concurrents, lancez un crawl et comparez les
             metriques reelles de vos sites
           </p>
@@ -496,7 +496,7 @@ export default function CompetitorsPage() {
 
       {/* Add Competitor Form */}
       <div className="rounded-xl border border-surface-700 bg-surface-900/50 backdrop-blur p-6 shadow-sm">
-        <h2 className="text-sm font-semibold text-surface-400 uppercase tracking-wide mb-4">
+        <h2 className="text-sm font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-4">
           Ajouter un concurrent
         </h2>
         <form
@@ -558,7 +558,7 @@ export default function CompetitorsPage() {
               <button
                 onClick={crawlOwnSite}
                 disabled={ownLoading}
-                className="p-2 rounded-lg bg-surface-800 hover:bg-surface-700 transition-colors text-surface-400 hover:text-surface-200 disabled:opacity-50"
+                className="p-2 rounded-lg bg-surface-800 hover:bg-surface-700 transition-colors text-surface-600 dark:text-surface-400 hover:text-surface-200 disabled:opacity-50"
                 title="Analyser votre site"
               >
                 {ownLoading ? (
@@ -643,7 +643,7 @@ export default function CompetitorsPage() {
                   <button
                     onClick={() => crawlCompetitor(comp.id)}
                     disabled={comp.isLoading}
-                    className="p-2 rounded-lg bg-surface-800 hover:bg-surface-700 transition-colors text-surface-400 hover:text-surface-200 disabled:opacity-50"
+                    className="p-2 rounded-lg bg-surface-800 hover:bg-surface-700 transition-colors text-surface-600 dark:text-surface-400 hover:text-surface-200 disabled:opacity-50"
                     title="Analyser ce concurrent"
                   >
                     {comp.isLoading ? (
@@ -654,7 +654,7 @@ export default function CompetitorsPage() {
                   </button>
                   <button
                     onClick={() => removeCompetitor(comp.id)}
-                    className="p-2 rounded-lg bg-surface-800 hover:bg-red-900/50 transition-colors text-surface-400 hover:text-red-400"
+                    className="p-2 rounded-lg bg-surface-800 hover:bg-red-900/50 transition-colors text-surface-600 dark:text-surface-400 hover:text-red-400"
                     title="Supprimer"
                   >
                     <Trash2 className="h-4 w-4" />
@@ -740,7 +740,7 @@ export default function CompetitorsPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-surface-700 bg-surface-800/30">
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-surface-400 uppercase tracking-wide">
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide">
                     Metrique
                   </th>
                   {ownCrawl && (
@@ -751,7 +751,7 @@ export default function CompetitorsPage() {
                   {crawledCompetitors.map((c) => (
                     <th
                       key={c.id}
-                      className="px-6 py-4 text-left text-xs font-semibold text-surface-400 uppercase tracking-wide"
+                      className="px-6 py-4 text-left text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide"
                     >
                       {c.domain}
                     </th>
@@ -824,7 +824,7 @@ export default function CompetitorsPage() {
             <Clock className="h-5 w-5 text-brand-400" />
             Comparaison du Temps de Reponse Moyen
           </h2>
-          <p className="text-sm text-surface-400 mb-6">
+          <p className="text-sm text-surface-600 dark:text-surface-400 mb-6">
             Temps de réponse moyen en millisecondes (plus bas = mieux)
           </p>
           <ResponsiveContainer width="100%" height={300}>
@@ -867,7 +867,7 @@ export default function CompetitorsPage() {
             <AlertTriangle className="h-5 w-5 text-brand-400" />
             Comparaison des Problèmes SEO
           </h2>
-          <p className="text-sm text-surface-400 mb-6">
+          <p className="text-sm text-surface-600 dark:text-surface-400 mb-6">
             Nombre de problèmes détectés par le crawl (plus bas = mieux)
           </p>
           <ResponsiveContainer width="100%" height={300}>
@@ -922,22 +922,22 @@ export default function CompetitorsPage() {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-surface-700">
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400">
+                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400">
                         URL
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400">
+                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400">
                         Status
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400">
+                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400">
                         Temps
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400">
+                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400">
                         H1
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400">
+                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400">
                         H2
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-400">
+                      <th className="px-4 py-3 text-left text-xs font-semibold text-surface-600 dark:text-surface-400">
                         Problemes
                       </th>
                     </tr>
@@ -965,13 +965,13 @@ export default function CompetitorsPage() {
                             {page.statusCode}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-surface-400">
+                        <td className="px-4 py-3 text-surface-600 dark:text-surface-400">
                           {page.responseTime}ms
                         </td>
-                        <td className="px-4 py-3 text-surface-400">
+                        <td className="px-4 py-3 text-surface-600 dark:text-surface-400">
                           {page.h1Count}
                         </td>
-                        <td className="px-4 py-3 text-surface-400">
+                        <td className="px-4 py-3 text-surface-600 dark:text-surface-400">
                           {page.h2Count}
                         </td>
                         <td className="px-4 py-3">

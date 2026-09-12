@@ -75,7 +75,7 @@ export default function ExitIntent() {
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-1.5 rounded-lg text-surface-400 hover:text-surface-600 dark:hover:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-lg text-surface-600 dark:text-surface-400 hover:text-surface-600 dark:hover:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
           aria-label="Fermer"
         >
           <X className="w-5 h-5" />
@@ -128,7 +128,7 @@ export default function ExitIntent() {
               <div className="w-full border-t border-surface-200 dark:border-surface-700" />
             </div>
             <div className="relative flex justify-center">
-              <span className="bg-white dark:bg-surface-900 px-3 text-xs text-surface-400">
+              <span className="bg-white dark:bg-surface-900 px-3 text-xs text-surface-600 dark:text-surface-400">
                 Ou recevez votre rapport par email
               </span>
             </div>
@@ -146,7 +146,7 @@ export default function ExitIntent() {
           >
             <div className="flex gap-2">
               <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-400" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-600 dark:text-surface-400" />
                 <input
                   type="email"
                   value={email}
@@ -166,7 +166,7 @@ export default function ExitIntent() {
           </form>
 
           {/* Trust */}
-          <p className="text-xs text-surface-400 mt-4 text-center">
+          <p className="text-xs text-surface-600 dark:text-surface-400 mt-4 text-center">
             Sans carte bancaire &middot; Résultat en 5 min &middot; 100% gratuit
           </p>
         </div>

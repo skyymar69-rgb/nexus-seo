@@ -19,7 +19,7 @@ const posts: Record<string, {
     readTime: '12 min',
     date: '28 mars 2026',
     excerpt: 'Tout ce que vous devez savoir sur le Generative Engine Optimization : comment fonctionne Google SGE, quels signaux il utilise, et comment structurer votre contenu pour être cité.',
-    tag_color: 'text-brand-500 bg-brand-50 dark:bg-brand-950/40',
+    tag_color: 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40',
     content: [
       'Le Generative Engine Optimization (GEO) est devenu la priorité absolue de tout référenceur en 2026. Depuis que Google a généralisé ses AI Overviews à l\'ensemble de ses marchés, les clics organiques "classiques" ont chuté de 30 à 60% sur les requêtes informationnelles.',
       'La bonne nouvelle ? Ceux qui maîtrisent le GEO captent désormais une visibilité nouvelle, plus qualifiée, directement dans les réponses générées. Voici comment.',
@@ -41,7 +41,7 @@ const posts: Record<string, {
     readTime: '9 min',
     date: '25 mars 2026',
     excerpt: 'Le LLMO (Large Language Model Optimization) est la discipline la plus stratégique de 2026. Voici la méthode exacte pour apparaître dans les recommandations de ChatGPT, Claude et Gemini.',
-    tag_color: 'text-cyan-500 bg-cyan-50 dark:bg-cyan-950/40',
+    tag_color: 'text-cyan-700 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/40',
     content: [
       'ChatGPT reçoit plus d\'un milliard de requêtes par jour. Une fraction significative de ces requêtes est du type "quel est le meilleur outil pour [X]" ou "recommande-moi une solution pour [Y]". Si votre marque n\'y apparaît pas, vous perdez des clients potentiels chaque minute.',
       'Le LLMO (Large Language Model Optimization) est la discipline qui adresse ce problème. Voici la méthode.',
@@ -93,17 +93,17 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <main className="bg-white dark:bg-surface-950">
         <article className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-surface-400 hover:text-brand-500 transition-colors mb-8">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-surface-600 dark:text-surface-400 hover:text-brand-500 transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
               Retour au blog
             </Link>
 
             <div className="flex items-center gap-3 mb-5">
               <span className={`px-3 py-1 rounded-full text-xs font-bold ${post.tag_color}`}>{post.category}</span>
-              <span className="text-xs text-surface-400 flex items-center gap-1">
+              <span className="text-xs text-surface-600 dark:text-surface-400 flex items-center gap-1">
                 <Clock className="w-3 h-3" />{post.readTime}
               </span>
-              <span className="text-xs text-surface-400">{post.date}</span>
+              <span className="text-xs text-surface-600 dark:text-surface-400">{post.date}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-black text-surface-900 dark:text-white mb-6 leading-tight">

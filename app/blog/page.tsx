@@ -26,7 +26,7 @@ const posts = [
     readTime: '12 min',
     date: '28 mars 2026',
     featured: true,
-    tag_color: 'text-brand-500 bg-brand-50 dark:bg-brand-950/40',
+    tag_color: 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40',
   },
   {
     slug: 'llmo-chatgpt-recommande-votre-marque',
@@ -36,7 +36,7 @@ const posts = [
     readTime: '9 min',
     date: '25 mars 2026',
     featured: false,
-    tag_color: 'text-cyan-500 bg-cyan-50 dark:bg-cyan-950/40',
+    tag_color: 'text-cyan-700 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/40',
   },
   {
     slug: 'aeo-featured-snippets-voice-search',
@@ -46,7 +46,7 @@ const posts = [
     readTime: '8 min',
     date: '20 mars 2026',
     featured: false,
-    tag_color: 'text-violet-500 bg-violet-50 dark:bg-violet-950/40',
+    tag_color: 'text-violet-700 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/40',
   },
   {
     slug: 'core-web-vitals-2026-guide',
@@ -56,7 +56,7 @@ const posts = [
     readTime: '7 min',
     date: '15 mars 2026',
     featured: false,
-    tag_color: 'text-amber-500 bg-amber-50 dark:bg-amber-950/40',
+    tag_color: 'text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40',
   },
   {
     slug: 'eeat-seo-ia-2026',
@@ -66,7 +66,7 @@ const posts = [
     readTime: '10 min',
     date: '10 mars 2026',
     featured: false,
-    tag_color: 'text-brand-500 bg-brand-50 dark:bg-brand-950/40',
+    tag_color: 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40',
   },
   {
     slug: 'semrush-vs-nexus-comparaison',
@@ -76,7 +76,7 @@ const posts = [
     readTime: '6 min',
     date: '5 mars 2026',
     featured: false,
-    tag_color: 'text-surface-500 bg-surface-100 dark:bg-surface-800',
+    tag_color: 'text-surface-700 dark:text-surface-300 bg-surface-100 dark:bg-surface-800',
   },
 ]
 
@@ -114,10 +114,10 @@ export default function BlogPage() {
               <div className="md:w-3/5 p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-3">
                   <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${featured.tag_color}`}>{featured.category}</span>
-                  <span className="text-xs text-surface-400 flex items-center gap-1">
+                  <span className="text-xs text-surface-600 dark:text-surface-400 flex items-center gap-1">
                     <Clock className="w-3 h-3" />{featured.readTime}
                   </span>
-                  <span className="text-xs text-surface-400">{featured.date}</span>
+                  <span className="text-xs text-surface-600 dark:text-surface-400">{featured.date}</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-surface-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   {featured.title}
@@ -135,7 +135,7 @@ export default function BlogPage() {
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="card-hover p-6 flex flex-col group">
                   <div className="flex items-center gap-2 mb-3">
                     <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${post.tag_color}`}>{post.category}</span>
-                    <span className="text-xs text-surface-400 flex items-center gap-1 ml-auto">
+                    <span className="text-xs text-surface-600 dark:text-surface-400 flex items-center gap-1 ml-auto">
                       <Clock className="w-3 h-3" />{post.readTime}
                     </span>
                   </div>
@@ -143,9 +143,9 @@ export default function BlogPage() {
                     {post.title}
                   </h3>
                   <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed flex-1 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-surface-400">
+                  <div className="flex items-center justify-between text-xs text-surface-600 dark:text-surface-400">
                     <span>{post.date}</span>
-                    <span className="text-brand-500 font-semibold group-hover:gap-1 flex items-center gap-0.5 transition-all">
+                    <span className="text-brand-700 dark:text-brand-400 font-semibold group-hover:gap-1 flex items-center gap-0.5 transition-all">
                       Lire <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>

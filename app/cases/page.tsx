@@ -83,11 +83,11 @@ const cases = [
 ]
 
 const tagColors: Record<string, string> = {
-  'GEO': 'bg-brand-50 text-brand-600 dark:bg-brand-950/40 dark:text-brand-400 border-brand-200 dark:border-brand-800/50',
-  'AEO': 'bg-violet-50 text-violet-600 dark:bg-violet-950/40 dark:text-violet-400 border-violet-200 dark:border-violet-800/50',
-  'LLMO': 'bg-cyan-50 text-cyan-600 dark:bg-cyan-950/40 dark:text-cyan-400 border-cyan-200 dark:border-cyan-800/50',
-  'SEO Technique': 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400 border-amber-200 dark:border-amber-800/50',
-  'Analytics': 'bg-accent-50 text-accent-600 dark:bg-accent-950/40 dark:text-accent-400 border-accent-200 dark:border-accent-800/50',
+  'GEO': 'bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400 border-brand-200 dark:border-brand-800/50',
+  'AEO': 'bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-400 border-violet-200 dark:border-violet-800/50',
+  'LLMO': 'bg-cyan-50 text-cyan-700 dark:bg-cyan-950/40 dark:text-cyan-400 border-cyan-200 dark:border-cyan-800/50',
+  'SEO Technique': 'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400 border-amber-200 dark:border-amber-800/50',
+  'Analytics': 'bg-accent-50 text-accent-700 dark:bg-accent-950/40 dark:text-accent-400 border-accent-200 dark:border-accent-800/50',
 }
 
 export default function CasesPage() {
@@ -120,7 +120,7 @@ export default function CasesPage() {
               >
                 <div className="flex items-start justify-between mb-5">
                   <div>
-                    <p className="text-xs text-surface-400 mb-1">{c.category}</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400 mb-1">{c.category}</p>
                     <p className="text-base font-bold text-surface-900 dark:text-white">{c.company}</p>
                   </div>
                   <div className="w-9 h-9 rounded-xl bg-brand-50 dark:bg-brand-950/30 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 dark:group-hover:bg-brand-950/60 transition-colors">
@@ -128,11 +128,11 @@ export default function CasesPage() {
                   </div>
                 </div>
 
-                <p className="text-xs text-surface-400 italic mb-4">&ldquo;{c.challenge}&rdquo;</p>
+                <p className="text-xs text-surface-600 dark:text-surface-400 italic mb-4">&ldquo;{c.challenge}&rdquo;</p>
 
                 <div className="rounded-2xl bg-surface-50 dark:bg-surface-800 border border-surface-100 dark:border-surface-700 p-4 mb-5">
                   <p className="text-xl font-black text-surface-900 dark:text-white mb-0.5">{c.result}</p>
-                  <p className="text-xs text-surface-400">{c.detail}</p>
+                  <p className="text-xs text-surface-600 dark:text-surface-400">{c.detail}</p>
                 </div>
 
                 <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed mb-5 flex-1">
@@ -150,7 +150,7 @@ export default function CasesPage() {
                       </span>
                     ))}
                   </div>
-                  <span className="text-xs text-surface-400">{c.duration}</span>
+                  <span className="text-xs text-surface-600 dark:text-surface-400">{c.duration}</span>
                 </div>
               </Link>
             ))}

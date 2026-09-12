@@ -308,7 +308,7 @@ function SidebarContent() {
                           className={cn(
                             'flex items-center justify-between gap-2 rounded-lg px-3 py-1.5 text-xs font-medium transition-all',
                             active
-                              ? 'bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-400'
+                              ? 'bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-400'
                               : 'text-zinc-500 dark:text-white/50 hover:bg-zinc-100 dark:hover:bg-white/[0.05]'
                           )}
                         >

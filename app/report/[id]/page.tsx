@@ -64,7 +64,7 @@ export default async function PublicReportPage({ params }: { params: { id: strin
             </div>
             <h1 className="text-3xl sm:text-4xl font-black text-surface-900 dark:text-white mb-2">{report.domain}</h1>
             <p className="text-surface-500">{report.url}</p>
-            <p className="text-xs text-surface-400 mt-2">
+            <p className="text-xs text-surface-600 dark:text-surface-400 mt-2">
               Généré le {new Date(report.createdAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
             </p>
           </div>
@@ -73,7 +73,7 @@ export default async function PublicReportPage({ params }: { params: { id: strin
           <div className="flex justify-center mb-10">
             <div className="text-center">
               <span className={`text-7xl font-black ${scoreColor}`}>{report.score}</span>
-              <span className="text-2xl text-surface-400 font-bold">/100</span>
+              <span className="text-2xl text-surface-600 dark:text-surface-400 font-bold">/100</span>
               <p className={`text-lg font-bold mt-2 ${scoreColor}`}>Grade {report.grade}</p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default async function PublicReportPage({ params }: { params: { id: strin
             </a>
           </div>
 
-          <p className="text-center text-xs text-surface-400 mt-8">
+          <p className="text-center text-xs text-surface-600 dark:text-surface-400 mt-8">
             Généré par <a href="https://nexus.kayzen-lyon.fr" className="text-brand-500 hover:underline">Nexus SEO</a> — Outil SEO & IA gratuit par Kayzen Web
           </p>
         </div>

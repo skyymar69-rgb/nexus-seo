@@ -78,7 +78,7 @@ export function AnimatedLogo({ size = 36, className, lightText = false }: Animat
         <span
           className={cn(
             'text-[10px] font-medium tracking-widest uppercase italic h-3',
-            lightText ? 'text-white/60' : 'text-surface-400 dark:text-surface-500'
+            lightText ? 'text-white/70' : 'text-surface-600 dark:text-surface-400'
           )}
         >
           {kayzen}

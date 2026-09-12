@@ -31,7 +31,7 @@ export default function Error({
         </p>
 
         {error.digest && (
-          <p className="text-xs text-surface-400 mb-6 font-mono">
+          <p className="text-xs text-surface-600 dark:text-surface-400 mb-6 font-mono">
             Code erreur: {error.digest}
           </p>
         )}

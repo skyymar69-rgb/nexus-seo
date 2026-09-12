@@ -169,7 +169,7 @@ export default function OnboardingPage() {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="w-full mt-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
+            className="w-full mt-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
           >
             {loading ? (
               <><Loader2 className="w-4 h-4 animate-spin" /> Analyse en cours... (30-60 secondes)</>

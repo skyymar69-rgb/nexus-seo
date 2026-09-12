@@ -51,7 +51,7 @@ export function Footer() {
               <a
                 href="mailto:contact@kayzen-lyon.fr"
                 aria-label="Nous contacter par email"
-                className="w-9 h-9 rounded-xl flex items-center justify-center text-surface-500 dark:text-white/50 hover:text-surface-900 dark:hover:text-white hover:bg-surface-200 dark:hover:bg-white/[0.05] transition-colors border border-surface-300 dark:border-white/10"
+                className="w-9 h-9 rounded-xl flex items-center justify-center text-surface-600 dark:text-white/60 hover:text-surface-900 dark:hover:text-white hover:bg-surface-200 dark:hover:bg-white/[0.05] transition-colors border border-surface-300 dark:border-white/10"
               >
                 <Mail className="w-4 h-4" />
               </a>
@@ -61,10 +61,10 @@ export function Footer() {
           {/* Newsletter */}
           <div className="max-w-sm w-full lg:w-auto">
             <p className="text-sm font-bold text-surface-900 dark:text-white mb-1">Newsletter SEO IA</p>
-            <p className="text-xs text-surface-500 dark:text-white/50 mb-4">Les dernières tendances GEO, AEO et LLMO chaque semaine.</p>
+            <p className="text-xs text-surface-600 dark:text-white/60 mb-4">Les dernières tendances GEO, AEO et LLMO chaque semaine.</p>
             <form onSubmit={(e) => e.preventDefault()} aria-label="Inscription a la newsletter" className="flex gap-2">
               <div className="flex-1 relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-400" aria-hidden="true" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-600 dark:text-surface-400" aria-hidden="true" />
                 <input
                   type="email"
                   placeholder="votre@email.fr"
@@ -81,7 +81,7 @@ export function Footer() {
                 S&apos;abonner
               </button>
             </form>
-            <p className="text-xs text-surface-500 dark:text-white/50 mt-2">Pas de spam. Désabonnement en un clic.</p>
+            <p className="text-xs text-surface-600 dark:text-white/60 mt-2">Pas de spam. Désabonnement en un clic.</p>
           </div>
         </div>
 
@@ -89,7 +89,7 @@ export function Footer() {
         <nav aria-label="Liens du pied de page" className="py-12 grid grid-cols-2 sm:grid-cols-4 gap-8 border-b border-surface-200 dark:border-white/5">
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <p id={`footer-${title.toLowerCase()}`} className="text-xs font-bold tracking-widest text-surface-500 dark:text-white/50 uppercase mb-4">
+              <p id={`footer-${title.toLowerCase()}`} className="text-xs font-bold tracking-widest text-surface-600 dark:text-white/60 uppercase mb-4">
                 {title}
               </p>
               <ul className="space-y-2.5" aria-labelledby={`footer-${title.toLowerCase()}`}>
@@ -110,7 +110,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-surface-500 dark:text-white/50">
+          <p className="text-xs text-surface-600 dark:text-white/60">
             © {currentYear} Nexus — By <a href="https://kayzen-lyon.fr" className="text-brand-600 dark:text-brand-400 hover:underline">Kayzen Lyon</a>. Tous droits réservés.
           </p>
           <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-end">
@@ -122,11 +122,11 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               title="EX2 Inc. — Serveurs NVMe en France, hébergement éco-responsable sans carbone"
-              className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-emerald-600 dark:text-emerald-400 hover:border-emerald-400 transition-colors"
+              className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-emerald-700 dark:text-emerald-400 hover:border-emerald-400 transition-colors"
             >
               Hébergé par EX2 · France
             </a>
-            <span className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-emerald-600 dark:text-emerald-400">
+            <span className="px-2.5 py-1 text-xs font-semibold rounded-lg border border-surface-300 dark:border-white/10 bg-white dark:bg-surface-800 text-emerald-700 dark:text-emerald-400">
               100% Gratuit
             </span>
           </div>

@@ -137,11 +137,11 @@ function CategoryCard({
           <div>
             <p className="text-sm font-medium text-surface-600 dark:text-surface-400">{meta.label}</p>
             <p className={cn('text-2xl font-bold', getScoreColor(category.score))}>
-              {category.score}<span className="text-sm text-surface-400 font-normal">/100</span>
+              {category.score}<span className="text-sm text-surface-600 dark:text-surface-400 font-normal">/100</span>
             </p>
           </div>
         </div>
-        <span className="text-surface-400 text-sm">{expanded ? '−' : '+'}</span>
+        <span className="text-surface-600 dark:text-surface-400 text-sm">{expanded ? '−' : '+'}</span>
       </button>
 
       {expanded && (

@@ -39,7 +39,7 @@ export function Logos() {
                 key={idx}
                 className="flex-shrink-0 flex items-center justify-center h-16"
               >
-                <span className="text-lg font-bold text-surface-400 dark:text-surface-600 opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">
+                <span className="text-lg font-bold text-surface-600 dark:text-surface-400 dark:text-surface-600 opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">
                   {logo}
                 </span>
               </div>

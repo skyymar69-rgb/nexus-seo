@@ -82,7 +82,7 @@ export default function ContactPage() {
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-surface-400 uppercase tracking-wide mb-0.5">{label}</p>
+                      <p className="text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-0.5">{label}</p>
                       <p className="text-sm font-medium text-surface-900 dark:text-white">{value}</p>
                     </div>
                   </a>
@@ -93,9 +93,9 @@ export default function ContactPage() {
                   <p className="text-sm font-semibold text-surface-900 dark:text-white mb-3">Temps de réponse moyen</p>
                   <div className="space-y-2">
                     {[
-                      { type: 'Email',   time: '< 4h',        color: 'bg-brand-500' },
-                      { type: 'Démo',    time: 'Même jour',   color: 'bg-accent-500' },
-                      { type: 'Support', time: '< 2h (pro+)', color: 'bg-violet-500' },
+                      { type: 'Email',   time: '< 4h',        color: 'bg-brand-700' },
+                      { type: 'Démo',    time: 'Même jour',   color: 'bg-accent-700' },
+                      { type: 'Support', time: '< 2h (pro+)', color: 'bg-violet-700' },
                     ].map((r) => (
                       <div key={r.type} className="flex items-center justify-between text-xs">
                         <span className="text-surface-500 dark:text-surface-400">{r.type}</span>
@@ -119,8 +119,8 @@ export default function ContactPage() {
                       Vos droits RGPD
                     </span>
                     {showRights
-                      ? <ChevronUp className="w-4 h-4 text-surface-400" />
-                      : <ChevronDown className="w-4 h-4 text-surface-400" />}
+                      ? <ChevronUp className="w-4 h-4 text-surface-600 dark:text-surface-400" />
+                      : <ChevronDown className="w-4 h-4 text-surface-600 dark:text-surface-400" />}
                   </button>
 
                   {showRights && (
@@ -163,7 +163,7 @@ export default function ContactPage() {
                     <p className="text-surface-500 dark:text-surface-400 mb-6">
                       Notre équipe vous répondra dans les 4 heures.
                     </p>
-                    <p className="text-xs text-surface-400 dark:text-surface-500">
+                    <p className="text-xs text-surface-600 dark:text-surface-400 dark:text-surface-500">
                       Conformément au RGPD, vos données sont conservées 3 ans maximum
                       et ne seront jamais revendues à des tiers.
                     </p>
@@ -337,7 +337,7 @@ export default function ContactPage() {
                         <div className="flex-1">
                           <label htmlFor="consent-marketing" className="text-sm font-medium text-surface-700 dark:text-surface-300 cursor-pointer">
                             J'accepte de recevoir des informations commerciales{' '}
-                            <span className="text-surface-400 font-normal">(facultatif)</span>
+                            <span className="text-surface-600 dark:text-surface-400 font-normal">(facultatif)</span>
                           </label>
                           <p id="consent-marketing-desc" className="mt-0.5 text-xs text-surface-500 dark:text-surface-400">
                             Actualités Nexus SEO, nouveautés, conseils SEO/GEO. Désabonnement en un clic à tout moment.
@@ -369,7 +369,7 @@ export default function ContactPage() {
                     {/* Pied de formulaire RGPD */}
                     <div className="flex items-start gap-2 pt-1">
                       <ShieldCheck className="w-3.5 h-3.5 text-accent-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                      <p className="text-xs text-surface-400 dark:text-surface-500 leading-relaxed">
+                      <p className="text-xs text-surface-600 dark:text-surface-400 dark:text-surface-500 leading-relaxed">
                         Données protégées · Jamais revendues · Chiffrement TLS.{' '}
                         <Link href="/privacy" className="underline underline-offset-2 hover:text-brand-500 transition-colors">
                           Politique de confidentialité

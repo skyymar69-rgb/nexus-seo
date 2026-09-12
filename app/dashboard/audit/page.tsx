@@ -330,7 +330,7 @@ function ExpandableDetailedCheck({ check }: { check: DetailedCheck }) {
         <span className={cn('text-sm font-bold tabular-nums w-8 text-right', getScoreColor(check.score))}>
           {check.score}
         </span>
-        <ChevronDown className={cn('h-4 w-4 text-surface-400 transition-transform flex-shrink-0 print:hidden', isExpanded && 'rotate-180')} />
+        <ChevronDown className={cn('h-4 w-4 text-surface-600 dark:text-surface-400 transition-transform flex-shrink-0 print:hidden', isExpanded && 'rotate-180')} />
       </button>
 
       {/* Tooltip on hover — shows solution preview */}
@@ -986,11 +986,11 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
                   { label: 'Canonical', value: result.meta.canonical, warn: 'Non defini' },
                 ].map(({ label, value, warn }) => (
                   <div key={label} className="rounded-lg bg-white/[0.02] p-3">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-surface-400 mb-1">{label}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-surface-600 dark:text-surface-400 mb-1">{label}</p>
                     <p className="text-sm text-white break-all">
                       {value || <span className="text-red-500 italic">{warn}</span>}
                     </p>
-                    {value && <p className="text-[10px] text-surface-400 mt-1">{value.length} caracteres</p>}
+                    {value && <p className="text-[10px] text-surface-600 dark:text-surface-400 mt-1">{value.length} caracteres</p>}
                   </div>
                 ))}
               </div>
@@ -1008,9 +1008,9 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
                   { label: 'Liens', value: result.content.internalLinks + result.content.externalLinks, sub: `${result.content.internalLinks} int. / ${result.content.externalLinks} ext.` },
                 ].map(({ label, value, color, sub }) => (
                   <div key={label} className="rounded-lg bg-white/[0.02] p-3">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-surface-400 mb-1">{label}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-surface-600 dark:text-surface-400 mb-1">{label}</p>
                     <p className={cn('text-xl font-bold', color || 'text-white')}>{value}</p>
-                    {sub && <p className="text-[10px] text-surface-400 mt-1">{sub}</p>}
+                    {sub && <p className="text-[10px] text-surface-600 dark:text-surface-400 mt-1">{sub}</p>}
                   </div>
                 ))}
               </div>

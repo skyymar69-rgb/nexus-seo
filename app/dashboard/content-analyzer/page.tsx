@@ -74,7 +74,7 @@ export default function ContentAnalyzerPage() {
       <div className="bg-white/[0.03] rounded-xl border border-white/5 p-6">
         <div className="flex gap-3">
           <div className="flex items-center gap-2 flex-1 px-4 py-2.5 rounded-xl border border-white/5 bg-white/[0.02]">
-            <Globe className="w-4 h-4 text-surface-400" />
+            <Globe className="w-4 h-4 text-surface-600 dark:text-surface-400" />
             <input type="text" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://votresite.fr/page" aria-label="URL de la page a analyser" className="flex-1 bg-transparent outline-none text-sm" onKeyDown={e => e.key === 'Enter' && handleAnalyze()} />
           </div>
           <button onClick={handleAnalyze} disabled={loading} className="btn-primary px-6 py-2.5 rounded-xl disabled:opacity-50">
@@ -116,7 +116,7 @@ export default function ContentAnalyzerPage() {
                   <div className="w-full bg-surface-200 dark:bg-surface-700 rounded-full h-1.5 mb-2" role="progressbar" aria-label={item.label} aria-valuenow={item.score} aria-valuemin={0} aria-valuemax={100}>
                     <div className={cn('h-1.5 rounded-full', item.score >= 60 ? 'bg-green-500' : item.score >= 40 ? 'bg-amber-500' : 'bg-red-500')} style={{ width: `${item.score}%` }} />
                   </div>
-                  <p className="text-[10px] text-surface-400">{item.desc}</p>
+                  <p className="text-[10px] text-surface-600 dark:text-surface-400">{item.desc}</p>
                 </div>
               ))}
             </div>

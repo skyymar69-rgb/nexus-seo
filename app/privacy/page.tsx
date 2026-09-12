@@ -15,7 +15,7 @@ export default function PrivacyPage() {
           <div className="max-w-3xl mx-auto">
             <div className="section-badge mb-6">RGPD & Confidentialité</div>
             <h1 className="text-4xl font-black text-surface-900 dark:text-white mb-3">Politique de confidentialité</h1>
-            <p className="text-surface-400 text-sm mb-12">Dernière mise à jour : 1er avril 2026 — Conforme au Règlement (UE) 2016/679 (RGPD)</p>
+            <p className="text-surface-600 dark:text-surface-400 text-sm mb-12">Dernière mise à jour : 1er avril 2026 — Conforme au Règlement (UE) 2016/679 (RGPD)</p>
 
             <div className="space-y-10 text-surface-600 dark:text-surface-400 text-sm">
 
@@ -100,13 +100,13 @@ export default function PrivacyPage() {
                     <div key={s.name} className="flex items-start justify-between card px-4 py-3">
                       <div>
                         <p className="font-medium text-surface-900 dark:text-white text-xs">{s.name}</p>
-                        <p className="text-surface-400 text-xs">{s.dpa}</p>
+                        <p className="text-surface-600 dark:text-surface-400 text-xs">{s.dpa}</p>
                       </div>
-                      <span className="text-xs text-surface-400 shrink-0 ml-4">{s.location}</span>
+                      <span className="text-xs text-surface-600 dark:text-surface-400 shrink-0 ml-4">{s.location}</span>
                     </div>
                   ))}
                 </div>
-                <p className="mt-3 text-xs text-surface-400">Nous ne vendons, ne louons et ne communiquons jamais vos données à des tiers à des fins commerciales ou publicitaires.</p>
+                <p className="mt-3 text-xs text-surface-600 dark:text-surface-400">Nous ne vendons, ne louons et ne communiquons jamais vos données à des tiers à des fins commerciales ou publicitaires.</p>
               </div>
 
               <div>
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                   ].map((r) => (
                     <div key={r.right} className="card p-4">
                       <p className="font-semibold text-surface-900 dark:text-white text-xs mb-1">{r.right}</p>
-                      <p className="text-surface-400 text-xs">{r.desc}</p>
+                      <p className="text-surface-600 dark:text-surface-400 text-xs">{r.desc}</p>
                     </div>
                   ))}
                 </div>

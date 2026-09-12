@@ -127,21 +127,21 @@ const colorMap: Record<string, { bg: string; text: string; ring: string; icon: s
   },
   emerald: {
     bg: 'bg-emerald-50 dark:bg-emerald-950/30',
-    text: 'text-emerald-600 dark:text-emerald-400',
+    text: 'text-emerald-700 dark:text-emerald-400',
     ring: 'ring-emerald-200 dark:ring-emerald-800/40',
-    icon: 'text-emerald-600 dark:text-emerald-400',
+    icon: 'text-emerald-700 dark:text-emerald-400',
   },
   amber: {
     bg: 'bg-amber-50 dark:bg-amber-950/30',
-    text: 'text-amber-600 dark:text-amber-400',
+    text: 'text-amber-700 dark:text-amber-400',
     ring: 'ring-amber-200 dark:ring-amber-800/40',
-    icon: 'text-amber-600 dark:text-amber-400',
+    icon: 'text-amber-700 dark:text-amber-400',
   },
   sky: {
     bg: 'bg-sky-50 dark:bg-sky-950/30',
-    text: 'text-sky-600 dark:text-sky-400',
+    text: 'text-sky-700 dark:text-sky-400',
     ring: 'ring-sky-200 dark:ring-sky-800/40',
-    icon: 'text-sky-600 dark:text-sky-400',
+    icon: 'text-sky-700 dark:text-sky-400',
   },
 }
 
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                   {/* Feature list */}
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                     <div className="card rounded-2xl p-6">
-                      <h3 className="text-sm font-bold uppercase tracking-wider text-surface-400 dark:text-surface-500 mb-5">
+                      <h3 className="text-sm font-bold uppercase tracking-wider text-surface-600 dark:text-surface-400 mb-5">
                         Fonctionnalités incluses
                       </h3>
                       <ul className="space-y-3">

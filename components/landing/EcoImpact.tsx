@@ -86,7 +86,7 @@ export function EcoImpact() {
             <div key={i} className="rounded-2xl p-8 bg-white dark:bg-white/5 border border-green-200 dark:border-white/10 shadow-sm dark:shadow-none">
               <div className="mb-4">
                 <span className="text-4xl font-black text-green-700 dark:text-green-400">{s.value}</span>
-                <span className="block text-sm text-green-600 dark:text-green-300/80 mt-1 font-medium">{s.unit}</span>
+                <span className="block text-sm text-green-700 dark:text-green-300 mt-1 font-medium">{s.unit}</span>
               </div>
               <p className="text-sm text-surface-700 dark:text-white/70 leading-relaxed mb-3">{s.desc}</p>
               <p className="text-xs text-surface-500 dark:text-white/40">Source : {s.source}</p>
@@ -137,7 +137,7 @@ export function EcoImpact() {
             <span className="px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-500/20 font-medium">
               Page 3 Mo, LCP 6s → ~4,5 g CO2/visite
             </span>
-            <ArrowRight className="w-4 h-4 text-green-600 dark:text-green-400" aria-hidden="true" />
+            <ArrowRight className="w-4 h-4 text-green-700 dark:text-green-400" aria-hidden="true" />
             <span className="px-3 py-1.5 rounded-lg bg-green-50 dark:bg-green-500/10 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-500/20 font-medium">
               Page 400 Ko, LCP 1,2s → ~0,3 g CO2/visite
             </span>

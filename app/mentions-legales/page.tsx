@@ -15,7 +15,7 @@ export default function MentionsLegalesPage() {
           <div className="max-w-3xl mx-auto">
             <div className="section-badge mb-6">Informations légales</div>
             <h1 className="text-4xl font-black text-surface-900 dark:text-white mb-3">Mentions légales</h1>
-            <p className="text-surface-400 text-sm mb-12">Dernière mise à jour : 1er avril 2026</p>
+            <p className="text-surface-600 dark:text-surface-400 text-sm mb-12">Dernière mise à jour : 1er avril 2026</p>
 
             <div className="space-y-10 text-surface-600 dark:text-surface-400">
 

@@ -154,7 +154,7 @@ export function ExportMenu({
       return (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 hover:bg-surface-700 rounded-lg transition-colors duration-200 text-surface-400 hover:text-surface-200"
+          className="p-2 hover:bg-surface-700 rounded-lg transition-colors duration-200 text-surface-600 dark:text-surface-400 hover:text-surface-200"
           title={label}
           aria-label={label}
         >

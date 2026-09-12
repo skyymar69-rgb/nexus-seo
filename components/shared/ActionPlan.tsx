@@ -75,11 +75,11 @@ function RecommendationCard({ rec }: { rec: ActionableRec }) {
             <span className={cn('px-2 py-0.5 text-[10px] font-bold uppercase rounded-full border', config.color)}>
               {config.label}
             </span>
-            <span className="text-[10px] text-surface-400">{rec.category} | {rec.estimatedTime}</span>
+            <span className="text-[10px] text-surface-600 dark:text-surface-400">{rec.category} | {rec.estimatedTime}</span>
           </div>
           <span className="text-sm font-semibold text-surface-900 dark:text-white">{rec.title}</span>
         </div>
-        <ChevronDown className={cn('w-4 h-4 text-surface-400 transition-transform shrink-0', expanded && 'rotate-180')} />
+        <ChevronDown className={cn('w-4 h-4 text-surface-600 dark:text-surface-400 transition-transform shrink-0', expanded && 'rotate-180')} />
       </button>
 
       {/* Expanded content */}
@@ -115,7 +115,7 @@ function RecommendationCard({ rec }: { rec: ActionableRec }) {
                   const ToolIcon = toolIcons[tool.type]
                   return (
                     <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-surface-900 border border-surface-200 dark:border-surface-700 text-xs">
-                      <ToolIcon className="w-3.5 h-3.5 text-surface-400" />
+                      <ToolIcon className="w-3.5 h-3.5 text-surface-600 dark:text-surface-400" />
                       <div>
                         <div className="flex items-center gap-1">
                           <span className="font-semibold text-surface-900 dark:text-white">{tool.name}</span>
