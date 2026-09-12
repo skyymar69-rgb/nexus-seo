@@ -64,7 +64,7 @@ export default function LoginPage() {
 
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
-        <span className="text-xs text-muted-foreground dark:text-white/50">ou</span>
+        <span className="text-xs text-muted-foreground">ou</span>
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
       </div>
 
@@ -80,7 +80,7 @@ export default function LoginPage() {
             Adresse e-mail
           </label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/50" />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               id="email"
               type="email"
@@ -100,7 +100,7 @@ export default function LoginPage() {
             Mot de passe
           </label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/50" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               id="password"
               type={showPassword ? 'text' : 'password'}
@@ -116,7 +116,7 @@ export default function LoginPage() {
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground dark:text-white/50 hover:text-surface-700 dark:hover:text-white/80"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-surface-700 dark:hover:text-white/80"
             >
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>

@@ -230,9 +230,9 @@ function SidebarContent() {
               aria-label={sidebarOpen ? 'Réduire la barre latérale' : 'Ouvrir la barre latérale'}
             >
               {sidebarOpen ? (
-                <ChevronLeft className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                <ChevronLeft className="h-5 w-5 text-muted-foreground" />
               ) : (
-                <ChevronRight className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                <ChevronRight className="h-5 w-5 text-muted-foreground" />
               )}
             </button>
             <button
@@ -240,7 +240,7 @@ function SidebarContent() {
               className="lg:hidden rounded-md p-1.5 hover:bg-zinc-100 dark:hover:bg-white/[0.05]"
               aria-label="Fermer le menu"
             >
-              <X className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+              <X className="h-5 w-5 text-muted-foreground" />
             </button>
           </div>
         </div>
@@ -266,7 +266,7 @@ function SidebarContent() {
                     onClick={() => toggleCategory(cat.id)}
                     aria-expanded={isExpanded}
                     aria-controls={`nav-${cat.id}`}
-                    className="flex items-center justify-between w-full rounded-lg px-3 py-2 text-sm font-medium text-zinc-500 dark:text-white/50 hover:bg-zinc-100 dark:hover:bg-white/[0.05] transition-all"
+                    className="flex items-center justify-between w-full rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-zinc-100 dark:hover:bg-white/[0.05] transition-all"
                   >
                     <div className="flex items-center gap-3">
                       <Icon className="h-5 w-5 flex-shrink-0" />
@@ -286,7 +286,7 @@ function SidebarContent() {
                   </button>
                 ) : (
                   <div
-                    className="flex items-center justify-center rounded-lg px-3 py-2 text-zinc-500 dark:text-white/50 hover:bg-zinc-100 dark:hover:bg-white/[0.05] transition-all cursor-help"
+                    className="flex items-center justify-center rounded-lg px-3 py-2 text-muted-foreground hover:bg-zinc-100 dark:hover:bg-white/[0.05] transition-all cursor-help"
                     title={cat.label}
                   >
                     <Icon className="h-5 w-5" />
@@ -309,7 +309,7 @@ function SidebarContent() {
                             'flex items-center justify-between gap-2 rounded-lg px-3 py-1.5 text-xs font-medium transition-all',
                             active
                               ? 'bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-400'
-                              : 'text-zinc-500 dark:text-white/50 hover:bg-zinc-100 dark:hover:bg-white/[0.05]'
+                              : 'text-muted-foreground hover:bg-zinc-100 dark:hover:bg-white/[0.05]'
                           )}
                         >
                           <div className="flex items-center gap-2 min-w-0">
@@ -381,17 +381,17 @@ function Breadcrumb() {
     <nav aria-label="Fil d'Ariane" className="text-sm">
       <ol className="flex items-center gap-2">
         <li>
-          <Link href="/dashboard" className="text-zinc-400 dark:text-white/40 hover:text-zinc-600 dark:hover:text-white/70">
+          <Link href="/dashboard" className="text-muted-foreground hover:text-zinc-600 dark:hover:text-white/70">
             Dashboard
           </Link>
         </li>
         {breadcrumbs.slice(1).map((crumb, idx) => (
           <li key={idx} className="flex items-center gap-2">
-            <ChevronRight className="h-4 w-4 text-zinc-300 dark:text-white/30" aria-hidden="true" />
+            <ChevronRight className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
             <Link
               href={crumb.path}
               aria-current={idx === breadcrumbs.length - 2 ? 'page' : undefined}
-              className="text-zinc-400 dark:text-white/40 hover:text-zinc-600 dark:hover:text-white/70"
+              className="text-muted-foreground hover:text-zinc-600 dark:hover:text-white/70"
             >
               {crumb.label}
             </Link>
@@ -429,7 +429,7 @@ function DashboardLayoutContent({
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          <p className="text-zinc-500 dark:text-white/50">Chargement...</p>
+          <p className="text-muted-foreground">Chargement...</p>
         </div>
       </div>
     )
@@ -462,9 +462,9 @@ function DashboardLayoutContent({
                   aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
                 >
                   {theme === 'dark' ? (
-                    <Sun className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                    <Sun className="h-5 w-5 text-muted-foreground" />
                   ) : (
-                    <Moon className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                    <Moon className="h-5 w-5 text-muted-foreground" />
                   )}
                 </button>
               </div>
@@ -475,7 +475,7 @@ function DashboardLayoutContent({
               {/* Search */}
               <div className="flex-1 lg:flex-none lg:max-w-sm">
                 <div className="flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-white/[0.03] px-3 py-2 focus-within:border-brand-500 transition-all">
-                  <Command className="h-4 w-4 text-zinc-400 dark:text-white/30" />
+                  <Command className="h-4 w-4 text-muted-foreground" />
                   <input
                     type="text"
                     placeholder="Rechercher un outil... (Cmd+K)"
@@ -484,7 +484,7 @@ function DashboardLayoutContent({
                     aria-label="Rechercher un outil"
                     className="w-full bg-transparent outline-none placeholder-zinc-400 dark:placeholder-white/30 text-sm text-zinc-900 dark:text-white"
                   />
-                  <kbd className="ml-auto rounded border border-zinc-200 dark:border-white/10 bg-zinc-200 dark:bg-white/[0.05] px-1.5 py-0.5 text-[10px] text-zinc-500 dark:text-white/40 font-medium hidden lg:inline-block">
+                  <kbd className="ml-auto rounded border border-zinc-200 dark:border-white/10 bg-zinc-200 dark:bg-white/[0.05] px-1.5 py-0.5 text-[10px] text-muted-foreground font-medium hidden lg:inline-block">
                     Cmd+K
                   </kbd>
                 </div>
@@ -499,7 +499,7 @@ function DashboardLayoutContent({
                   aria-expanded={notificationMenuOpen}
                   aria-haspopup="true"
                 >
-                  <Bell className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                  <Bell className="h-5 w-5 text-muted-foreground" />
                 </button>
 
                 {notificationMenuOpen && (
@@ -510,8 +510,8 @@ function DashboardLayoutContent({
                     <div className="py-2 max-h-96 overflow-y-auto">
                       <div className="px-4 py-6 text-center">
                         <Bell className="w-8 h-8 text-zinc-200 dark:text-white/10 mx-auto mb-2" aria-hidden="true" />
-                        <p className="text-xs text-zinc-400 dark:text-white/30">Aucune notification</p>
-                        <p className="text-[10px] text-zinc-300 dark:text-white/20 mt-1">Les alertes de scan et de monitoring apparaitront ici</p>
+                        <p className="text-xs text-muted-foreground">Aucune notification</p>
+                        <p className="text-[10px] text-muted-foreground mt-1">Les alertes de scan et de monitoring apparaitront ici</p>
                       </div>
                     </div>
                   </div>
@@ -525,9 +525,9 @@ function DashboardLayoutContent({
                 aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
               >
                 {theme === 'dark' ? (
-                  <Sun className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                  <Sun className="h-5 w-5 text-muted-foreground" />
                 ) : (
-                  <Moon className="h-5 w-5 text-zinc-400 dark:text-white/50" />
+                  <Moon className="h-5 w-5 text-muted-foreground" />
                 )}
               </button>
 
@@ -543,14 +543,14 @@ function DashboardLayoutContent({
                   <div className="h-8 w-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-semibold">
                     {userInitials}
                   </div>
-                  <ChevronDown className="h-4 w-4 text-zinc-400 dark:text-white/50 hidden lg:block" />
+                  <ChevronDown className="h-4 w-4 text-muted-foreground hidden lg:block" />
                 </button>
 
                 {userMenuOpen && (
                   <div role="menu" aria-label="Menu utilisateur" className="absolute right-0 top-full mt-2 w-56 rounded-lg border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-black/10 dark:shadow-black/50 z-50">
                     <div className="border-b border-zinc-200 dark:border-white/5 px-4 py-3">
                       <p className="text-sm font-semibold text-zinc-900 dark:text-white">{userName}</p>
-                      <p className="text-xs text-zinc-500 dark:text-white/40">{userEmail}</p>
+                      <p className="text-xs text-muted-foreground">{userEmail}</p>
                       <p className="text-xs font-medium text-green-600 dark:text-green-400 mt-1">100% {userPlan} — Tous les outils</p>
                     </div>
                     <nav className="py-1">

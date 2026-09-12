@@ -78,7 +78,7 @@ function SignupForm() {
     <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-bold text-foreground mb-2">Créer un compte</h2>
-        <p className="text-sm text-surface-600 dark:text-white/50">
+        <p className="text-sm text-muted-foreground">
           Rejoignez Nexus SEO et commencez à optimiser votre référencement
         </p>
       </div>
@@ -95,7 +95,7 @@ function SignupForm() {
 
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
-        <span className="text-xs text-muted-foreground dark:text-white/30">ou avec votre e-mail</span>
+        <span className="text-xs text-muted-foreground">ou avec votre e-mail</span>
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
       </div>
 
@@ -110,7 +110,7 @@ function SignupForm() {
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Nom complet</label>
           <div className="relative">
-            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
+            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}
               placeholder="Jean Dupont"
@@ -125,7 +125,7 @@ function SignupForm() {
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Adresse e-mail</label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
               placeholder="vous@example.com"
@@ -140,7 +140,7 @@ function SignupForm() {
         <div>
           <label htmlFor="password" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Mot de passe</label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               id="password" type={showPassword ? 'text' : 'password'} value={password}
               onChange={(e) => setPassword(e.target.value)} placeholder="••••••••"
@@ -151,7 +151,7 @@ function SignupForm() {
             />
             <button type="button" onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground dark:text-white/30 hover:text-surface-700 dark:hover:text-white/60">
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-surface-700 dark:hover:text-white/60">
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
           </div>
@@ -160,7 +160,7 @@ function SignupForm() {
               <div className="flex-1 h-1 bg-surface-200 dark:bg-white/5 rounded-full overflow-hidden" aria-hidden="true">
                 <div className={`h-full transition-all ${strength.color}`} style={{ width: `${(strength.score / 4) * 100}%` }} />
               </div>
-              <span className="text-xs text-muted-foreground dark:text-white/40" aria-live="polite">{strength.label}</span>
+              <span className="text-xs text-muted-foreground" aria-live="polite">{strength.label}</span>
             </div>
           )}
         </div>
@@ -169,7 +169,7 @@ function SignupForm() {
         <div>
           <label htmlFor="confirmPassword" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Confirmer le mot de passe</label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input
               id="confirmPassword" type="password" value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)} placeholder="••••••••"
@@ -187,7 +187,7 @@ function SignupForm() {
           {/* Notice Art. 13 RGPD */}
           <div className="flex gap-2.5 p-3.5 rounded-xl bg-surface-50 dark:bg-white/[0.04] border border-surface-200 dark:border-white/10">
             <Info className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
-            <p className="text-xs text-surface-600 dark:text-white/50 leading-relaxed">
+            <p className="text-xs text-muted-foreground leading-relaxed">
               <strong className="text-surface-700 dark:text-white/70 font-semibold">Traitement de vos données (Art. 13 RGPD) —</strong>{' '}
               Responsable : <strong className="text-surface-700 dark:text-white/70">Kayzen Lyon</strong>.
               Finalité : création et gestion de votre compte, fourniture du service.
@@ -207,7 +207,7 @@ function SignupForm() {
               aria-required="true"
               className="mt-1 w-4 h-4 rounded border-surface-300 dark:border-white/20 bg-white dark:bg-white/5 text-brand-500 focus:ring-brand-500/50"
             />
-            <label htmlFor="terms" className="text-sm text-surface-600 dark:text-white/50 leading-relaxed cursor-pointer">
+            <label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
               J&apos;accepte les{' '}
               <Link href="/cgu" className="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 underline underline-offset-2">conditions d&apos;utilisation</Link>
               {' '}et la{' '}
@@ -234,7 +234,7 @@ function SignupForm() {
                 J&apos;accepte le traitement de mes données personnelles
                 <span className="text-red-500 ml-0.5" aria-hidden="true">*</span>
               </label>
-              <p id="rgpd-consent-desc" className="text-xs text-muted-foreground dark:text-white/40 mt-0.5">
+              <p id="rgpd-consent-desc" className="text-xs text-muted-foreground mt-0.5">
                 Nom, email, usage de la plateforme. Je peux retirer ce consentement à tout moment.
               </p>
             </div>
@@ -253,18 +253,18 @@ function SignupForm() {
               className="mt-0.5 w-4 h-4 rounded border-surface-300 dark:border-white/20 bg-white dark:bg-white/5 text-violet-500 focus:ring-violet-500/50"
             />
             <div>
-              <label htmlFor="marketing-consent" className="text-sm text-surface-600 dark:text-white/50 cursor-pointer">
+              <label htmlFor="marketing-consent" className="text-sm text-muted-foreground cursor-pointer">
                 Recevoir les actualités &amp; conseils Nexus SEO{' '}
-                <span className="text-muted-foreground dark:text-white/30">(facultatif)</span>
+                <span className="text-muted-foreground">(facultatif)</span>
               </label>
-              <p id="marketing-desc" className="text-xs text-muted-foreground dark:text-white/30 mt-0.5">
+              <p id="marketing-desc" className="text-xs text-muted-foreground mt-0.5">
                 Désabonnement en un clic. Aucune revente à des tiers.
               </p>
             </div>
           </div>
 
           {/* Droits */}
-          <p className="flex items-center gap-1.5 text-xs text-muted-foreground dark:text-white/30">
+          <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <ShieldCheck className="w-3.5 h-3.5 text-accent-500 flex-shrink-0" aria-hidden="true" />
             Droits : accès, rectification, effacement —{' '}
             <a href="mailto:contact@kayzen-lyon.fr?subject=Exercice%20droits%20RGPD" className="text-brand-600 dark:text-brand-400/70 underline underline-offset-2 hover:text-brand-700 dark:hover:text-brand-400">
@@ -285,7 +285,7 @@ function SignupForm() {
         </button>
       </form>
 
-      <p className="text-center text-sm text-surface-600 dark:text-white/40">
+      <p className="text-center text-sm text-muted-foreground">
         Déjà un compte ?{' '}
         <Link href="/login" className="font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300">Se connecter</Link>
       </p>

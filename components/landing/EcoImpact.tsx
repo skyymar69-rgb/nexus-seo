@@ -89,7 +89,7 @@ export function EcoImpact() {
                 <span className="block text-sm text-green-700 dark:text-green-300 mt-1 font-medium">{s.unit}</span>
               </div>
               <p className="text-sm text-surface-700 dark:text-white/70 leading-relaxed mb-3">{s.desc}</p>
-              <p className="text-xs text-muted-foreground dark:text-white/40">Source : {s.source}</p>
+              <p className="text-xs text-muted-foreground">Source : {s.source}</p>
             </div>
           ))}
         </div>
@@ -142,7 +142,7 @@ export function EcoImpact() {
               Page 400 Ko, LCP 1,2s → ~0,3 g CO2/visite
             </span>
           </div>
-          <p className="text-sm text-surface-600 dark:text-white/50 mt-4">
+          <p className="text-sm text-muted-foreground mt-4">
             Sur 100 000 pages vues/mois, c&apos;est l&apos;équivalent de 500 km en voiture économisés chaque mois.
           </p>
         </div>
