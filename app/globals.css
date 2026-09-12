@@ -199,8 +199,17 @@
   will-change: transform;
 }
 
+@keyframes logo-dot-breathe {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .logo-dot { animation: none; }
+  .logo-dot {
+    animation: logo-dot-breathe 2.4s ease-in-out infinite !important;
+    animation-duration: 2.4s !important;
+    animation-iteration-count: infinite !important;
+  }
 }
 
 @layer utilities {

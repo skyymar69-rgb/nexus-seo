@@ -49,7 +49,12 @@ export function AnimatedLogo({ size = 36, className, lightText = false }: Animat
     <div className={cn('flex items-center gap-2', className)}>
       {/* Animated colored dots logo */}
       <div className="shrink-0 flex items-center justify-center gap-[3px]" style={{ width: size, height: size }}>
-        {['bg-blue-500', 'bg-red-500', 'bg-yellow-400', 'bg-green-500'].map((color, idx) => (
+        {[
+          'bg-brand-600 dark:bg-brand-400',       /* terracotta — primaire Kayzen */
+          'bg-secondary-700 dark:bg-secondary-300', /* marine */
+          'bg-accent-600 dark:bg-accent-400',     /* vert Kayzen */
+          'bg-gold-600 dark:bg-gold-400',         /* dore */
+        ].map((color, idx) => (
           <span
             key={idx}
             className={cn('logo-dot rounded-full', color)}
