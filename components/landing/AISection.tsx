@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { ArrowRight, Brain, Zap, Eye } from 'lucide-react'
 
 const llms = [
-  { name: 'ChatGPT',    pct: 88, color: 'from-brand-500 to-brand-600' },
-  { name: 'Perplexity', pct: 81, color: 'from-violet-500 to-violet-600' },
-  { name: 'Claude',     pct: 74, color: 'from-cyan-500 to-cyan-600' },
-  { name: 'Gemini',     pct: 62, color: 'from-accent-500 to-accent-600' },
-  { name: 'Copilot',    pct: 55, color: 'from-amber-500 to-amber-600' },
+  { name: 'ChatGPT',    pct: 88, color: 'bg-brand-500' },
+  { name: 'Perplexity', pct: 81, color: 'bg-violet-500' },
+  { name: 'Claude',     pct: 74, color: 'bg-cyan-500' },
+  { name: 'Gemini',     pct: 62, color: 'bg-accent-500' },
+  { name: 'Copilot',    pct: 55, color: 'bg-amber-500' },
 ]
 
 const mentions = [
@@ -31,7 +31,7 @@ export function AISection() {
   return (
     <section id="demo" className="section-y px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-brand-950 relative overflow-hidden">
       {/* Background grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.06)_0%,transparent_65%)]" />
+      <div className="absolute inset-0 bg-[rgba(59,130,246,0.06)]" />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -109,7 +109,7 @@ export function AISection() {
                     </div>
                     <div className="h-2 bg-surface-100 dark:bg-surface-800 rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full bg-gradient-to-r ${llm.color}`}
+                        className={`h-full rounded-full ${llm.color}`}
                         style={{ width: `${llm.pct}%` }}
                       />
                     </div>

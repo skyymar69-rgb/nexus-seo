@@ -406,7 +406,7 @@ export default function AuditGratuitPage() {
 
           {/* Score Circle Section */}
           <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-surface-50 to-surface-100 dark:from-surface-800/50 dark:to-surface-900/50 rounded-2xl p-8 sm:p-12 border border-surface-200 dark:border-surface-700">
+            <div className="bg-surface-50 dark:bg-surface-800/50 rounded-2xl p-8 sm:p-12 border border-surface-200 dark:border-surface-700">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
                 <div className="relative w-32 h-32">
                   <ScoreCircle score={results.score} />
@@ -433,7 +433,7 @@ export default function AuditGratuitPage() {
                   {results.score < 90 && (
                     <Link
                       href="/signup"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                       Améliorer votre SEO <ArrowRight className="w-4 h-4" />
                     </Link>

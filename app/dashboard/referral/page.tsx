@@ -25,7 +25,7 @@ export default function ReferralPage() {
   return (
     <div className="space-y-6 pb-8 max-w-3xl mx-auto">
       <div className="flex items-center gap-3">
-        <div className="p-2.5 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg">
+        <div className="p-2.5 bg-amber-400 rounded-lg">
           <Gift className="h-6 w-6 text-white" />
         </div>
         <div>

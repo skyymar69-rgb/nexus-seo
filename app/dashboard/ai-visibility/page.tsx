@@ -258,7 +258,7 @@ function EmptyState({ onNewQuery }: { onNewQuery?: () => void }) {
       {onNewQuery && (
         <button
           onClick={onNewQuery}
-          className="px-4 py-2.5 rounded-lg bg-gradient-to-r from-brand-500 to-brand-600 text-white font-medium hover:shadow-lg hover:from-brand-600 hover:to-brand-700 transition-all"
+          className="px-4 py-2.5 rounded-lg bg-brand-500 text-white font-medium hover:shadow-lg hover:bg-brand-600 transition-all"
         >
           Lancer une analyse
         </button>
@@ -352,7 +352,7 @@ function NewQueryForm({
             'w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm transition-all',
             isSubmitting || !prompt.trim()
               ? 'bg-surface-200 dark:bg-surface-700 text-muted-foreground cursor-not-allowed'
-              : 'bg-gradient-to-r from-brand-500 to-brand-600 text-white hover:shadow-lg hover:from-brand-600 hover:to-brand-700'
+              : 'bg-brand-500 text-white hover:shadow-lg hover:bg-brand-600'
           )}
         >
           {isSubmitting ? (
@@ -394,7 +394,7 @@ export default function AIVisibilityPage() {
       <div className="space-y-8 pb-8">
         <div className="space-y-2">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-br from-brand-400 to-brand-600 rounded-lg">
+            <div className="p-2.5 bg-brand-400 rounded-lg">
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-3xl font-bold text-surface-950 dark:text-surface-50">Visibilite IA</h1>
@@ -458,7 +458,7 @@ export default function AIVisibilityPage() {
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
         <div className="space-y-2">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-br from-brand-400 to-brand-600 rounded-lg">
+            <div className="p-2.5 bg-brand-400 rounded-lg">
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-3xl font-bold text-surface-950 dark:text-surface-50">Visibilite IA</h1>
@@ -484,7 +484,7 @@ export default function AIVisibilityPage() {
           </div>
           <button
             onClick={refetch}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-brand-500 to-brand-600 text-white font-medium hover:shadow-lg hover:from-brand-600 hover:to-brand-700 transition-all"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-500 text-white font-medium hover:shadow-lg hover:bg-brand-600 transition-all"
           >
             <RefreshCw className="h-4 w-4" />
             Actualiser
@@ -569,7 +569,7 @@ export default function AIVisibilityPage() {
             <p className="text-3xl font-bold text-white">{positivePercent}%</p>
             <div className="w-full h-1.5 rounded-full bg-surface-200 dark:bg-surface-800 overflow-hidden" role="progressbar" aria-label="Sentiment Positif" aria-valuenow={positivePercent} aria-valuemin={0} aria-valuemax={100}>
               <div
-                className="h-full bg-gradient-to-r from-accent-500 to-accent-600 rounded-full transition-all"
+                className="h-full bg-accent-500 rounded-full transition-all"
                 style={{ width: `${positivePercent}%` }}
               />
             </div>
@@ -636,10 +636,7 @@ export default function AIVisibilityPage() {
               <ResponsiveContainer width="100%" height={350}>
                 <AreaChart data={chartData}>
                   <defs>
-                    <linearGradient id="colorMentionRate" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#6366f1" stopOpacity={0.3} />
-                      <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
-                    </linearGradient>
+                    
                   </defs>
                   <CartesianGrid
                     strokeDasharray="3 3"
@@ -672,7 +669,7 @@ export default function AIVisibilityPage() {
                     type="monotone"
                     dataKey="mentionRate"
                     stroke="#6366f1"
-                    fill="url(#colorMentionRate)"
+                    fill="#6366f1"
                     name="Taux de mention"
                     strokeWidth={2}
                   />

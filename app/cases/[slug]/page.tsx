@@ -186,7 +186,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
                   &ldquo;{c.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-secondary-600 flex items-center justify-center text-sm font-bold text-white">
+                  <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-sm font-bold text-white">
                     {c.author.split(' ').map((n) => n[0]).join('').slice(0, 2)}
                   </div>
                   <div>

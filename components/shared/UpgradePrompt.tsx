@@ -31,9 +31,9 @@ export function UpgradePrompt({ feature, requiredPlan }: UpgradePromptProps) {
   const isAgencyFeature = feature === 'agencyAccess'
 
   return (
-    <div className="relative rounded-2xl border border-brand-200/20 dark:border-brand-800/20 bg-gradient-to-br from-brand-50/50 to-brand-100/30 dark:from-brand-950/20 dark:to-brand-900/10 p-8 text-center overflow-hidden">
+    <div className="relative rounded-2xl border border-brand-200/20 dark:border-brand-800/20 bg-brand-50/50 dark:bg-brand-950/20 p-8 text-center overflow-hidden">
       {/* Subtle gradient border effect */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-400/10 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl bg-brand-400/10 pointer-events-none" />
 
       <div className="relative z-10">
         {/* Lock Icon */}
@@ -60,7 +60,7 @@ export function UpgradePrompt({ feature, requiredPlan }: UpgradePromptProps) {
               href="https://internet.kayzen-lyon.fr"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-amber-500 hover:bg-amber-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Découvrir l&apos;Agence Kayzen
               <ExternalLink className="w-4 h-4" />
@@ -68,7 +68,7 @@ export function UpgradePrompt({ feature, requiredPlan }: UpgradePromptProps) {
           ) : (
             <Link
               href="/pricing"
-              className="inline-flex px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex px-6 py-3 rounded-lg font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Passer au plan {plan.name}
             </Link>

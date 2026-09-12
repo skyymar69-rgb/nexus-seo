@@ -103,12 +103,7 @@ function PerformanceGauge({ score, grade }: { score: number; grade: string }) {
       <div className="relative w-56 h-56">
         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 140 140">
           <defs>
-            <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#ef4444" />
-              <stop offset="33%" stopColor="#f59e0b" />
-              <stop offset="66%" stopColor="#10b981" />
-              <stop offset="100%" stopColor="#059669" />
-            </linearGradient>
+            
           </defs>
           <circle cx="70" cy="70" r="60" fill="none" stroke="currentColor" strokeWidth="10" className="text-white/10" />
           <circle
@@ -116,7 +111,7 @@ function PerformanceGauge({ score, grade }: { score: number; grade: string }) {
             cy="70"
             r="60"
             fill="none"
-            stroke="url(#scoreGradient)"
+            stroke="#ef4444"
             strokeWidth="10"
             strokeDasharray={circumference}
             strokeDashoffset={offset}

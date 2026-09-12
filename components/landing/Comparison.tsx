@@ -52,7 +52,7 @@ export function Comparison() {
         <div className="card-gradient rounded-3xl overflow-hidden">
           <div className="relative">
             {/* Indicateur de scroll horizontal sur mobile */}
-            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white dark:from-surface-900 to-transparent pointer-events-none z-10 md:hidden" aria-hidden="true" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-white dark:bg-surface-900 pointer-events-none z-10 md:hidden" aria-hidden="true" />
             <div className="overflow-x-auto scrollbar-thin">
             <table className="w-full" role="table" aria-label="Comparaison des fonctionnalites entre Nexus et ses concurrents">
               <thead>

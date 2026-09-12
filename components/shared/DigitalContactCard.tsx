@@ -29,9 +29,9 @@ const TABS: Array<{
     src: '/qr/site.svg',
     deepLink: 'https://nexus.kayzen-lyon.fr',
     caption: 'Ouvrir Nexus — By Kayzen',
-    accent: 'from-brand-500 to-secondary-500',
-    accentFrom: '#3b82f6',
-    accentTo: '#06b6d4',
+    accent: 'bg-brand-500',
+    accentFrom: '#1f3b61',
+    accentTo: '',
   },
   {
     id: 'maps',
@@ -40,9 +40,9 @@ const TABS: Array<{
     src: '/qr/maps.svg',
     deepLink: 'https://maps.google.com/?q=6+rue+Pierre+Termier+69009+Lyon',
     caption: 'Itinéraire vers nos bureaux',
-    accent: 'from-emerald-500 to-teal-500',
-    accentFrom: '#10b981',
-    accentTo: '#14b8a6',
+    accent: 'bg-emerald-500',
+    accentFrom: '#27674a',
+    accentTo: '',
   },
   {
     id: 'reviews',
@@ -51,9 +51,9 @@ const TABS: Array<{
     src: '/qr/reviews.svg',
     deepLink: 'https://www.google.com/search?q=Kayzen+Lyon+6+rue+Pierre+Termier+avis&hl=fr',
     caption: 'Consulter ou laisser un avis Google',
-    accent: 'from-amber-500 to-orange-500',
-    accentFrom: '#d15f42',
-    accentTo: '#f97316',
+    accent: 'bg-amber-500',
+    accentFrom: '#b74820',
+    accentTo: '',
   },
   {
     id: 'vcard',
@@ -62,9 +62,9 @@ const TABS: Array<{
     src: '/qr/vcard.svg',
     deepLink: '/kayzen-lyon.vcf',
     caption: 'Ajouter à vos contacts (vCard)',
-    accent: 'from-violet-500 to-fuchsia-500',
-    accentFrom: '#2b4a74',
-    accentTo: '#d946ef',
+    accent: 'bg-violet-500',
+    accentFrom: '#132c48',
+    accentTo: '',
   },
 ]
 
@@ -166,7 +166,7 @@ export default function DigitalContactCard() {
           aria-hidden="true"
           className="absolute -inset-[1.5px] rounded-[25px] opacity-80 blur-[1px]"
           style={{
-            background: `conic-gradient(from var(--gradient-angle, 0deg), ${active.accentFrom}, #2b4a74, #ec4899, ${active.accentTo}, ${active.accentFrom})`,
+            background: `#2b4a74`,
             animation: 'rotate-gradient 4s linear infinite',
           }}
         />
@@ -177,8 +177,8 @@ export default function DigitalContactCard() {
         >
           {/* ── Header gradient ────────────────────────────────── */}
           <div
-            className={cn('relative h-28 bg-gradient-to-br overflow-hidden', active.accent)}
-            style={{ background: `linear-gradient(135deg, ${active.accentFrom} 0%, ${active.accentTo} 100%)` }}
+            className={cn('relative h-28 overflow-hidden', active.accent)}
+            style={{ background: active.accentFrom }}
           >
             {/* Radial shine */}
             <div
@@ -186,7 +186,7 @@ export default function DigitalContactCard() {
               className="absolute inset-0 opacity-30"
               style={{
                 backgroundImage:
-                  'radial-gradient(circle at 15% 120%, rgba(255,255,255,0.55) 0%, transparent 50%), radial-gradient(circle at 85% -20%, rgba(255,255,255,0.4) 0%, transparent 45%)',
+                  'rgba(255,255,255,0.55), rgba(255,255,255,0.4)',
               }}
             />
             {/* Noise texture */}
@@ -269,7 +269,7 @@ export default function DigitalContactCard() {
                   {isActive && (
                     <span
                       className="absolute bottom-0 inset-x-2 h-[2px] rounded-full"
-                      style={{ background: `linear-gradient(90deg, ${t.accentFrom}, ${t.accentTo})` }}
+                      style={{ background: t.accentFrom }}
                     />
                   )}
                 </button>
@@ -300,7 +300,7 @@ export default function DigitalContactCard() {
               <div
                 aria-hidden="true"
                 className="absolute -inset-2 rounded-2xl opacity-40 blur-xl pointer-events-none"
-                style={{ background: `radial-gradient(circle, ${active.accentFrom}66, transparent 70%)` }}
+                style={{ background: `${active.accentFrom}1f` }}
               />
 
               {/* QR card */}
@@ -352,7 +352,7 @@ export default function DigitalContactCard() {
                   className={cn(
                     'flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold text-white shadow-md hover:shadow-lg transition-all active:scale-[0.98]',
                     confetti ? 'confetti-burst active' : 'confetti-burst',
-                    'bg-gradient-to-br',
+                    '',
                     active.accent
                   )}
                 >
@@ -366,7 +366,7 @@ export default function DigitalContactCard() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    'flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold text-white shadow-md hover:shadow-lg transition-all active:scale-[0.98] bg-gradient-to-br',
+                    'flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold text-white shadow-md hover:shadow-lg transition-all active:scale-[0.98] ',
                     active.accent
                   )}
                 >
@@ -404,25 +404,25 @@ export default function DigitalContactCard() {
                 href: 'tel:+33487776861',
                 label: 'Appeler',
                 icon: Phone,
-                gradient: 'from-brand-500 to-secondary-500',
+                gradient: 'bg-brand-500',
               },
               {
                 href: 'mailto:contact@kayzen-lyon.fr',
                 label: 'Écrire',
                 icon: Mail,
-                gradient: 'from-violet-500 to-fuchsia-500',
+                gradient: 'bg-violet-500',
               },
               {
                 href: 'https://maps.google.com/?q=6+rue+Pierre+Termier+69009+Lyon',
                 label: 'Itinéraire',
                 icon: MapPin,
-                gradient: 'from-emerald-500 to-teal-500',
+                gradient: 'bg-emerald-500',
               },
               {
                 href: 'https://wa.me/33487776861?text=Bonjour%20Kayzen%20Lyon%2C%20je%20vous%20contacte%20depuis%20votre%20carte%20num%C3%A9rique.',
                 label: 'WhatsApp',
                 icon: MessageCircle,
-                gradient: 'from-green-500 to-emerald-600',
+                gradient: 'bg-green-500',
               },
             ].map(({ href, label, icon: Icon, gradient }) => (
               <a
@@ -435,7 +435,7 @@ export default function DigitalContactCard() {
               >
                 <span
                   className={cn(
-                    'w-9 h-9 rounded-full bg-gradient-to-br flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform',
+                    'w-9 h-9 rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform',
                     gradient
                   )}
                 >
@@ -496,7 +496,7 @@ export default function DigitalContactCard() {
         {/* Ping badge */}
         <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gradient-to-br from-brand-500 to-secondary-600" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500" />
         </span>
       </button>
 

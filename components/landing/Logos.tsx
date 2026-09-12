@@ -28,9 +28,9 @@ export function Logos() {
         {/* Marquee Container */}
         <div className="relative overflow-hidden">
           {/* Gradient Overlay Left */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface-50 dark:from-surface-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-surface-50 dark:bg-surface-950 z-10 pointer-events-none" />
           {/* Gradient Overlay Right */}
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface-50 dark:from-surface-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-surface-50 dark:bg-surface-950 z-10 pointer-events-none" />
 
           {/* Animated Logos */}
           <div className="flex gap-12 animate-[scroll_30s_linear_infinite]">

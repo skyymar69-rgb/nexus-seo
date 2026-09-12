@@ -98,7 +98,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
 
               <Link
                 href="/audit-gratuit"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-800 text-white font-bold text-lg hover:from-brand-700 hover:to-brand-900 transition-all shadow-lg"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-600 text-white font-bold text-lg hover:bg-brand-700 transition-all shadow-lg"
               >
                 Lancer mon audit gratuit <ArrowRight className="w-5 h-5" />
               </Link>
@@ -156,7 +156,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
         </section>
 
         {/* CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-brand-600 to-secondary-700">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-600">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Pret a optimiser votre site a {city.name} ?

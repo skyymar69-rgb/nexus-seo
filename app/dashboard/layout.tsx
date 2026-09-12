@@ -540,7 +540,7 @@ function DashboardLayoutContent({
                   aria-expanded={userMenuOpen}
                   aria-haspopup="menu"
                 >
-                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center text-white text-xs font-semibold">
+                  <div className="h-8 w-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-semibold">
                     {userInitials}
                   </div>
                   <ChevronDown className="h-4 w-4 text-zinc-400 dark:text-white/50 hidden lg:block" />

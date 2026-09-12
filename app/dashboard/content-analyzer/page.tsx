@@ -61,7 +61,7 @@ export default function ContentAnalyzerPage() {
   return (
     <div className="space-y-6 pb-8">
       <div className="flex items-center gap-3">
-        <div className="p-2.5 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg">
+        <div className="p-2.5 bg-cyan-400 rounded-lg">
           <Sparkles className="h-6 w-6 text-white" />
         </div>
         <div>

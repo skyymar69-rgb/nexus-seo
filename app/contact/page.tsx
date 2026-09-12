@@ -78,7 +78,7 @@ export default function ContactPage() {
                   { icon: MapPin, label: 'Adresse',   value: '6, rue Pierre Termier, 69009 Lyon', href: 'https://maps.google.com/?q=6+rue+Pierre+Termier+69009+Lyon' },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <a key={label} href={href} className="flex items-start gap-4 card p-5 hover:ring-1 hover:ring-brand-500/30 transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-secondary-700 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center flex-shrink-0">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
               <div className="lg:col-span-3">
                 {sent ? (
                   <div className="card p-12 text-center" role="status" aria-live="polite">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-500 to-secondary-700 flex items-center justify-center mx-auto mb-5">
+                    <div className="w-16 h-16 rounded-full bg-brand-500 flex items-center justify-center mx-auto mb-5">
                       <Check className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-3">Message envoyé !</h3>

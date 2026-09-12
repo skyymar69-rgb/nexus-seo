@@ -671,7 +671,7 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
       {/* ── Header ──────────────────────────────────────────── */}
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between print:flex-row print:items-center">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-gradient-to-br from-brand-400 to-brand-600 rounded-lg print:hidden">
+          <div className="p-2.5 bg-brand-400 rounded-lg print:hidden">
             <Search className="h-6 w-6 text-white" />
           </div>
           <div>

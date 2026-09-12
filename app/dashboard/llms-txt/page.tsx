@@ -47,7 +47,7 @@ export default function LLMSTxtPage() {
   return (
     <div className="space-y-6 pb-8">
       <div className="flex items-center gap-3">
-        <div className="p-2.5 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg">
+        <div className="p-2.5 bg-emerald-400 rounded-lg">
           <FileText className="h-6 w-6 text-white" />
         </div>
         <div>

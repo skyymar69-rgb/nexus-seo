@@ -10,7 +10,7 @@ const steps = [
     title: 'Connectez votre site en 30 secondes',
     desc: 'Ajoutez votre domaine, connectez Google Search Console en 1 clic et choisissez vos mots-clés prioritaires. Pas d\'installation technique requise.',
     detail: 'Compatible avec tous les CMS : WordPress, Shopify, Webflow, custom...',
-    color: 'from-brand-500 to-brand-600',
+    color: 'bg-brand-500',
     bg: 'bg-brand-50 dark:bg-brand-950/20',
   },
   {
@@ -19,7 +19,7 @@ const steps = [
     title: 'Analyse complète en 5 minutes',
     desc: 'Nexus crawle votre site, vérifie votre score GEO/AEO/LLMO, identifie vos opportunités de featured snippets et audite vos 100+ facteurs techniques.',
     detail: 'Rapport d\'audit disponible immédiatement, comparé à vos 5 principaux concurrents.',
-    color: 'from-violet-500 to-violet-600',
+    color: 'bg-violet-500',
     bg: 'bg-violet-50 dark:bg-violet-950/20',
   },
   {
@@ -28,7 +28,7 @@ const steps = [
     title: 'Implémentez et dominez',
     desc: 'Suivez les recommandations prioritaires de notre IA, mesurez l\'impact de chaque action et regardez votre trafic organique et votre visibilité IA croître chaque semaine.',
     detail: 'Rapports automatiques pour vous et vos clients, avec évolution des KPIs.',
-    color: 'from-cyan-500 to-cyan-600',
+    color: 'bg-cyan-500',
     bg: 'bg-cyan-50 dark:bg-cyan-950/20',
   },
 ]
@@ -52,7 +52,7 @@ export function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-500/0 via-brand-500/40 to-brand-500/0" />
+          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-brand-500/0" />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {steps.map((step, i) => {
@@ -61,7 +61,7 @@ export function HowItWorks() {
                 <div key={i} className="relative flex flex-col items-start">
                   {/* Step number + icon */}
                   <div className="relative mb-6 z-10">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
+                    <div className={`w-16 h-16 rounded-2xl ${step.color} flex items-center justify-center shadow-lg`}>
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                     <span className="absolute -top-2 -right-2 text-xs font-black text-muted-foreground dark:text-surface-600">

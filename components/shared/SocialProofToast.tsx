@@ -83,7 +83,7 @@ export default function SocialProofToast() {
     >
       <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white dark:bg-surface-900 shadow-lg border border-surface-200 dark:border-surface-700 max-w-xs">
         {/* Avatar */}
-        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-500 to-secondary-600 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
+        <div className="w-9 h-9 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
           {msg.initials}
         </div>
         {/* Text */}

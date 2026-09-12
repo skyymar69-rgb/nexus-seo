@@ -64,7 +64,7 @@ export default function LinkBuyingPage() {
     <div className="space-y-6 pb-8">
       {/* Header */}
       <div className="flex items-center gap-3">
-        <div className="p-2.5 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg">
+        <div className="p-2.5 bg-amber-400 rounded-lg">
           <ShoppingCart className="h-6 w-6 text-white" />
         </div>
         <div>

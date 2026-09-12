@@ -372,7 +372,7 @@ export default function AIContentPage() {
                 <button
                   onClick={handleGenerate}
                   disabled={isGenerating}
-                  className="flex-1 py-3 rounded-lg font-semibold text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-brand-600 to-brand-800 hover:from-brand-700 hover:to-brand-900 shadow-lg hover:shadow-xl"
+                  className="flex-1 py-3 rounded-lg font-semibold text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-brand-600 hover:bg-brand-700 shadow-lg hover:shadow-xl"
                 >
                   {isGenerating ? (
                     <span className="flex items-center justify-center gap-2">
@@ -527,7 +527,7 @@ export default function AIContentPage() {
             {showSEO && content && (
               <>
                 {/* SEO Score */}
-                <div className="bg-gradient-to-br from-brand-500/10 to-accent-500/10 rounded-xl border border-brand-500/20 p-6">
+                <div className="bg-brand-500/10 rounded-xl border border-brand-500/20 p-6">
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
                     <TrendingUp className="w-5 h-5 text-brand-600" />
                     Score SEO

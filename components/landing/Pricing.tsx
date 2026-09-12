@@ -57,7 +57,7 @@ export function Pricing() {
 
               <Link
                 href="/signup"
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-800 text-white font-bold text-base hover:from-brand-700 hover:to-brand-900 transition-all shadow-lg"
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-brand-600 text-white font-bold text-base hover:bg-brand-700 transition-all shadow-lg"
               >
                 Commencer gratuitement <ArrowRight className="w-5 h-5" />
               </Link>
@@ -77,7 +77,7 @@ export function Pricing() {
         </div>
 
         {/* Kayzen Agency Banner */}
-        <div className="mt-12 rounded-2xl bg-gradient-to-r from-amber-500/10 to-brand-500/10 dark:from-amber-500/5 dark:to-brand-500/5 border border-amber-300/30 dark:border-amber-700/30 p-8 text-center">
+        <div className="mt-12 rounded-2xl bg-amber-500/10 dark:bg-amber-500/5 border border-amber-300/30 dark:border-amber-700/30 p-8 text-center">
           <p className="text-lg font-semibold text-foreground mb-2">
             Besoin d&apos;un site web performant ?
           </p>
@@ -88,7 +88,7 @@ export function Pricing() {
             href="https://internet.kayzen-lyon.fr"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-amber-500 hover:bg-amber-600 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Découvrir l&apos;Agence Kayzen
             <ExternalLink className="w-4 h-4" />

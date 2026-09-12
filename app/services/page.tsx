@@ -264,7 +264,7 @@ export default function ServicesPage() {
         {/* Kayzen Agency CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-3xl mx-auto">
-            <div className="rounded-2xl bg-gradient-to-r from-amber-500/10 to-brand-500/10 dark:from-amber-500/5 dark:to-brand-500/5 border border-amber-300/30 dark:border-amber-700/30 p-8 text-center">
+            <div className="rounded-2xl bg-amber-500/10 dark:bg-amber-500/5 border border-amber-300/30 dark:border-amber-700/30 p-8 text-center">
               <p className="text-lg font-semibold text-foreground mb-2">
                 Besoin d&apos;un accompagnement sur mesure ?
               </p>
@@ -275,7 +275,7 @@ export default function ServicesPage() {
                 href="https://internet.kayzen-lyon.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-amber-500 hover:bg-amber-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Découvrir l&apos;Agence Kayzen
                 <ExternalLink className="w-4 h-4" />

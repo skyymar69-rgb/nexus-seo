@@ -93,31 +93,16 @@ export function ScoreTrendChart({ websiteId }: ScoreTrendChartProps) {
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={chartData} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
             <defs>
-              <linearGradient id="gradSEO" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.3} />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="gradAEO" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#8b5cf6" stopOpacity={0.3} />
-                <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="gradGEO" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#34d399" stopOpacity={0.3} />
-                <stop offset="100%" stopColor="#34d399" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="gradPerf" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#22d3ee" stopOpacity={0.3} />
-                <stop offset="100%" stopColor="#22d3ee" stopOpacity={0} />
-              </linearGradient>
+
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.03)" />
             <XAxis dataKey="date" tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 11 }} axisLine={false} tickLine={false} />
             <YAxis domain={[0, 100]} tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 11 }} axisLine={false} tickLine={false} />
             <Tooltip content={<CustomTooltip />} />
-            <Area type="monotone" dataKey="SEO" stroke="#3b82f6" fill="url(#gradSEO)" strokeWidth={2} dot={false} />
-            <Area type="monotone" dataKey="AEO" stroke="#8b5cf6" fill="url(#gradAEO)" strokeWidth={2} dot={false} />
-            <Area type="monotone" dataKey="GEO" stroke="#34d399" fill="url(#gradGEO)" strokeWidth={2} dot={false} />
-            <Area type="monotone" dataKey="Perf" stroke="#22d3ee" fill="url(#gradPerf)" strokeWidth={2} dot={false} />
+            <Area type="monotone" dataKey="SEO" stroke="#3b82f6" fill="#3b82f6" strokeWidth={2} dot={false} />
+            <Area type="monotone" dataKey="AEO" stroke="#8b5cf6" fill="#8b5cf6" strokeWidth={2} dot={false} />
+            <Area type="monotone" dataKey="GEO" stroke="#34d399" fill="#34d399" strokeWidth={2} dot={false} />
+            <Area type="monotone" dataKey="Perf" stroke="#22d3ee" fill="#22d3ee" strokeWidth={2} dot={false} />
           </AreaChart>
         </ResponsiveContainer>
       </div>

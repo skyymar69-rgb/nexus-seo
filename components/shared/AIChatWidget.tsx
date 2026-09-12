@@ -175,7 +175,7 @@ export default function AIChatWidget() {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-surface-50 dark:bg-zinc-800/80 border-b border-surface-200 dark:border-zinc-700/50">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-amber-500 flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-8 h-8 rounded-lg bg-purple-500 flex items-center justify-center text-white font-bold text-xs">
                 N
               </div>
               <div>
@@ -274,7 +274,7 @@ export default function AIChatWidget() {
       <button
         onClick={() => setOpen(!open)}
         aria-label="Ouvrir l'assistant SEO"
-        className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-zinc-900 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:scale-105 transition-all"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-amber-500 text-zinc-900 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:scale-105 transition-all"
       >
         {open ? (
           <span className="text-xl font-bold">&#x2715;</span>

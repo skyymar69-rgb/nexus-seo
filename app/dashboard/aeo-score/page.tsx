@@ -94,22 +94,22 @@ const CATEGORY_META: Record<string, { label: string; icon: React.ReactNode; colo
   snippetReadiness: {
     label: 'Snippet Readiness',
     icon: <Zap className="h-5 w-5" />,
-    color: 'from-indigo-500 to-indigo-600',
+    color: 'bg-indigo-500',
   },
   qaPatterns: {
     label: 'Q&A Patterns',
     icon: <MessageSquare className="h-5 w-5" />,
-    color: 'from-brand-500 to-brand-600',
+    color: 'bg-brand-500',
   },
   voiceReadiness: {
     label: 'Voice Readiness',
     icon: <Mic className="h-5 w-5" />,
-    color: 'from-purple-500 to-purple-600',
+    color: 'bg-purple-500',
   },
   contentStructure: {
     label: 'Content Structure',
     icon: <LayoutList className="h-5 w-5" />,
-    color: 'from-cyan-500 to-cyan-600',
+    color: 'bg-cyan-500',
   },
 }
 
@@ -131,7 +131,7 @@ function CategoryCard({
         className="w-full p-5 flex items-center justify-between text-left"
       >
         <div className="flex items-center gap-3">
-          <div className={cn('p-2 rounded-lg bg-gradient-to-br text-white', meta.color)}>
+          <div className={cn('p-2 rounded-lg text-white', meta.color)}>
             {meta.icon}
           </div>
           <div>
@@ -269,7 +269,7 @@ export default function AEOScorePage() {
       <div className="space-y-8 pb-8">
         <div className="space-y-2">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg">
+            <div className="p-2.5 bg-indigo-400 rounded-lg">
               <FileSearch className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-3xl font-bold text-surface-950 dark:text-surface-50">Score AEO</h1>
@@ -315,7 +315,7 @@ export default function AEOScorePage() {
       {/* Header */}
       <div className="space-y-2">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg">
+          <div className="p-2.5 bg-indigo-400 rounded-lg">
             <FileSearch className="h-6 w-6 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-surface-950 dark:text-surface-50">Score AEO</h1>

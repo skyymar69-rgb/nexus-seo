@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Play, TrendingUp, Globe, Zap, Search, Loader2 } from 'lucide-react'
 
-
 export function Hero() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   return (
@@ -161,35 +160,15 @@ export function Hero() {
           >
             <defs>
               {/* Area chart gradient */}
-              <linearGradient id="hero-area-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#e18268" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#e18268" stopOpacity="0" />
-              </linearGradient>
+              
               {/* Frame gradient */}
-              <linearGradient id="frame-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(22,41,63,0.95)" />
-                <stop offset="100%" stopColor="rgba(10,21,36,0.98)" />
-              </linearGradient>
+              
               {/* Titlebar gradient */}
-              <linearGradient id="titlebar-grad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="rgba(31,59,97,0.9)" />
-                <stop offset="100%" stopColor="rgba(15,31,53,0.9)" />
-              </linearGradient>
+              
               {/* Score ring gradient */}
-              <linearGradient id="score-ring-grad" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0%" stopColor="#e18268" />
-                <stop offset="60%" stopColor="#d15f42" />
-                <stop offset="100%" stopColor="#e18268" stopOpacity="0.6" />
-              </linearGradient>
+              
               {/* Bar gradient */}
-              <linearGradient id="bar-grad-violet" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#6d8cb5" />
-                <stop offset="100%" stopColor="rgba(43,74,116,0.55)" />
-              </linearGradient>
-              <linearGradient id="bar-grad-gold" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#f6d0c7" />
-                <stop offset="100%" stopColor="#e18268" />
-              </linearGradient>
+
               {/* Glow filter */}
               <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
@@ -214,21 +193,17 @@ export function Hero() {
             <ellipse cx="210" cy="200" rx="180" ry="160" fill="rgba(124,58,237,0.04)" />
 
             {/* ── Dashboard frame ── */}
-            <rect x="10" y="10" width="400" height="368" rx="18" fill="url(#frame-grad)" />
+            <rect x="10" y="10" width="400" height="368" rx="18" fill="rgba(22,41,63,0.95)" />
             {/* Frame border with gradient */}
-            <rect x="10" y="10" width="400" height="368" rx="18" fill="none" stroke="url(#frame-grad-border)" strokeWidth="1" />
+            <rect x="10" y="10" width="400" height="368" rx="18" fill="none" stroke="rgba(109,140,181,0.45)" strokeWidth="1" />
             <defs>
-              <linearGradient id="frame-grad-border" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="rgba(109,140,181,0.45)" />
-                <stop offset="50%" stopColor="rgba(43,74,116,0.2)" />
-                <stop offset="100%" stopColor="rgba(225,130,104,0.25)" />
-              </linearGradient>
+              
             </defs>
             {/* Inner top highlight */}
             <rect x="11" y="11" width="398" height="2" rx="1" fill="rgba(255,255,255,0.08)" />
 
             {/* ── Title bar ── */}
-            <rect x="10" y="10" width="400" height="40" rx="18" fill="url(#titlebar-grad)" />
+            <rect x="10" y="10" width="400" height="40" rx="18" fill="rgba(31,59,97,0.9)" />
             <rect x="10" y="40" width="400" height="10" fill="rgba(15,31,53,0.9)" />
 
             {/* Window dots with glow */}
@@ -256,7 +231,7 @@ export function Hero() {
               {/* Second decorative track */}
               <circle cx="0" cy="0" r="35" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
               {/* Progress ring */}
-              <circle cx="0" cy="0" r="42" fill="none" stroke="url(#score-ring-grad)" strokeWidth="7"
+              <circle cx="0" cy="0" r="42" fill="none" stroke="#e18268" strokeWidth="7"
                 strokeDasharray="226" strokeDashoffset="28" strokeLinecap="round"
                 transform="rotate(-90)" className="hero-line-draw"
                 filter="url(#glow-gold)"
@@ -338,7 +313,7 @@ export function Hero() {
               {/* Area fill */}
               <polygon
                 points="0,90 15,85 30,80 45,76 60,70 75,62 90,56 105,43 120,37 135,28 150,22 165,16 165,107 0,107"
-                fill="url(#hero-area-grad)" opacity="0.5" className="hero-line-draw" style={{ animationDelay: '0.8s' }}
+                fill="#e18268" opacity="0.5" className="hero-line-draw" style={{ animationDelay: '0.8s' }}
               />
               {/* Line */}
               <polyline
@@ -419,7 +394,7 @@ export function Hero() {
               />
               <polygon
                 points="0,80 25,65 50,55 75,35 100,25 125,10 125,90 0,90"
-                fill="url(#hero-area-grad-m)"
+                fill="#e18268"
                 opacity="0.25"
                 className="hero-line-draw"
                 style={{ animationDelay: '1s' }}
@@ -428,10 +403,7 @@ export function Hero() {
             </g>
 
             <defs>
-              <linearGradient id="hero-area-grad-m" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#e18268" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#e18268" stopOpacity="0" />
-              </linearGradient>
+              
             </defs>
           </svg>
         </div>

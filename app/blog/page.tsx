@@ -108,7 +108,7 @@ export default function BlogPage() {
           <div className="max-w-6xl mx-auto">
             {/* Featured */}
             <Link href={`/blog/${featured.slug}`} className="card-hover p-0 overflow-hidden flex flex-col md:flex-row mb-8 group">
-              <div className="md:w-2/5 bg-gradient-to-br from-brand-500 via-brand-700 to-secondary-700 flex items-center justify-center p-12 min-h-48">
+              <div className="md:w-2/5 bg-brand-500 flex items-center justify-center p-12 min-h-48">
                 <span className="text-white/20 text-9xl font-black">SEO</span>
               </div>
               <div className="md:w-3/5 p-8 flex flex-col justify-center">

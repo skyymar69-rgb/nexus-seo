@@ -7,31 +7,31 @@ const reasons = [
     icon: Sparkles,
     title: 'Premier outil GEO + AEO + LLMO',
     desc: 'Nexus est le seul outil qui combine l\'optimisation pour Google SGE, les featured snippets et les réponses des LLMs (ChatGPT, Claude, Gemini) en une seule plateforme.',
-    color: 'from-brand-500 to-secondary-600',
+    color: 'bg-brand-500',
   },
   {
     icon: Zap,
     title: '50+ outils SEO gratuits',
     desc: 'Audit technique, suivi de positions, analyse de backlinks, générateur de contenu, keyword research — tout est inclus sans limitation et sans carte bancaire.',
-    color: 'from-violet-500 to-cyan-500',
+    color: 'bg-violet-500',
   },
   {
     icon: Leaf,
     title: 'SEO éco-responsable',
     desc: 'Un site rapide et bien référencé consomme moins d\'énergie. Nexus vous aide à réduire le poids de vos pages et à adopter les bonnes pratiques du web durable.',
-    color: 'from-green-500 to-emerald-500',
+    color: 'bg-green-500',
   },
   {
     icon: Globe,
     title: 'Conçu par une agence web',
     desc: 'Nexus est développé par Kayzen Web, agence lyonnaise de création de sites React/Next.js performants. L\'outil est né de l\'expérience terrain avec de vrais clients.',
-    color: 'from-cyan-500 to-brand-500',
+    color: 'bg-cyan-500',
   },
   {
     icon: Shield,
     title: 'Données hébergées en Europe',
     desc: 'Vos données sont hébergées en Europe via Vercel et Railway, dans le respect du RGPD. Aucune revente de données, aucune utilisation pour entraîner des modèles IA.',
-    color: 'from-brand-500 to-secondary-500',
+    color: 'bg-brand-500',
   },
 ]
 
@@ -57,7 +57,7 @@ export function Testimonials() {
             const Icon = r.icon
             return (
               <div key={r.title} className="card-hover p-7 flex flex-col gap-4">
-                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${r.color} flex items-center justify-center`}>
+                <div className={`w-12 h-12 rounded-2xl ${r.color} flex items-center justify-center`}>
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground">{r.title}</h3>
@@ -72,7 +72,7 @@ export function Testimonials() {
             const Icon = r.icon
             return (
               <div key={r.title} className="card p-6 flex items-start gap-5">
-                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${r.color} flex items-center justify-center flex-shrink-0`}>
+                <div className={`w-12 h-12 rounded-2xl ${r.color} flex items-center justify-center flex-shrink-0`}>
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <div>

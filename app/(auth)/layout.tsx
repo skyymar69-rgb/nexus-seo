@@ -15,7 +15,7 @@ export default function AuthLayout({
   return (
     <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
       {/* Left side - Branding */}
-      <div className="hidden lg:flex flex-col items-center justify-center bg-gradient-to-br from-brand-950 via-brand-900 to-surface-950 p-8 relative overflow-hidden">
+      <div className="hidden lg:flex flex-col items-center justify-center bg-brand-950 p-8 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl"></div>

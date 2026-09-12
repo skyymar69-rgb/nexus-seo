@@ -252,10 +252,10 @@ const HealthGauge: React.FC<HealthGaugeProps> = ({
   const offset = circumference - (percentage / 100) * circumference
 
   const getColor = () => {
-    if (score >= 80) return 'from-green-500 to-emerald-600'
-    if (score >= 70) return 'from-blue-500 to-cyan-600'
-    if (score >= 60) return 'from-yellow-500 to-amber-600'
-    return 'from-red-500 to-rose-600'
+    if (score >= 80) return 'bg-green-500'
+    if (score >= 70) return 'bg-blue-500'
+    if (score >= 60) return 'bg-yellow-500'
+    return 'bg-red-500'
   }
 
   const getGrade = () => {
@@ -284,24 +284,12 @@ const HealthGauge: React.FC<HealthGaugeProps> = ({
           strokeWidth="8"
           className="text-slate-700"
         />
-        <defs>
-          <linearGradient id={`gradient-${score}`}>
-            <stop
-              offset="0%"
-              stopColor={score >= 80 ? '#10b981' : score >= 70 ? '#3b82f6' : score >= 60 ? '#f59e0b' : '#ef4444'}
-            />
-            <stop
-              offset="100%"
-              stopColor={score >= 80 ? '#059669' : score >= 70 ? '#0891b2' : score >= 60 ? '#d97706' : '#dc2626'}
-            />
-          </linearGradient>
-        </defs>
         <circle
           cx="60"
           cy="60"
           r="45"
           fill="none"
-          stroke={`url(#gradient-${score})`}
+          stroke={score >= 80 ? '#27674a' : score >= 70 ? '#1f3b61' : score >= 60 ? '#b45309' : '#dc2626'}
           strokeWidth="8"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
@@ -311,7 +299,7 @@ const HealthGauge: React.FC<HealthGaugeProps> = ({
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div
-          className={`text-3xl font-bold bg-gradient-to-r ${getColor()} bg-clip-text text-transparent`}
+          className={`text-3xl font-bold ${getColor()} bg-clip-text text-transparent`}
         >
           {score}
         </div>
@@ -385,12 +373,12 @@ const CategoryScoreCard: React.FC<CategoryScoreCardProps> = ({ category }) => {
         <div
           className={`h-full transition-all duration-500 ${
             category.score >= 80
-              ? 'bg-gradient-to-r from-green-500 to-emerald-600'
+              ? 'bg-green-500'
               : category.score >= 70
-                ? 'bg-gradient-to-r from-blue-500 to-cyan-600'
+                ? 'bg-blue-500'
                 : category.score >= 60
-                  ? 'bg-gradient-to-r from-yellow-500 to-amber-600'
-                  : 'bg-gradient-to-r from-red-500 to-rose-600'
+                  ? 'bg-yellow-500'
+                  : 'bg-red-500'
           }`}
           style={{ width: `${category.score}%` }}
         />
@@ -573,7 +561,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ items, onToggleDone
         </div>
         <div className="w-full h-3 bg-slate-700 rounded-full overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-500"
+            className="h-full bg-blue-500 transition-all duration-500"
             style={{ width: `${totalProgress}%` }}
           />
         </div>
@@ -611,7 +599,7 @@ const ChecklistSection: React.FC<ChecklistSectionProps> = ({ items, onToggleDone
         </div>
         <div className="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-500"
+            className="h-full bg-emerald-500 transition-all duration-500"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -803,11 +791,11 @@ const ActionPlanTab: React.FC<ActionPlanTabProps> = ({ plans }) => {
 
 function LoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-slate-950">
       <div className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg">
+            <div className="p-3 bg-blue-500 rounded-lg">
               <Brain size={28} className="text-white" />
             </div>
             <div>
@@ -836,11 +824,11 @@ function LoadingSkeleton() {
 
 function EmptyState({ message }: { message: string }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-slate-950">
       <div className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg">
+            <div className="p-3 bg-blue-500 rounded-lg">
               <Brain size={28} className="text-white" />
             </div>
             <div>
@@ -1017,13 +1005,13 @@ export default function AIAdvisorPage() {
   }))
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-slate-950">
       {/* Header */}
       <div className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg">
+              <div className="p-3 bg-blue-500 rounded-lg">
                 <Brain size={28} className="text-white" />
               </div>
               <div>
@@ -1094,7 +1082,7 @@ export default function AIAdvisorPage() {
                     </div>
                     <div className="w-full h-3 bg-slate-700 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-blue-500 to-cyan-600"
+                        className="h-full bg-blue-500"
                         style={{ width: `${overallScore}%` }}
                       />
                     </div>
@@ -1193,7 +1181,7 @@ export default function AIAdvisorPage() {
               {Object.entries(groupedRecommendations).map(([category, recs]) => (
                 <div key={category} className="space-y-4">
                   <h3 className="text-lg font-semibold text-slate-200 flex items-center gap-2">
-                    <span className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-600 rounded-full" />
+                    <span className="w-1 h-6 bg-blue-500 rounded-full" />
                     {categoryLabelsMap[category] || category}
                   </h3>
 
@@ -1247,14 +1235,7 @@ export default function AIAdvisorPage() {
               <ResponsiveContainer width="100%" height={400}>
                 <ComposedChart data={evolutionData}>
                   <defs>
-                    <linearGradient id="colorActual" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3} />
-                      <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
-                    </linearGradient>
-                    <linearGradient id="colorGoal" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
-                      <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
-                    </linearGradient>
+
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                   <XAxis dataKey="month" stroke="#94a3b8" />
@@ -1273,7 +1254,7 @@ export default function AIAdvisorPage() {
                     dataKey="actual"
                     stroke="#3b82f6"
                     strokeWidth={3}
-                    fill="url(#colorActual)"
+                    fill="#3b82f6"
                     name="Score actuel"
                   />
                   <Area
@@ -1281,7 +1262,7 @@ export default function AIAdvisorPage() {
                     dataKey="goal"
                     stroke="#10b981"
                     strokeWidth={2}
-                    fill="url(#colorGoal)"
+                    fill="#10b981"
                     name="Objectif"
                     strokeDasharray="5 5"
                   />
@@ -1425,7 +1406,7 @@ export default function AIAdvisorPage() {
             <p className="text-slate-300 mb-6">
               Commencez par les recommandations critiques pour des gains immediats
             </p>
-            <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
+            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
               Demarrer l&apos;optimisation
             </button>
           </div>

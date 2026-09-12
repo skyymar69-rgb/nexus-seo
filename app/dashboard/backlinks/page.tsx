@@ -364,7 +364,7 @@ export default function BacklinksPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900">
       {/* Header */}
       <div className="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -559,7 +559,7 @@ export default function BacklinksPage() {
                 </div>
                 <div className="w-full bg-slate-700 rounded-full h-2">
                   <div
-                    className="bg-gradient-to-r from-blue-500 to-blue-400 h-2 rounded-full"
+                    className="bg-blue-500 h-2 rounded-full"
                     style={{ width: `${item.percentage}%` }}
                   />
                 </div>

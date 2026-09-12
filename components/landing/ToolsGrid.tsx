@@ -7,7 +7,7 @@ const categories = [
   {
     name: 'SEO Technique',
     icon: Search,
-    color: 'from-blue-500 to-blue-600',
+    color: 'bg-blue-500',
     border: 'border-blue-500/20 hover:border-blue-500/40',
     tools: ['Audit de site', 'Performance', 'Domain Overview', 'On-Page Checker', 'Crawleur Web'],
     count: 8,
@@ -15,7 +15,7 @@ const categories = [
   {
     name: 'Mots-clés',
     icon: TrendingUp,
-    color: 'from-violet-500 to-violet-600',
+    color: 'bg-violet-500',
     border: 'border-violet-500/20 hover:border-violet-500/40',
     tools: ['Suivi de positions', 'Keyword Magic', 'Keyword Gap', 'Recherche Sémantique', 'Clustering'],
     count: 8,
@@ -23,7 +23,7 @@ const categories = [
   {
     name: 'Backlinks',
     icon: LinkIcon,
-    color: 'from-orange-500 to-orange-600',
+    color: 'bg-orange-500',
     border: 'border-orange-500/20 hover:border-orange-500/40',
     tools: ['Profil Backlinks', 'Audit Toxicité', 'Analyse Concurrents', 'Netlinking'],
     count: 6,
@@ -31,7 +31,7 @@ const categories = [
   {
     name: 'Contenu',
     icon: FileText,
-    color: 'from-emerald-500 to-emerald-600',
+    color: 'bg-emerald-500',
     border: 'border-emerald-500/20 hover:border-emerald-500/40',
     tools: ['Optimisation', 'Topic Research', 'Templates SEO', 'Générateur IA', 'Analyse Lisibilité'],
     count: 8,
@@ -39,7 +39,7 @@ const categories = [
   {
     name: 'IA & GEO',
     icon: Sparkles,
-    color: 'from-brand-500 to-brand-700',
+    color: 'bg-brand-500',
     border: 'border-brand-500/20 hover:border-brand-500/40',
     tools: ['Visibilité IA', 'Audit GEO', 'Score AEO', 'Score LLMO', 'AI Advisor', 'Prompt Tester'],
     count: 10,
@@ -47,7 +47,7 @@ const categories = [
   {
     name: 'Rapports',
     icon: BarChart3,
-    color: 'from-cyan-500 to-cyan-600',
+    color: 'bg-cyan-500',
     border: 'border-cyan-500/20 hover:border-cyan-500/40',
     tools: ['Analytics', 'Évolution', 'Rapports PDF', 'Export CSV'],
     count: 6,
@@ -77,7 +77,7 @@ export function ToolsGrid() {
                 className={`group rounded-2xl p-6 border ${cat.border} bg-white/50 dark:bg-white/[0.02] transition-all duration-300 hover:shadow-glow`}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center shadow-sm`}>
+                  <div className={`w-10 h-10 rounded-xl ${cat.color} flex items-center justify-center shadow-sm`}>
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <div>

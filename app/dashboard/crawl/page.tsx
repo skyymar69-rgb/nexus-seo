@@ -312,7 +312,7 @@ export default function CrawlPage() {
                 </div>
                 <div className="w-full bg-white/[0.03] rounded-full h-2.5">
                   <div
-                    className="bg-gradient-to-r from-brand-500 to-secondary-500 h-2.5 rounded-full transition-all duration-300"
+                    className="bg-brand-500 h-2.5 rounded-full transition-all duration-300"
                     style={{ width: `${Math.min(100, (progress.pagesCrawled / Math.max(1, maxPages)) * 100)}%` }}
                   />
                 </div>

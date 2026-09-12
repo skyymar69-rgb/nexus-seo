@@ -54,7 +54,7 @@ const optimizations = [
 export function EcoImpact() {
   return (
     <section
-      className="section-y px-4 sm:px-6 lg:px-8 overflow-hidden relative bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-surface-950"
+      className="section-y px-4 sm:px-6 lg:px-8 overflow-hidden relative bg-green-50 dark:bg-green-950"
       id="eco"
     >
       {/* Background texture */}
@@ -148,7 +148,7 @@ export function EcoImpact() {
         </div>
 
         {/* Kayzen bridge */}
-        <div className="rounded-2xl p-8 sm:p-10 bg-gradient-to-r from-brand-50 to-green-50 dark:from-brand-600/20 dark:to-green-600/20 border border-brand-200 dark:border-brand-500/20 text-center">
+        <div className="rounded-2xl p-8 sm:p-10 bg-brand-50 dark:bg-brand-600/20 border border-brand-200 dark:border-brand-500/20 text-center">
           <h3 className="text-2xl font-bold text-foreground mb-4">
             Nexus diagnostique. Kayzen Web construit.
           </h3>

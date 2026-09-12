@@ -360,7 +360,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 70%);
+    background: transparent;
     pointer-events: none;
   }
 }
@@ -672,7 +672,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(59,130,246,0.04), rgba(139,92,246,0.04));
+  background: transparent;
 }
 .card-img-frame > img { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
 .card-img-frame:hover > img { transform: scale(1.04); }
@@ -806,10 +806,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   position: absolute;
   inset: -1.5px;
   border-radius: inherit;
-  background: conic-gradient(
-    from var(--gradient-angle),
-    #3b82f6, #7c3aed, #ec4899, #06b6d4, #10b981, #3b82f6
-  );
+  background: #3b82f6;
   animation: rotate-gradient 4s linear infinite;
   z-index: -1;
 }
@@ -831,10 +828,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
 }
 
 .gradient-text-animated {
-  background: linear-gradient(
-    90deg,
-    #2563eb 0%, #7c3aed 25%, #06b6d4 50%, #2563eb 75%, #7c3aed 100%
-  );
+  background: #2563eb;
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -858,7 +852,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   left: 8px;
   right: 8px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #3b82f6, #7c3aed, #3b82f6, transparent);
+  background: #3b82f6;
   border-radius: 99px;
   animation: scan-line 2.4s ease-in-out infinite;
   z-index: 10;
@@ -903,7 +897,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
 }
 
 .bg-aurora {
-  background: linear-gradient(-45deg, #172554, #1e3a8a, #2563eb, #7c3aed, #ec4899, #06b6d4);
+  background: #172554;
   background-size: 400% 400%;
   animation: aurora 8s ease infinite;
 }
@@ -959,7 +953,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
    AMÉLIORATION #18 — PREMIUM BUTTON VARIANTS
    ============================================================ */
 .btn-gradient {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: #2563eb;
   color: white;
   font-weight: 600;
   border: none;
@@ -967,7 +961,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   box-shadow: 0 4px 15px rgba(37,99,235,0.35);
 }
 .btn-gradient:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+  background: #1d4ed8;
   box-shadow: 0 6px 20px rgba(37,99,235,0.45);
   transform: translateY(-1px);
 }
@@ -1132,17 +1126,17 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   transform: translateX(-50%);
   width: 80%;
   height: 60%;
-  background: radial-gradient(ellipse, rgba(37,99,235,0.15) 0%, transparent 70%);
+  background: transparent;
   pointer-events: none;
   z-index: 0;
 }
 
 .glow-violet::before {
-  background: radial-gradient(ellipse, rgba(124,58,237,0.15) 0%, transparent 70%);
+  background: transparent;
 }
 
 .glow-cyan::before {
-  background: radial-gradient(ellipse, rgba(6,182,212,0.15) 0%, transparent 70%);
+  background: transparent;
 }
 
 /* ============================================================
@@ -1160,7 +1154,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   width: 60%;
   height: 2px;
   border-radius: 99px;
-  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  background: #2563eb;
   opacity: 0;
   transition: opacity var(--dur-fast) ease, width var(--dur-normal) ease;
 }
@@ -1229,19 +1223,11 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
    AMÉLIORATION #31 — GRADIENT MESH BACKGROUNDS
    ============================================================ */
 .bg-mesh-brand {
-  background:
-    radial-gradient(at 20% 80%, rgba(37,99,235,0.12) 0px, transparent 50%),
-    radial-gradient(at 80% 20%, rgba(124,58,237,0.10) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(6,182,212,0.06) 0px, transparent 60%),
-    rgb(var(--bg));
+  background: transparent;
 }
 
 .bg-mesh-hero {
-  background:
-    radial-gradient(at 10% 90%, rgba(37,99,235,0.20) 0px, transparent 50%),
-    radial-gradient(at 90% 10%, rgba(124,58,237,0.18) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(6,182,212,0.10) 0px, transparent 60%),
-    linear-gradient(180deg, #172554 0%, #1e3a8a 50%, #0c1a3d 100%);
+  background: transparent;
 }
 
 /* ============================================================
@@ -1264,7 +1250,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
   bottom: 0;
   height: 2px;
   border-radius: 99px;
-  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  background: #2563eb;
   transform-origin: left;
   animation: tab-indicator-slide 0.25s var(--ease-spring) forwards;
 }
@@ -1355,12 +1341,7 @@ a:focus-visible,
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.65) 0%,
-    rgba(0,0,0,0.2) 40%,
-    transparent 70%
-  );
+  background: rgba(0,0,0,0.65);
   pointer-events: none;
 }
 
@@ -1373,12 +1354,7 @@ a:focus-visible,
 }
 
 .skeleton {
-  background: linear-gradient(
-    90deg,
-    rgb(var(--bg-hover)) 25%,
-    rgb(var(--border)) 50%,
-    rgb(var(--bg-hover)) 75%
-  );
+  background: hsl(var(--muted));
   background-size: 200% 100%;
   animation: skeleton-wave 1.5s ease-in-out infinite;
   border-radius: 0.5rem;
@@ -1388,21 +1364,21 @@ a:focus-visible,
    AMÉLIORATION #42 — TEXT GRADIENT BRAND VARIANTS
    ============================================================ */
 .gradient-text-gold {
-  background: linear-gradient(135deg, #FECD4D 0%, #eab308 50%, #f97316 100%);
+  background: #FECD4D;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-emerald {
-  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #06b6d4 100%);
+  background: #10b981;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-violet {
-  background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+  background: #7c3aed;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1454,7 +1430,7 @@ a:focus-visible,
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2563eb, #7c3aed, #06b6d4);
+  background: #2563eb;
   z-index: 100;
   transform-origin: left;
   transition: transform 0.1s linear;
@@ -1585,7 +1561,7 @@ img {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%, rgba(254,205,77,0.04) 100%);
+  background: transparent;
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -1646,7 +1622,7 @@ svg.icon-stroke-thin { stroke-width: 1; }
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(59,130,246,0.5), rgba(124,58,237,0.3), rgba(254,205,77,0.2));
+  background: rgba(59,130,246,0.5);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -1683,7 +1659,7 @@ svg.icon-stroke-thin { stroke-width: 1; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(9,9,11,0.8) 100%);
+  background: rgba(9,9,11,0.8);
   pointer-events: none;
 }
 
@@ -1709,10 +1685,7 @@ svg.icon-stroke-thin { stroke-width: 1; }
 .glass-iridescent {
   backdrop-filter: blur(16px) saturate(200%);
   -webkit-backdrop-filter: blur(16px) saturate(200%);
-  background: linear-gradient(135deg,
-    rgba(59,130,246,0.08) 0%,
-    rgba(124,58,237,0.06) 50%,
-    rgba(254,205,77,0.04) 100%);
+  background: transparent;
   border: 1px solid rgba(255,255,255,0.1);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 }
@@ -1765,7 +1738,7 @@ svg.icon-stroke-thin { stroke-width: 1; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  background: transparent;
   transform: translateX(-100%);
   animation: badge-shimmer 3s ease-in-out infinite;
 }

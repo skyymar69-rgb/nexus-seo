@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #172554 0%, #1e3a8a 50%, #2563eb 100%)',
+          background: '#172554',
           fontFamily: 'system-ui, sans-serif',
         }}
       >

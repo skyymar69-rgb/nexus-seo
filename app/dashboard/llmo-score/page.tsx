@@ -118,7 +118,7 @@ function MetricCard({
   return (
     <div className="rounded-lg border border-white/5 bg-white/[0.02] p-5 hover:shadow-md transition-shadow">
       <div className="flex items-center gap-3 mb-3">
-        <div className={cn('p-2 rounded-lg bg-gradient-to-br text-white', color)}>
+        <div className={cn('p-2 rounded-lg text-white', color)}>
           {icon}
         </div>
         <p className="text-sm font-medium text-white/50">{label}</p>
@@ -214,7 +214,7 @@ export default function LLMOScorePage() {
       <div className="space-y-8 pb-8">
         <div className="space-y-2">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg">
+            <div className="p-2.5 bg-purple-400 rounded-lg">
               <Brain className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-3xl font-bold text-white">Score LLMO</h1>
@@ -298,7 +298,7 @@ export default function LLMOScorePage() {
       {/* Header */}
       <div className="space-y-2">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg">
+          <div className="p-2.5 bg-purple-400 rounded-lg">
             <Brain className="h-6 w-6 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-white">Score LLMO</h1>
@@ -390,7 +390,7 @@ export default function LLMOScorePage() {
               'w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm transition-all',
               isLoading
                 ? 'bg-surface-200 dark:bg-surface-700 text-muted-foreground cursor-not-allowed'
-                : 'bg-gradient-to-r from-purple-500 to-purple-600 text-white hover:shadow-lg hover:from-purple-600 hover:to-purple-700'
+                : 'bg-purple-500 text-white hover:shadow-lg hover:bg-purple-600'
             )}
           >
             {isLoading ? (
@@ -438,27 +438,27 @@ export default function LLMOScorePage() {
               label="Taux de mention"
               value={Math.round(result.mentionRate)}
               suffix="%"
-              color="from-emerald-500 to-emerald-600"
+              color="bg-emerald-500"
             />
             <MetricCard
               icon={<Target className="h-5 w-5" />}
               label="Position moyenne"
               value={result.avgPosition != null ? result.avgPosition.toFixed(1) : 'N/A'}
-              color="from-blue-500 to-blue-600"
+              color="bg-blue-500"
             />
             <MetricCard
               icon={<TrendingUp className="h-5 w-5" />}
               label="Score sentiment"
               value={Math.round(result.sentimentScore)}
               suffix="/100"
-              color="from-amber-500 to-amber-600"
+              color="bg-amber-500"
             />
             <MetricCard
               icon={<BarChart3 className="h-5 w-5" />}
               label="Position competitive"
               value={Math.round(result.competitivePosition)}
               suffix="/100"
-              color="from-purple-500 to-purple-600"
+              color="bg-purple-500"
             />
           </div>
 
@@ -540,7 +540,7 @@ export default function LLMOScorePage() {
                     </span>
                     <div className="flex-1 h-6 bg-surface-200 dark:bg-surface-700 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full transition-all duration-700"
+                        className="h-full bg-purple-500 rounded-full transition-all duration-700"
                         style={{ width: `${(comp.mentions / maxMentions) * 100}%` }}
                       />
                     </div>

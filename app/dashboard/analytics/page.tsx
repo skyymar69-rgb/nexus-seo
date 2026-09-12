@@ -246,24 +246,7 @@ export default function AnalyticsPage() {
               <ResponsiveContainer width="100%" height={260}>
                 <AreaChart data={charts.auditScoresOverTime}>
                   <defs>
-                    <linearGradient
-                      id="auditGrad"
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="1"
-                    >
-                      <stop
-                        offset="5%"
-                        stopColor="#3b82f6"
-                        stopOpacity={0.25}
-                      />
-                      <stop
-                        offset="95%"
-                        stopColor="#3b82f6"
-                        stopOpacity={0}
-                      />
-                    </linearGradient>
+                    
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis dataKey="date" tick={{ fontSize: 12 }} stroke="#9ca3af" />
@@ -273,7 +256,7 @@ export default function AnalyticsPage() {
                     type="monotone"
                     dataKey="score"
                     stroke="#3b82f6"
-                    fill="url(#auditGrad)"
+                    fill="#3b82f6"
                     name="Score"
                   />
                 </AreaChart>
@@ -344,24 +327,7 @@ export default function AnalyticsPage() {
               <ResponsiveContainer width="100%" height={260}>
                 <AreaChart data={charts.performanceOverTime}>
                   <defs>
-                    <linearGradient
-                      id="perfGrad"
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="1"
-                    >
-                      <stop
-                        offset="5%"
-                        stopColor="#10b981"
-                        stopOpacity={0.25}
-                      />
-                      <stop
-                        offset="95%"
-                        stopColor="#10b981"
-                        stopOpacity={0}
-                      />
-                    </linearGradient>
+                    
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis dataKey="date" tick={{ fontSize: 12 }} stroke="#9ca3af" />
@@ -371,7 +337,7 @@ export default function AnalyticsPage() {
                     type="monotone"
                     dataKey="score"
                     stroke="#10b981"
-                    fill="url(#perfGrad)"
+                    fill="#10b981"
                     name="Score"
                   />
                 </AreaChart>
