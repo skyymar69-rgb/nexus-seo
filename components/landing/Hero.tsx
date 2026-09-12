@@ -57,7 +57,7 @@ export function Hero() {
       {/* ── Background layers ── */}
       <div className="absolute inset-0 bg-grid-line bg-grid opacity-40 pointer-events-none" aria-hidden="true" />
       <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-brand-500/10 blur-[160px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gold-400/5 blur-[120px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-400/10 blur-[120px] pointer-events-none" aria-hidden="true" />
 
       {/* ── Content grid ── */}
       <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-center">
@@ -67,9 +67,9 @@ export function Hero() {
 
           {/* Badge */}
           <div className="flex justify-center lg:justify-start mb-8">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-gold-400/30 bg-gold-400/5 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
-              <span className="text-xs sm:text-sm font-semibold text-gold-400 tracking-wide">
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-brand-400/40 bg-brand-400/10 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
+              <span className="text-xs sm:text-sm font-semibold text-brand-300 tracking-wide">
                 Agence SEO IA — GEO &middot; AEO &middot; LLMO
               </span>
             </div>
@@ -78,7 +78,7 @@ export function Hero() {
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.08] tracking-tight mb-4">
             Audit SEO{' '}
-            <span className="text-gold-400 drop-shadow-[0_0_30px_rgba(254,205,77,0.3)]">
+            <span className="text-brand-300 drop-shadow-[0_0_30px_rgba(225,130,104,0.35)]">
               Gratuit
             </span>
           </h1>
@@ -111,13 +111,13 @@ export function Hero() {
                   name="url"
                   placeholder="https://www.monsite.fr"
                   aria-label="URL du site web à analyser"
-                  className="w-full pl-12 pr-4 py-4 rounded-xl input-hero text-white text-base"
+                  className="w-full pl-12 pr-4 py-4 rounded-lg input-hero text-white text-base"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isAnalyzing}
-                className="px-8 py-4 rounded-xl bg-gold-400 text-brand-950 font-bold text-base hover:bg-gold-300 transition-all duration-300 shadow-gold hover:shadow-[0_0_40px_rgba(254,205,77,0.4)] hover:scale-[1.02] flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-70 disabled:cursor-wait disabled:hover:scale-100"
+                className="px-8 py-4 rounded-full bg-brand-600 text-white font-heading font-bold text-base hover:bg-brand-700 transition-all duration-300 shadow-elev-md hover:shadow-[0_0_40px_rgba(225,130,104,0.45)] hover:scale-[1.02] flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-70 disabled:cursor-wait disabled:hover:scale-100"
               >
                 {isAnalyzing ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -145,9 +145,9 @@ export function Hero() {
                 const Icon = stat.icon
                 return (
                   <div key={stat.label} className="flex items-center gap-3">
-                    <Icon className="w-5 h-5 text-gold-400/60 hidden sm:block" />
+                    <Icon className="w-5 h-5 text-brand-300/70 hidden sm:block" />
                     <div className="text-center sm:text-left">
-                      <p className="text-2xl sm:text-3xl font-black text-gold-400">
+                      <p className="text-2xl sm:text-3xl font-black text-brand-300">
                         {stat.value}
                       </p>
                       <p className="text-xs text-white/70 uppercase tracking-wider font-medium">{stat.label}</p>
@@ -160,7 +160,7 @@ export function Hero() {
 
           {/* Trust signal */}
           <p className="text-sm text-white/70 font-medium">
-            Développé par <a href="https://internet.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-gold-400 transition-colors">Kayzen Web</a> — Agence web Lyon
+            Développé par <a href="https://internet.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-300 transition-colors">Kayzen Web</a> — Agence web Lyon
           </p>
         </div>
 
@@ -169,46 +169,46 @@ export function Hero() {
           {/* Outer glow halo */}
           <div className="relative">
             <div className="absolute inset-0 rounded-3xl bg-brand-500/10 blur-[60px] scale-110 pointer-events-none" />
-            <div className="absolute inset-0 rounded-3xl bg-gold-400/5 blur-[80px] scale-125 pointer-events-none" />
+            <div className="absolute inset-0 rounded-3xl bg-brand-400/10 blur-[80px] scale-125 pointer-events-none" />
           <svg
             viewBox="0 0 420 390"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="relative w-full max-w-[440px] h-auto"
-            style={{ filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.5)) drop-shadow(0 0 80px rgba(124,58,237,0.15))' }}
+            style={{ filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.5)) drop-shadow(0 0 80px rgba(43,74,116,0.2))' }}
             role="img"
             aria-label="Dashboard de performance SEO avec graphiques animés"
           >
             <defs>
               {/* Area chart gradient */}
               <linearGradient id="hero-area-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#FECD4D" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#FECD4D" stopOpacity="0" />
+                <stop offset="0%" stopColor="#e18268" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#e18268" stopOpacity="0" />
               </linearGradient>
               {/* Frame gradient */}
               <linearGradient id="frame-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(43,18,76,0.95)" />
-                <stop offset="100%" stopColor="rgba(10,4,22,0.98)" />
+                <stop offset="0%" stopColor="rgba(22,41,63,0.95)" />
+                <stop offset="100%" stopColor="rgba(10,21,36,0.98)" />
               </linearGradient>
               {/* Titlebar gradient */}
               <linearGradient id="titlebar-grad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="rgba(60,25,100,0.9)" />
-                <stop offset="100%" stopColor="rgba(35,12,65,0.9)" />
+                <stop offset="0%" stopColor="rgba(31,59,97,0.9)" />
+                <stop offset="100%" stopColor="rgba(15,31,53,0.9)" />
               </linearGradient>
               {/* Score ring gradient */}
               <linearGradient id="score-ring-grad" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0%" stopColor="#FECD4D" />
-                <stop offset="60%" stopColor="#f59e0b" />
-                <stop offset="100%" stopColor="#FECD4D" stopOpacity="0.6" />
+                <stop offset="0%" stopColor="#e18268" />
+                <stop offset="60%" stopColor="#d15f42" />
+                <stop offset="100%" stopColor="#e18268" stopOpacity="0.6" />
               </linearGradient>
               {/* Bar gradient */}
               <linearGradient id="bar-grad-violet" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#a78bfa" />
-                <stop offset="100%" stopColor="rgba(124,58,237,0.4)" />
+                <stop offset="0%" stopColor="#6d8cb5" />
+                <stop offset="100%" stopColor="rgba(43,74,116,0.55)" />
               </linearGradient>
               <linearGradient id="bar-grad-gold" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#fde68a" />
-                <stop offset="100%" stopColor="#FECD4D" />
+                <stop offset="0%" stopColor="#f6d0c7" />
+                <stop offset="100%" stopColor="#e18268" />
               </linearGradient>
               {/* Glow filter */}
               <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
@@ -239,9 +239,9 @@ export function Hero() {
             <rect x="10" y="10" width="400" height="368" rx="18" fill="none" stroke="url(#frame-grad-border)" strokeWidth="1" />
             <defs>
               <linearGradient id="frame-grad-border" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="rgba(167,139,250,0.4)" />
-                <stop offset="50%" stopColor="rgba(124,58,237,0.15)" />
-                <stop offset="100%" stopColor="rgba(254,205,77,0.2)" />
+                <stop offset="0%" stopColor="rgba(109,140,181,0.45)" />
+                <stop offset="50%" stopColor="rgba(43,74,116,0.2)" />
+                <stop offset="100%" stopColor="rgba(225,130,104,0.25)" />
               </linearGradient>
             </defs>
             {/* Inner top highlight */}
@@ -249,15 +249,15 @@ export function Hero() {
 
             {/* ── Title bar ── */}
             <rect x="10" y="10" width="400" height="40" rx="18" fill="url(#titlebar-grad)" />
-            <rect x="10" y="40" width="400" height="10" fill="rgba(35,12,65,0.9)" />
+            <rect x="10" y="40" width="400" height="10" fill="rgba(15,31,53,0.9)" />
 
             {/* Window dots with glow */}
-            <circle cx="30" cy="30" r="5" fill="#ef4444" opacity="0.9" />
+            <circle cx="30" cy="30" r="5" fill="#dc2626" opacity="0.9" />
             <circle cx="30" cy="30" r="3" fill="#fca5a5" opacity="0.4" />
-            <circle cx="46" cy="30" r="5" fill="#eab308" opacity="0.9" />
-            <circle cx="46" cy="30" r="3" fill="#fde047" opacity="0.4" />
-            <circle cx="62" cy="30" r="5" fill="#22c55e" opacity="0.9" />
-            <circle cx="62" cy="30" r="3" fill="#86efac" opacity="0.4" />
+            <circle cx="46" cy="30" r="5" fill="#d15f42" opacity="0.9" />
+            <circle cx="46" cy="30" r="3" fill="#eeae9f" opacity="0.4" />
+            <circle cx="62" cy="30" r="5" fill="#34d399" opacity="0.9" />
+            <circle cx="62" cy="30" r="3" fill="#a6f3d5" opacity="0.4" />
 
             {/* URL bar */}
             <rect x="95" y="20" width="220" height="20" rx="6" fill="rgba(0,0,0,0.25)" />
@@ -282,23 +282,23 @@ export function Hero() {
                 filter="url(#glow-gold)"
               />
               {/* Score text */}
-              <text x="0" y="-6" textAnchor="middle" fill="#FECD4D" fontSize="26" fontWeight="900" fontFamily="system-ui" className="hero-score-text">94</text>
+              <text x="0" y="-6" textAnchor="middle" fill="#e18268" fontSize="26" fontWeight="900" fontFamily="system-ui" className="hero-score-text">94</text>
               <text x="0" y="10" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="7.5" fontWeight="600" fontFamily="system-ui" letterSpacing="1.5">/100</text>
               {/* Grade badge */}
-              <rect x="-12" y="15" width="24" height="13" rx="4" fill="rgba(254,205,77,0.15)" />
-              <text x="0" y="25" textAnchor="middle" fill="#FECD4D" fontSize="8" fontWeight="800" fontFamily="system-ui">A+</text>
+              <rect x="-12" y="15" width="24" height="13" rx="4" fill="rgba(225,130,104,0.2)" />
+              <text x="0" y="25" textAnchor="middle" fill="#e18268" fontSize="8" fontWeight="800" fontFamily="system-ui">A+</text>
             </g>
             <text x="74" y="168" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="7.5" fontWeight="700" fontFamily="system-ui" letterSpacing="1.5">SCORE SEO</text>
 
             {/* ── 3 mini KPI cards (top-right) ── */}
             {[
-              { y: 64, label: 'Performance', value: '96', color: '#22c55e', bar: 77, icon: '▲' },
-              { y: 102, label: 'Accessibilité', value: '91', color: '#FECD4D', bar: 73, icon: '●' },
-              { y: 140, label: 'Visibilité IA', value: '87', color: '#a78bfa', bar: 70, icon: '◆' },
+              { y: 64, label: 'Performance', value: '96', color: '#34d399', bar: 77, icon: '▲' },
+              { y: 102, label: 'Accessibilité', value: '91', color: '#e18268', bar: 73, icon: '●' },
+              { y: 140, label: 'Visibilité IA', value: '87', color: '#6d8cb5', bar: 70, icon: '◆' },
             ].map((kpi, i) => (
               <g key={i} transform={`translate(148, ${kpi.y})`} style={{ animation: `hero-grow-bar 0.6s ease-out ${0.3 + i * 0.15}s both` }}>
                 {/* Card background */}
-                <rect width="248" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(124,58,237,0.18)" strokeWidth="0.5" />
+                <rect width="248" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(109,140,181,0.25)" strokeWidth="0.5" />
                 {/* Left accent line */}
                 <rect x="0" y="4" width="2.5" height="24" rx="1.5" fill={kpi.color} opacity="0.7" />
                 <text x="14" y="20" fill={kpi.color} fontSize="9" fontFamily="system-ui">{kpi.icon}</text>
@@ -317,7 +317,7 @@ export function Hero() {
             {/* ── Bar chart (bottom-left) ── */}
             <g transform="translate(30, 194)">
               <text x="0" y="10" fill="rgba(255,255,255,0.35)" fontSize="7.5" fontWeight="700" fontFamily="system-ui" letterSpacing="1">TRAFIC ORGANIQUE</text>
-              <text x="170" y="10" textAnchor="end" fill="#22c55e" fontSize="7.5" fontWeight="700" fontFamily="system-ui" filter="url(#glow-green)">+142%</text>
+              <text x="170" y="10" textAnchor="end" fill="#34d399" fontSize="7.5" fontWeight="700" fontFamily="system-ui" filter="url(#glow-green)">+142%</text>
               {/* Grid lines */}
               {[0, 1, 2, 3].map(i => (
                 <line key={i} x1="0" y1={22 + i * 27} x2="170" y2={22 + i * 27} stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" />
@@ -350,7 +350,7 @@ export function Hero() {
             {/* ── Line chart (bottom-right) ── */}
             <g transform="translate(218, 194)">
               <text x="0" y="10" fill="rgba(255,255,255,0.35)" fontSize="7.5" fontWeight="700" fontFamily="system-ui" letterSpacing="1">POSITIONS GOOGLE</text>
-              <text x="172" y="10" textAnchor="end" fill="#FECD4D" fontSize="7.5" fontWeight="700" fontFamily="system-ui">Top 3 ↑</text>
+              <text x="172" y="10" textAnchor="end" fill="#e18268" fontSize="7.5" fontWeight="700" fontFamily="system-ui">Top 3 ↑</text>
               {/* Grid */}
               {[0, 1, 2, 3].map(i => (
                 <line key={i} x1="0" y1={22 + i * 27} x2="172" y2={22 + i * 27} stroke="rgba(255,255,255,0.03)" strokeWidth="0.5" />
@@ -363,13 +363,13 @@ export function Hero() {
               {/* Line */}
               <polyline
                 points="0,90 15,85 30,80 45,76 60,70 75,62 90,56 105,43 120,37 135,28 150,22 165,16"
-                stroke="#FECD4D" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
+                stroke="#e18268" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
                 className="hero-line-draw"
                 filter="url(#glow-gold)"
               />
               {/* Dots on line */}
               {[[0,90],[45,76],[90,56],[135,28],[165,16]].map(([cx,cy],i) => (
-                <circle key={i} cx={cx} cy={cy} r={i === 4 ? 4.5 : 2.5} fill="#FECD4D"
+                <circle key={i} cx={cx} cy={cy} r={i === 4 ? 4.5 : 2.5} fill="#e18268"
                   opacity={i === 4 ? 1 : 0.5}
                   className={i === 4 ? 'hero-score-text' : ''}
                   filter={i === 4 ? 'url(#glow-gold)' : undefined}
@@ -380,13 +380,13 @@ export function Hero() {
 
             {/* ── Bottom status bar ── */}
             <g transform="translate(30, 338)">
-              <rect width="360" height="28" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(124,58,237,0.15)" strokeWidth="0.5" />
+              <rect width="360" height="28" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(43,74,116,0.2)" strokeWidth="0.5" />
               {/* Live pulse */}
-              <circle cx="16" cy="14" r="5" fill="#22c55e" opacity="0.15" className="hero-score-text" />
-              <circle cx="16" cy="14" r="3.5" fill="#22c55e" filter="url(#glow-green)" />
+              <circle cx="16" cy="14" r="5" fill="#34d399" opacity="0.15" className="hero-score-text" />
+              <circle cx="16" cy="14" r="3.5" fill="#34d399" filter="url(#glow-green)" />
               <text x="28" y="18.5" fill="rgba(255,255,255,0.4)" fontSize="8" fontFamily="system-ui">Analyse complète · 50+ contrôles validés</text>
               <rect x="298" y="8" width="55" height="14" rx="4" fill="rgba(254,205,77,0.12)" />
-              <text x="325" y="18.5" textAnchor="middle" fill="#FECD4D" fontSize="8" fontWeight="800" fontFamily="system-ui">94/100 ✓</text>
+              <text x="325" y="18.5" textAnchor="middle" fill="#e18268" fontSize="8" fontWeight="800" fontFamily="system-ui">94/100 ✓</text>
             </g>
 
           </svg>
@@ -407,9 +407,9 @@ export function Hero() {
                 { x: 0,  h: 50, delay: '0.2s', color: 'rgba(124,58,237,0.6)' },
                 { x: 18, h: 70, delay: '0.4s', color: 'rgba(124,58,237,0.7)' },
                 { x: 36, h: 45, delay: '0.6s', color: 'rgba(124,58,237,0.6)' },
-                { x: 54, h: 85, delay: '0.8s', color: '#7c3aed' },
+                { x: 54, h: 85, delay: '0.8s', color: '#2b4a74' },
                 { x: 72, h: 60, delay: '1.0s', color: 'rgba(124,58,237,0.7)' },
-                { x: 90, h: 95, delay: '1.2s', color: '#FECD4D' },
+                { x: 90, h: 95, delay: '1.2s', color: '#e18268' },
               ].map((bar, i) => (
                 <rect
                   key={i}
@@ -430,7 +430,7 @@ export function Hero() {
             <g transform="translate(160, 15)">
               <polyline
                 points="0,80 25,65 50,55 75,35 100,25 125,10"
-                stroke="#FECD4D"
+                stroke="#e18268"
                 strokeWidth="2.5"
                 fill="none"
                 strokeLinecap="round"
@@ -449,8 +449,8 @@ export function Hero() {
 
             <defs>
               <linearGradient id="hero-area-grad-m" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#FECD4D" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#FECD4D" stopOpacity="0" />
+                <stop offset="0%" stopColor="#e18268" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#e18268" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

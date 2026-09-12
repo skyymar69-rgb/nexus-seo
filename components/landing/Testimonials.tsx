@@ -7,7 +7,7 @@ const reasons = [
     icon: Sparkles,
     title: 'Premier outil GEO + AEO + LLMO',
     desc: 'Nexus est le seul outil qui combine l\'optimisation pour Google SGE, les featured snippets et les réponses des LLMs (ChatGPT, Claude, Gemini) en une seule plateforme.',
-    color: 'from-brand-500 to-violet-500',
+    color: 'from-brand-500 to-secondary-600',
   },
   {
     icon: Zap,
@@ -31,7 +31,7 @@ const reasons = [
     icon: Shield,
     title: 'Données hébergées en Europe',
     desc: 'Vos données sont hébergées en Europe via Vercel et Railway, dans le respect du RGPD. Aucune revente de données, aucune utilisation pour entraîner des modèles IA.',
-    color: 'from-brand-500 to-cyan-500',
+    color: 'from-brand-500 to-secondary-500',
   },
 ]
 

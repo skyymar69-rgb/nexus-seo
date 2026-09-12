@@ -29,7 +29,7 @@ const TABS: Array<{
     src: '/qr/site.svg',
     deepLink: 'https://nexus.kayzen-lyon.fr',
     caption: 'Ouvrir Nexus — By Kayzen',
-    accent: 'from-brand-500 to-cyan-500',
+    accent: 'from-brand-500 to-secondary-500',
     accentFrom: '#3b82f6',
     accentTo: '#06b6d4',
   },
@@ -52,7 +52,7 @@ const TABS: Array<{
     deepLink: 'https://www.google.com/search?q=Kayzen+Lyon+6+rue+Pierre+Termier+avis&hl=fr',
     caption: 'Consulter ou laisser un avis Google',
     accent: 'from-amber-500 to-orange-500',
-    accentFrom: '#f59e0b',
+    accentFrom: '#d15f42',
     accentTo: '#f97316',
   },
   {
@@ -63,7 +63,7 @@ const TABS: Array<{
     deepLink: '/kayzen-lyon.vcf',
     caption: 'Ajouter à vos contacts (vCard)',
     accent: 'from-violet-500 to-fuchsia-500',
-    accentFrom: '#7c3aed',
+    accentFrom: '#2b4a74',
     accentTo: '#d946ef',
   },
 ]
@@ -166,7 +166,7 @@ export default function DigitalContactCard() {
           aria-hidden="true"
           className="absolute -inset-[1.5px] rounded-[25px] opacity-80 blur-[1px]"
           style={{
-            background: `conic-gradient(from var(--gradient-angle, 0deg), ${active.accentFrom}, #7c3aed, #ec4899, ${active.accentTo}, ${active.accentFrom})`,
+            background: `conic-gradient(from var(--gradient-angle, 0deg), ${active.accentFrom}, #2b4a74, #ec4899, ${active.accentTo}, ${active.accentFrom})`,
             animation: 'rotate-gradient 4s linear infinite',
           }}
         />
@@ -404,7 +404,7 @@ export default function DigitalContactCard() {
                 href: 'tel:+33487776861',
                 label: 'Appeler',
                 icon: Phone,
-                gradient: 'from-brand-500 to-cyan-500',
+                gradient: 'from-brand-500 to-secondary-500',
               },
               {
                 href: 'mailto:contact@kayzen-lyon.fr',
@@ -496,7 +496,7 @@ export default function DigitalContactCard() {
         {/* Ping badge */}
         <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5" aria-hidden="true">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gradient-to-br from-brand-500 to-violet-500" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gradient-to-br from-brand-500 to-secondary-600" />
         </span>
       </button>
 

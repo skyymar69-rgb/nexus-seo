@@ -33,7 +33,7 @@ export default function CookieBanner() {
       className="fixed bottom-0 inset-x-0 z-[9999] animate-slide-up"
     >
       <div className="mx-auto max-w-5xl px-4 pb-4">
-        <div className="rounded-2xl border border-purple-500/20 bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-purple-900/20 p-5 sm:p-6">
+        <div className="rounded-2xl border border-white/12 bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-black/30 p-5 sm:p-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             {/* Text */}
             <p className="flex-1 text-sm text-zinc-300 leading-relaxed">
@@ -41,7 +41,7 @@ export default function CookieBanner() {
               En continuant, vous acceptez notre{' '}
               <Link
                 href="/privacy"
-                className="text-purple-400 underline underline-offset-2 hover:text-purple-300 transition-colors"
+                className="text-brand-300 underline underline-offset-2 hover:text-brand-200 transition-colors"
               >
                 politique de confidentialit&eacute;
               </Link>
@@ -58,13 +58,13 @@ export default function CookieBanner() {
               </button>
               <button
                 onClick={() => handleConsent('custom')}
-                className="rounded-lg border border-purple-500/40 px-4 py-2 text-sm font-medium text-purple-300 hover:bg-purple-500/10 transition-colors"
+                className="rounded-lg border border-brand-400/50 px-4 py-2 text-sm font-medium text-brand-200 hover:bg-brand-400/10 transition-colors"
               >
                 Personnaliser
               </button>
               <button
                 onClick={() => handleConsent('accepted')}
-                className="rounded-lg bg-purple-600 px-5 py-2 text-sm font-semibold text-white hover:bg-purple-500 transition-colors shadow-lg shadow-purple-600/25"
+                className="rounded-lg bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition-colors shadow-elev-md"
               >
                 Accepter tout
               </button>

@@ -190,7 +190,7 @@ export function Features() {
                 className={cn(
                   'flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200',
                   isActive
-                    ? 'bg-gradient-to-r from-brand-600 to-violet-600 text-white shadow-brand'
+                    ? 'bg-gradient-to-r from-brand-600 to-secondary-700 text-white shadow-brand'
                     : 'text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-white hover:bg-surface-100 dark:hover:bg-surface-800'
                 )}
               >

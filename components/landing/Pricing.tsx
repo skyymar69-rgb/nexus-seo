@@ -57,7 +57,7 @@ export function Pricing() {
 
               <Link
                 href="/signup"
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 text-white font-bold text-base hover:from-brand-700 hover:to-accent-700 transition-all shadow-lg"
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-800 text-white font-bold text-base hover:from-brand-700 hover:to-brand-900 transition-all shadow-lg"
               >
                 Commencer gratuitement <ArrowRight className="w-5 h-5" />
               </Link>

@@ -11,7 +11,7 @@ export function CTA() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-brand-500/8 dark:bg-brand-500/5 blur-[120px] rounded-full" />
       </div>
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-600 via-violet-600 to-cyan-600 p-px shadow-2xl shadow-brand-500/20 dark:shadow-brand-500/10">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-600 via-brand-700 to-secondary-700 p-px shadow-2xl shadow-brand-500/20 dark:shadow-brand-500/10">
           <div className="relative rounded-3xl bg-white dark:bg-surface-950 p-10 sm:p-16 text-center overflow-hidden">
             {/* Background glow */}
             <div className="absolute inset-0 pointer-events-none">

@@ -336,7 +336,7 @@ export default function SemanticAnalysisPage() {
                     </div>
                     <div className="w-full h-2 bg-surface-200 dark:bg-surface-800 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-brand-500 to-accent-500 rounded-full"
+                        className="h-full bg-gradient-to-r from-brand-500 to-brand-700 rounded-full"
                         style={{ width: `${Math.min(item.density * 25, 100)}%` }}
                       />
                     </div>

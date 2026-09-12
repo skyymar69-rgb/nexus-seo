@@ -91,7 +91,7 @@ export function BentoFeatures() {
               >
                 {/* Decorative ambient orb */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"
-                  style={{ background: `radial-gradient(circle, ${f.id === 'geo' ? 'rgba(59,130,246,0.15)' : 'rgba(124,58,237,0.15)'}, transparent)` }}
+                  style={{ background: `radial-gradient(circle, ${f.id === 'geo' ? 'rgba(59,130,246,0.15)' : 'rgba(43,74,116,0.2)'}, transparent)` }}
                 />
                 {/* Top-right decorative dots grid */}
                 <svg className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500" width="48" height="48" viewBox="0 0 48 48" fill="currentColor">

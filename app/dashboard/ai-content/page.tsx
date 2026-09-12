@@ -372,7 +372,7 @@ export default function AIContentPage() {
                 <button
                   onClick={handleGenerate}
                   disabled={isGenerating}
-                  className="flex-1 py-3 rounded-lg font-semibold text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-700 hover:to-accent-700 shadow-lg hover:shadow-xl"
+                  className="flex-1 py-3 rounded-lg font-semibold text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-brand-600 to-brand-800 hover:from-brand-700 hover:to-brand-900 shadow-lg hover:shadow-xl"
                 >
                   {isGenerating ? (
                     <span className="flex items-center justify-center gap-2">

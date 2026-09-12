@@ -39,7 +39,7 @@ const categories = [
   {
     name: 'IA & GEO',
     icon: Sparkles,
-    color: 'from-brand-500 to-accent-500',
+    color: 'from-brand-500 to-brand-700',
     border: 'border-brand-500/20 hover:border-brand-500/40',
     tools: ['Visibilité IA', 'Audit GEO', 'Score AEO', 'Score LLMO', 'AI Advisor', 'Prompt Tester'],
     count: 10,

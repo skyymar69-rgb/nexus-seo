@@ -82,7 +82,7 @@ export default function ExitIntent() {
         </button>
 
         {/* Top gradient bar */}
-        <div className="h-1.5 bg-gradient-to-r from-brand-500 via-violet-500 to-gold-400" />
+        <div className="h-1.5 bg-gradient-to-r from-brand-500 via-brand-600 to-secondary-700" />
 
         <div className="p-8">
           {/* Heading */}

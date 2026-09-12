@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter, Outfit } from 'next/font/google'
+import { Plus_Jakarta_Sans, Outfit } from 'next/font/google'
 import { Providers } from '@/app/providers'
 import dynamic from 'next/dynamic'
 import { ErrorBoundary } from '@/components/shared/ErrorBoundary'
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-jakarta',
 })
 
 const outfit = Outfit({
@@ -182,14 +182,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${outfit.variable} min-h-screen bg-zinc-50 dark:bg-surface-950 text-surface-900 dark:text-surface-100 antialiased`}>
+      <body className={`${jakarta.variable} ${outfit.variable} min-h-screen bg-zinc-50 dark:bg-surface-950 text-surface-900 dark:text-surface-100 antialiased`}>
         <a href="#main-content" className="skip-to-main">
           Aller au contenu principal
         </a>
         <Providers>
-          <div className="animate-fade-in">
           {children}
-          </div>
           <ErrorBoundary><ScrollProgress /></ErrorBoundary>
           <ErrorBoundary><CookieBanner /></ErrorBoundary>
           <ErrorBoundary><AccessibilityToggle /></ErrorBoundary>

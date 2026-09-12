@@ -72,7 +72,7 @@ export function AnimatedLogo({ size = 36, className, lightText = false }: Animat
         >
           {nexus}
           {phase === 'typing-nexus' && (
-            <span className="inline-block w-[2px] h-[1em] bg-gold-400 ml-px animate-pulse" />
+            <span className="inline-block w-[2px] h-[1em] bg-brand-500 ml-px animate-pulse" />
           )}
         </span>
         <span

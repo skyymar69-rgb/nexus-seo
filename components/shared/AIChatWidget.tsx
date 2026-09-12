@@ -203,7 +203,7 @@ export default function AIChatWidget() {
                   <button
                     key={s}
                     onClick={() => sendMessage(s)}
-                    className="block w-full text-left rounded-lg border border-purple-200 dark:border-purple-500/20 bg-purple-50 dark:bg-purple-500/5 px-3 py-2 text-xs text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-500/10 transition-colors"
+                    className="block w-full text-left rounded-lg border border-purple-200 dark:border-white/12 bg-purple-50 dark:bg-purple-500/5 px-3 py-2 text-xs text-purple-700 dark:text-brand-200 hover:bg-purple-100 dark:hover:bg-brand-400/10 transition-colors"
                   >
                     {s}
                   </button>
@@ -219,7 +219,7 @@ export default function AIChatWidget() {
                 <div
                   className={`max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
                     msg.role === 'user'
-                      ? 'bg-purple-600 text-white'
+                      ? 'bg-brand-600 text-white'
                       : 'bg-surface-100 dark:bg-zinc-800 text-surface-800 dark:text-zinc-300'
                   }`}
                 >

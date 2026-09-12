@@ -103,7 +103,7 @@ export default function AccessibilityToggle() {
 
       {/* Panel */}
       {open && (
-        <div className="absolute bottom-16 left-0 w-72 rounded-xl border border-purple-500/20 bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-purple-900/20 p-4 animate-fade-in">
+        <div className="absolute bottom-16 left-0 w-72 rounded-xl border border-white/12 bg-zinc-900/95 backdrop-blur-xl shadow-2xl shadow-black/30 p-4 animate-fade-in">
           <h3 className="text-sm font-semibold text-white mb-4">
             Accessibilit&eacute;
           </h3>
@@ -122,7 +122,7 @@ export default function AccessibilityToggle() {
                   onClick={() => update({ fontSize: value })}
                   className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                     prefs.fontSize === value
-                      ? 'bg-purple-600 text-white'
+                      ? 'bg-brand-600 text-white'
                       : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'
                   }`}
                 >
@@ -145,7 +145,7 @@ export default function AccessibilityToggle() {
                   onClick={() => update({ contrast: value })}
                   className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                     prefs.contrast === value
-                      ? 'bg-purple-600 text-white'
+                      ? 'bg-brand-600 text-white'
                       : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700'
                   }`}
                 >
@@ -163,7 +163,7 @@ export default function AccessibilityToggle() {
               role="switch"
               aria-checked={prefs.dyslexia}
               className={`relative w-10 h-5 rounded-full transition-colors ${
-                prefs.dyslexia ? 'bg-purple-600' : 'bg-zinc-700'
+                prefs.dyslexia ? 'bg-brand-600' : 'bg-zinc-700'
               }`}
             >
               <span
@@ -182,7 +182,7 @@ export default function AccessibilityToggle() {
               role="switch"
               aria-checked={prefs.animations}
               className={`relative w-10 h-5 rounded-full transition-colors ${
-                prefs.animations ? 'bg-purple-600' : 'bg-zinc-700'
+                prefs.animations ? 'bg-brand-600' : 'bg-zinc-700'
               }`}
             >
               <span
