@@ -8,7 +8,7 @@ import { ArrowRight, Play, TrendingUp, Globe, Zap, Search, Loader2 } from 'lucid
 export function Hero() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-hero">
+    <section className="relative bg-background pt-24 pb-12 md:pt-28 md:pb-16 px-4 sm:px-6 lg:px-8">
 
       {/* ── Inline keyframes ── */}
       <style>{`
@@ -54,39 +54,28 @@ export function Hero() {
         }
       `}</style>
 
-      {/* ── Background layers ── */}
-      <div className="absolute inset-0 bg-grid-line bg-grid opacity-40 pointer-events-none" aria-hidden="true" />
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-brand-500/10 blur-[160px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-400/10 blur-[120px] pointer-events-none" aria-hidden="true" />
-
       {/* ── Content grid ── */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        {/* ─── LEFT COLUMN — text (3/5 on desktop) ─── */}
-        <div className="lg:col-span-3 text-center lg:text-left">
+        {/* ─── Colonne texte ─── */}
+        <div>
 
-          {/* Badge */}
-          <div className="flex justify-center lg:justify-start mb-8">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-brand-400/40 bg-brand-400/10 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
-              <span className="text-xs sm:text-sm font-semibold text-brand-300 tracking-wide">
-                Agence SEO IA — GEO &middot; AEO &middot; LLMO
-              </span>
-            </div>
-          </div>
+          {/* Sur-titre */}
+          <p className="overline mb-5">
+            Agence SEO IA &middot; GEO &middot; AEO &middot; LLMO
+          </p>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.08] tracking-tight mb-4">
-            Audit SEO{' '}
-            <span className="text-brand-300 drop-shadow-[0_0_30px_rgba(225,130,104,0.35)]">
-              Gratuit
-            </span>
+          {/* Titre : une promesse, une phrase en terracotta */}
+          <h1 className="mb-5 text-balance">
+            Votre audit SEO complet.{' '}
+            <span className="text-primary">Gratuit, en 30 secondes.</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-            Analysez votre site web en 30 secondes. Obtenez un diagnostic complet
-            avec des recommandations actionnables.
+          {/* Accroche */}
+          <p className="text-lg md:text-xl text-muted-foreground measure mb-8 text-pretty">
+            Nexus analyse votre site et vous rend un diagnostic actionnable :
+            SEO technique, visibilite dans les reponses des IA, contenu et
+            performance. Sans inscription, sans carte bancaire.
           </p>
 
           {/* Audit form directly in hero */}
@@ -105,19 +94,19 @@ export function Hero() {
               className="flex flex-col sm:flex-row gap-3"
             >
               <div className="flex-1 relative">
-                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" aria-hidden="true" />
                 <input
                   type="url"
                   name="url"
                   placeholder="https://www.monsite.fr"
                   aria-label="URL du site web à analyser"
-                  className="w-full pl-12 pr-4 py-4 rounded-lg input-hero text-white text-base"
+                  className="w-full h-14 pl-12 pr-4 rounded-lg border border-input bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors text-base"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isAnalyzing}
-                className="px-8 py-4 rounded-full bg-brand-600 text-white font-heading font-bold text-base hover:bg-brand-700 transition-all duration-300 shadow-elev-md hover:shadow-[0_0_40px_rgba(225,130,104,0.45)] hover:scale-[1.02] flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-70 disabled:cursor-wait disabled:hover:scale-100"
+                className="h-14 px-8 rounded-full bg-primary text-primary-foreground font-heading font-bold text-base hover:bg-primary/90 transition-colors duration-200 flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-70 disabled:cursor-wait"
               >
                 {isAnalyzing ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -129,47 +118,38 @@ export function Hero() {
             </form>
           </div>
 
-          {/* Trust text */}
-          <p className="text-sm text-white/85 mb-10">
-            Aucune inscription requise · Résultats instantanés · Export PDF, Markdown, JSON
-          </p>
+          {/* Micro-reassurances — liste semantique */}
+          <ul className="flex flex-wrap gap-2.5 mt-6 mb-8 list-none p-0">
+            {[
+              { Icon: Zap, text: 'Aucune inscription requise' },
+              { Icon: TrendingUp, text: '50+ outils gratuits' },
+              { Icon: Globe, text: '10+ moteurs IA surveilles' },
+            ].map(({ Icon, text }) => (
+              <li key={text} className="pill">
+                <Icon className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
+                {text}
+              </li>
+            ))}
+          </ul>
 
-          {/* Stats bar */}
-          <div className="mb-10" role="region" aria-label="Statistiques cl&#233;s">
-            <div className="inline-flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 px-8 py-5 rounded-2xl stats-glass">
-              {[
-                { value: '50+', label: 'outils gratuits', icon: TrendingUp },
-                { value: '10+', label: 'LLMs surveillés', icon: Globe },
-                { value: '0€', label: 'pour toujours', icon: Zap },
-              ].map((stat) => {
-                const Icon = stat.icon
-                return (
-                  <div key={stat.label} className="flex items-center gap-3">
-                    <Icon className="w-5 h-5 text-brand-300/70 hidden sm:block" />
-                    <div className="text-center sm:text-left">
-                      <p className="text-2xl sm:text-3xl font-black text-brand-300">
-                        {stat.value}
-                      </p>
-                      <p className="text-xs text-white/85 uppercase tracking-wider font-medium">{stat.label}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Trust signal */}
-          <p className="text-sm text-white/85 font-medium">
-            Développé par <a href="https://internet.kayzen-lyon.fr" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-300 transition-colors">Kayzen Web</a> — Agence web Lyon
+          {/* Signature */}
+          <p className="text-sm text-muted-foreground">
+            Developpe par{' '}
+            <a
+              href="https://www.kayzen-lyon.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-foreground underline underline-offset-2 hover:text-primary transition-colors"
+            >
+              Kayzen Web
+            </a>{' '}
+            — Agence web &amp; IA a Lyon
           </p>
         </div>
 
-        {/* ─── RIGHT COLUMN — SEO Performance Dashboard (2/5 on desktop) ─── */}
-        <div className="hidden lg:flex lg:col-span-2 items-center justify-center">
-          {/* Outer glow halo */}
-          <div className="relative">
-            <div className="absolute inset-0 rounded-3xl bg-brand-500/10 blur-[60px] scale-110 pointer-events-none" />
-            <div className="absolute inset-0 rounded-3xl bg-brand-400/10 blur-[80px] scale-125 pointer-events-none" />
+        {/* ─── Colonne visuelle — apercu du rapport ─── */}
+        <div className="order-last">
+          <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-border bg-surface-sunken shadow-e3 p-4 sm:p-6">
           <svg
             viewBox="0 0 420 390"
             fill="none"

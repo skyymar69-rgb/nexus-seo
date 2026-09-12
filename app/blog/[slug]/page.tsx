@@ -93,23 +93,23 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <main className="bg-white dark:bg-surface-950">
         <article className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-surface-600 dark:text-surface-400 hover:text-brand-500 transition-colors mb-8">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-500 transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
               Retour au blog
             </Link>
 
             <div className="flex items-center gap-3 mb-5">
               <span className={`px-3 py-1 rounded-full text-xs font-bold ${post.tag_color}`}>{post.category}</span>
-              <span className="text-xs text-surface-600 dark:text-surface-400 flex items-center gap-1">
+              <span className="text-xs text-muted-foreground flex items-center gap-1">
                 <Clock className="w-3 h-3" />{post.readTime}
               </span>
-              <span className="text-xs text-surface-600 dark:text-surface-400">{post.date}</span>
+              <span className="text-xs text-muted-foreground">{post.date}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-black text-surface-900 dark:text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-black text-foreground mb-6 leading-tight">
               {post.title}
             </h1>
-            <p className="text-xl text-surface-500 dark:text-surface-400 mb-12 leading-relaxed border-b border-surface-200 dark:border-surface-800 pb-10">
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed border-b border-surface-200 dark:border-surface-800 pb-10">
               {post.excerpt}
             </p>
 
@@ -117,20 +117,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               {post.content.map((block, i) => {
                 if (block.startsWith('## ')) {
                   return (
-                    <h2 key={i} className="text-2xl font-bold text-surface-900 dark:text-white mt-10 mb-4">
+                    <h2 key={i} className="text-2xl font-bold text-foreground mt-10 mb-4">
                       {block.slice(3)}
                     </h2>
                   )
                 }
                 if (block.startsWith('**')) {
                   return (
-                    <p key={i} className="text-surface-600 dark:text-surface-400 leading-relaxed"
-                      dangerouslySetInnerHTML={{ __html: block.replace(/\*\*(.*?)\*\*/g, '<strong class="text-surface-900 dark:text-white">$1</strong>') }}
+                    <p key={i} className="text-muted-foreground leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: block.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}
                     />
                   )
                 }
                 return (
-                  <p key={i} className="text-surface-600 dark:text-surface-400 leading-relaxed">
+                  <p key={i} className="text-muted-foreground leading-relaxed">
                     {block}
                   </p>
                 )
@@ -139,10 +139,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
             {/* CTA */}
             <div className="mt-16 card-gradient p-8 rounded-2xl text-center">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-white mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 Prêt à optimiser votre {post.category} ?
               </h3>
-              <p className="text-surface-500 dark:text-surface-400 mb-6 text-sm">
+              <p className="text-muted-foreground mb-6 text-sm">
                 Audit gratuit en 5 minutes. Découvrez votre score {post.category} et les actions prioritaires.
               </p>
               <Link href="/signup" className="btn-primary px-8 py-3 rounded-xl inline-flex items-center gap-2">

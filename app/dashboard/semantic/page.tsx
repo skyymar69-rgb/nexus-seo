@@ -171,10 +171,10 @@ export default function SemanticAnalysisPage() {
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="space-y-2">
-          <h1 className="text-4xl font-bold text-surface-900 dark:text-surface-50">
+          <h1 className="text-4xl font-bold text-foreground">
             Analyse Sémantique
           </h1>
-          <p className="text-lg text-surface-600 dark:text-surface-400">
+          <p className="text-lg text-muted-foreground">
             Analysez votre contenu et comparez-le aux résultats des concurrents
           </p>
         </div>
@@ -193,7 +193,7 @@ export default function SemanticAnalysisPage() {
                     'flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all',
                     mode === m
                       ? 'bg-brand-600 text-white dark:bg-brand-500'
-                      : 'bg-surface-200 dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-surface-300 dark:hover:bg-surface-700'
+                      : 'bg-surface-200 dark:bg-surface-800 text-foreground hover:bg-surface-300 dark:hover:bg-surface-700'
                   )}
                 >
                   {m === 'url' ? <FileText size={18} /> : <BookOpen size={18} />}
@@ -205,7 +205,7 @@ export default function SemanticAnalysisPage() {
             {/* Input Fields */}
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   {mode === 'url' ? 'URL à analyser' : 'Contenu'}
                 </label>
                 {mode === 'url' ? (
@@ -232,7 +232,7 @@ export default function SemanticAnalysisPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Mot-clé cible
                 </label>
                 <input
@@ -265,7 +265,7 @@ export default function SemanticAnalysisPage() {
                 className={cn(
                   'w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all',
                   loading
-                    ? 'bg-surface-300 dark:bg-surface-700 text-surface-500 dark:text-surface-400 cursor-not-allowed'
+                    ? 'bg-surface-300 dark:bg-surface-700 text-muted-foreground cursor-not-allowed'
                     : 'bg-brand-600 dark:bg-brand-500 text-white hover:bg-brand-700 dark:hover:bg-brand-600'
                 )}
               >
@@ -290,20 +290,20 @@ export default function SemanticAnalysisPage() {
           <div ref={resultsRef} className="space-y-8">
             {/* Semantic Score */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 Score Sémantique
               </h2>
               <div className="flex items-center justify-center">
                 <ScoreCircle score={result.score} />
               </div>
-              <p className="text-center text-surface-600 dark:text-surface-400 mt-6">
+              <p className="text-center text-muted-foreground mt-6">
                 Votre contenu correspond bien au mot-clé cible. Améliorez la densité et la profondeur pour atteindre 85+.
               </p>
             </div>
 
             {/* Content Stats */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 Analyse de Structure
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -324,14 +324,14 @@ export default function SemanticAnalysisPage() {
 
             {/* Keyword Density */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 Densité des Mots-clés
               </h2>
               <div className="space-y-4">
                 {result.keywordDensity.map((item) => (
                   <div key={item.keyword}>
                     <div className="flex justify-between mb-2">
-                      <span className="font-medium text-surface-900 dark:text-surface-50">{item.keyword}</span>
+                      <span className="font-medium text-foreground">{item.keyword}</span>
                       <span className="text-brand-600 dark:text-brand-400 font-semibold">{item.density.toFixed(2)}%</span>
                     </div>
                     <div className="w-full h-2 bg-surface-200 dark:bg-surface-800 rounded-full overflow-hidden">
@@ -347,26 +347,26 @@ export default function SemanticAnalysisPage() {
 
             {/* TF-IDF Analysis */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 Analyse TF-IDF (Top 20 termes)
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-surface-300 dark:border-surface-700">
-                      <th className="text-left py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-left py-3 px-4 font-semibold text-foreground">
                         Terme
                       </th>
-                      <th className="text-center py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-center py-3 px-4 font-semibold text-foreground">
                         Fréquence
                       </th>
-                      <th className="text-center py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-center py-3 px-4 font-semibold text-foreground">
                         Densité (%)
                       </th>
-                      <th className="text-center py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-center py-3 px-4 font-semibold text-foreground">
                         Pertinence
                       </th>
-                      <th className="text-center py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-center py-3 px-4 font-semibold text-foreground">
                         Statut
                       </th>
                     </tr>
@@ -380,13 +380,13 @@ export default function SemanticAnalysisPage() {
                           term.isMissing && 'bg-red-50 dark:bg-red-950/20'
                         )}
                       >
-                        <td className="py-3 px-4 font-medium text-surface-900 dark:text-surface-50">
+                        <td className="py-3 px-4 font-medium text-foreground">
                           {term.term}
                         </td>
-                        <td className="py-3 px-4 text-center text-surface-600 dark:text-surface-400">
+                        <td className="py-3 px-4 text-center text-muted-foreground">
                           {term.frequency}
                         </td>
-                        <td className="py-3 px-4 text-center text-surface-600 dark:text-surface-400">
+                        <td className="py-3 px-4 text-center text-muted-foreground">
                           {term.density.toFixed(2)}%
                         </td>
                         <td className="py-3 px-4 text-center">
@@ -397,7 +397,7 @@ export default function SemanticAnalysisPage() {
                                 style={{ width: `${term.relevance * 100}%` }}
                               />
                             </div>
-                            <span className="text-xs font-semibold text-surface-600 dark:text-surface-400">
+                            <span className="text-xs font-semibold text-muted-foreground">
                               {(term.relevance * 100).toFixed(0)}
                             </span>
                           </div>
@@ -424,7 +424,7 @@ export default function SemanticAnalysisPage() {
 
             {/* Semantic Related Keywords */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Cloud size={24} />
                 Champ Sémantique
               </h2>
@@ -454,26 +454,26 @@ export default function SemanticAnalysisPage() {
 
             {/* Competitor Comparison */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 Comparaison avec les Concurrents
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-surface-300 dark:border-surface-700">
-                      <th className="text-left py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-left py-3 px-4 font-semibold text-foreground">
                         Rang
                       </th>
-                      <th className="text-left py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-left py-3 px-4 font-semibold text-foreground">
                         URL
                       </th>
-                      <th className="text-center py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-center py-3 px-4 font-semibold text-foreground">
                         Mots
                       </th>
-                      <th className="text-center py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-center py-3 px-4 font-semibold text-foreground">
                         Score
                       </th>
-                      <th className="text-left py-3 px-4 font-semibold text-surface-700 dark:text-surface-300">
+                      <th className="text-left py-3 px-4 font-semibold text-foreground">
                         Termes clés
                       </th>
                     </tr>
@@ -486,8 +486,8 @@ export default function SemanticAnalysisPage() {
                             {comp.rank}
                           </span>
                         </td>
-                        <td className="py-3 px-4 text-surface-900 dark:text-surface-50 font-medium">{comp.url}</td>
-                        <td className="py-3 px-4 text-center text-surface-600 dark:text-surface-400">
+                        <td className="py-3 px-4 text-foreground font-medium">{comp.url}</td>
+                        <td className="py-3 px-4 text-center text-muted-foreground">
                           {formatNumber(comp.wordCount)}
                         </td>
                         <td className="py-3 px-4 text-center">
@@ -498,7 +498,7 @@ export default function SemanticAnalysisPage() {
                         <td className="py-3 px-4">
                           <div className="flex flex-wrap gap-1">
                             {comp.keyTerms.map((t) => (
-                              <span key={t} className="px-2 py-0.5 bg-surface-200 dark:bg-surface-800 text-surface-700 dark:text-surface-300 rounded text-xs">
+                              <span key={t} className="px-2 py-0.5 bg-surface-200 dark:bg-surface-800 text-foreground rounded text-xs">
                                 {t}
                               </span>
                             ))}
@@ -513,7 +513,7 @@ export default function SemanticAnalysisPage() {
 
             {/* Recommendations */}
             <div className="bg-surface-100 dark:bg-surface-900 rounded-lg border border-surface-200 dark:border-surface-800 p-8">
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Lightbulb size={24} className="text-yellow-500" />
                 Recommandations
               </h2>
@@ -573,8 +573,8 @@ function ScoreCircle({ score }: { score: number }) {
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-4xl font-bold text-surface-900 dark:text-surface-50">{score}</span>
-        <span className="text-xs text-surface-600 dark:text-surface-400">/100</span>
+        <span className="text-4xl font-bold text-foreground">{score}</span>
+        <span className="text-xs text-muted-foreground">/100</span>
       </div>
     </div>
   )
@@ -598,9 +598,9 @@ function StatCard({
         highlight || 'bg-surface-200 dark:bg-surface-800'
       )}
     >
-      {icon && <div className="flex justify-center mb-2 text-surface-600 dark:text-surface-400">{icon}</div>}
-      <p className="text-2xl font-bold text-surface-900 dark:text-surface-50">{value}</p>
-      <p className="text-xs text-surface-600 dark:text-surface-400 mt-1">{label}</p>
+      {icon && <div className="flex justify-center mb-2 text-muted-foreground">{icon}</div>}
+      <p className="text-2xl font-bold text-foreground">{value}</p>
+      <p className="text-xs text-muted-foreground mt-1">{label}</p>
     </div>
   )
 }

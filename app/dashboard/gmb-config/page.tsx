@@ -55,7 +55,7 @@ export default function GMBConfigPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-white">Google My Business</h1>
-          <p className="text-sm text-surface-500">Configurez votre fiche Google My Business pour le SEO local</p>
+          <p className="text-sm text-muted-foreground">Configurez votre fiche Google My Business pour le SEO local</p>
         </div>
       </div>
 
@@ -115,17 +115,17 @@ export default function GMBConfigPage() {
             <h3 className="font-bold text-white mb-4 flex items-center gap-2"><Building2 className="w-5 h-5 text-brand-500" /> Informations optimisées</h3>
             <div className="space-y-3">
               <div className="p-3 rounded-lg bg-white/[0.02]">
-                <p className="text-xs font-bold text-surface-500 mb-1">NOM (tel qu&apos;il apparaîtra sur Google)</p>
+                <p className="text-xs font-bold text-muted-foreground mb-1">NOM (tel qu&apos;il apparaîtra sur Google)</p>
                 <p className="text-sm font-semibold text-white">{result.businessInfo.name}</p>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02]">
-                <p className="text-xs font-bold text-surface-500 mb-1">CATEGORIE PRINCIPALE</p>
+                <p className="text-xs font-bold text-muted-foreground mb-1">CATEGORIE PRINCIPALE</p>
                 <p className="text-sm text-white">{result.businessInfo.category}</p>
-                <p className="text-xs text-surface-600 dark:text-surface-400 mt-1">Sous-catégories suggérées: {result.businessInfo.subcategories.join(', ')}</p>
+                <p className="text-xs text-muted-foreground mt-1">Sous-catégories suggérées: {result.businessInfo.subcategories.join(', ')}</p>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02]">
                 <div className="flex items-center justify-between mb-1">
-                  <p className="text-xs font-bold text-surface-500">DESCRIPTION OPTIMISEE ({result.businessInfo.description.length}/750)</p>
+                  <p className="text-xs font-bold text-muted-foreground">DESCRIPTION OPTIMISEE ({result.businessInfo.description.length}/750)</p>
                   <button onClick={() => copyText(result.businessInfo.description, 'desc')} className="text-xs text-brand-600 flex items-center gap-1">
                     {copied === 'desc' ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />} Copier
                   </button>

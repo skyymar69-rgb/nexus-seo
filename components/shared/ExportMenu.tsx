@@ -154,7 +154,7 @@ export function ExportMenu({
       return (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 hover:bg-surface-700 rounded-lg transition-colors duration-200 text-surface-600 dark:text-surface-400 hover:text-surface-200"
+          className="p-2 hover:bg-surface-700 rounded-lg transition-colors duration-200 text-muted-foreground hover:text-surface-200"
           title={label}
           aria-label={label}
         >
@@ -201,7 +201,7 @@ export function ExportMenu({
         <div className="absolute right-0 mt-2 w-72 bg-surface-800 border border-surface-700 rounded-lg shadow-xl z-50 overflow-hidden">
           {/* Header */}
           <div className="px-4 py-3 bg-surface-900 border-b border-surface-700">
-            <p className="text-xs font-semibold text-surface-500 uppercase tracking-wide">
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
               Choisir un format d'export
             </p>
           </div>
@@ -242,7 +242,7 @@ export function ExportMenu({
                         <p className="text-sm font-semibold text-surface-200 group-hover:text-indigo-400 transition-colors">
                           {option.label}
                         </p>
-                        <p className="text-xs text-surface-500 group-hover:text-surface-400 transition-colors">
+                        <p className="text-xs text-muted-foreground group-hover:text-surface-400 transition-colors">
                           {option.description}
                         </p>
                       </div>

@@ -23,11 +23,11 @@ export default function AccessibilityStatementPage() {
               ]}
             />
 
-            <h1 className="text-4xl font-black text-surface-900 dark:text-white mt-8 mb-6">
+            <h1 className="text-4xl font-black text-foreground mt-8 mb-6">
               Declaration d&apos;accessibilite
             </h1>
 
-            <div className="prose prose-zinc dark:prose-invert max-w-none space-y-6 text-surface-700 dark:text-surface-300">
+            <div className="prose prose-zinc dark:prose-invert max-w-none space-y-6 text-foreground">
               <p>
                 <strong>Nexus SEO</strong> s&apos;engage a rendre son site internet et ses
                 applications accessibles conformement a l&apos;article 47 de la loi
@@ -38,7 +38,7 @@ export default function AccessibilityStatementPage() {
                 l&apos;<strong>European Accessibility Act (EAA)</strong> entrant en vigueur le 28 juin 2025.
               </p>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Etat de conformite
               </h2>
               <p>
@@ -47,7 +47,7 @@ export default function AccessibilityStatementPage() {
                 listees ci-dessous.
               </p>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Resultats des tests
               </h2>
               <p>
@@ -55,10 +55,10 @@ export default function AccessibilityStatementPage() {
                 global est en cours d&apos;amelioration continue.
               </p>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Contenus non accessibles
               </h2>
-              <h3 className="text-xl font-semibold text-surface-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-foreground">
                 Non-conformites connues
               </h3>
               <ul className="list-disc pl-6 space-y-2">
@@ -66,17 +66,17 @@ export default function AccessibilityStatementPage() {
                 <li>Certains contrastes de couleurs sur les textes secondaires en mode sombre sont en cours d&apos;amelioration.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-surface-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-foreground">
                 Derogations pour charge disproportionnee
               </h3>
               <p>Aucune derogation n&apos;est invoquee a ce stade.</p>
 
-              <h3 className="text-xl font-semibold text-surface-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-foreground">
                 Contenus non soumis a l&apos;obligation
               </h3>
               <p>Les contenus tiers (Google OAuth, services externes) ne sont pas sous le controle de Nexus SEO.</p>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Technologies utilisees
               </h2>
               <ul className="list-disc pl-6 space-y-1">
@@ -86,7 +86,7 @@ export default function AccessibilityStatementPage() {
                 <li>WAI-ARIA 1.2</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Environnement de test
               </h2>
               <p>Les verifications ont ete realisees avec :</p>
@@ -97,7 +97,7 @@ export default function AccessibilityStatementPage() {
                 <li>Lighthouse (Google Chrome)</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Retour d&apos;information et contact
               </h2>
               <p>
@@ -111,7 +111,7 @@ export default function AccessibilityStatementPage() {
                 <li>Adresse : 6, rue Pierre Termier, 69009 Lyon</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-surface-900 dark:text-white">
+              <h2 className="text-2xl font-bold text-foreground">
                 Voie de recours
               </h2>
               <p>
@@ -125,7 +125,7 @@ export default function AccessibilityStatementPage() {
                 <li>Envoyer un courrier par la poste (gratuit) : Defenseur des droits — Libre reponse 71120 — 75342 Paris CEDEX 07</li>
               </ul>
 
-              <p className="text-sm text-surface-600 dark:text-surface-400 mt-8">
+              <p className="text-sm text-muted-foreground mt-8">
                 Cette declaration a ete etablie le 16 avril 2026.
               </p>
             </div>

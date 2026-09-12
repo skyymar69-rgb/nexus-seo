@@ -30,7 +30,7 @@ export default function ReferralPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-surface-950 dark:text-surface-50">Programme Ambassadeur</h1>
-          <p className="text-sm text-surface-500">Partagez Nexus SEO et gagnez des badges</p>
+          <p className="text-sm text-muted-foreground">Partagez Nexus SEO et gagnez des badges</p>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ export default function ReferralPage() {
             <div key={stat.label} className="bg-white/[0.03] rounded-xl border border-white/5 p-5 text-center">
               <Icon className={cn('w-5 h-5 mx-auto mb-2', stat.color)} />
               <p className={cn('text-xl font-black', stat.color)}>{stat.value}</p>
-              <p className="text-xs text-surface-500">{stat.label}</p>
+              <p className="text-xs text-muted-foreground">{stat.label}</p>
             </div>
           )
         })}
@@ -107,7 +107,7 @@ export default function ReferralPage() {
               </div>
               <div>
                 <p className="font-semibold text-sm text-white">{item.title}</p>
-                <p className="text-xs text-surface-500 mt-0.5">{item.desc}</p>
+                <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -117,8 +117,8 @@ export default function ReferralPage() {
       {/* Widget embed */}
       <div className="bg-white/[0.03] rounded-xl border border-white/5 p-6">
         <h3 className="font-bold text-white mb-4">Badge SEO pour votre site</h3>
-        <p className="text-sm text-surface-500 mb-3">Affichez votre score SEO sur votre site et générez des backlinks vers Nexus.</p>
-        <div className="bg-white/[0.02] rounded-lg p-3 font-mono text-xs text-surface-600 dark:text-surface-400 overflow-x-auto">
+        <p className="text-sm text-muted-foreground mb-3">Affichez votre score SEO sur votre site et générez des backlinks vers Nexus.</p>
+        <div className="bg-white/[0.02] rounded-lg p-3 font-mono text-xs text-muted-foreground overflow-x-auto">
           {`<a href="${baseUrl}"><img src="${baseUrl}/api/widget?domain=VOTRE-DOMAINE.FR" alt="Score SEO par Nexus"></a>`}
         </div>
       </div>

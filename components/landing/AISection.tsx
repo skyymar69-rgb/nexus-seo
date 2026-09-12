@@ -29,7 +29,7 @@ export function AISection() {
   }, [])
 
   return (
-    <section id="demo" className="py-28 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-brand-950 relative overflow-hidden">
+    <section id="demo" className="section-y px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-brand-950 relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.06)_0%,transparent_65%)]" />
       <div className="max-w-7xl mx-auto">
@@ -38,7 +38,7 @@ export function AISection() {
           {/* Left: copy */}
           <div>
             <div className="section-badge mb-6">Fonctionnalité unique</div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Soyez{' '}
               <span className="gradient-text">visible là où vos clients cherchent</span>{' '}
               — même sans Google
@@ -57,8 +57,8 @@ export function AISection() {
                 return (
                   <div key={s.label} className="card p-4 text-center">
                     <Icon className="w-5 h-5 text-brand-500 mx-auto mb-2" />
-                    <p className="text-xl font-black text-surface-900 dark:text-white">{s.value}</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400 mt-0.5">{s.label}</p>
+                    <p className="text-xl font-black text-foreground">{s.value}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{s.label}</p>
                   </div>
                 )
               })}
@@ -73,13 +73,13 @@ export function AISection() {
           {/* Right: live dashboard */}
           <div className="card-gradient rounded-3xl overflow-hidden">
             {/* Header */}
-            <div className="flex items-center gap-3 p-5 border-b border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-950/50">
+            <div className="flex items-center gap-3 p-5 border-b border-surface-200 dark:border-surface-700 surface-sunken/50">
               <div className="flex gap-1.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
                 <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                 <div className="w-2.5 h-2.5 rounded-full bg-accent-400" />
               </div>
-              <span className="text-xs font-mono text-surface-600 dark:text-surface-400">AI Visibility Dashboard</span>
+              <span className="text-xs font-mono text-muted-foreground">AI Visibility Dashboard</span>
               <div className="ml-auto flex items-center gap-1.5 text-xs text-accent-700 dark:text-accent-400 font-semibold">
                 <div className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
                 Live
@@ -90,12 +90,12 @@ export function AISection() {
               {/* Score global */}
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <p className="text-xs text-surface-600 dark:text-surface-400 mb-0.5">Score de visibilité IA</p>
-                  <p className="text-5xl font-black gradient-text">79<span className="text-2xl text-surface-600 dark:text-surface-400">/100</span></p>
+                  <p className="text-xs text-muted-foreground mb-0.5">Score de visibilité IA</p>
+                  <p className="text-5xl font-black gradient-text">79<span className="text-2xl text-muted-foreground">/100</span></p>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs text-surface-600 dark:text-surface-400 mb-0.5">Mentions ce mois</p>
-                  <p className="text-3xl font-black text-surface-900 dark:text-white">+{count.toLocaleString('fr-FR')}</p>
+                  <p className="text-xs text-muted-foreground mb-0.5">Mentions ce mois</p>
+                  <p className="text-3xl font-black text-foreground">+{count.toLocaleString('fr-FR')}</p>
                 </div>
               </div>
 
@@ -103,7 +103,7 @@ export function AISection() {
               <div className="space-y-3 mb-6">
                 {llms.map((llm) => (
                   <div key={llm.name}>
-                    <div className="flex justify-between text-xs text-surface-500 dark:text-surface-400 mb-1">
+                    <div className="flex justify-between text-xs text-muted-foreground mb-1">
                       <span>{llm.name}</span>
                       <span>{llm.pct}%</span>
                     </div>
@@ -119,14 +119,14 @@ export function AISection() {
 
               {/* Recent mentions */}
               <div className="rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700 p-4">
-                <p className="text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-3">Dernières mentions</p>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">Dernières mentions</p>
                 <div className="space-y-3">
                   {mentions.map((m, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="text-xs text-surface-600 dark:text-surface-400 shrink-0 mt-0.5">{m.time}</span>
+                      <span className="text-xs text-muted-foreground shrink-0 mt-0.5">{m.time}</span>
                       <div>
                         <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{m.llm}</span>
-                        <p className="text-xs text-surface-500 dark:text-surface-400 mt-0.5 italic">{m.text}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5 italic">{m.text}</p>
                       </div>
                     </div>
                   ))}

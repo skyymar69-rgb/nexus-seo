@@ -123,7 +123,7 @@ export default function AccessibilityToggle() {
                   className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                     prefs.fontSize === value
                       ? 'bg-brand-600 text-white'
-                      : 'bg-surface-100 dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-surface-200 dark:hover:bg-surface-700'
+                      : 'bg-surface-100 dark:bg-surface-800 text-foreground hover:bg-surface-200 dark:hover:bg-surface-700'
                   }`}
                 >
                   {label}
@@ -146,7 +146,7 @@ export default function AccessibilityToggle() {
                   className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                     prefs.contrast === value
                       ? 'bg-brand-600 text-white'
-                      : 'bg-surface-100 dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-surface-200 dark:hover:bg-surface-700'
+                      : 'bg-surface-100 dark:bg-surface-800 text-foreground hover:bg-surface-200 dark:hover:bg-surface-700'
                   }`}
                 >
                   {label}

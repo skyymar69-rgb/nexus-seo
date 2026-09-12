@@ -46,7 +46,7 @@ export default function LoginPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-2">Se connecter</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-2">Se connecter</h2>
         <p className="text-sm text-surface-600 dark:text-white/70">
           Accédez à vos outils SEO — 100% gratuit
         </p>
@@ -64,7 +64,7 @@ export default function LoginPage() {
 
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
-        <span className="text-xs text-surface-500 dark:text-white/50">ou</span>
+        <span className="text-xs text-muted-foreground dark:text-white/50">ou</span>
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
       </div>
 
@@ -80,7 +80,7 @@ export default function LoginPage() {
             Adresse e-mail
           </label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/50" />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/50" />
             <input
               id="email"
               type="email"
@@ -90,7 +90,7 @@ export default function LoginPage() {
               aria-required="true"
               aria-invalid={error ? true : undefined}
               autoComplete="email"
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/20 bg-white dark:bg-white/[0.06] text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500/50 transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/20 bg-white dark:bg-white/[0.06] text-foreground placeholder-surface-400 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500/50 transition-colors"
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function LoginPage() {
             Mot de passe
           </label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/50" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/50" />
             <input
               id="password"
               type={showPassword ? 'text' : 'password'}
@@ -110,13 +110,13 @@ export default function LoginPage() {
               aria-required="true"
               aria-invalid={error ? true : undefined}
               autoComplete="current-password"
-              className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 dark:border-white/20 bg-white dark:bg-white/[0.06] text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500/50 transition-colors"
+              className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 dark:border-white/20 bg-white dark:bg-white/[0.06] text-foreground placeholder-surface-400 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500/50 transition-colors"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-600 dark:text-surface-400 dark:text-white/50 hover:text-surface-700 dark:hover:text-white/80"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground dark:text-white/50 hover:text-surface-700 dark:hover:text-white/80"
             >
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
@@ -137,7 +137,7 @@ export default function LoginPage() {
         </button>
       </form>
 
-      <p className="text-center text-sm text-surface-600 dark:text-white/60">
+      <p className="text-center text-sm text-muted-foreground">
         Pas encore de compte ?{' '}
         <Link href="/signup" className="font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300">
           Créer un compte

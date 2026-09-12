@@ -248,11 +248,11 @@ function LoadingSkeleton() {
 function EmptyState({ onNewQuery }: { onNewQuery?: () => void }) {
   return (
     <div className="rounded-lg border border-white/5 bg-white/[0.02] p-12 text-center">
-      <Sparkles className="h-12 w-12 text-surface-600 dark:text-surface-400 mx-auto mb-4" />
+      <Sparkles className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
       <h3 className="text-lg font-semibold text-white mb-2">
         Aucune donnée disponible
       </h3>
-      <p className="text-sm text-surface-500 mb-6 max-w-md mx-auto">
+      <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
         Lancez votre première requête pour découvrir comment votre site est mentionné par les IA génératives.
       </p>
       {onNewQuery && (
@@ -351,7 +351,7 @@ function NewQueryForm({
           className={cn(
             'w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm transition-all',
             isSubmitting || !prompt.trim()
-              ? 'bg-surface-200 dark:bg-surface-700 text-surface-600 dark:text-surface-400 cursor-not-allowed'
+              ? 'bg-surface-200 dark:bg-surface-700 text-muted-foreground cursor-not-allowed'
               : 'bg-gradient-to-r from-brand-500 to-brand-600 text-white hover:shadow-lg hover:from-brand-600 hover:to-brand-700'
           )}
         >
@@ -401,7 +401,7 @@ export default function AIVisibilityPage() {
           </div>
         </div>
         <div className="rounded-lg border border-white/5 bg-white/[0.02] p-12 text-center">
-          <p className="text-surface-500">
+          <p className="text-muted-foreground">
             Veuillez sélectionner un site web pour afficher les données de visibilité IA.
           </p>
         </div>
@@ -469,7 +469,7 @@ export default function AIVisibilityPage() {
         </div>
         <div className="flex items-center gap-3 flex-wrap lg:flex-nowrap">
           <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-white/5 bg-white/[0.02]">
-            <Calendar className="h-4 w-4 text-surface-500" />
+            <Calendar className="h-4 w-4 text-muted-foreground" />
             <select
               value={timeRange}
               onChange={(e) => setTimeRange(e.target.value)}
@@ -541,7 +541,7 @@ export default function AIVisibilityPage() {
                     <p className="text-2xl font-bold text-white">
                       {Math.round(mentionRate)}
                     </p>
-                    <p className="text-xs text-surface-500">%</p>
+                    <p className="text-xs text-muted-foreground">%</p>
                   </div>
                 </div>
               </div>
@@ -556,7 +556,7 @@ export default function AIVisibilityPage() {
             <p className="text-3xl font-bold text-white">
               {formatNumber(totalQueries)}
             </p>
-            <p className="text-xs text-surface-500">
+            <p className="text-xs text-muted-foreground">
               {mentionedCount} mention{mentionedCount !== 1 ? 's' : ''} trouvée{mentionedCount !== 1 ? 's' : ''}
             </p>
           </div>
@@ -611,7 +611,7 @@ export default function AIVisibilityPage() {
                   <h2 className="text-lg font-bold text-white">
                     Évolution de la visibilité
                   </h2>
-                  <p className="text-xs text-surface-500 mt-1">
+                  <p className="text-xs text-muted-foreground mt-1">
                     Taux de mention au fil du temps
                   </p>
                 </div>
@@ -688,7 +688,7 @@ export default function AIVisibilityPage() {
                 <h2 className="text-lg font-bold text-white">
                   Requetes recentes
                 </h2>
-                <span className="text-xs text-surface-700 dark:text-surface-300 bg-surface-200 dark:bg-surface-800 px-2.5 py-1 rounded-full font-medium">
+                <span className="text-xs text-foreground bg-surface-200 dark:bg-surface-800 px-2.5 py-1 rounded-full font-medium">
                   {sortedQueries.length} requête{sortedQueries.length !== 1 ? 's' : ''}
                 </span>
               </div>
@@ -696,7 +696,7 @@ export default function AIVisibilityPage() {
               {/* Search and Filter Bar */}
               <div className="flex items-center gap-3">
                 <div className="flex-1 flex items-center gap-2 px-3 py-2.5 rounded-lg border border-white/5 bg-white/[0.03]">
-                  <Search className="h-4 w-4 text-surface-600 dark:text-surface-400" />
+                  <Search className="h-4 w-4 text-muted-foreground" />
                   <input
                     type="text"
                     placeholder="Rechercher une requête..."
@@ -771,7 +771,7 @@ export default function AIVisibilityPage() {
                                 Oui
                               </span>
                             ) : (
-                              <span className="text-surface-600 dark:text-surface-400 text-xs">Non</span>
+                              <span className="text-muted-foreground text-xs">Non</span>
                             )}
                           </td>
                           <td className="py-3 px-4 text-center">
@@ -780,7 +780,7 @@ export default function AIVisibilityPage() {
                                 #{query.position}
                               </span>
                             ) : (
-                              <span className="text-surface-600 dark:text-surface-400">&mdash;</span>
+                              <span className="text-muted-foreground">&mdash;</span>
                             )}
                           </td>
                           <td className="py-3 px-4">
@@ -794,10 +794,10 @@ export default function AIVisibilityPage() {
                                 {sentimentInfo.icon} {sentimentInfo.label}
                               </span>
                             ) : (
-                              <span className="text-surface-600 dark:text-surface-400">&mdash;</span>
+                              <span className="text-muted-foreground">&mdash;</span>
                             )}
                           </td>
-                          <td className="py-3 px-4 text-xs text-surface-500">
+                          <td className="py-3 px-4 text-xs text-muted-foreground">
                             {formatRelativeDate(query.date)}
                           </td>
                         </tr>
@@ -807,7 +807,7 @@ export default function AIVisibilityPage() {
                 </table>
               </div>
             ) : (
-              <p className="text-sm text-surface-500 text-center py-8">
+              <p className="text-sm text-muted-foreground text-center py-8">
                 Aucune requête trouvée.
               </p>
             )}

@@ -124,7 +124,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
         {/* Hero */}
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Link href="/cases" className="inline-flex items-center gap-2 text-sm text-surface-600 dark:text-surface-400 hover:text-brand-500 transition-colors mb-8">
+            <Link href="/cases" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-500 transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
               Tous les cas clients
             </Link>
@@ -136,10 +136,10 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
               ))}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-black text-surface-900 dark:text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
               {c.company}
             </h1>
-            <p className="text-xl text-surface-500 dark:text-surface-400 mb-10">
+            <p className="text-xl text-muted-foreground mb-10">
               {c.description}
             </p>
 
@@ -148,7 +148,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
               {c.results.map((r) => (
                 <div key={r.metric} className="card p-5 text-center">
                   <p className="text-2xl font-black gradient-text mb-1">{r.value}</p>
-                  <p className="text-xs text-surface-600 dark:text-surface-400">{r.metric}</p>
+                  <p className="text-xs text-muted-foreground">{r.metric}</p>
                 </div>
               ))}
             </div>
@@ -161,20 +161,20 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
             <div className="lg:col-span-2 space-y-10">
               {/* Context */}
               <div>
-                <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-4">Le contexte</h2>
-                <p className="text-surface-600 dark:text-surface-400 leading-relaxed">{c.context}</p>
+                <h2 className="text-2xl font-bold text-foreground mb-4">Le contexte</h2>
+                <p className="text-muted-foreground leading-relaxed">{c.context}</p>
               </div>
 
               {/* Solution */}
               <div>
-                <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-4">Notre approche</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-4">Notre approche</h2>
                 <ul className="space-y-3">
                   {c.solution.map((s) => (
                     <li key={s} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-brand-50 dark:bg-brand-950/40 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-brand-600 dark:text-brand-400" />
                       </div>
-                      <span className="text-sm text-surface-600 dark:text-surface-400">{s}</span>
+                      <span className="text-sm text-muted-foreground">{s}</span>
                     </li>
                   ))}
                 </ul>
@@ -182,7 +182,7 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
 
               {/* Quote */}
               <blockquote className="card-gradient p-8 rounded-2xl">
-                <p className="text-lg text-surface-700 dark:text-surface-300 italic leading-relaxed mb-5">
+                <p className="text-lg text-foreground italic leading-relaxed mb-5">
                   &ldquo;{c.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
@@ -190,8 +190,8 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
                     {c.author.split(' ').map((n) => n[0]).join('').slice(0, 2)}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-surface-900 dark:text-white">{c.author}</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400">{c.role}</p>
+                    <p className="text-sm font-semibold text-foreground">{c.author}</p>
+                    <p className="text-xs text-muted-foreground">{c.role}</p>
                   </div>
                 </div>
               </blockquote>
@@ -200,30 +200,30 @@ export default function CaseDetailPage({ params }: { params: { slug: string } })
             {/* Sidebar */}
             <div className="space-y-6">
               <div className="card p-6">
-                <h3 className="text-sm font-bold text-surface-900 dark:text-white uppercase tracking-wide mb-4">Résultats clés</h3>
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wide mb-4">Résultats clés</h3>
                 <div className="space-y-4">
                   {c.results.map((r) => (
                     <div key={r.metric}>
                       <p className="text-2xl font-black gradient-text">{r.value}</p>
-                      <p className="text-xs text-surface-600 dark:text-surface-400">{r.metric}</p>
+                      <p className="text-xs text-muted-foreground">{r.metric}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="card p-6">
-                <h3 className="text-sm font-bold text-surface-900 dark:text-white uppercase tracking-wide mb-4">Infos</h3>
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wide mb-4">Infos</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-surface-600 dark:text-surface-400">Secteur</span>
-                    <span className="text-surface-900 dark:text-white font-medium">{c.category}</span>
+                    <span className="text-muted-foreground">Secteur</span>
+                    <span className="text-foreground font-medium">{c.category}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-surface-600 dark:text-surface-400">Durée</span>
-                    <span className="text-surface-900 dark:text-white font-medium">{c.duration}</span>
+                    <span className="text-muted-foreground">Durée</span>
+                    <span className="text-foreground font-medium">{c.duration}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-surface-600 dark:text-surface-400">Services</span>
+                    <span className="text-muted-foreground">Services</span>
                     <div className="flex gap-1 flex-wrap justify-end">
                       {c.tags.map((tag) => (
                         <span key={tag} className="text-xs font-semibold text-brand-600 dark:text-brand-400">{tag}</span>

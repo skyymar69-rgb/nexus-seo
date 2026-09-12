@@ -10,7 +10,7 @@ const features = [
     title: 'GEO',
     subtitle: 'Generative Engine Optimization',
     desc: 'Soyez cité par Google SGE, Bing Copilot et Perplexity. Score E-E-A-T, schéma markup et monitoring quotidien.',
-    gradient: 'from-brand-500/20 to-brand-500/5',
+    gradient: '',
     border: 'border-brand-500/20 hover:border-brand-500/40',
     iconColor: 'text-brand-400',
     size: 'large',
@@ -21,7 +21,7 @@ const features = [
     title: 'AEO',
     subtitle: 'Answer Engine Optimization',
     desc: 'Capturez les featured snippets, People Also Ask et réponses vocales. Analysez votre prêt pour la position zéro.',
-    gradient: 'from-violet-500/20 to-violet-500/5',
+    gradient: '',
     border: 'border-violet-500/20 hover:border-violet-500/40',
     iconColor: 'text-violet-400',
     size: 'large',
@@ -32,7 +32,7 @@ const features = [
     title: 'LLMO',
     subtitle: 'LLM Optimization',
     desc: 'Trackez vos mentions dans ChatGPT, Claude, Gemini et Perplexity en temps réel.',
-    gradient: 'from-cyan-500/20 to-cyan-500/5',
+    gradient: '',
     border: 'border-cyan-500/20 hover:border-cyan-500/40',
     iconColor: 'text-cyan-400',
     size: 'small',
@@ -43,7 +43,7 @@ const features = [
     title: 'SEO Technique',
     subtitle: '25+ vérifications',
     desc: 'Audit complet, Core Web Vitals, crawl, sécurité, mobile et plus encore.',
-    gradient: 'from-amber-500/20 to-amber-500/5',
+    gradient: '',
     border: 'border-amber-500/20 hover:border-amber-500/40',
     iconColor: 'text-amber-400',
     size: 'small',
@@ -54,7 +54,7 @@ const features = [
     title: 'Contenu & Mots-clés',
     subtitle: 'Optimisation IA',
     desc: 'Génération de contenu, recherche sémantique, keyword gap et analyse de lisibilité.',
-    gradient: 'from-emerald-500/20 to-emerald-500/5',
+    gradient: '',
     border: 'border-emerald-500/20 hover:border-emerald-500/40',
     iconColor: 'text-emerald-400',
     size: 'small',
@@ -66,15 +66,15 @@ export function BentoFeatures() {
   const smallItems = features.filter(f => f.size === 'small')
 
   return (
-    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
+    <section id="features" className="section-y px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <div className="section-badge mx-auto mb-4">Fonctionnalités</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Tout ce qu&apos;il faut pour{' '}
             <span className="gradient-text">dominer l&apos;ère IA</span>
           </h2>
-          <p className="text-lg text-surface-500 dark:text-surface-400">
+          <p className="text-lg text-muted-foreground">
             GEO, AEO, LLMO — les trois piliers du référencement nouvelle génération, réunis dans une seule plateforme.
           </p>
         </div>
@@ -86,12 +86,11 @@ export function BentoFeatures() {
             return (
               <div
                 key={f.id}
-                className={`group relative rounded-2xl p-8 border bg-gradient-to-br ${f.gradient} ${f.border} transition-all duration-500 hover:shadow-glow hover:-translate-y-1.5 overflow-hidden`}
+                className={`group relative rounded-2xl p-8 border border-border bg-card shadow-e2 transition-shadow duration-200 hover:shadow-e3 overflow-hidden`}
                 style={{ backdropFilter: 'blur(2px)' }}
               >
                 {/* Decorative ambient orb */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"
-                  style={{ background: `radial-gradient(circle, ${f.id === 'geo' ? 'rgba(59,130,246,0.15)' : 'rgba(43,74,116,0.2)'}, transparent)` }}
                 />
                 {/* Top-right decorative dots grid */}
                 <svg className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500" width="48" height="48" viewBox="0 0 48 48" fill="currentColor">
@@ -107,14 +106,13 @@ export function BentoFeatures() {
                 </div>
 
                 <div className="flex items-baseline gap-3 mb-3">
-                  <h3 className="text-2xl font-black text-surface-900 dark:text-white tracking-tight">{f.title}</h3>
-                  <span className="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{f.subtitle}</span>
+                  <h3 className="text-2xl font-black text-foreground tracking-tight">{f.title}</h3>
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{f.subtitle}</span>
                 </div>
-                <p className="text-surface-600 dark:text-surface-400 leading-relaxed max-w-md text-sm">{f.desc}</p>
+                <p className="text-muted-foreground leading-relaxed max-w-md text-sm">{f.desc}</p>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: `linear-gradient(to right, transparent, ${f.id === 'geo' ? 'rgba(59,130,246,0.5)' : 'rgba(124,58,237,0.5)'}, transparent)` }} />
+                <div className="absolute bottom-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             )
           })}
@@ -127,11 +125,10 @@ export function BentoFeatures() {
             return (
               <div
                 key={f.id}
-                className={`group relative rounded-2xl p-6 border bg-gradient-to-br ${f.gradient} ${f.border} transition-all duration-500 hover:shadow-glow hover:-translate-y-1 overflow-hidden`}
+                className={`group relative rounded-2xl p-6 border border-border bg-card shadow-e2 transition-shadow duration-200 hover:shadow-e3 overflow-hidden`}
               >
                 {/* Ambient glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-                  style={{ background: 'radial-gradient(ellipse at top right, rgba(255,255,255,0.04), transparent 70%)' }} />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                 {/* Icon */}
                 <div className="relative w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
@@ -140,10 +137,10 @@ export function BentoFeatures() {
                 </div>
 
                 <div className="flex items-baseline gap-2 mb-2">
-                  <h3 className="text-lg font-bold text-surface-900 dark:text-white">{f.title}</h3>
-                  <span className="text-xs text-surface-500 dark:text-surface-400">{f.subtitle}</span>
+                  <h3 className="text-lg font-bold text-foreground">{f.title}</h3>
+                  <span className="text-xs text-muted-foreground">{f.subtitle}</span>
                 </div>
-                <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{f.desc}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
 
                 {/* Corner accent */}
                 <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-60 transition-opacity duration-300">

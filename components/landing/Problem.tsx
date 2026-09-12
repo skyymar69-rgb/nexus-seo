@@ -26,7 +26,7 @@ const problems = [
   },
   {
     icon: AlertTriangle,
-    color: 'text-violet-500',
+    color: 'text-violet-700 dark:text-violet-300',
     bg: 'bg-violet-50 dark:bg-violet-950/20',
     border: 'border-violet-200 dark:border-violet-900/40',
     title: 'Vos concurrents s\'adaptent déjà',
@@ -38,17 +38,17 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-950 border-y border-surface-200 dark:border-white/5">
+    <section className="section-y px-4 sm:px-6 lg:px-8 surface-sunken border-y border-surface-200 dark:border-white/5">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
           <div className="section-badge mx-auto mb-4">Le problème</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Le SEO traditionnel ne suffit{' '}
             <span className="gradient-text">plus en 2026</span>
           </h2>
-          <p className="text-lg text-surface-500 dark:text-surface-400">
+          <p className="text-lg text-muted-foreground">
             Les règles du référencement ont changé. Les moteurs de recherche génératifs redistribuent le trafic. Êtes-vous prêt ?
           </p>
         </div>
@@ -64,10 +64,10 @@ export function Problem() {
                 </div>
                 <div className="mb-4">
                   <span className={`text-5xl sm:text-6xl font-black ${p.color}`}>{p.stat}</span>
-                  <span className="block text-xs text-surface-500 dark:text-surface-400 mt-1">{p.statLabel}</span>
+                  <span className="block text-xs text-muted-foreground mt-1">{p.statLabel}</span>
                 </div>
-                <h3 className="text-lg font-bold text-surface-900 dark:text-white mb-2">{p.title}</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{p.desc}</p>
+                <h3 className="text-lg font-bold text-foreground mb-2">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             )
           })}
@@ -75,8 +75,8 @@ export function Problem() {
 
         {/* Bridge to solution */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-white dark:bg-surface-900 border border-surface-200 dark:border-surface-800 shadow-sm">
-            <span className="text-sm font-semibold text-surface-900 dark:text-white">Nexus résout exactement ces 3 problèmes</span>
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-card border border-surface-200 dark:border-surface-800 shadow-sm">
+            <span className="text-sm font-semibold text-foreground">Nexus résout exactement ces 3 problèmes</span>
             <Link href="#features" className="flex items-center gap-1 text-sm font-bold text-brand-600 dark:text-brand-400 hover:gap-2 transition-all">
               Voir comment <ArrowRight className="w-4 h-4" />
             </Link>

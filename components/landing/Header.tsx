@@ -106,19 +106,17 @@ export function Header() {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
-  /* Le header repose toujours sur une surface sombre (navy Kayzen) :
-     transparent au-dessus du hero, navy translucide une fois scrollé.
-     Le menu et le logo restent donc blancs en thème clair comme en thème sombre. */
+  /* Header au modele Kayzen : la barre suit le theme (blanc en clair,
+     marine profond en sombre) et porte une ombre une fois la page scrollee.
+     Le hero n'etant plus sombre, un menu blanc permanent serait invisible. */
   const isDark = theme === 'dark'
 
   return (
     <header
       role="banner"
       className={cn(
-        'fixed top-0 inset-x-0 z-50 transition-all duration-300',
-        solid
-          ? 'bg-secondary-900/95 backdrop-blur-md border-b border-white/10 shadow-elev-md'
-          : 'bg-transparent border-b border-transparent'
+        'fixed top-0 inset-x-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm transition-shadow duration-200',
+        solid ? 'shadow-e2' : ''
       )}
     >
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-medium focus:ring-2 focus:ring-brand-400">
@@ -130,7 +128,7 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" aria-label="Nexus by Kayzen — Retour à l'accueil" className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-lg">
-            <AnimatedLogo size={36} lightText />
+            <AnimatedLogo size={36} />
           </Link>
 
           {/* Desktop Nav */}
@@ -149,8 +147,8 @@ export function Header() {
                     aria-expanded={dropdown === item.label}
                     aria-haspopup="true"
                     className={cn(
-                      'flex items-center gap-1 px-4 py-2 min-h-[44px] text-sm font-medium rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                      'text-white/80 hover:text-white hover:bg-white/10'
+                      'flex items-center gap-1 px-3 py-2 min-h-[44px] text-sm font-heading font-semibold rounded-lg transition-colors',
+                      'text-foreground hover:text-primary'
                     )}
                   >
                     {item.label}
@@ -161,10 +159,10 @@ export function Header() {
                     href={item.href}
                     aria-current={isActive(pathname, item.href) ? 'page' : undefined}
                     className={cn(
-                      'px-4 py-2 min-h-[44px] flex items-center text-sm font-medium rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
+                      'px-3 py-2 min-h-[44px] flex items-center text-sm font-heading font-semibold border-b-2 transition-colors',
                       isActive(pathname, item.href)
-                        ? 'text-white bg-white/12 underline underline-offset-4 decoration-2 decoration-brand-400'
-                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                        ? 'text-primary border-primary'
+                        : 'text-foreground border-transparent hover:text-primary'
                     )}
                   >
                     {item.label}
@@ -179,8 +177,8 @@ export function Header() {
                     onMouseEnter={() => setDropdown(item.label)}
                     onMouseLeave={() => setDropdown(null)}
                     className={cn(
-                      'absolute top-full left-0 mt-2 w-64 rounded-2xl p-2 animate-slide-down backdrop-blur-xl border',
-                      'bg-secondary-900/98 border-white/10 shadow-elev-lg'
+                      'absolute top-full left-0 mt-2 w-64 rounded-xl p-2 animate-slide-down border',
+                      'bg-card border-border shadow-e3'
                     )}
                   >
                     {item.children.map((child) => (
@@ -189,8 +187,8 @@ export function Header() {
                         href={child.href}
                         role="menuitem"
                         className={cn(
-                          'block px-4 py-2.5 min-h-[44px] flex items-center text-sm rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                          'text-white/75 hover:text-white hover:bg-white/10'
+                          'block px-4 py-2.5 min-h-[44px] flex items-center text-sm rounded-lg transition-colors',
+                          'text-muted-foreground hover:text-foreground hover:bg-muted'
                         )}
                       >
                         {child.label}
@@ -212,8 +210,8 @@ export function Header() {
                 onClick={() => setTheme(isDark ? 'light' : 'dark')}
                 aria-label={isDark ? 'Passer en mode clair' : 'Passer en mode sombre'}
                 className={cn(
-                  'p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                  'text-white/75 hover:text-white hover:bg-white/10'
+                  'flex h-11 w-11 items-center justify-center rounded-full transition-colors',
+                  'text-muted-foreground hover:bg-muted hover:text-foreground'
                 )}
               >
                 {isDark ? <Sun className="w-[18px] h-[18px]" /> : <Moon className="w-[18px] h-[18px]" />}
@@ -224,13 +222,16 @@ export function Header() {
               <Link
                 href="/login"
                 className={cn(
-                  'px-4 py-2 min-h-[44px] flex items-center text-sm font-medium rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                  'text-white/80 hover:text-white hover:bg-white/10'
+                  'px-4 min-h-[44px] flex items-center text-sm font-heading font-semibold rounded-full transition-colors',
+                  'text-foreground hover:text-primary'
                 )}
               >
                 Connexion
               </Link>
-              <Link href="/signup" className="btn-primary px-5 py-2 text-sm rounded-xl min-h-[44px] flex items-center">
+              <Link
+                href="/signup"
+                className="flex h-11 items-center justify-center gap-1.5 rounded-full bg-primary px-5 text-sm font-heading font-bold text-primary-foreground transition-colors duration-150 hover:bg-primary/90"
+              >
                 Démarrer gratuitement
               </Link>
             </div>
@@ -242,8 +243,8 @@ export function Header() {
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
               className={cn(
-                'lg:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                'text-white/80 hover:text-white hover:bg-white/10'
+                'lg:hidden flex h-11 w-11 items-center justify-center rounded-full transition-colors',
+                'text-foreground hover:bg-muted'
               )}
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -261,7 +262,7 @@ export function Header() {
           aria-label="Navigation mobile"
           className={cn(
             'lg:hidden border-t px-4 py-4 space-y-1 animate-slide-down',
-            'border-white/10 bg-secondary-900/98 backdrop-blur-xl shadow-elev-lg'
+            'border-border bg-background shadow-e3'
           )}
         >
           {navItems.map((item) => (
@@ -271,10 +272,10 @@ export function Header() {
                 onClick={() => setMobile(false)}
                 aria-current={isActive(pathname, item.href) ? 'page' : undefined}
                 className={cn(
-                  'block px-4 py-3 min-h-[44px] flex items-center text-sm font-medium rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
+                  'block px-4 py-3 min-h-[44px] flex items-center text-sm font-heading font-semibold rounded-lg transition-colors',
                   isActive(pathname, item.href)
-                    ? 'text-white bg-white/12 underline underline-offset-4 decoration-2 decoration-brand-400'
-                    : 'text-white/75 hover:text-white hover:bg-white/10'
+                    ? 'text-primary bg-muted'
+                    : 'text-foreground hover:bg-muted'
                 )}
               >
                 {item.label}
@@ -287,8 +288,8 @@ export function Header() {
                       href={child.href}
                       onClick={() => setMobile(false)}
                       className={cn(
-                        'block px-4 py-2 min-h-[44px] flex items-center text-xs rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                        'text-white/65 hover:text-white'
+                        'block px-4 py-2 min-h-[44px] flex items-center text-xs rounded-lg transition-colors',
+                        'text-muted-foreground hover:text-foreground'
                       )}
                     >
                       {child.label}
@@ -299,19 +300,19 @@ export function Header() {
             </div>
           ))}
 
-          <div className="flex gap-3 pt-4 border-t border-white/10">
+          <div className="flex gap-3 pt-4 border-t border-border">
             <Link
               href="/login"
               className={cn(
-                'flex-1 text-center py-3 min-h-[44px] flex items-center justify-center text-sm font-medium border rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400',
-                'text-white/85 border-white/25 hover:bg-white/10'
+                'flex-1 h-12 flex items-center justify-center text-sm font-heading font-semibold border border-border-strong rounded-full transition-colors',
+                'text-foreground bg-card hover:bg-muted'
               )}
             >
               Connexion
             </Link>
             <Link
               href="/signup"
-              className="flex-1 text-center py-3 min-h-[44px] flex items-center justify-center text-sm font-semibold text-white rounded-full bg-brand-600 hover:bg-brand-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
+              className="flex-1 h-12 flex items-center justify-center text-sm font-heading font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Démarrer
             </Link>

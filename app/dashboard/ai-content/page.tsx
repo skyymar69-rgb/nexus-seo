@@ -346,7 +346,7 @@ export default function AIContentPage() {
                   onChange={(e) => setWordCount(parseInt(e.target.value))}
                   className="w-full h-2 bg-white/[0.03] rounded-lg appearance-none cursor-pointer accent-brand-600"
                 />
-                <div className="flex justify-between text-xs text-surface-500 mt-1">
+                <div className="flex justify-between text-xs text-muted-foreground mt-1">
                   <span>300</span>
                   <span>5000</span>
                 </div>
@@ -517,7 +517,7 @@ export default function AIContentPage() {
                     <p className="font-medium text-sm text-white group-hover:text-brand-600 transition-colors">
                       {item.title}
                     </p>
-                    <p className="text-xs text-surface-500 mt-1">{item.date}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.date}</p>
                   </button>
                 ))}
               </div>
@@ -570,7 +570,7 @@ export default function AIContentPage() {
                       <div className="w-full bg-white/[0.03] rounded-full h-2">
                         <div className="bg-green-500 h-2 rounded-full" style={{ width: '2.1%' }}></div>
                       </div>
-                      <p className="text-xs text-surface-500 mt-2">Optimal (1-3%)</p>
+                      <p className="text-xs text-muted-foreground mt-2">Optimal (1-3%)</p>
                     </div>
                   )}
                 </div>
@@ -605,7 +605,7 @@ export default function AIContentPage() {
                   <p className="text-sm text-white/70 mb-2 line-clamp-2">
                     {metaTitle}
                   </p>
-                  <p className="text-xs text-surface-500">
+                  <p className="text-xs text-muted-foreground">
                     {metaTitle.length}/60 caracteres
                   </p>
                   <p className={cn(
@@ -626,7 +626,7 @@ export default function AIContentPage() {
                   <p className="text-sm text-white/70 mb-2 line-clamp-3">
                     {metaDesc}
                   </p>
-                  <p className="text-xs text-surface-500">
+                  <p className="text-xs text-muted-foreground">
                     {metaDesc.length}/160 caracteres
                   </p>
                   <p className={cn(

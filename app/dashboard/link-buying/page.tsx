@@ -69,7 +69,7 @@ export default function LinkBuyingPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-white">Opportunites de Liens</h1>
-          <p className="text-sm text-surface-500">Trouvez des opportunités de backlinks gratuits et de qualité</p>
+          <p className="text-sm text-muted-foreground">Trouvez des opportunités de backlinks gratuits et de qualité</p>
         </div>
       </div>
 
@@ -94,7 +94,7 @@ export default function LinkBuyingPage() {
           return (
             <div key={stat.label} className="bg-white/[0.03] rounded-xl border border-white/5 p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-medium text-surface-500 uppercase tracking-wider">{stat.label}</span>
+                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</span>
                 <Icon className={cn('w-4 h-4', stat.color)} />
               </div>
               <span className={cn('text-2xl font-black', stat.color)}>{stat.value}</span>
@@ -106,7 +106,7 @@ export default function LinkBuyingPage() {
       {/* Filters */}
       <div className="bg-white/[0.03] rounded-xl border border-white/5 p-4 flex flex-col sm:flex-row gap-3">
         <div className="flex items-center gap-2 flex-1 px-3 py-2 rounded-lg border border-white/5 bg-white/[0.02]">
-          <Search className="w-4 h-4 text-surface-600 dark:text-surface-400" />
+          <Search className="w-4 h-4 text-muted-foreground" />
           <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Rechercher un domaine..." className="flex-1 bg-transparent outline-none text-sm" />
         </div>
         <select value={typeFilter} onChange={e => setTypeFilter(e.target.value)} className="px-3 py-2 rounded-lg border border-white/5 bg-white/[0.02] text-sm">
@@ -131,13 +131,13 @@ export default function LinkBuyingPage() {
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <Globe className="w-4 h-4 text-surface-600 dark:text-surface-400" />
+                  <Globe className="w-4 h-4 text-muted-foreground" />
                   <span className="font-bold text-white">{opp.domain}</span>
                   <span className={cn('px-2 py-0.5 text-[10px] font-bold rounded-full', typeColors[opp.type])}>
                     {typeLabels[opp.type]}
                   </span>
                 </div>
-                <div className="flex items-center gap-4 text-xs text-surface-500">
+                <div className="flex items-center gap-4 text-xs text-muted-foreground">
                   <span>Categorie: {opp.category}</span>
                   <span>Trafic: {opp.traffic}</span>
                   <span>Delai: {opp.turnaround}</span>
@@ -146,15 +146,15 @@ export default function LinkBuyingPage() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="text-center">
-                  <div className="text-[10px] text-surface-600 dark:text-surface-400 uppercase">DA</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">DA</div>
                   <DABadge value={opp.da} />
                 </div>
                 <div className="text-center">
-                  <div className="text-[10px] text-surface-600 dark:text-surface-400 uppercase">DR</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">DR</div>
                   <DABadge value={opp.dr} />
                 </div>
                 <div className="text-center">
-                  <div className="text-[10px] text-surface-600 dark:text-surface-400 uppercase">Prix</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">Prix</div>
                   <span className="text-xs font-bold text-green-600">{opp.price}</span>
                 </div>
                 <button className="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition-colors flex items-center gap-1">
@@ -166,7 +166,7 @@ export default function LinkBuyingPage() {
         ))}
 
         {filtered.length === 0 && (
-          <div className="text-center py-12 text-surface-500">
+          <div className="text-center py-12 text-muted-foreground">
             <Search className="w-8 h-8 mx-auto mb-3 text-surface-300" />
             <p>Aucune opportunité trouvée avec ces filtres.</p>
           </div>

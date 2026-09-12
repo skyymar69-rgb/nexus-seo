@@ -99,11 +99,11 @@ export default function CasesPage() {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="section-badge mx-auto mb-4">Résultats concrets</div>
-            <h1 className="text-4xl sm:text-5xl font-black text-surface-900 dark:text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-6">
               Ils ont choisi Nexus.{' '}
               <span className="gradient-text">Voici leurs résultats.</span>
             </h1>
-            <p className="text-xl text-surface-500 dark:text-surface-400">
+            <p className="text-xl text-muted-foreground">
               Des entreprises de toutes tailles, tous secteurs — résultats vérifiables et documentés.
             </p>
           </div>
@@ -120,22 +120,22 @@ export default function CasesPage() {
               >
                 <div className="flex items-start justify-between mb-5">
                   <div>
-                    <p className="text-xs text-surface-600 dark:text-surface-400 mb-1">{c.category}</p>
-                    <p className="text-base font-bold text-surface-900 dark:text-white">{c.company}</p>
+                    <p className="text-xs text-muted-foreground mb-1">{c.category}</p>
+                    <p className="text-base font-bold text-foreground">{c.company}</p>
                   </div>
                   <div className="w-9 h-9 rounded-xl bg-brand-50 dark:bg-brand-950/30 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 dark:group-hover:bg-brand-950/60 transition-colors">
                     <TrendingUp className="w-4 h-4 text-brand-500" />
                   </div>
                 </div>
 
-                <p className="text-xs text-surface-600 dark:text-surface-400 italic mb-4">&ldquo;{c.challenge}&rdquo;</p>
+                <p className="text-xs text-muted-foreground italic mb-4">&ldquo;{c.challenge}&rdquo;</p>
 
                 <div className="rounded-2xl bg-surface-50 dark:bg-surface-800 border border-surface-100 dark:border-surface-700 p-4 mb-5">
-                  <p className="text-xl font-black text-surface-900 dark:text-white mb-0.5">{c.result}</p>
-                  <p className="text-xs text-surface-600 dark:text-surface-400">{c.detail}</p>
+                  <p className="text-xl font-black text-foreground mb-0.5">{c.result}</p>
+                  <p className="text-xs text-muted-foreground">{c.detail}</p>
                 </div>
 
-                <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed mb-5 flex-1">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
                   {c.description}
                 </p>
 
@@ -150,7 +150,7 @@ export default function CasesPage() {
                       </span>
                     ))}
                   </div>
-                  <span className="text-xs text-surface-600 dark:text-surface-400">{c.duration}</span>
+                  <span className="text-xs text-muted-foreground">{c.duration}</span>
                 </div>
               </Link>
             ))}
@@ -160,7 +160,7 @@ export default function CasesPage() {
         {/* CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-4">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
               Votre entreprise sera le prochain cas client ?
             </h2>
             <Link href="/signup" className="btn-primary px-8 py-3 rounded-xl inline-flex items-center gap-2">

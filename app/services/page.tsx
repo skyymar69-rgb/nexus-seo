@@ -156,11 +156,11 @@ export default function ServicesPage() {
             <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Services' }]} />
             <div className="text-center">
             <div className="section-badge mx-auto mb-4">Nos services</div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-surface-900 dark:text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6">
               La plateforme SEO{' '}
               <span className="gradient-text">complète pour 2026</span>
             </h1>
-            <p className="text-xl text-surface-500 dark:text-surface-400 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               GEO, AEO, LLMO, SEO Technique, Analytics — tout ce dont vous avez besoin pour dominer la recherche IA et classique.
             </p>
             <Link
@@ -199,10 +199,10 @@ export default function ServicesPage() {
                     >
                       <Icon className={`w-6 h-6 ${colors.icon}`} />
                     </div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-surface-900 dark:text-white mb-4">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
                       {service.title}
                     </h2>
-                    <p className="text-surface-600 dark:text-surface-400 text-lg leading-relaxed mb-8">
+                    <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                       {service.description}
                     </p>
                     <Link
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                   {/* Feature list */}
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                     <div className="card rounded-2xl p-6">
-                      <h3 className="text-sm font-bold uppercase tracking-wider text-surface-600 dark:text-surface-400 mb-5">
+                      <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-5">
                         Fonctionnalités incluses
                       </h3>
                       <ul className="space-y-3">
@@ -228,7 +228,7 @@ export default function ServicesPage() {
                             >
                               <Check className={`w-3 h-3 ${colors.icon}`} />
                             </div>
-                            <span className="text-sm text-surface-700 dark:text-surface-300">
+                            <span className="text-sm text-foreground">
                               {feat}
                             </span>
                           </li>
@@ -245,10 +245,10 @@ export default function ServicesPage() {
         {/* CTA Audit */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-4">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
               Prêt à découvrir votre score de visibilité IA ?
             </h2>
-            <p className="text-surface-500 dark:text-surface-400 mb-6">
+            <p className="text-muted-foreground mb-6">
               Audit gratuit en 5 minutes. Sans carte bancaire.
             </p>
             <Link
@@ -265,10 +265,10 @@ export default function ServicesPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-3xl mx-auto">
             <div className="rounded-2xl bg-gradient-to-r from-amber-500/10 to-brand-500/10 dark:from-amber-500/5 dark:to-brand-500/5 border border-amber-300/30 dark:border-amber-700/30 p-8 text-center">
-              <p className="text-lg font-semibold text-surface-900 dark:text-white mb-2">
+              <p className="text-lg font-semibold text-foreground mb-2">
                 Besoin d&apos;un accompagnement sur mesure ?
               </p>
-              <p className="text-surface-600 dark:text-surface-400 mb-5 max-w-xl mx-auto">
+              <p className="text-muted-foreground mb-5 max-w-xl mx-auto">
                 L&apos;Agence Kayzen Lyon conçoit des sites web optimisés SEO et vous accompagne dans votre stratégie digitale complète.
               </p>
               <a

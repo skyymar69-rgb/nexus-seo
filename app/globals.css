@@ -5,101 +5,190 @@
 /* Fonts loaded via <link> in layout.tsx for non-blocking render */
 
 /* ============================================================
-   DESIGN TOKENS — Nexus 2026
+   DESIGN TOKENS — systeme Kayzen
+   Valeurs reprises de kayzen-elevate-spark/src/index.css afin que
+   Nexus et kayzen-lyon.com partagent exactement la meme palette.
    ============================================================ */
 @layer base {
   :root {
-    /* Typography */
+    /* Typographie */
     --font-heading: var(--font-outfit), system-ui, sans-serif;
     --font-body: var(--font-jakarta), system-ui, sans-serif;
 
-    /* Surfaces (light) */
-    --bg:        250 250 250;
-    --bg-card:   255 255 255;
-    --bg-hover:  244 244 245;
-    --fg:        9 9 11;
-    --fg-muted:  113 113 122;
-    --fg-subtle: 161 161 170;
-    --border:    228 228 231;
-    --border-strong: 212 212 216;
+    /* Surfaces */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+    --surface-sunken: 210 33% 98%;
+    --surface-elevated: 0 0% 100%;
 
-    /* Legacy aliases for dashboard compatibility */
-    --background:      250 250 250;
-    --foreground:      9 9 11;
-    --card:            255 255 255;
-    --card-foreground: 9 9 11;
-    --muted:           244 244 245;
-    --muted-foreground: 113 113 122;
-    --sidebar:         248 248 249;
-    --sidebar-foreground: 113 113 122;
-    --sidebar-border:  228 228 231;
-    --sidebar-hover:   244 244 245;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Terracotta : actions, sur-titres, focus */
+    --primary: 16 71% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 25% 96%;
+    --secondary-foreground: 215 28% 17%;
+
+    --muted: 210 25% 96%;
+    --muted-foreground: 215 14% 40%;
+
+    /* Marine : titres et bandeaux */
+    --accent: 214 52% 25%;
+    --accent-foreground: 0 0% 100%;
+    --navy: 214 52% 25%;
+    --navy-deep: 213 56% 17%;
+
+    /* Dore : chiffres sur fond marine uniquement */
+    --gold-bright: 41 88% 62%;
+    --kayzen-green: 152 45% 28%;
+
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --border-strong: 214 16% 66%;
+    --input: 214 16% 68%;
+    --ring: 214 52% 25%;
+
+    --radius: 0.75rem;
+
+    /* Rythme vertical */
+    --section-y: 4rem;
+    --section-y-lg: 6rem;
+    --header-h: 64px;
+  }
+
+  @media (min-width: 768px) {
+    :root { --section-y: var(--section-y-lg); }
   }
 
   .dark {
-    /* Surfaces (dark) */
-    --bg:        9 9 11;
-    --bg-card:   24 24 27;
-    --bg-hover:  39 39 42;
-    --fg:        250 250 250;
-    --fg-muted:  161 161 170;
-    --fg-subtle: 113 113 122;
-    --border:    39 39 42;
-    --border-strong: 63 63 70;
+    --background: 213 45% 9%;
+    --foreground: 213 30% 94%;
+    --surface-sunken: 213 40% 12%;
+    --surface-elevated: 213 40% 13%;
 
-    /* Legacy aliases */
-    --background:      9 9 11;
-    --foreground:      250 250 250;
-    --card:            24 24 27;
-    --card-foreground: 250 250 250;
-    --muted:           24 24 27;
-    --muted-foreground: 161 161 170;
-    --sidebar:         15 15 18;
-    --sidebar-foreground: 161 161 170;
-    --sidebar-border:  39 39 42;
-    --sidebar-hover:   27 27 30;
+    --card: 213 40% 12%;
+    --card-foreground: 213 30% 94%;
+    --popover: 213 40% 12%;
+    --popover-foreground: 213 30% 94%;
+
+    --primary: 15 72% 58%;
+    --primary-foreground: 213 45% 9%;
+
+    --secondary: 213 30% 18%;
+    --secondary-foreground: 213 30% 94%;
+
+    --muted: 213 30% 20%;
+    --muted-foreground: 214 20% 72%;
+
+    --accent: 41 85% 62%;
+    --accent-foreground: 213 45% 10%;
+    --navy: 213 35% 88%;
+    --navy-deep: 213 50% 13%;
+
+    --gold-bright: 41 85% 62%;
+    --kayzen-green: 152 40% 55%;
+
+    --destructive: 0 78% 62%;
+    --destructive-foreground: 213 45% 9%;
+
+    --border: 213 26% 22%;
+    --border-strong: 213 18% 48%;
+    --input: 213 18% 46%;
+    --ring: 213 30% 94%;
   }
 
-  * { border-color: rgb(var(--border)); }
+  * { border-color: hsl(var(--border)); }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + 16px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 
   body {
-    background-color: rgb(var(--bg));
-    color: rgb(var(--fg));
-    font-family: var(--font-jakarta), system-ui, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.65;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Headings — Outfit for modern look */
-  h1, h2, h3, h4 {
-    font-family: var(--font-outfit), system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+  /* Echelle typographique fluide Kayzen — titres en marine */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif;
+    font-weight: 800;
+    color: hsl(var(--navy));
+    text-wrap: balance;
+    font-variant-numeric: tabular-nums;
   }
 
-  h1 { font-weight: 900; }
-  h2 { font-weight: 700; }
-  h3, h4 { font-weight: 700; }
-
-  /* Body elements — Inter for clarity */
-  p, li, span, td, th, label, textarea {
-    line-height: 1.6;
+  h1 {
+    font-size: clamp(2.125rem, 1.35rem + 3.3vw, 4.25rem);
+    line-height: 1.06;
+    letter-spacing: -0.028em;
   }
+  h2 {
+    font-size: clamp(1.625rem, 1.2rem + 1.8vw, 2.75rem);
+    line-height: 1.14;
+    letter-spacing: -0.022em;
+  }
+  h3 {
+    font-size: clamp(1.1875rem, 1.05rem + 0.7vw, 1.5rem);
+    line-height: 1.25;
+    letter-spacing: -0.014em;
+  }
+  h4 { font-size: 1.125rem; line-height: 1.35; letter-spacing: -0.01em; }
+  h5, h6 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.005em; }
+
+  p { text-wrap: pretty; }
+
+  p, li {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+    color: hsl(var(--foreground));
+  }
+
+  /* Anneau de focus unifie : decouple de --primary pour rester visible
+     y compris sur un bouton terracotta. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px hsl(var(--background));
+    border-radius: 6px;
+  }
+  :focus:not(:focus-visible) { outline: none; }
 
   input, select, textarea, button {
-    font-family: var(--font-jakarta), system-ui, sans-serif;
-    font-weight: 400;
+    font-family: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 
-  /* Interface elements: semibold for UI weight */
-  button, [role="button"], a.btn-primary, a.btn-outline {
-    font-weight: 600;
-  }
+  img, svg, video { max-width: 100%; height: auto; }
+  button, [role="button"] { touch-action: manipulation; }
+}
+
+@layer utilities {
+  .measure { max-width: 68ch; }
+  .section-y { padding-top: var(--section-y); padding-bottom: var(--section-y); }
+  .surface-sunken { background-color: hsl(var(--surface-sunken)); }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
 }
 
 /* ============================================================
@@ -107,103 +196,96 @@
    ============================================================ */
 @layer components {
 
-  /* ---------- Texte dégradé ---------- */
-  .gradient-text {
-    @apply bg-gradient-to-r from-brand-500 via-brand-600 to-secondary-700 bg-clip-text text-transparent;
-  }
-  .gradient-text-brand {
-    @apply bg-gradient-to-r from-brand-500 to-brand-600 bg-clip-text text-transparent;
+  /* ---------- Texte accentue ----------
+     Kayzen n'utilise pas de texte en degrade : une phrase du titre passe
+     simplement en terracotta. On conserve les noms de classes. */
+  .gradient-text        { @apply text-primary; }
+  .gradient-text-brand  { @apply text-primary; }
+
+  /* ---------- Sur-titre Kayzen ---------- */
+  .overline {
+    @apply text-xs font-heading font-bold tracking-[0.18em] uppercase text-primary;
   }
 
-  /* ---------- Boutons ---------- */
+  /* ---------- Boutons ----------
+     Pilule, hauteur 56 px pour l'action principale, 44 px en compact. */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full
-           bg-brand-600 hover:bg-brand-700
-           text-white font-heading font-bold text-base tracking-[0.01em]
-           shadow-elev-md hover:shadow-elev-lg
-           active:scale-[0.98]
-           transition-all duration-200;
+    @apply inline-flex h-14 items-center justify-center gap-2 px-8 rounded-full
+           bg-primary text-primary-foreground
+           font-heading font-bold text-base
+           hover:bg-primary/90
+           transition-colors duration-200;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
-           bg-transparent
-           text-brand-600 dark:text-brand-400
-           border-2 border-brand-600 dark:border-brand-400
-           font-heading font-bold text-base tracking-[0.01em]
-           hover:bg-brand-50 dark:hover:bg-brand-950/40
+    @apply inline-flex h-14 items-center justify-center gap-2 px-8 rounded-full
+           bg-card text-foreground border border-border-strong
+           font-heading font-bold text-base
+           hover:bg-muted
            transition-colors duration-200;
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
-           text-surface-800 dark:text-surface-200
-           hover:bg-surface-200 dark:hover:bg-surface-800
-           font-heading font-bold text-base tracking-[0.01em]
-           transition-colors duration-200;
+    @apply inline-flex h-11 items-center justify-center gap-2 px-5 rounded-full
+           text-foreground font-heading font-semibold text-sm
+           hover:bg-muted transition-colors duration-200;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
-           border-2 border-surface-300 dark:border-surface-700
-           text-surface-800 dark:text-surface-200
-           font-heading font-bold text-base tracking-[0.01em]
-           hover:border-brand-600 dark:hover:border-brand-400
-           hover:text-brand-600 dark:hover:text-brand-400
-           transition-colors duration-200;
+    @apply inline-flex h-14 items-center justify-center gap-2 px-8 rounded-full
+           bg-transparent text-foreground border border-border-strong
+           font-heading font-bold text-base
+           hover:bg-muted transition-colors duration-200;
+  }
+  .btn-compact {
+    @apply h-11 px-5 text-sm;
   }
 
   /* ---------- Cartes ---------- */
   .card {
-    @apply bg-white dark:bg-surface-900
-           border border-surface-200 dark:border-surface-800
-           rounded-2xl shadow-elev-md;
+    @apply bg-card text-card-foreground border border-border rounded-2xl shadow-e2;
   }
   .card-hover {
-    @apply card transition-all duration-200 ease-out
-           hover:border-brand-300 dark:hover:border-brand-700
-           hover:shadow-elev-lg
-           hover:-translate-y-0.5;
+    @apply card transition-shadow duration-200 ease-out hover:shadow-e3;
   }
   .card-gradient {
-    @apply bg-white dark:bg-surface-900 rounded-2xl
-           border border-brand-200 dark:border-brand-800;
+    @apply bg-card border border-border rounded-2xl shadow-e2;
+  }
+
+  /* ---------- Pastille de reassurance Kayzen ---------- */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-border
+           bg-card px-3 py-1.5 text-xs font-medium text-foreground;
   }
 
   /* ---------- Badge de section ---------- */
   .section-badge {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
-           bg-brand-50 dark:bg-brand-950/40
-           text-brand-600 dark:text-brand-400
-           border border-brand-200/50 dark:border-brand-800/50
-           tracking-wide uppercase;
+    @apply inline-flex items-center gap-1.5 text-xs font-heading font-bold
+           tracking-[0.18em] uppercase text-primary;
   }
 
   /* ---------- Sidebar dashboard ---------- */
   .sidebar-link {
-    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150;
-    @apply text-surface-500 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-50;
-    @apply hover:bg-surface-100 dark:hover:bg-surface-800;
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors duration-150;
+    @apply text-muted-foreground hover:text-foreground hover:bg-muted;
   }
   .sidebar-link.active {
-    @apply bg-brand-50 dark:bg-brand-950/50 text-brand-600 dark:text-brand-400;
+    @apply bg-muted text-primary;
   }
 
   /* ---------- Formulaires ---------- */
   .input-field {
-    @apply w-full px-4 py-2.5 rounded-lg
-           border border-surface-200 dark:border-surface-700
-           bg-surface-50 dark:bg-surface-800
-           text-surface-900 dark:text-surface-100
-           placeholder:text-surface-500 dark:placeholder:text-surface-400
-           focus:outline-none focus:ring-[3px] focus:ring-brand-600/10 focus:border-brand-600
+    @apply w-full h-12 px-4 rounded-lg
+           border border-input bg-card text-foreground
+           placeholder:text-muted-foreground
+           focus:outline-none focus:border-primary
            transition-colors text-base;
   }
 
   /* ---------- Badges ---------- */
-  .badge { @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium; }
-  .badge-success { @apply bg-accent-100 text-accent-700 dark:bg-accent-900/30 dark:text-accent-400; }
-  .badge-warning { @apply bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400; }
-  .badge-danger  { @apply bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400; }
-  .badge-info    { @apply bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-400; }
-  .badge-neutral { @apply bg-surface-100 text-surface-700 dark:bg-surface-800 dark:text-surface-300; }
+  .badge { @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-success { @apply bg-accent-50 text-accent-700 dark:bg-accent-900/40 dark:text-accent-200; }
+  .badge-warning { @apply bg-gold-50 text-gold-800 dark:bg-gold-900/40 dark:text-gold-200; }
+  .badge-danger  { @apply bg-red-50 text-red-800 dark:bg-red-900/40 dark:text-red-200; }
+  .badge-info    { @apply bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-200; }
+  .badge-neutral { @apply bg-muted text-foreground; }
 
   /* ---------- Stat card dashboard ---------- */
   .stat-card {

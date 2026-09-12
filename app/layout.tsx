@@ -182,7 +182,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${jakarta.variable} ${outfit.variable} min-h-screen bg-zinc-50 dark:bg-surface-950 text-surface-900 dark:text-surface-100 antialiased`}>
+      <body className={`${jakarta.variable} ${outfit.variable} min-h-screen antialiased`}>
         <a href="#main-content" className="skip-to-main">
           Aller au contenu principal
         </a>

@@ -52,7 +52,7 @@ export default function LLMSTxtPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-white">Générateur llms.txt</h1>
-          <p className="text-sm text-surface-500">Créez votre fichier llms.txt pour que les LLMs citent correctement votre site</p>
+          <p className="text-sm text-muted-foreground">Créez votre fichier llms.txt pour que les LLMs citent correctement votre site</p>
         </div>
       </div>
 
@@ -174,7 +174,7 @@ export default function LLMSTxtPage() {
                   </a>
                 ))}
                 {(!result.socialLinks || result.socialLinks.length === 0) && (
-                  <p className="text-xs text-surface-500">Aucun réseau social détecté</p>
+                  <p className="text-xs text-muted-foreground">Aucun réseau social détecté</p>
                 )}
               </div>
             </div>

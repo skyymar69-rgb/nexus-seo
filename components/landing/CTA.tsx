@@ -5,14 +5,14 @@ import { ArrowRight, Zap, Leaf } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-b from-surface-50 via-brand-50/30 to-surface-50 dark:from-surface-900/50 dark:via-brand-950/20 dark:to-surface-900/50">
+    <section className="section-y px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-b from-surface-50 via-brand-50/30 to-surface-50 dark:from-surface-900/50 dark:via-brand-950/20 dark:to-surface-900/50">
       {/* Section-level ambient glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-brand-500/8 dark:bg-brand-500/5 blur-[120px] rounded-full" />
       </div>
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-600 via-brand-700 to-secondary-700 p-px shadow-2xl shadow-brand-500/20 dark:shadow-brand-500/10">
-          <div className="relative rounded-3xl bg-white dark:bg-surface-950 p-10 sm:p-16 text-center overflow-hidden">
+          <div className="relative rounded-3xl bg-background p-10 sm:p-16 text-center overflow-hidden">
             {/* Background glow */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-64 bg-brand-500/15 dark:bg-brand-500/8 blur-3xl rounded-full" />
@@ -26,7 +26,7 @@ export function CTA() {
                 100% gratuit
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-surface-900 dark:text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-6 leading-tight">
                 Prêt à optimiser{' '}
                 <span className="gradient-text">votre visibilité</span>{' '}
                 ?
@@ -47,7 +47,7 @@ export function CTA() {
               </div>
 
               {/* Real info */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-surface-600 dark:text-surface-400">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1.5">
                   <Leaf className="w-4 h-4 text-green-500" />
                   Web éco-responsable

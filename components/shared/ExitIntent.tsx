@@ -75,7 +75,7 @@ export default function ExitIntent() {
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-1.5 rounded-lg text-surface-600 dark:text-surface-400 hover:text-surface-600 dark:hover:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-lg text-muted-foreground hover:text-surface-600 dark:hover:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
           aria-label="Fermer"
         >
           <X className="w-5 h-5" />
@@ -86,10 +86,10 @@ export default function ExitIntent() {
 
         <div className="p-8">
           {/* Heading */}
-          <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-2">
+          <h2 className="text-2xl font-bold text-foreground mb-2">
             Attendez ! Votre audit SEO gratuit vous attend
           </h2>
-          <p className="text-surface-500 dark:text-surface-400 text-sm mb-6">
+          <p className="text-muted-foreground text-sm mb-6">
             Entrez votre URL pour recevoir un audit complet GEO + AEO + LLMO en 5 minutes.
           </p>
 
@@ -110,7 +110,7 @@ export default function ExitIntent() {
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="https://votre-site.fr"
                 aria-label="URL du site a auditer"
-                className="flex-1 px-4 py-3 rounded-xl border border-surface-300 dark:border-surface-600 bg-surface-50 dark:bg-surface-800 text-surface-900 dark:text-white placeholder-surface-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-xl border border-surface-300 dark:border-surface-600 bg-surface-50 dark:bg-surface-800 text-foreground placeholder-surface-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
               />
               <button
                 type="submit"
@@ -128,7 +128,7 @@ export default function ExitIntent() {
               <div className="w-full border-t border-surface-200 dark:border-surface-700" />
             </div>
             <div className="relative flex justify-center">
-              <span className="bg-white dark:bg-surface-900 px-3 text-xs text-surface-600 dark:text-surface-400">
+              <span className="bg-white dark:bg-surface-900 px-3 text-xs text-muted-foreground">
                 Ou recevez votre rapport par email
               </span>
             </div>
@@ -146,14 +146,14 @@ export default function ExitIntent() {
           >
             <div className="flex gap-2">
               <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-600 dark:text-surface-400" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="votre@email.com"
                   aria-label="Adresse email pour recevoir le rapport"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-300 dark:border-surface-600 bg-surface-50 dark:bg-surface-800 text-surface-900 dark:text-white placeholder-surface-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-300 dark:border-surface-600 bg-surface-50 dark:bg-surface-800 text-foreground placeholder-surface-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
                 />
               </div>
               <button
@@ -166,7 +166,7 @@ export default function ExitIntent() {
           </form>
 
           {/* Trust */}
-          <p className="text-xs text-surface-600 dark:text-surface-400 mt-4 text-center">
+          <p className="text-xs text-muted-foreground mt-4 text-center">
             Sans carte bancaire &middot; Résultat en 5 min &middot; 100% gratuit
           </p>
         </div>

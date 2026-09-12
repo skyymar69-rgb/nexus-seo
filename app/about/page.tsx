@@ -40,11 +40,11 @@ export default function AboutPage() {
             <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]} />
             <div className="text-center">
             <div className="section-badge mx-auto mb-6">Notre histoire</div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-surface-900 dark:text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6 leading-tight">
               Nous construisons{' '}
               <span className="gradient-text">le SEO de demain</span>
             </h1>
-            <p className="text-xl text-surface-500 dark:text-surface-400 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Nexus est né d&apos;une conviction simple : les outils SEO de 2015 ne peuvent pas résoudre les défis de 2026. L&apos;IA a tout changé — nous l&apos;avons accepté avant tout le monde.
             </p>
             </div>
@@ -57,8 +57,8 @@ export default function AboutPage() {
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-4xl font-black gradient-text mb-1">{s.value}</p>
-                <p className="font-semibold text-surface-900 dark:text-white text-sm">{s.label}</p>
-                <p className="text-xs text-surface-600 dark:text-surface-400 mt-0.5">{s.desc}</p>
+                <p className="font-semibold text-foreground text-sm">{s.label}</p>
+                <p className="text-xs text-muted-foreground mt-0.5">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -67,11 +67,11 @@ export default function AboutPage() {
         {/* Story */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-white mb-8">Notre histoire</h2>
-            <div className="prose-custom space-y-5 text-surface-600 dark:text-surface-400 leading-relaxed">
+            <h2 className="text-3xl font-bold text-foreground mb-8">Notre histoire</h2>
+            <div className="prose-custom space-y-5 text-muted-foreground leading-relaxed">
               <p>En 2024, Google lance les AI Overviews. Du jour au lendemain, des centaines de milliers de sites voient leur trafic s&apos;effondrer — sans comprendre pourquoi. Les outils SEO existants affichent des scores verts pendant que le trafic chute de 40%.</p>
               <p>C&apos;est ce moment de rupture qui a donné naissance à Nexus. Nous avons compris que le problème n&apos;était pas technique — c&apos;était structurel. Les anciens outils mesurent des signaux du passé. Ils ne voient pas ce qui se passe dans les LLMs.</p>
-              <p>Nexus a été conçu from scratch pour répondre aux trois nouvelles disciplines du référencement IA : le <strong className="text-surface-900 dark:text-white">GEO</strong> (être cité dans les réponses génératives), l&apos;<strong className="text-surface-900 dark:text-white">AEO</strong> (dominer les featured snippets) et le <strong className="text-surface-900 dark:text-white">LLMO</strong> (être recommandé par ChatGPT, Claude et Gemini).</p>
+              <p>Nexus a été conçu from scratch pour répondre aux trois nouvelles disciplines du référencement IA : le <strong className="text-foreground">GEO</strong> (être cité dans les réponses génératives), l&apos;<strong className="text-foreground">AEO</strong> (dominer les featured snippets) et le <strong className="text-foreground">LLMO</strong> (être recommandé par ChatGPT, Claude et Gemini).</p>
               <p>Aujourd&apos;hui, 2 500+ équipes dans 45 pays font confiance à Nexus pour naviguer dans cette nouvelle réalité du search.</p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
         {/* Values */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-white mb-12 text-center">Ce qui nous guide</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Ce qui nous guide</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((v) => {
                 const Icon = v.icon
@@ -89,8 +89,8 @@ export default function AboutPage() {
                     <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-secondary-700 flex items-center justify-center mb-5">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-surface-900 dark:text-white mb-3">{v.title}</h3>
-                    <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed">{v.desc}</p>
+                    <h3 className="text-lg font-bold text-foreground mb-3">{v.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
                   </div>
                 )
               })}

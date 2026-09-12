@@ -36,7 +36,7 @@ const tabs = [
     id: 'aeo',
     label: 'AEO',
     icon: MessageCircle,
-    color: 'text-violet-500',
+    color: 'text-violet-700 dark:text-violet-300',
     title: 'Answer Engine Optimization',
     subtitle: 'Devenez la réponse de référence pour vos prospects',
     desc: "Structurez votre contenu pour dominer les featured snippets, la voice search et les PAA (People Also Ask). Nexus identifie toutes les questions de votre audience et vous aide à y répondre de façon optimale.",
@@ -144,13 +144,13 @@ export function Features() {
   const tab = tabs.find((t) => t.id === active) || tabs[0]
 
   return (
-    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
+    <section id="features" className="section-y px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
           <div className="section-badge mx-auto mb-4">La solution</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Nexus couvre{' '}
             <span className="gradient-text">tout le spectre SEO</span>
           </h2>
@@ -191,7 +191,7 @@ export function Features() {
                   'flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200',
                   isActive
                     ? 'bg-gradient-to-r from-brand-600 to-secondary-700 text-white shadow-brand'
-                    : 'text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-white hover:bg-surface-100 dark:hover:bg-surface-800'
+                    : 'text-muted-foreground hover:text-surface-900 dark:hover:text-white hover:bg-surface-100 dark:hover:bg-surface-800'
                 )}
               >
                 <Icon className="w-4 h-4" />
@@ -211,13 +211,13 @@ export function Features() {
               <span className={cn('text-sm font-bold uppercase tracking-wider', tab.color)}>{tab.label}</span>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-surface-900 dark:text-white mb-2">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
               {tab.title}
             </h3>
             <p className="text-base font-medium text-surface-700 dark:text-surface-400 mb-4">
               {tab.subtitle}
             </p>
-            <p className="text-surface-600 dark:text-surface-400 leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-8">
               {tab.desc}
             </p>
 
@@ -227,7 +227,7 @@ export function Features() {
                   <div className="w-5 h-5 rounded-full bg-brand-50 dark:bg-brand-950/40 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-brand-600 dark:text-brand-400" />
                   </div>
-                  <span className="text-sm text-surface-700 dark:text-surface-300">{f}</span>
+                  <span className="text-sm text-foreground">{f}</span>
                 </li>
               ))}
             </ul>
@@ -239,12 +239,12 @@ export function Features() {
 
           {/* Right: mockup */}
           <div className="card-gradient p-6 sm:p-8 rounded-3xl animate-fade-in">
-            <p className="text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wider mb-2">{tab.mockup.title}</p>
-            <p className="text-4xl font-black text-surface-900 dark:text-white mb-8">{tab.mockup.value}</p>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">{tab.mockup.title}</p>
+            <p className="text-4xl font-black text-foreground mb-8">{tab.mockup.value}</p>
             <div className="space-y-5">
               {tab.mockup.bars.map((b) => (
                 <div key={b.label}>
-                  <div className="flex justify-between text-xs text-surface-500 dark:text-surface-400 mb-1.5">
+                  <div className="flex justify-between text-xs text-muted-foreground mb-1.5">
                     <span>{b.label}</span>
                     <span>{b.pct}%</span>
                   </div>
@@ -258,7 +258,7 @@ export function Features() {
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-surface-200 dark:border-surface-700 flex items-center justify-between text-xs text-surface-600 dark:text-surface-400">
+            <div className="mt-8 pt-6 border-t border-surface-200 dark:border-surface-700 flex items-center justify-between text-xs text-muted-foreground">
               <span>Mis à jour il y a 3 min</span>
               <div className="flex items-center gap-1.5 text-accent-700 dark:text-accent-400 font-semibold">
                 <div className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />

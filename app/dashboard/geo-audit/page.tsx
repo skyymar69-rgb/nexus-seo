@@ -116,7 +116,7 @@ function ExpandableCheck({ check }: { check: GeoCheck }) {
           <p className="text-sm text-white/50 mt-1">{check.value}</p>
         </div>
         <button className="flex-shrink-0 p-2 hover:bg-surface-200/50 dark:hover:bg-surface-700/50 rounded-lg transition-colors">
-          <ChevronDown className={cn('h-4 w-4 text-surface-600 dark:text-surface-400 transition-transform', isExpanded && 'rotate-180')} />
+          <ChevronDown className={cn('h-4 w-4 text-muted-foreground transition-transform', isExpanded && 'rotate-180')} />
         </button>
       </div>
       {isExpanded && (
@@ -161,7 +161,7 @@ function CategoryCard({
           </h3>
           <div className="ml-auto flex items-center gap-2">
             <span className={cn('text-lg font-bold', getScoreColor(category.score))}>{category.score}</span>
-            <ChevronDown className={cn('h-4 w-4 text-surface-600 dark:text-surface-400 transition-transform', isExpanded && 'rotate-180')} />
+            <ChevronDown className={cn('h-4 w-4 text-muted-foreground transition-transform', isExpanded && 'rotate-180')} />
           </div>
         </div>
 
@@ -350,7 +350,7 @@ export default function GeoAuditPage() {
             </div>
             <div className="text-center">
               <p className="text-lg font-semibold text-white">Analyse GEO en cours...</p>
-              <p className="text-sm text-surface-500 mt-1">Nous evaluons {url} pour les moteurs generatifs</p>
+              <p className="text-sm text-muted-foreground mt-1">Nous evaluons {url} pour les moteurs generatifs</p>
             </div>
           </div>
         </div>
@@ -365,7 +365,7 @@ export default function GeoAuditPage() {
             </div>
             <div>
               <p className="text-lg font-semibold text-white">Pret pour l&apos;analyse GEO</p>
-              <p className="text-sm text-surface-500 mt-1 max-w-md">
+              <p className="text-sm text-muted-foreground mt-1 max-w-md">
                 Entrez l&apos;URL de votre site pour évaluer sa compatibilité avec les moteurs de recherche génératifs et obtenir des recommandations personnalisées.
               </p>
             </div>
@@ -406,7 +406,7 @@ export default function GeoAuditPage() {
                       <p className={cn('text-4xl font-bold', getScoreColor(result.overallScore))}>
                         {result.overallScore}
                       </p>
-                      <p className="text-sm text-surface-500 mt-1">/100</p>
+                      <p className="text-sm text-muted-foreground mt-1">/100</p>
                     </div>
                   </div>
                 </div>
@@ -498,7 +498,7 @@ export default function GeoAuditPage() {
                   { label: 'Confiance', score: result.eeat.trust.score },
                 ].map(item => (
                   <div key={item.label} className="text-center p-3 rounded-lg bg-white/[0.02]">
-                    <p className="text-xs text-surface-500 mb-1">{item.label}</p>
+                    <p className="text-xs text-muted-foreground mb-1">{item.label}</p>
                     <p className={cn('text-2xl font-black', item.score >= 60 ? 'text-green-600' : item.score >= 40 ? 'text-amber-500' : 'text-red-500')}>
                       {item.score}
                     </p>
@@ -507,7 +507,7 @@ export default function GeoAuditPage() {
               </div>
               {result.eeat.experience.recommendations.length > 0 && (
                 <div className="space-y-1 mt-3">
-                  <p className="text-xs font-bold uppercase text-surface-500">Recommandations E-E-A-T</p>
+                  <p className="text-xs font-bold uppercase text-muted-foreground">Recommandations E-E-A-T</p>
                   {[...result.eeat.experience.recommendations, ...result.eeat.expertise.recommendations, ...result.eeat.authority.recommendations, ...result.eeat.trust.recommendations].slice(0, 5).map((rec: string, i: number) => (
                     <p key={i} className="text-sm text-white/70 flex items-start gap-2">
                       <AlertTriangle className="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0" /> {rec}

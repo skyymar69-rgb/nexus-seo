@@ -87,8 +87,8 @@ export default function SocialProofToast() {
           {msg.initials}
         </div>
         {/* Text */}
-        <p className="text-sm text-surface-700 dark:text-surface-300 leading-snug">
-          <span className="font-semibold text-surface-900 dark:text-white">
+        <p className="text-sm text-foreground leading-snug">
+          <span className="font-semibold text-foreground">
             {msg.name} de {msg.city}
           </span>{' '}
           {msg.action}

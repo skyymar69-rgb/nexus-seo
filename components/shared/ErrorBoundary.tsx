@@ -41,10 +41,10 @@ export class ErrorBoundary extends React.Component<Props, State> {
             <AlertTriangle className="w-6 h-6 text-red-500" aria-hidden="true" />
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-surface-900 dark:text-white mb-1">
+            <h3 className="text-sm font-semibold text-foreground mb-1">
               Une erreur est survenue
             </h3>
-            <p className="text-xs text-surface-500 dark:text-surface-400">
+            <p className="text-xs text-muted-foreground">
               Ce composant n&apos;a pas pu se charger correctement.
             </p>
           </div>

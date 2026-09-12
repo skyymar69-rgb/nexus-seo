@@ -54,7 +54,7 @@ const optimizations = [
 export function EcoImpact() {
   return (
     <section
-      className="py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-surface-950"
+      className="section-y px-4 sm:px-6 lg:px-8 overflow-hidden relative bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-surface-950"
       id="eco"
     >
       {/* Background texture */}
@@ -71,7 +71,7 @@ export function EcoImpact() {
             <Leaf className="w-4 h-4 text-green-700 dark:text-green-400" />
             <span className="text-green-800 dark:text-green-300 text-sm font-semibold">Notre raison d&apos;être</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Optimiser le SEO,{' '}
             <span className="text-green-700 dark:text-green-400">c&apos;est réduire l&apos;empreinte carbone</span>
           </h2>
@@ -89,14 +89,14 @@ export function EcoImpact() {
                 <span className="block text-sm text-green-700 dark:text-green-300 mt-1 font-medium">{s.unit}</span>
               </div>
               <p className="text-sm text-surface-700 dark:text-white/70 leading-relaxed mb-3">{s.desc}</p>
-              <p className="text-xs text-surface-500 dark:text-white/40">Source : {s.source}</p>
+              <p className="text-xs text-muted-foreground dark:text-white/40">Source : {s.source}</p>
             </div>
           ))}
         </div>
 
         {/* How Nexus helps */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-surface-900 dark:text-white text-center mb-10">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-10">
             Comment Nexus réduit concrètement votre impact
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -109,7 +109,7 @@ export function EcoImpact() {
                       <Icon className="w-5 h-5 text-green-700 dark:text-green-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-surface-900 dark:text-white mb-2">{opt.title}</h4>
+                      <h4 className="font-bold text-foreground mb-2">{opt.title}</h4>
                       {/* WCAG AA: text-red-700 sur blanc = ratio ~5.8:1 ✓ */}
                       <p className="text-sm text-red-700 dark:text-red-300 mb-2 flex items-start gap-1.5">
                         <TrendingDown className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" aria-hidden="true" />
@@ -130,7 +130,7 @@ export function EcoImpact() {
 
         {/* Equation */}
         <div className="rounded-2xl p-8 sm:p-10 bg-white dark:bg-white/5 border border-green-300 dark:border-green-500/20 text-center shadow-sm dark:shadow-none mb-16">
-          <p className="text-lg sm:text-xl font-semibold text-surface-900 dark:text-white mb-4">
+          <p className="text-lg sm:text-xl font-semibold text-foreground mb-4">
             Site rapide + SEO optimisé = Moins de requêtes serveur, moins de transfert, moins d&apos;énergie
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
@@ -149,11 +149,11 @@ export function EcoImpact() {
 
         {/* Kayzen bridge */}
         <div className="rounded-2xl p-8 sm:p-10 bg-gradient-to-r from-brand-50 to-green-50 dark:from-brand-600/20 dark:to-green-600/20 border border-brand-200 dark:border-brand-500/20 text-center">
-          <h3 className="text-2xl font-bold text-surface-900 dark:text-white mb-4">
+          <h3 className="text-2xl font-bold text-foreground mb-4">
             Nexus diagnostique. Kayzen Web construit.
           </h3>
           <p className="text-surface-700 dark:text-white/70 max-w-2xl mx-auto mb-6 leading-relaxed">
-            Nexus identifie les problèmes. Pour aller plus loin, <strong className="text-surface-900 dark:text-white">Kayzen Web</strong> crée des sites React/Next.js ultra-légers, optimisés SEO dès la conception — avec un bilan carbone minimal. Et avec <strong className="text-surface-900 dark:text-white">Kayzen Reconditionné</strong>, l&apos;engagement va jusqu&apos;au matériel.
+            Nexus identifie les problèmes. Pour aller plus loin, <strong className="text-foreground">Kayzen Web</strong> crée des sites React/Next.js ultra-légers, optimisés SEO dès la conception — avec un bilan carbone minimal. Et avec <strong className="text-foreground">Kayzen Reconditionné</strong>, l&apos;engagement va jusqu&apos;au matériel.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

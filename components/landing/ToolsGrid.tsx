@@ -56,14 +56,14 @@ const categories = [
 
 export function ToolsGrid() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950" id="outils">
+    <section className="section-y px-4 sm:px-6 lg:px-8 bg-background" id="outils">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <div className="section-badge mx-auto mb-4">Boîte à outils</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             <span className="gradient-text">50+ outils</span> en une seule plateforme
           </h2>
-          <p className="text-lg text-surface-500 dark:text-surface-400">
+          <p className="text-lg text-muted-foreground">
             Tout ce dont vous avez besoin pour le SEO classique et l'optimisation IA, sans jongler entre 5 abonnements.
           </p>
         </div>
@@ -81,13 +81,13 @@ export function ToolsGrid() {
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-surface-900 dark:text-white">{cat.name}</h3>
-                    <span className="text-xs text-surface-500 dark:text-surface-400">{cat.count} outils</span>
+                    <h3 className="font-bold text-foreground">{cat.name}</h3>
+                    <span className="text-xs text-muted-foreground">{cat.count} outils</span>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {cat.tools.map((tool, j) => (
-                    <span key={j} className="text-xs px-2.5 py-1 rounded-full bg-surface-100 dark:bg-white/5 text-surface-600 dark:text-surface-400">
+                    <span key={j} className="text-xs px-2.5 py-1 rounded-full bg-surface-100 dark:bg-white/5 text-muted-foreground">
                       {tool}
                     </span>
                   ))}
@@ -105,7 +105,7 @@ export function ToolsGrid() {
             Découvrir les 50+ outils
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <p className="mt-3 text-sm text-surface-500 dark:text-surface-400">100% gratuit — Aucune carte bancaire requise</p>
+          <p className="mt-3 text-sm text-muted-foreground">100% gratuit — Aucune carte bancaire requise</p>
         </div>
       </div>
     </section>

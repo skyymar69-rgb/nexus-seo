@@ -34,12 +34,12 @@ function Cell({ val }: { val: boolean | 'partial' }) {
 
 export function Comparison() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
+    <section className="section-y px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-14">
           <div className="section-badge mx-auto mb-4">Pourquoi Nexus</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             La seule plateforme qui couvre{' '}
             <span className="gradient-text">l&apos;ère de l&apos;IA</span>
           </h2>
@@ -71,7 +71,7 @@ export function Comparison() {
                       ) : (
                         <div className="inline-flex flex-col items-center gap-1">
                           <span className="text-sm font-bold text-surface-900 dark:text-surface-300">{tool.name}</span>
-                          <span className="text-xs text-surface-600 dark:text-surface-400">{tool.price}</span>
+                          <span className="text-xs text-muted-foreground">{tool.price}</span>
                         </div>
                       )}
                     </th>
@@ -87,7 +87,7 @@ export function Comparison() {
                     }`}
                   >
                     <td className="p-4 pl-5">
-                      <span className="text-sm text-surface-700 dark:text-surface-300">{f.label}</span>
+                      <span className="text-sm text-foreground">{f.label}</span>
                     </td>
                     {[f.nexus, f.semrush, f.ahrefs, f.moz].map((val, j) => (
                       <td
@@ -104,10 +104,10 @@ export function Comparison() {
           </div>
           </div>
 
-          <div className="p-5 border-t border-surface-200 dark:border-surface-700 flex flex-wrap items-center gap-4 text-xs text-surface-600 dark:text-surface-400">
+          <div className="p-5 border-t border-surface-200 dark:border-surface-700 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-brand-500" /> Disponible</div>
             <div className="flex items-center gap-1.5"><Minus className="w-3.5 h-3.5 text-amber-400" /> Partiel</div>
-            <div className="flex items-center gap-1.5"><X className="w-3.5 h-3.5 text-surface-500 dark:text-surface-400" /> Non disponible</div>
+            <div className="flex items-center gap-1.5"><X className="w-3.5 h-3.5 text-muted-foreground" /> Non disponible</div>
           </div>
         </div>
       </div>

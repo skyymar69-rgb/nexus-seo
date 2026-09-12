@@ -52,7 +52,7 @@ export default function CookieBanner() {
             <div className="flex flex-wrap gap-2 shrink-0">
               <button
                 onClick={() => handleConsent('refused')}
-                className="rounded-full border border-surface-300 dark:border-surface-700 px-4 py-2 text-sm font-medium text-surface-700 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-white/10 transition-colors"
+                className="rounded-full border border-surface-300 dark:border-surface-700 px-4 py-2 text-sm font-medium text-foreground hover:bg-surface-100 dark:hover:bg-white/10 transition-colors"
               >
                 Refuser
               </button>

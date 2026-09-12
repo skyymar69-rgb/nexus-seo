@@ -37,12 +37,12 @@ const reasons = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50 border-y border-surface-200 dark:border-surface-800/60">
+    <section className="section-y px-4 sm:px-6 lg:px-8 surface-sunken/50 border-y border-surface-200 dark:border-surface-800/60">
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-14">
           <div className="section-badge mx-auto mb-4">Pourquoi Nexus</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Ce qui rend Nexus{' '}
             <span className="gradient-text">différent.</span>
           </h2>
@@ -60,8 +60,8 @@ export function Testimonials() {
                 <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${r.color} flex items-center justify-center`}>
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-surface-900 dark:text-white">{r.title}</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{r.desc}</p>
+                <h3 className="text-lg font-bold text-foreground">{r.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
               </div>
             )
           })}
@@ -76,8 +76,8 @@ export function Testimonials() {
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-surface-900 dark:text-white mb-2">{r.title}</h3>
-                  <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{r.desc}</p>
+                  <h3 className="text-base font-bold text-foreground mb-2">{r.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
                 </div>
               </div>
             )

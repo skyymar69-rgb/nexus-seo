@@ -37,10 +37,10 @@ export default function FAQPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-4">
           <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'FAQ' }]} />
           <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl font-black text-surface-900 dark:text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
             Centre d&apos;aide
           </h1>
-          <p className="text-lg text-surface-500 dark:text-surface-400">
+          <p className="text-lg text-muted-foreground">
             Toutes les réponses à vos questions sur Nexus et le SEO IA.
           </p>
           </div>

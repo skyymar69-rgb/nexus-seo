@@ -59,11 +59,11 @@ export default function ContactPage() {
 
             <div className="text-center mb-16">
               <div className="section-badge mx-auto mb-4">Contact</div>
-              <h1 className="text-4xl sm:text-5xl font-black text-surface-900 dark:text-white mb-4">
+              <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
                 Parlons de votre{' '}
                 <span className="gradient-text">visibilité IA</span>
               </h1>
-              <p className="text-lg text-surface-500 dark:text-surface-400">
+              <p className="text-lg text-muted-foreground">
                 Notre équipe répond sous 24h · Démo personnalisée disponible
               </p>
             </div>
@@ -82,15 +82,15 @@ export default function ContactPage() {
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-surface-600 dark:text-surface-400 uppercase tracking-wide mb-0.5">{label}</p>
-                      <p className="text-sm font-medium text-surface-900 dark:text-white">{value}</p>
+                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-0.5">{label}</p>
+                      <p className="text-sm font-medium text-foreground">{value}</p>
                     </div>
                   </a>
                 ))}
 
                 {/* Temps de réponse */}
                 <div className="card p-5">
-                  <p className="text-sm font-semibold text-surface-900 dark:text-white mb-3">Temps de réponse moyen</p>
+                  <p className="text-sm font-semibold text-foreground mb-3">Temps de réponse moyen</p>
                   <div className="space-y-2">
                     {[
                       { type: 'Email',   time: '< 4h',        color: 'bg-brand-700' },
@@ -98,7 +98,7 @@ export default function ContactPage() {
                       { type: 'Support', time: '< 2h (pro+)', color: 'bg-violet-700' },
                     ].map((r) => (
                       <div key={r.type} className="flex items-center justify-between text-xs">
-                        <span className="text-surface-500 dark:text-surface-400">{r.type}</span>
+                        <span className="text-muted-foreground">{r.type}</span>
                         <span className={`px-2 py-0.5 rounded-full font-semibold text-white ${r.color}`}>{r.time}</span>
                       </div>
                     ))}
@@ -110,7 +110,7 @@ export default function ContactPage() {
                   <button
                     type="button"
                     onClick={() => setShowRights((v) => !v)}
-                    className="flex items-center justify-between w-full text-sm font-semibold text-surface-900 dark:text-white"
+                    className="flex items-center justify-between w-full text-sm font-semibold text-foreground"
                     aria-expanded={showRights}
                     aria-controls="rgpd-rights-panel"
                   >
@@ -119,12 +119,12 @@ export default function ContactPage() {
                       Vos droits RGPD
                     </span>
                     {showRights
-                      ? <ChevronUp className="w-4 h-4 text-surface-600 dark:text-surface-400" />
-                      : <ChevronDown className="w-4 h-4 text-surface-600 dark:text-surface-400" />}
+                      ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
                   </button>
 
                   {showRights && (
-                    <div id="rgpd-rights-panel" className="mt-4 space-y-3 text-xs text-surface-500 dark:text-surface-400 animate-slide-down">
+                    <div id="rgpd-rights-panel" className="mt-4 space-y-3 text-xs text-muted-foreground animate-slide-down">
                       {[
                         { icon: Eye,            label: 'Accès',       desc: 'Obtenir une copie de vos données' },
                         { icon: Pencil,         label: 'Rectification', desc: 'Corriger des données inexactes' },
@@ -134,7 +134,7 @@ export default function ContactPage() {
                         <div key={label} className="flex items-start gap-2">
                           <Icon className="w-3.5 h-3.5 text-brand-500 mt-0.5 flex-shrink-0" />
                           <div>
-                            <span className="font-semibold text-surface-700 dark:text-surface-300">{label} —</span>{' '}
+                            <span className="font-semibold text-foreground">{label} —</span>{' '}
                             {desc}
                           </div>
                         </div>
@@ -159,11 +159,11 @@ export default function ContactPage() {
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-500 to-secondary-700 flex items-center justify-center mx-auto mb-5">
                       <Check className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-surface-900 dark:text-white mb-3">Message envoyé !</h3>
-                    <p className="text-surface-500 dark:text-surface-400 mb-6">
+                    <h3 className="text-2xl font-bold text-foreground mb-3">Message envoyé !</h3>
+                    <p className="text-muted-foreground mb-6">
                       Notre équipe vous répondra dans les 4 heures.
                     </p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400 dark:text-surface-500">
+                    <p className="text-xs text-muted-foreground dark:text-surface-500">
                       Conformément au RGPD, vos données sont conservées 3 ans maximum
                       et ne seront jamais revendues à des tiers.
                     </p>
@@ -179,7 +179,7 @@ export default function ContactPage() {
                     {/* Notice d'information RGPD (Art. 13 RGPD) */}
                     <div className="flex gap-3 p-4 rounded-xl bg-brand-50 dark:bg-brand-950/30 border border-brand-200/60 dark:border-brand-800/50">
                       <Info className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" />
-                      <div className="text-xs text-surface-600 dark:text-surface-400 leading-relaxed">
+                      <div className="text-xs text-muted-foreground leading-relaxed">
                         <strong className="text-surface-800 dark:text-surface-200 font-semibold">Traitement de vos données (Art. 13 RGPD)</strong>
                         <br />
                         Responsable : <strong>Kayzen Lyon</strong>, 6 rue Pierre Termier, 69009 Lyon.
@@ -196,7 +196,7 @@ export default function ContactPage() {
                     {/* Champs */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="contact-name" className="block text-xs font-semibold text-surface-500 uppercase tracking-wide mb-2">
+                        <label htmlFor="contact-name" className="block text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
                           Nom <span aria-hidden="true" className="text-red-500">*</span>
                         </label>
                         <input
@@ -207,11 +207,11 @@ export default function ContactPage() {
                           value={form.name}
                           onChange={(e) => setField('name', e.target.value)}
                           placeholder="Jean Dupont"
-                          className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-white placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
+                          className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-foreground placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
                         />
                       </div>
                       <div>
-                        <label htmlFor="contact-email" className="block text-xs font-semibold text-surface-500 uppercase tracking-wide mb-2">
+                        <label htmlFor="contact-email" className="block text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
                           Email <span aria-hidden="true" className="text-red-500">*</span>
                         </label>
                         <input
@@ -223,30 +223,30 @@ export default function ContactPage() {
                           value={form.email}
                           onChange={(e) => setField('email', e.target.value)}
                           placeholder="jean@entreprise.fr"
-                          className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-white placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
+                          className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-foreground placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="contact-company" className="block text-xs font-semibold text-surface-500 uppercase tracking-wide mb-2">Entreprise</label>
+                      <label htmlFor="contact-company" className="block text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Entreprise</label>
                       <input
                         id="contact-company"
                         autoComplete="organization"
                         value={form.company}
                         onChange={(e) => setField('company', e.target.value)}
                         placeholder="Ma Société"
-                        className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-white placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
+                        className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-foreground placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="contact-subject" className="block text-xs font-semibold text-surface-500 uppercase tracking-wide mb-2">Sujet</label>
+                      <label htmlFor="contact-subject" className="block text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Sujet</label>
                       <select
                         id="contact-subject"
                         value={form.subject}
                         onChange={(e) => setField('subject', e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500/50"
+                        className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/50"
                       >
                         <option value="demo">Demander une démo</option>
                         <option value="sales">Question commerciale</option>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="contact-message" className="block text-xs font-semibold text-surface-500 uppercase tracking-wide mb-2">
+                      <label htmlFor="contact-message" className="block text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
                         Message <span aria-hidden="true" className="text-red-500">*</span>
                       </label>
                       <textarea
@@ -268,13 +268,13 @@ export default function ContactPage() {
                         value={form.message}
                         onChange={(e) => setField('message', e.target.value)}
                         placeholder="Décrivez votre projet, vos besoins..."
-                        className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-white placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50 resize-none"
+                        className="w-full px-4 py-2.5 rounded-xl text-sm bg-surface-50 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 text-foreground placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50 resize-none"
                       />
                     </div>
 
                     {/* ─── Consentements RGPD ─────────────────────── */}
                     <fieldset className="space-y-3 pt-1">
-                      <legend className="text-xs font-bold text-surface-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+                      <legend className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-2 flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5 text-brand-500" />
                         Consentements <span className="normal-case font-normal">(requis)</span>
                       </legend>
@@ -300,10 +300,10 @@ export default function ContactPage() {
                           />
                         </div>
                         <div className="flex-1">
-                          <label htmlFor="consent-main" className="text-sm font-semibold text-surface-900 dark:text-white cursor-pointer">
+                          <label htmlFor="consent-main" className="text-sm font-semibold text-foreground cursor-pointer">
                             J'accepte le traitement de mes données personnelles <span className="text-red-500" aria-hidden="true">*</span>
                           </label>
-                          <p id="consent-main-desc" className="mt-0.5 text-xs text-surface-500 dark:text-surface-400">
+                          <p id="consent-main-desc" className="mt-0.5 text-xs text-muted-foreground">
                             Je consens à ce que Kayzen Lyon traite mes données (nom, email, message) pour répondre à ma demande.
                             Conformément au RGPD, je peux retirer ce consentement à tout moment.{' '}
                             <Link href="/privacy" className="text-brand-600 dark:text-brand-400 underline underline-offset-2">
@@ -335,11 +335,11 @@ export default function ContactPage() {
                           />
                         </div>
                         <div className="flex-1">
-                          <label htmlFor="consent-marketing" className="text-sm font-medium text-surface-700 dark:text-surface-300 cursor-pointer">
+                          <label htmlFor="consent-marketing" className="text-sm font-medium text-foreground cursor-pointer">
                             J'accepte de recevoir des informations commerciales{' '}
-                            <span className="text-surface-600 dark:text-surface-400 font-normal">(facultatif)</span>
+                            <span className="text-muted-foreground font-normal">(facultatif)</span>
                           </label>
-                          <p id="consent-marketing-desc" className="mt-0.5 text-xs text-surface-500 dark:text-surface-400">
+                          <p id="consent-marketing-desc" className="mt-0.5 text-xs text-muted-foreground">
                             Actualités Nexus SEO, nouveautés, conseils SEO/GEO. Désabonnement en un clic à tout moment.
                           </p>
                         </div>
@@ -369,7 +369,7 @@ export default function ContactPage() {
                     {/* Pied de formulaire RGPD */}
                     <div className="flex items-start gap-2 pt-1">
                       <ShieldCheck className="w-3.5 h-3.5 text-accent-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                      <p className="text-xs text-surface-600 dark:text-surface-400 dark:text-surface-500 leading-relaxed">
+                      <p className="text-xs text-muted-foreground dark:text-surface-500 leading-relaxed">
                         Données protégées · Jamais revendues · Chiffrement TLS.{' '}
                         <Link href="/privacy" className="underline underline-offset-2 hover:text-brand-500 transition-colors">
                           Politique de confidentialité

@@ -81,7 +81,7 @@ function ScoreGauge({ score, grade, size = 160 }: { score: number; grade: string
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className={cn('text-3xl font-bold', getScoreColor(score))}>{score}</span>
-          <span className="text-xs font-medium text-surface-500 dark:text-surface-400">{grade}</span>
+          <span className="text-xs font-medium text-muted-foreground">{grade}</span>
         </div>
       </div>
     </div>
@@ -135,13 +135,13 @@ function CategoryCard({
             {meta.icon}
           </div>
           <div>
-            <p className="text-sm font-medium text-surface-600 dark:text-surface-400">{meta.label}</p>
+            <p className="text-sm font-medium text-muted-foreground">{meta.label}</p>
             <p className={cn('text-2xl font-bold', getScoreColor(category.score))}>
-              {category.score}<span className="text-sm text-surface-600 dark:text-surface-400 font-normal">/100</span>
+              {category.score}<span className="text-sm text-muted-foreground font-normal">/100</span>
             </p>
           </div>
         </div>
-        <span className="text-surface-600 dark:text-surface-400 text-sm">{expanded ? '−' : '+'}</span>
+        <span className="text-muted-foreground text-sm">{expanded ? '−' : '+'}</span>
       </button>
 
       {expanded && (
@@ -155,15 +155,15 @@ function CategoryCard({
               )}
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-medium text-surface-900 dark:text-surface-100">
+                  <p className="text-sm font-medium text-foreground">
                     {check.name}
                   </p>
-                  <span className="text-xs text-surface-500 whitespace-nowrap">
+                  <span className="text-xs text-muted-foreground whitespace-nowrap">
                     {check.score}/{check.maxScore}
                   </span>
                 </div>
                 {check.details && (
-                  <p className="text-xs text-surface-500 dark:text-surface-400 mt-0.5">
+                  <p className="text-xs text-muted-foreground mt-0.5">
                     {check.details}
                   </p>
                 )}
@@ -276,7 +276,7 @@ export default function AEOScorePage() {
           </div>
         </div>
         <div className="rounded-lg border border-surface-200 dark:border-surface-800 bg-surface-50 dark:bg-surface-900 p-12 text-center">
-          <p className="text-surface-500">
+          <p className="text-muted-foreground">
             Veuillez selectionner un site web pour analyser le score AEO.
           </p>
         </div>
@@ -320,7 +320,7 @@ export default function AEOScorePage() {
           </div>
           <h1 className="text-3xl font-bold text-surface-950 dark:text-surface-50">Score AEO</h1>
         </div>
-        <p className="text-surface-600 dark:text-surface-400">
+        <p className="text-muted-foreground">
           Analysez la préparation de vos pages pour les moteurs de réponses IA (Answer Engine Optimization)
         </p>
       </div>
@@ -352,10 +352,10 @@ export default function AEOScorePage() {
           {/* Overall Score */}
           <div className="rounded-lg border border-surface-200 dark:border-surface-800 bg-surface-50 dark:bg-surface-900 p-8">
             <div className="text-center mb-4">
-              <h2 className="text-lg font-bold text-surface-900 dark:text-surface-50 mb-1">
+              <h2 className="text-lg font-bold text-foreground mb-1">
                 Score AEO global
               </h2>
-              <p className="text-sm text-surface-500 dark:text-surface-400 break-all">
+              <p className="text-sm text-muted-foreground break-all">
                 {result.url}
               </p>
             </div>
@@ -376,7 +376,7 @@ export default function AEOScorePage() {
             <div className="rounded-lg border border-surface-200 dark:border-surface-800 bg-surface-50 dark:bg-surface-900 p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Lightbulb className="h-5 w-5 text-amber-500" />
-                <h2 className="text-lg font-bold text-surface-900 dark:text-surface-50">
+                <h2 className="text-lg font-bold text-foreground">
                   Recommandations
                 </h2>
               </div>
@@ -386,7 +386,7 @@ export default function AEOScorePage() {
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold flex items-center justify-center mt-0.5">
                       {i + 1}
                     </span>
-                    <p className="text-sm text-surface-700 dark:text-surface-300">{rec}</p>
+                    <p className="text-sm text-foreground">{rec}</p>
                   </li>
                 ))}
               </ul>

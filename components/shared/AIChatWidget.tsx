@@ -179,14 +179,14 @@ export default function AIChatWidget() {
                 N
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-surface-900 dark:text-white">Assistant SEO Nexus</h3>
-                <p className="text-[10px] text-surface-500 dark:text-zinc-500">Propuls&eacute; par Nexus AI</p>
+                <h3 className="text-sm font-semibold text-foreground">Assistant SEO Nexus</h3>
+                <p className="text-[10px] text-muted-foreground dark:text-zinc-500">Propuls&eacute; par Nexus AI</p>
               </div>
             </div>
             <button
               onClick={() => setOpen(false)}
               aria-label="Fermer le chat"
-              className="w-7 h-7 rounded-lg hover:bg-surface-200 dark:hover:bg-zinc-700 flex items-center justify-center text-surface-500 dark:text-zinc-400 hover:text-surface-900 dark:hover:text-white transition-colors"
+              className="w-7 h-7 rounded-lg hover:bg-surface-200 dark:hover:bg-zinc-700 flex items-center justify-center text-muted-foreground dark:text-zinc-400 hover:text-surface-900 dark:hover:text-white transition-colors"
             >
               &#x2715;
             </button>
@@ -196,7 +196,7 @@ export default function AIChatWidget() {
           <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-white dark:bg-transparent" aria-live="polite" aria-label="Messages du chat">
             {messages.length === 0 && (
               <div className="space-y-2">
-                <p className="text-xs text-surface-500 dark:text-zinc-500 mb-3">
+                <p className="text-xs text-muted-foreground dark:text-zinc-500 mb-3">
                   Posez-moi vos questions SEO, GEO ou AEO :
                 </p>
                 {SUGGESTIONS.map((s) => (
@@ -230,7 +230,7 @@ export default function AIChatWidget() {
 
             {typing && (
               <div className="flex justify-start">
-                <div className="bg-surface-100 dark:bg-zinc-800 rounded-xl px-4 py-2 text-xs text-surface-500 dark:text-zinc-400">
+                <div className="bg-surface-100 dark:bg-zinc-800 rounded-xl px-4 py-2 text-xs text-muted-foreground dark:text-zinc-400">
                   <span className="inline-flex gap-1">
                     <span className="animate-bounce" style={{ animationDelay: '0ms' }}>&#8226;</span>
                     <span className="animate-bounce" style={{ animationDelay: '150ms' }}>&#8226;</span>
@@ -257,7 +257,7 @@ export default function AIChatWidget() {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Posez votre question SEO..."
               aria-label="Question pour l'assistant SEO"
-              className="flex-1 rounded-lg bg-surface-100 dark:bg-zinc-800 border border-surface-300 dark:border-zinc-700 px-3 py-2 text-xs text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-zinc-500 outline-none focus:border-purple-500 transition-colors"
+              className="flex-1 rounded-lg bg-surface-100 dark:bg-zinc-800 border border-surface-300 dark:border-zinc-700 px-3 py-2 text-xs text-foreground placeholder-surface-400 dark:placeholder-zinc-500 outline-none focus:border-purple-500 transition-colors"
             />
             <button
               type="submit"

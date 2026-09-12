@@ -63,15 +63,15 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="py-16 bg-brand-600 dark:bg-brand-950">
+    <section className="section-y bg-[hsl(var(--navy-deep))]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-4">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <p className="text-4xl sm:text-5xl font-black text-white mb-1.5">
+              <p className="font-heading font-extrabold text-gold-bright tabular-nums leading-none mb-2 text-[clamp(1.5rem,1.1rem+1.6vw,2.25rem)]">
                 <Counter target={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="text-sm text-white/90 font-medium">{stat.label}</p>
+              <p className="text-[11px] md:text-xs text-white/85 uppercase tracking-[0.14em] font-heading font-semibold">{stat.label}</p>
             </div>
           ))}
         </div>

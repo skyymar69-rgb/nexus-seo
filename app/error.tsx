@@ -22,16 +22,16 @@ export default function Error({
           <AlertTriangle className="w-10 h-10 text-red-500" />
         </div>
 
-        <h1 className="text-3xl font-black text-surface-900 dark:text-white mb-4">
+        <h1 className="text-3xl font-black text-foreground mb-4">
           Une erreur est survenue
         </h1>
-        <p className="text-surface-500 dark:text-surface-400 mb-8">
+        <p className="text-muted-foreground mb-8">
           Nous sommes desoles. Une erreur inattendue s&apos;est produite.
           Essayez de recharger la page ou revenez a l&apos;accueil.
         </p>
 
         {error.digest && (
-          <p className="text-xs text-surface-600 dark:text-surface-400 mb-6 font-mono">
+          <p className="text-xs text-muted-foreground mb-6 font-mono">
             Code erreur: {error.digest}
           </p>
         )}

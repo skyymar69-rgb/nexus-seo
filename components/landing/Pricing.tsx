@@ -19,13 +19,13 @@ const features = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="scroll-mt-24 py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50 border-y border-surface-200 dark:border-surface-800/60">
+    <section id="pricing" className="scroll-mt-24 section-y px-4 sm:px-6 lg:px-8 surface-sunken/50 border-y border-surface-200 dark:border-surface-800/60">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-12">
           <div className="section-badge mx-auto mb-4">100% Gratuit</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Tous les outils.{' '}
             <span className="gradient-text">Zéro euro.</span>
           </h2>
@@ -36,7 +36,7 @@ export function Pricing() {
 
         {/* Single Free Plan Card */}
         <div className="max-w-2xl mx-auto">
-          <div className="relative overflow-hidden rounded-3xl border-2 border-brand-500 bg-white dark:bg-surface-900 shadow-xl">
+          <div className="relative overflow-hidden rounded-3xl border-2 border-brand-500 bg-card shadow-xl">
             <div className="absolute top-0 right-0 bg-brand-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl">
               Accès complet
             </div>
@@ -44,14 +44,14 @@ export function Pricing() {
             <div className="p-8 sm:p-10">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles className="w-6 h-6 text-brand-500" />
-                <h3 className="text-xl font-bold text-surface-900 dark:text-white">Nexus</h3>
+                <h3 className="text-xl font-bold text-foreground">Nexus</h3>
               </div>
 
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-black text-surface-900 dark:text-white">0&euro;</span>
-                <span className="text-surface-600 dark:text-surface-400 text-lg">/mois, pour toujours</span>
+                <span className="text-5xl font-black text-foreground">0&euro;</span>
+                <span className="text-muted-foreground text-lg">/mois, pour toujours</span>
               </div>
-              <p className="text-surface-600 dark:text-surface-400 mb-8">
+              <p className="text-muted-foreground mb-8">
                 Aucune carte bancaire. Aucune limitation.
               </p>
 
@@ -68,7 +68,7 @@ export function Pricing() {
                     <div className="w-5 h-5 rounded-full bg-green-50 dark:bg-green-950/40 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3 h-3 text-green-700 dark:text-green-400" />
                     </div>
-                    <span className="text-sm text-surface-700 dark:text-surface-300">{feature}</span>
+                    <span className="text-sm text-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -78,10 +78,10 @@ export function Pricing() {
 
         {/* Kayzen Agency Banner */}
         <div className="mt-12 rounded-2xl bg-gradient-to-r from-amber-500/10 to-brand-500/10 dark:from-amber-500/5 dark:to-brand-500/5 border border-amber-300/30 dark:border-amber-700/30 p-8 text-center">
-          <p className="text-lg font-semibold text-surface-900 dark:text-white mb-2">
+          <p className="text-lg font-semibold text-foreground mb-2">
             Besoin d&apos;un site web performant ?
           </p>
-          <p className="text-surface-600 dark:text-surface-400 mb-5 max-w-xl mx-auto">
+          <p className="text-muted-foreground mb-5 max-w-xl mx-auto">
             L&apos;Agence Kayzen crée des sites optimisés SEO dès 1&nbsp;500&euro;
           </p>
           <a

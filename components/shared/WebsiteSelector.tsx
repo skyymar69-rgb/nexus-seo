@@ -56,8 +56,8 @@ export function WebsiteSelector() {
   if (isLoading) {
     return (
       <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-800 border border-surface-700">
-        <Loader2 className="h-4 w-4 animate-spin text-surface-500" />
-        <span className="text-sm text-surface-500">Chargement...</span>
+        <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+        <span className="text-sm text-muted-foreground">Chargement...</span>
       </div>
     )
   }
@@ -77,10 +77,10 @@ export function WebsiteSelector() {
               <p className="text-sm font-medium text-surface-100 truncate">
                 {selectedWebsite.name || selectedWebsite.domain}
               </p>
-              <p className="text-xs text-surface-500 truncate">{selectedWebsite.domain}</p>
+              <p className="text-xs text-muted-foreground truncate">{selectedWebsite.domain}</p>
             </>
           ) : (
-            <p className="text-sm text-surface-600 dark:text-surface-400">Selectionnez un site</p>
+            <p className="text-sm text-muted-foreground">Selectionnez un site</p>
           )}
         </div>
         {selectedWebsite?.latestAudit && (
@@ -93,7 +93,7 @@ export function WebsiteSelector() {
             {selectedWebsite.latestAudit.score}
           </div>
         )}
-        <ChevronDown className={cn('h-4 w-4 text-surface-500 transition-transform', isOpen && 'rotate-180')} />
+        <ChevronDown className={cn('h-4 w-4 text-muted-foreground transition-transform', isOpen && 'rotate-180')} />
       </button>
 
       {isOpen && (
@@ -111,12 +111,12 @@ export function WebsiteSelector() {
                   selectedWebsite?.id === website.id && 'bg-surface-700/50'
                 )}
               >
-                <Globe className="h-4 w-4 text-surface-500 shrink-0" />
+                <Globe className="h-4 w-4 text-muted-foreground shrink-0" />
                 <div className="flex-1 text-left min-w-0">
                   <p className="text-sm font-medium text-surface-200 truncate">
                     {website.name || website.domain}
                   </p>
-                  <p className="text-xs text-surface-500 truncate">{website.domain}</p>
+                  <p className="text-xs text-muted-foreground truncate">{website.domain}</p>
                 </div>
                 {selectedWebsite?.id === website.id && (
                   <Check className="h-4 w-4 text-brand-400 shrink-0" />

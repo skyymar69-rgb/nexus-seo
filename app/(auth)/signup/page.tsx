@@ -77,7 +77,7 @@ function SignupForm() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-2">Créer un compte</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-2">Créer un compte</h2>
         <p className="text-sm text-surface-600 dark:text-white/50">
           Rejoignez Nexus SEO et commencez à optimiser votre référencement
         </p>
@@ -95,7 +95,7 @@ function SignupForm() {
 
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
-        <span className="text-xs text-surface-500 dark:text-white/30">ou avec votre e-mail</span>
+        <span className="text-xs text-muted-foreground dark:text-white/30">ou avec votre e-mail</span>
         <div className="flex-1 h-px bg-surface-200 dark:bg-white/10" />
       </div>
 
@@ -110,13 +110,13 @@ function SignupForm() {
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Nom complet</label>
           <div className="relative">
-            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/30" />
+            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
             <input
               id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}
               placeholder="Jean Dupont"
               aria-required="true"
               autoComplete="name"
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-foreground placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
             />
           </div>
         </div>
@@ -125,13 +125,13 @@ function SignupForm() {
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Adresse e-mail</label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/30" />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
             <input
               id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
               placeholder="vous@example.com"
               aria-required="true"
               autoComplete="email"
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-foreground placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
             />
           </div>
         </div>
@@ -140,18 +140,18 @@ function SignupForm() {
         <div>
           <label htmlFor="password" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Mot de passe</label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/30" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
             <input
               id="password" type={showPassword ? 'text' : 'password'} value={password}
               onChange={(e) => setPassword(e.target.value)} placeholder="••••••••"
               aria-required="true"
               aria-describedby={password ? 'password-strength' : undefined}
               autoComplete="new-password"
-              className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
+              className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-foreground placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
             />
             <button type="button" onClick={() => setShowPassword(!showPassword)}
               aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-600 dark:text-surface-400 dark:text-white/30 hover:text-surface-700 dark:hover:text-white/60">
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground dark:text-white/30 hover:text-surface-700 dark:hover:text-white/60">
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
           </div>
@@ -160,7 +160,7 @@ function SignupForm() {
               <div className="flex-1 h-1 bg-surface-200 dark:bg-white/5 rounded-full overflow-hidden" aria-hidden="true">
                 <div className={`h-full transition-all ${strength.color}`} style={{ width: `${(strength.score / 4) * 100}%` }} />
               </div>
-              <span className="text-xs text-surface-500 dark:text-white/40" aria-live="polite">{strength.label}</span>
+              <span className="text-xs text-muted-foreground dark:text-white/40" aria-live="polite">{strength.label}</span>
             </div>
           )}
         </div>
@@ -169,13 +169,13 @@ function SignupForm() {
         <div>
           <label htmlFor="confirmPassword" className="block text-sm font-medium text-surface-700 dark:text-white/70 mb-1.5">Confirmer le mot de passe</label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-600 dark:text-surface-400 dark:text-white/30" />
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground dark:text-white/30" />
             <input
               id="confirmPassword" type="password" value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)} placeholder="••••••••"
               aria-required="true"
               autoComplete="new-password"
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-surface-900 dark:text-white placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-surface-200 dark:border-white/10 bg-white dark:bg-white/[0.03] text-foreground placeholder-surface-400 dark:placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors"
             />
           </div>
         </div>
@@ -234,7 +234,7 @@ function SignupForm() {
                 J&apos;accepte le traitement de mes données personnelles
                 <span className="text-red-500 ml-0.5" aria-hidden="true">*</span>
               </label>
-              <p id="rgpd-consent-desc" className="text-xs text-surface-500 dark:text-white/40 mt-0.5">
+              <p id="rgpd-consent-desc" className="text-xs text-muted-foreground dark:text-white/40 mt-0.5">
                 Nom, email, usage de la plateforme. Je peux retirer ce consentement à tout moment.
               </p>
             </div>
@@ -255,16 +255,16 @@ function SignupForm() {
             <div>
               <label htmlFor="marketing-consent" className="text-sm text-surface-600 dark:text-white/50 cursor-pointer">
                 Recevoir les actualités &amp; conseils Nexus SEO{' '}
-                <span className="text-surface-600 dark:text-surface-400 dark:text-white/30">(facultatif)</span>
+                <span className="text-muted-foreground dark:text-white/30">(facultatif)</span>
               </label>
-              <p id="marketing-desc" className="text-xs text-surface-500 dark:text-white/30 mt-0.5">
+              <p id="marketing-desc" className="text-xs text-muted-foreground dark:text-white/30 mt-0.5">
                 Désabonnement en un clic. Aucune revente à des tiers.
               </p>
             </div>
           </div>
 
           {/* Droits */}
-          <p className="flex items-center gap-1.5 text-xs text-surface-500 dark:text-white/30">
+          <p className="flex items-center gap-1.5 text-xs text-muted-foreground dark:text-white/30">
             <ShieldCheck className="w-3.5 h-3.5 text-accent-500 flex-shrink-0" aria-hidden="true" />
             Droits : accès, rectification, effacement —{' '}
             <a href="mailto:contact@kayzen-lyon.fr?subject=Exercice%20droits%20RGPD" className="text-brand-600 dark:text-brand-400/70 underline underline-offset-2 hover:text-brand-700 dark:hover:text-brand-400">

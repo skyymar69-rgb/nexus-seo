@@ -35,12 +35,12 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-surface-950">
+    <section className="section-y px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
 
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="section-badge mx-auto mb-4">Simple et rapide</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Opérationnel en{' '}
             <span className="gradient-text">moins de 10 minutes</span>
           </h2>
@@ -64,18 +64,18 @@ export function HowItWorks() {
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
                       <Icon className="w-7 h-7 text-white" />
                     </div>
-                    <span className="absolute -top-2 -right-2 text-xs font-black text-surface-500 dark:text-surface-600">
+                    <span className="absolute -top-2 -right-2 text-xs font-black text-muted-foreground dark:text-surface-600">
                       {step.number}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-surface-900 dark:text-white mb-3">
+                  <h3 className="text-xl font-bold text-foreground mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-surface-600 dark:text-surface-400 leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     {step.desc}
                   </p>
-                  <p className={`text-xs font-medium px-3 py-2 rounded-xl ${step.bg} text-surface-600 dark:text-surface-400`}>
+                  <p className={`text-xs font-medium px-3 py-2 rounded-xl ${step.bg} text-muted-foreground`}>
                     {step.detail}
                   </p>
                 </div>
@@ -89,7 +89,7 @@ export function HowItWorks() {
             Commencer maintenant — C&apos;est gratuit
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <p className="mt-3 text-sm text-surface-600 dark:text-surface-400">Aucune carte bancaire requise · Configuration en 5 min</p>
+          <p className="mt-3 text-sm text-muted-foreground">Aucune carte bancaire requise · Configuration en 5 min</p>
         </div>
       </div>
     </section>

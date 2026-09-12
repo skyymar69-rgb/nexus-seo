@@ -76,7 +76,7 @@ const posts = [
     readTime: '6 min',
     date: '5 mars 2026',
     featured: false,
-    tag_color: 'text-surface-700 dark:text-surface-300 bg-surface-100 dark:bg-surface-800',
+    tag_color: 'text-foreground bg-surface-100 dark:bg-surface-800',
   },
 ]
 
@@ -93,11 +93,11 @@ export default function BlogPage() {
             <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Blog' }]} />
             <div className="text-center">
             <div className="section-badge mx-auto mb-4">Blog SEO IA</div>
-            <h1 className="text-4xl sm:text-5xl font-black text-surface-900 dark:text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
               Les stratégies SEO{' '}
               <span className="gradient-text">de l&apos;ère IA</span>
             </h1>
-            <p className="text-lg text-surface-500 dark:text-surface-400">
+            <p className="text-lg text-muted-foreground">
               GEO · AEO · LLMO · SEO Technique — guides pratiques et études de cas chaque semaine.
             </p>
             </div>
@@ -114,15 +114,15 @@ export default function BlogPage() {
               <div className="md:w-3/5 p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-3">
                   <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${featured.tag_color}`}>{featured.category}</span>
-                  <span className="text-xs text-surface-600 dark:text-surface-400 flex items-center gap-1">
+                  <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <Clock className="w-3 h-3" />{featured.readTime}
                   </span>
-                  <span className="text-xs text-surface-600 dark:text-surface-400">{featured.date}</span>
+                  <span className="text-xs text-muted-foreground">{featured.date}</span>
                 </div>
-                <h2 className="text-xl sm:text-2xl font-bold text-surface-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   {featured.title}
                 </h2>
-                <p className="text-surface-500 dark:text-surface-400 text-sm leading-relaxed mb-5">{featured.excerpt}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">{featured.excerpt}</p>
                 <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 dark:text-brand-400 group-hover:gap-2.5 transition-all">
                   Lire l&apos;article <ArrowRight className="w-4 h-4" />
                 </span>
@@ -135,15 +135,15 @@ export default function BlogPage() {
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="card-hover p-6 flex flex-col group">
                   <div className="flex items-center gap-2 mb-3">
                     <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${post.tag_color}`}>{post.category}</span>
-                    <span className="text-xs text-surface-600 dark:text-surface-400 flex items-center gap-1 ml-auto">
+                    <span className="text-xs text-muted-foreground flex items-center gap-1 ml-auto">
                       <Clock className="w-3 h-3" />{post.readTime}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-surface-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug">
+                  <h3 className="text-base font-bold text-foreground mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed flex-1 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-surface-600 dark:text-surface-400">
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">{post.excerpt}</p>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>{post.date}</span>
                     <span className="text-brand-700 dark:text-brand-400 font-semibold group-hover:gap-1 flex items-center gap-0.5 transition-all">
                       Lire <ArrowRight className="w-3 h-3" />

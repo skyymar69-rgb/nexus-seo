@@ -330,7 +330,7 @@ function ExpandableDetailedCheck({ check }: { check: DetailedCheck }) {
         <span className={cn('text-sm font-bold tabular-nums w-8 text-right', getScoreColor(check.score))}>
           {check.score}
         </span>
-        <ChevronDown className={cn('h-4 w-4 text-surface-600 dark:text-surface-400 transition-transform flex-shrink-0 print:hidden', isExpanded && 'rotate-180')} />
+        <ChevronDown className={cn('h-4 w-4 text-muted-foreground transition-transform flex-shrink-0 print:hidden', isExpanded && 'rotate-180')} />
       </button>
 
       {/* Tooltip on hover — shows solution preview */}
@@ -379,7 +379,7 @@ function ExpandableDetailedCheck({ check }: { check: DetailedCheck }) {
               </h5>
               <div className="flex flex-wrap gap-2">
                 {check.sources.map((src, i) => (
-                  <span key={i} className="inline-flex items-center px-2 py-1 text-xs rounded bg-surface-100 dark:bg-surface-700 text-surface-600 dark:text-surface-300">
+                  <span key={i} className="inline-flex items-center px-2 py-1 text-xs rounded bg-surface-100 dark:bg-surface-700 text-muted-foreground">
                     {src}
                   </span>
                 ))}
@@ -419,7 +419,7 @@ function ScoreGauge({ score, size = 180 }: { score: number; size?: number }) {
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-4xl font-extrabold" style={{ color }}>{score}</span>
         <span className="text-xs text-white/50">/100</span>
-        <span className="mt-1 px-2 py-0.5 text-xs font-bold rounded-full bg-surface-100 dark:bg-surface-700 text-surface-600 dark:text-surface-300">
+        <span className="mt-1 px-2 py-0.5 text-xs font-bold rounded-full bg-surface-100 dark:bg-surface-700 text-muted-foreground">
           Grade {grade}
         </span>
       </div>
@@ -754,7 +754,7 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
             </div>
             <div className="text-center">
               <p className="text-lg font-semibold text-white">Analyse en cours...</p>
-              <p className="text-sm text-surface-500 mt-1">Nous analysons {url} en profondeur</p>
+              <p className="text-sm text-muted-foreground mt-1">Nous analysons {url} en profondeur</p>
             </div>
           </div>
         </div>
@@ -952,24 +952,24 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
             <h3 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Résumé technique</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               <div className="rounded-lg bg-white/[0.02] p-3">
-                <p className="text-xs text-surface-500 mb-1">HTTPS</p>
+                <p className="text-xs text-muted-foreground mb-1">HTTPS</p>
                 <p className={cn('text-lg font-bold', result.url.startsWith('https') ? 'text-green-600' : 'text-red-500')}>
                   {result.url.startsWith('https') ? 'Actif' : 'Inactif'}
                 </p>
               </div>
               <div className="rounded-lg bg-white/[0.02] p-3">
-                <p className="text-xs text-surface-500 mb-1">Temps de réponse</p>
+                <p className="text-xs text-muted-foreground mb-1">Temps de réponse</p>
                 <p className="text-lg font-bold text-white">{result.loadTime}ms</p>
               </div>
               <div className="rounded-lg bg-white/[0.02] p-3">
-                <p className="text-xs text-surface-500 mb-1">Taille HTML</p>
+                <p className="text-xs text-muted-foreground mb-1">Taille HTML</p>
                 <p className="text-lg font-bold text-white">{(result.htmlSize / 1024).toFixed(1)} KB</p>
               </div>
               <div className="rounded-lg bg-white/[0.02] p-3">
-                <p className="text-xs text-surface-500 mb-1">Vérifications</p>
+                <p className="text-xs text-muted-foreground mb-1">Vérifications</p>
                 <p className="text-lg font-bold text-white">
                   {summary.totalChecks}
-                  <span className="text-xs font-normal text-surface-500 ml-1">({summary.passed} OK)</span>
+                  <span className="text-xs font-normal text-muted-foreground ml-1">({summary.passed} OK)</span>
                 </p>
               </div>
             </div>
@@ -986,11 +986,11 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
                   { label: 'Canonical', value: result.meta.canonical, warn: 'Non defini' },
                 ].map(({ label, value, warn }) => (
                   <div key={label} className="rounded-lg bg-white/[0.02] p-3">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-surface-600 dark:text-surface-400 mb-1">{label}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1">{label}</p>
                     <p className="text-sm text-white break-all">
                       {value || <span className="text-red-500 italic">{warn}</span>}
                     </p>
-                    {value && <p className="text-[10px] text-surface-600 dark:text-surface-400 mt-1">{value.length} caracteres</p>}
+                    {value && <p className="text-[10px] text-muted-foreground mt-1">{value.length} caracteres</p>}
                   </div>
                 ))}
               </div>
@@ -1008,9 +1008,9 @@ th{background:#f8fafc;font-weight:600}.badge{display:inline-block;padding:2px 8p
                   { label: 'Liens', value: result.content.internalLinks + result.content.externalLinks, sub: `${result.content.internalLinks} int. / ${result.content.externalLinks} ext.` },
                 ].map(({ label, value, color, sub }) => (
                   <div key={label} className="rounded-lg bg-white/[0.02] p-3">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-surface-600 dark:text-surface-400 mb-1">{label}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1">{label}</p>
                     <p className={cn('text-xl font-bold', color || 'text-white')}>{value}</p>
-                    {sub && <p className="text-[10px] text-surface-600 dark:text-surface-400 mt-1">{sub}</p>}
+                    {sub && <p className="text-[10px] text-muted-foreground mt-1">{sub}</p>}
                   </div>
                 ))}
               </div>
@@ -1102,7 +1102,7 @@ function AuditHistory({ websiteId }: { websiteId: string }) {
                 <span className={cn('text-lg font-black tabular-nums w-10', scoreColor)}>{audit.score}</span>
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-white truncate">{audit.url}</p>
-                  <p className="text-xs text-surface-500">{date}</p>
+                  <p className="text-xs text-muted-foreground">{date}</p>
                 </div>
               </div>
               <span className={cn('px-2 py-0.5 text-xs font-bold rounded',

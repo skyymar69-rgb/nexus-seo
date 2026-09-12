@@ -260,8 +260,8 @@ export default function DigitalContactCard() {
                     'flex-1 flex flex-col items-center gap-1 py-3 text-[11px] font-semibold transition-all relative',
                     `stagger-${i + 1}`,
                     isActive
-                      ? 'text-surface-900 dark:text-white'
-                      : 'text-surface-600 dark:text-surface-400 dark:text-surface-500 hover:text-surface-600 dark:hover:text-surface-300'
+                      ? 'text-foreground'
+                      : 'text-muted-foreground dark:text-surface-500 hover:text-surface-600 dark:hover:text-surface-300'
                   )}
                 >
                   <Icon className="w-4 h-4" />
@@ -329,8 +329,8 @@ export default function DigitalContactCard() {
 
             {/* Instruction scan */}
             <div className="flex items-center justify-center gap-1.5 mb-1">
-              <Camera className="w-3.5 h-3.5 text-surface-600 dark:text-surface-400" />
-              <p className="text-[11px] text-surface-600 dark:text-surface-400 dark:text-surface-500 font-medium">
+              <Camera className="w-3.5 h-3.5 text-muted-foreground" />
+              <p className="text-[11px] text-muted-foreground dark:text-surface-500 font-medium">
                 Pointez votre appareil photo vers le code
               </p>
             </div>
@@ -338,7 +338,7 @@ export default function DigitalContactCard() {
             <p className="text-center text-sm font-semibold text-surface-700 dark:text-surface-200 mb-0.5">
               {active.caption}
             </p>
-            <p className="text-center text-[11px] text-surface-600 dark:text-surface-400 dark:text-surface-500 mb-4 truncate px-4">
+            <p className="text-center text-[11px] text-muted-foreground dark:text-surface-500 mb-4 truncate px-4">
               {active.deepLink.replace(/^https?:\/\//, '')}
             </p>
 
@@ -441,7 +441,7 @@ export default function DigitalContactCard() {
                 >
                   <Icon className="w-4 h-4 text-white" />
                 </span>
-                <span className="text-[9px] font-bold text-surface-500 dark:text-surface-400 leading-tight text-center">
+                <span className="text-[9px] font-bold text-muted-foreground leading-tight text-center">
                   {label}
                 </span>
               </a>
@@ -468,7 +468,7 @@ export default function DigitalContactCard() {
               href="https://nexus-seo.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] text-surface-600 dark:text-surface-400 dark:text-surface-500 hover:text-brand-500 transition-colors font-medium"
+              className="text-[10px] text-muted-foreground dark:text-surface-500 hover:text-brand-500 transition-colors font-medium"
             >
               nexus-seo.app
             </a>
@@ -487,7 +487,7 @@ export default function DigitalContactCard() {
         onClick={() => setOpen(true)}
         aria-label="Ouvrir la carte de contact numérique"
         aria-expanded={open}
-        className="relative p-2 rounded-xl text-surface-500 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 group"
+        className="relative p-2 rounded-xl text-muted-foreground hover:bg-surface-100 dark:hover:bg-surface-800 transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 group"
       >
         <QrCode
           className="w-[18px] h-[18px] transition-transform group-hover:rotate-6"

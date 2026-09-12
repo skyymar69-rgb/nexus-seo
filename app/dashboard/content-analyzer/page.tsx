@@ -53,7 +53,7 @@ export default function ContentAnalyzerPage() {
           <circle cx={size/2} cy={size/2} r={r} fill="none" stroke={color} strokeWidth="6" strokeDasharray={c} strokeDashoffset={offset} strokeLinecap="round" />
         </svg>
         <span className="text-2xl font-black mt-[-55px] mb-[25px]" style={{ color }}>{score}</span>
-        <span className="text-xs text-surface-500 mt-1">{label}</span>
+        <span className="text-xs text-muted-foreground mt-1">{label}</span>
       </div>
     )
   }
@@ -66,7 +66,7 @@ export default function ContentAnalyzerPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-white">Content Analyzer IA</h1>
-          <p className="text-sm text-surface-500">Analysez votre contenu pour la citabilite par les LLMs</p>
+          <p className="text-sm text-muted-foreground">Analysez votre contenu pour la citabilite par les LLMs</p>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function ContentAnalyzerPage() {
       <div className="bg-white/[0.03] rounded-xl border border-white/5 p-6">
         <div className="flex gap-3">
           <div className="flex items-center gap-2 flex-1 px-4 py-2.5 rounded-xl border border-white/5 bg-white/[0.02]">
-            <Globe className="w-4 h-4 text-surface-600 dark:text-surface-400" />
+            <Globe className="w-4 h-4 text-muted-foreground" />
             <input type="text" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://votresite.fr/page" aria-label="URL de la page a analyser" className="flex-1 bg-transparent outline-none text-sm" onKeyDown={e => e.key === 'Enter' && handleAnalyze()} />
           </div>
           <button onClick={handleAnalyze} disabled={loading} className="btn-primary px-6 py-2.5 rounded-xl disabled:opacity-50">
@@ -116,7 +116,7 @@ export default function ContentAnalyzerPage() {
                   <div className="w-full bg-surface-200 dark:bg-surface-700 rounded-full h-1.5 mb-2" role="progressbar" aria-label={item.label} aria-valuenow={item.score} aria-valuemin={0} aria-valuemax={100}>
                     <div className={cn('h-1.5 rounded-full', item.score >= 60 ? 'bg-green-500' : item.score >= 40 ? 'bg-amber-500' : 'bg-red-500')} style={{ width: `${item.score}%` }} />
                   </div>
-                  <p className="text-[10px] text-surface-600 dark:text-surface-400">{item.desc}</p>
+                  <p className="text-[10px] text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ export default function ContentAnalyzerPage() {
                     </div>
                   ))}
                 </div>
-              ) : <p className="text-sm text-surface-500">Aucun schéma détecté</p>}
+              ) : <p className="text-sm text-muted-foreground">Aucun schéma détecté</p>}
               {result.schema.missing.length > 0 && (
                 <div className="mt-3 p-3 rounded-lg bg-amber-50 dark:bg-amber-950/20">
                   <p className="text-xs font-bold text-amber-700 mb-1">Manquants :</p>
@@ -155,7 +155,7 @@ export default function ContentAnalyzerPage() {
                   {result.faq.hasSchema ? <CheckCircle className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-400" />}
                   <span className="text-sm text-white/70">{result.faq.hasSchema ? 'Schema FAQPage présent' : 'Schema FAQPage manquant'}</span>
                 </div>
-                <p className="text-xs text-surface-500">{result.wordCount} mots sur la page</p>
+                <p className="text-xs text-muted-foreground">{result.wordCount} mots sur la page</p>
               </div>
             </div>
           </div>

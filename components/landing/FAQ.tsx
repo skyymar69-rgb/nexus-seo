@@ -77,7 +77,7 @@ export function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-950">
+    <section id="faq" className="section-y px-4 sm:px-6 lg:px-8 surface-sunken">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -86,7 +86,7 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
           <div className="section-badge mx-auto mb-4">FAQ</div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Questions fréquentes
           </h2>
           <p className="text-lg text-surface-700 dark:text-surface-400">
@@ -120,7 +120,7 @@ export function FAQ() {
                     'text-sm font-semibold transition-colors',
                     open === i
                       ? 'text-brand-600 dark:text-brand-400'
-                      : 'text-surface-900 dark:text-white'
+                      : 'text-foreground'
                   )}>
                     {faq.question}
                   </span>
@@ -137,7 +137,7 @@ export function FAQ() {
 
                 {open === i && (
                   <div id={panelId} role="region" aria-labelledby={buttonId} className="px-5 pb-5">
-                    <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed border-t border-surface-100 dark:border-surface-800 pt-4">
+                    <p className="text-sm text-muted-foreground leading-relaxed border-t border-surface-100 dark:border-surface-800 pt-4">
                       {faq.answer}
                     </p>
                   </div>
@@ -147,7 +147,7 @@ export function FAQ() {
           })}
         </div>
 
-        <p className="text-center text-sm text-surface-600 dark:text-surface-400 mt-10">
+        <p className="text-center text-sm text-muted-foreground mt-10">
           Vous n&apos;avez pas trouvé votre réponse ?{' '}
           <a href="/contact" className="text-brand-600 dark:text-brand-400 font-semibold hover:underline">
             Contactez-nous

@@ -43,7 +43,7 @@ const cases = [
 
 const tagColors: Record<string, string> = {
   'SEO':           'bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400 border-brand-200 dark:border-brand-800/50',
-  'SEO Local':     'bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-400 border-violet-200 dark:border-violet-800/50',
+  'SEO Local':     'bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-300 border-violet-200 dark:border-violet-800/50',
   'SEO Technique': 'bg-cyan-50 text-cyan-700 dark:bg-cyan-950/40 dark:text-cyan-400 border-cyan-200 dark:border-cyan-800/50',
   'Performance':   'bg-accent-50 text-accent-700 dark:bg-accent-950/40 dark:text-accent-400 border-accent-200 dark:border-accent-800/50',
   'Eco-web':       'bg-green-50 text-green-700 dark:bg-green-950/40 dark:text-green-400 border-green-200 dark:border-green-800/50',
@@ -54,14 +54,14 @@ const tagColors: Record<string, string> = {
 
 export function CaseStudies() {
   return (
-    <section id="cases" className="py-24 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50 border-y border-surface-200 dark:border-surface-800/60">
+    <section id="cases" className="section-y px-4 sm:px-6 lg:px-8 surface-sunken/50 border-y border-surface-200 dark:border-surface-800/60">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <div>
             <div className="section-badge mb-4">Sites réalisés par Kayzen Web</div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
               Des sites optimisés
               <br />
               <span className="gradient-text">dès la conception.</span>
@@ -86,15 +86,15 @@ export function CaseStudies() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <p className="text-xs text-surface-600 dark:text-surface-400 mb-1">{c.category}</p>
-                  <p className="text-base font-bold text-surface-900 dark:text-white">{c.company}</p>
+                  <p className="text-xs text-muted-foreground mb-1">{c.category}</p>
+                  <p className="text-base font-bold text-foreground">{c.company}</p>
                 </div>
                 <div className="w-9 h-9 rounded-xl bg-brand-50 dark:bg-brand-950/30 flex items-center justify-center flex-shrink-0">
                   <Globe className="w-4 h-4 text-brand-500" />
                 </div>
               </div>
 
-              <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed mb-5 flex-1">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
                 {c.desc}
               </p>
 

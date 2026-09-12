@@ -106,7 +106,7 @@ export function CommandPalette() {
         <div className="bg-white dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-700 shadow-2xl overflow-hidden">
           {/* Search input */}
           <div className="flex items-center gap-3 px-4 border-b border-surface-200 dark:border-surface-700">
-            <Search className="w-5 h-5 text-surface-600 dark:text-surface-400 shrink-0" />
+            <Search className="w-5 h-5 text-muted-foreground shrink-0" />
             <input
               ref={inputRef}
               type="text"
@@ -114,18 +114,18 @@ export function CommandPalette() {
               onChange={e => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Rechercher un outil..."
-              className="w-full py-4 bg-transparent outline-none text-sm text-surface-900 dark:text-surface-100 placeholder-surface-400"
+              className="w-full py-4 bg-transparent outline-none text-sm text-foreground placeholder-surface-400"
               autoFocus
             />
             <button onClick={() => setOpen(false)} className="shrink-0 p-1 rounded hover:bg-surface-100 dark:hover:bg-surface-800">
-              <X className="w-4 h-4 text-surface-600 dark:text-surface-400" />
+              <X className="w-4 h-4 text-muted-foreground" />
             </button>
           </div>
 
           {/* Results */}
           <div className="max-h-80 overflow-y-auto py-2 px-2">
             {filtered.length === 0 && (
-              <div className="py-6 text-center text-sm text-surface-500">Aucun outil trouvé.</div>
+              <div className="py-6 text-center text-sm text-muted-foreground">Aucun outil trouvé.</div>
             )}
             {filtered.map((tool, i) => {
               const Icon = tool.icon
@@ -137,19 +137,19 @@ export function CommandPalette() {
                     'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-left transition-colors',
                     i === selectedIndex
                       ? 'bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300'
-                      : 'text-surface-700 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-800'
+                      : 'text-foreground hover:bg-surface-50 dark:hover:bg-surface-800'
                   )}
                 >
                   <Icon className="w-4 h-4 shrink-0" />
                   <span className="flex-1">{tool.label}</span>
-                  <span className="text-[10px] text-surface-600 dark:text-surface-400 uppercase tracking-wider">{tool.category}</span>
+                  <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{tool.category}</span>
                 </button>
               )
             })}
           </div>
 
           {/* Footer hints */}
-          <div className="border-t border-surface-200 dark:border-surface-700 px-4 py-2 flex items-center gap-4 text-[10px] text-surface-600 dark:text-surface-400">
+          <div className="border-t border-surface-200 dark:border-surface-700 px-4 py-2 flex items-center gap-4 text-[10px] text-muted-foreground">
             <span><kbd className="px-1 py-0.5 rounded bg-surface-100 dark:bg-surface-800 font-mono">↑↓</kbd> naviguer</span>
             <span><kbd className="px-1 py-0.5 rounded bg-surface-100 dark:bg-surface-800 font-mono">↵</kbd> ouvrir</span>
             <span><kbd className="px-1 py-0.5 rounded bg-surface-100 dark:bg-surface-800 font-mono">esc</kbd> fermer</span>

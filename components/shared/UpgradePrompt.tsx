@@ -44,12 +44,12 @@ export function UpgradePrompt({ feature, requiredPlan }: UpgradePromptProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-display font-semibold text-surface-900 dark:text-surface-50 mb-2">
+        <h3 className="text-xl font-display font-semibold text-foreground mb-2">
           Plan {plan.name} requis
         </h3>
 
         {/* Description */}
-        <p className="text-surface-600 dark:text-surface-300 mb-6 max-w-sm mx-auto">
+        <p className="text-muted-foreground mb-6 max-w-sm mx-auto">
           {description}
         </p>
 

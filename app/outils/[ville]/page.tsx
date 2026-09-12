@@ -87,7 +87,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
                 <span className="text-brand-700 dark:text-brand-400 text-sm font-bold">{city.name} — {city.region}</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-surface-900 dark:text-white mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6">
                 Audit SEO gratuit a{' '}
                 <span className="gradient-text">{city.name}</span>
               </h1>
@@ -109,10 +109,10 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
         {/* Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface-50 dark:bg-surface-900/50 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-white text-center mb-4">
+            <h2 className="text-3xl font-bold text-foreground text-center mb-4">
               Ce que comprend votre audit SEO a {city.name}
             </h2>
-            <p className="text-center text-surface-600 dark:text-surface-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Tous les outils sont gratuits, illimites et sans carte bancaire. Nexus SEO est le seul outil qui combine SEO classique et visibilite IA.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -121,7 +121,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
                   <div className="w-6 h-6 rounded-full bg-green-50 dark:bg-green-950/40 flex items-center justify-center shrink-0">
                     <Check className="w-3.5 h-3.5 text-green-600" />
                   </div>
-                  <span className="text-sm text-surface-700 dark:text-surface-300">{feature}</span>
+                  <span className="text-sm text-foreground">{feature}</span>
                 </div>
               ))}
             </div>
@@ -131,7 +131,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
         {/* Why local SEO */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-white text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">
               Pourquoi le SEO est essentiel a {city.name}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -146,8 +146,8 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
                     <div className="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-950/30 flex items-center justify-center mb-4">
                       <Icon className="w-5 h-5 text-brand-600" />
                     </div>
-                    <h3 className="font-bold text-surface-900 dark:text-white mb-2">{item.title}</h3>
-                    <p className="text-sm text-surface-600 dark:text-surface-400">{item.desc}</p>
+                    <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
                   </div>
                 )
               })}
@@ -173,7 +173,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
         {/* Other cities */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-surface-200 dark:border-surface-800">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-surface-900 dark:text-white text-center mb-8">
+            <h2 className="text-2xl font-bold text-foreground text-center mb-8">
               Audit SEO gratuit dans d&apos;autres villes
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
@@ -184,7 +184,7 @@ export default function AuditSEOVillePage({ params }: { params: { ville: string 
                   <Link
                     key={slug}
                     href={`/outils/audit-seo-${slug}`}
-                    className="px-3 py-1.5 text-xs font-medium rounded-full border border-surface-200 dark:border-surface-700 text-surface-600 dark:text-surface-400 hover:border-brand-400 hover:text-brand-600 transition-colors"
+                    className="px-3 py-1.5 text-xs font-medium rounded-full border border-surface-200 dark:border-surface-700 text-muted-foreground hover:border-brand-400 hover:text-brand-600 transition-colors"
                   >
                     Audit SEO {c.name}
                   </Link>

@@ -62,9 +62,9 @@ export default async function PublicReportPage({ params }: { params: { id: strin
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/30 border border-brand-200 dark:border-brand-800 rounded-full mb-4">
               <span className="text-brand-600 text-sm font-bold">Rapport d&apos;audit SEO</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-surface-900 dark:text-white mb-2">{report.domain}</h1>
-            <p className="text-surface-500">{report.url}</p>
-            <p className="text-xs text-surface-600 dark:text-surface-400 mt-2">
+            <h1 className="text-3xl sm:text-4xl font-black text-foreground mb-2">{report.domain}</h1>
+            <p className="text-muted-foreground">{report.url}</p>
+            <p className="text-xs text-muted-foreground mt-2">
               Généré le {new Date(report.createdAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
             </p>
           </div>
@@ -73,7 +73,7 @@ export default async function PublicReportPage({ params }: { params: { id: strin
           <div className="flex justify-center mb-10">
             <div className="text-center">
               <span className={`text-7xl font-black ${scoreColor}`}>{report.score}</span>
-              <span className="text-2xl text-surface-600 dark:text-surface-400 font-bold">/100</span>
+              <span className="text-2xl text-muted-foreground font-bold">/100</span>
               <p className={`text-lg font-bold mt-2 ${scoreColor}`}>Grade {report.grade}</p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default async function PublicReportPage({ params }: { params: { id: strin
 
           {/* Checks */}
           <div className="space-y-2 mb-10">
-            <h2 className="text-xl font-bold text-surface-900 dark:text-white mb-4">Détail des contrôles</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4">Détail des contrôles</h2>
             {checks.map((check: any, i: number) => (
               <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-lg border border-surface-200 dark:border-surface-800 bg-surface-50 dark:bg-surface-900">
                 {check.status === 'passed' ? (
@@ -107,8 +107,8 @@ export default async function PublicReportPage({ params }: { params: { id: strin
                   <X className="w-4 h-4 text-red-500 shrink-0" />
                 )}
                 <div className="flex-1 min-w-0">
-                  <span className="text-sm font-medium text-surface-900 dark:text-white">{check.name}</span>
-                  <span className="text-xs text-surface-500 ml-2">{check.value}</span>
+                  <span className="text-sm font-medium text-foreground">{check.name}</span>
+                  <span className="text-xs text-muted-foreground ml-2">{check.value}</span>
                 </div>
                 <span className={`text-sm font-bold ${check.score >= 80 ? 'text-green-600' : check.score >= 60 ? 'text-amber-500' : 'text-red-500'}`}>
                   {check.score}
@@ -126,7 +126,7 @@ export default async function PublicReportPage({ params }: { params: { id: strin
             </a>
           </div>
 
-          <p className="text-center text-xs text-surface-600 dark:text-surface-400 mt-8">
+          <p className="text-center text-xs text-muted-foreground mt-8">
             Généré par <a href="https://nexus.kayzen-lyon.fr" className="text-brand-500 hover:underline">Nexus SEO</a> — Outil SEO & IA gratuit par Kayzen Web
           </p>
         </div>

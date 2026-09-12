@@ -55,7 +55,7 @@ function ScoreCircle({ score }: { score: number }) {
         />
       </svg>
       <div className={`absolute text-3xl font-bold ${colorClass}`}>{score}</div>
-      <div className="absolute translate-y-12 text-xs font-medium text-surface-500 dark:text-surface-400">
+      <div className="absolute translate-y-12 text-xs font-medium text-muted-foreground">
         {score >= 90 ? 'Excellent' : score >= 70 ? 'Bon' : score >= 50 ? 'À améliorer' : 'Critique'}
       </div>
     </div>
@@ -95,8 +95,8 @@ function SummaryCard({
           <div className={iconClasses[color]}>{Icon}</div>
         </div>
         <div>
-          <p className="text-sm font-medium text-surface-600 dark:text-surface-400">{title}</p>
-          <p className="text-2xl font-bold text-surface-900 dark:text-surface-50">{value}</p>
+          <p className="text-sm font-medium text-muted-foreground">{title}</p>
+          <p className="text-2xl font-bold text-foreground">{value}</p>
         </div>
       </div>
     </div>
@@ -118,8 +118,8 @@ function MetaInfoCard({
   if (!value) {
     return (
       <div className="p-4 rounded-lg bg-surface-50 dark:bg-surface-800/50 border border-surface-200 dark:border-surface-700">
-        <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">{label}</p>
-        <p className="text-surface-600 dark:text-surface-400 dark:text-surface-600 text-sm italic">Non trouvé</p>
+        <p className="text-sm font-medium text-muted-foreground mb-2">{label}</p>
+        <p className="text-muted-foreground dark:text-surface-600 text-sm italic">Non trouvé</p>
       </div>
     )
   }
@@ -134,9 +134,9 @@ function MetaInfoCard({
     <div className="p-4 rounded-lg bg-surface-50 dark:bg-surface-800/50 border border-surface-200 dark:border-surface-700">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">{label}</p>
-          <p className="text-surface-900 dark:text-surface-50 text-sm break-all">{value}</p>
-          {maxLength && <p className="text-xs text-surface-500 dark:text-surface-400 mt-1">{value.length} caractères</p>}
+          <p className="text-sm font-medium text-muted-foreground mb-2">{label}</p>
+          <p className="text-foreground text-sm break-all">{value}</p>
+          {maxLength && <p className="text-xs text-muted-foreground mt-1">{value.length} caractères</p>}
         </div>
         {status && <div className={`text-lg ${statusColor[status]} flex-shrink-0`}>{status === 'success' ? '✓' : status === 'warning' ? '!' : '✗'}</div>}
       </div>
@@ -170,18 +170,18 @@ function CheckItem({ check, expanded, onToggle }: { check: AuditCheck; expanded:
             {statusIcons[check.status]}
           </div>
           <div className="text-left">
-            <h4 className="font-semibold text-surface-900 dark:text-surface-50">{check.name}</h4>
-            <p className="text-xs text-surface-500 dark:text-surface-400 mt-0.5">{check.value}</p>
+            <h4 className="font-semibold text-foreground">{check.name}</h4>
+            <p className="text-xs text-muted-foreground mt-0.5">{check.value}</p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="text-right">
-            <div className="font-bold text-lg text-surface-900 dark:text-surface-50">{check.score}</div>
-            <div className="text-xs text-surface-500 dark:text-surface-400">/100</div>
+            <div className="font-bold text-lg text-foreground">{check.score}</div>
+            <div className="text-xs text-muted-foreground">/100</div>
           </div>
           <svg
-            className={`w-5 h-5 transition-transform text-surface-600 dark:text-surface-400 dark:text-surface-500 ${expanded ? 'rotate-180' : ''}`}
+            className={`w-5 h-5 transition-transform text-muted-foreground dark:text-surface-500 ${expanded ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -193,7 +193,7 @@ function CheckItem({ check, expanded, onToggle }: { check: AuditCheck; expanded:
 
       {expanded && (
         <div className="px-5 py-4 bg-surface-50 dark:bg-surface-800/30 border-t border-surface-200 dark:border-surface-700">
-          <p className="text-sm text-surface-700 dark:text-surface-300">{check.recommendation}</p>
+          <p className="text-sm text-foreground">{check.recommendation}</p>
         </div>
       )}
     </div>
@@ -241,7 +241,7 @@ function LoadingSpinner() {
           />
         </svg>
       </div>
-      <p className="text-surface-600 dark:text-surface-300 font-medium">{statuses[statusIndex]}</p>
+      <p className="text-muted-foreground font-medium">{statuses[statusIndex]}</p>
     </div>
   )
 }
@@ -296,7 +296,7 @@ export default function AuditGratuitPage() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white dark:bg-surface-900 border-b border-surface-200 dark:border-surface-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link href="/" className="font-display font-bold text-xl text-surface-900 dark:text-surface-50">
+          <Link href="/" className="font-display font-bold text-xl text-foreground">
             Nexus
           </Link>
           <Link
@@ -313,10 +313,10 @@ export default function AuditGratuitPage() {
           {/* Hero Section */}
           <section className="py-12 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-surface-900 dark:text-surface-50 mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
                 Audit SEO Gratuit
               </h1>
-              <p className="text-lg sm:text-xl text-surface-600 dark:text-surface-300 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Analysez votre site web en 30 secondes. Obtenez un diagnostic complet avec des recommandations actionnables.
               </p>
             </div>
@@ -334,7 +334,7 @@ export default function AuditGratuitPage() {
             </div>
 
             {/* Info text */}
-            <p className="text-center text-sm text-surface-500 dark:text-surface-400">
+            <p className="text-center text-sm text-muted-foreground">
               Aucune inscription requise · Résultats instantanés · Export PDF, Markdown, JSON
             </p>
 
@@ -356,8 +356,8 @@ export default function AuditGratuitPage() {
                 <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
                   <BarChart3 className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-surface-900 dark:text-surface-50 mb-2">15+ Contrôles SEO</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400">
+                <h3 className="font-semibold text-foreground mb-2">15+ Contrôles SEO</h3>
+                <p className="text-sm text-muted-foreground">
                   Analyse complète des meta tags, contenu, performances et facteurs techniques
                 </p>
               </div>
@@ -366,8 +366,8 @@ export default function AuditGratuitPage() {
                 <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
                   <Zap className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-surface-900 dark:text-surface-50 mb-2">Résultats Instantanés</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400">
+                <h3 className="font-semibold text-foreground mb-2">Résultats Instantanés</h3>
+                <p className="text-sm text-muted-foreground">
                   Obtenez votre score SEO et vos recommandations en quelques secondes
                 </p>
               </div>
@@ -376,8 +376,8 @@ export default function AuditGratuitPage() {
                 <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
                   <TrendingUp className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-surface-900 dark:text-surface-50 mb-2">Recommandations Actionnables</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400">
+                <h3 className="font-semibold text-foreground mb-2">Recommandations Actionnables</h3>
+                <p className="text-sm text-muted-foreground">
                   Des conseils précis et faciles à mettre en place pour améliorer votre SEO
                 </p>
               </div>
@@ -390,10 +390,10 @@ export default function AuditGratuitPage() {
           <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-surface-900 dark:text-surface-50 mb-2">
+                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-2">
                   Résultats de l'audit
                 </h2>
-                <p className="text-surface-600 dark:text-surface-400 break-all">{results.url}</p>
+                <p className="text-muted-foreground break-all">{results.url}</p>
               </div>
               <button
                 onClick={handleNewAudit}
@@ -413,7 +413,7 @@ export default function AuditGratuitPage() {
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-50 mb-4">
+                  <h3 className="text-xl font-semibold text-foreground mb-4">
                     {results.score >= 90
                       ? 'Excellent travail!'
                       : results.score >= 70
@@ -422,7 +422,7 @@ export default function AuditGratuitPage() {
                           ? 'À améliorer'
                           : 'Optimisation nécessaire'}
                   </h3>
-                  <p className="text-surface-600 dark:text-surface-300 mb-6">
+                  <p className="text-muted-foreground mb-6">
                     {results.score >= 90
                       ? 'Votre site est bien optimisé pour le SEO. Continuez avec les meilleures pratiques!'
                       : results.score >= 70
@@ -475,7 +475,7 @@ export default function AuditGratuitPage() {
           {/* Meta Analysis */}
           <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <div className="mb-6">
-              <h3 className="text-xl font-display font-bold text-surface-900 dark:text-surface-50 mb-4">
+              <h3 className="text-xl font-display font-bold text-foreground mb-4">
                 Analyse des Meta Tags
               </h3>
             </div>
@@ -509,48 +509,48 @@ export default function AuditGratuitPage() {
           {/* Content Analysis */}
           <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <div className="mb-6">
-              <h3 className="text-xl font-display font-bold text-surface-900 dark:text-surface-50 mb-4">
+              <h3 className="text-xl font-display font-bold text-foreground mb-4">
                 Analyse du Contenu
               </h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-6 rounded-lg border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <h4 className="font-semibold text-surface-900 dark:text-surface-50 mb-4">Statistiques textuelles</h4>
+                <h4 className="font-semibold text-foreground mb-4">Statistiques textuelles</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">Nombre de mots</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.wordCount}</span>
+                    <span className="text-muted-foreground">Nombre de mots</span>
+                    <span className="font-semibold text-foreground">{results.content.wordCount}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">H1 tags</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.h1Count}</span>
+                    <span className="text-muted-foreground">H1 tags</span>
+                    <span className="font-semibold text-foreground">{results.content.h1Count}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">H2 tags</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.h2Count}</span>
+                    <span className="text-muted-foreground">H2 tags</span>
+                    <span className="font-semibold text-foreground">{results.content.h2Count}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">H3 tags</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.h3Count}</span>
+                    <span className="text-muted-foreground">H3 tags</span>
+                    <span className="font-semibold text-foreground">{results.content.h3Count}</span>
                   </div>
                 </div>
               </div>
 
               <div className="p-6 rounded-lg border border-surface-200 dark:border-surface-700 bg-surface-50 dark:bg-surface-800/50">
-                <h4 className="font-semibold text-surface-900 dark:text-surface-50 mb-4">Ressources multimédia</h4>
+                <h4 className="font-semibold text-foreground mb-4">Ressources multimédia</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">Nombre d'images</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.imageCount}</span>
+                    <span className="text-muted-foreground">Nombre d'images</span>
+                    <span className="font-semibold text-foreground">{results.content.imageCount}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">Avec alt text</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.imagesWithAlt}</span>
+                    <span className="text-muted-foreground">Avec alt text</span>
+                    <span className="font-semibold text-foreground">{results.content.imagesWithAlt}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">Couverture</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">
+                    <span className="text-muted-foreground">Couverture</span>
+                    <span className="font-semibold text-foreground">
                       {results.content.imageCount > 0
                         ? Math.round((results.content.imagesWithAlt / results.content.imageCount) * 100)
                         : 0}
@@ -558,12 +558,12 @@ export default function AuditGratuitPage() {
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">Liens internes</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.internalLinks}</span>
+                    <span className="text-muted-foreground">Liens internes</span>
+                    <span className="font-semibold text-foreground">{results.content.internalLinks}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-surface-600 dark:text-surface-400">Liens externes</span>
-                    <span className="font-semibold text-surface-900 dark:text-surface-50">{results.content.externalLinks}</span>
+                    <span className="text-muted-foreground">Liens externes</span>
+                    <span className="font-semibold text-foreground">{results.content.externalLinks}</span>
                   </div>
                 </div>
               </div>
@@ -573,7 +573,7 @@ export default function AuditGratuitPage() {
           {/* Checks List */}
           <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <div className="mb-6">
-              <h3 className="text-xl font-display font-bold text-surface-900 dark:text-surface-50 mb-4">
+              <h3 className="text-xl font-display font-bold text-foreground mb-4">
                 Tous les contrôles SEO
               </h3>
             </div>
@@ -607,7 +607,7 @@ export default function AuditGratuitPage() {
                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-colors ${
                       activeTab === tab
                         ? 'bg-brand-600 dark:bg-brand-700 text-white'
-                        : 'bg-surface-100 dark:bg-surface-800 text-surface-900 dark:text-surface-50 hover:bg-surface-200 dark:hover:bg-surface-700'
+                        : 'bg-surface-100 dark:bg-surface-800 text-foreground hover:bg-surface-200 dark:hover:bg-surface-700'
                     }`}
                   >
                     {labels[tab]} ({counts[tab]})
@@ -619,7 +619,7 @@ export default function AuditGratuitPage() {
             {/* Checks List */}
             <div className="space-y-3">
               {getFilteredChecks().length === 0 ? (
-                <div className="text-center py-8 text-surface-500 dark:text-surface-400">
+                <div className="text-center py-8 text-muted-foreground">
                   Aucun contrôle trouvé pour cette catégorie
                 </div>
               ) : (
@@ -638,10 +638,10 @@ export default function AuditGratuitPage() {
           {/* Upsell Section */}
           <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-surface-900 dark:text-surface-50 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-foreground mb-4">
                 Vous voulez aller plus loin?
               </h2>
-              <p className="text-center text-surface-600 dark:text-surface-300 max-w-2xl mx-auto">
+              <p className="text-center text-muted-foreground max-w-2xl mx-auto">
                 Débloquez des fonctionnalités avancées pour optimiser vraiment votre SEO.
               </p>
             </div>
@@ -651,8 +651,8 @@ export default function AuditGratuitPage() {
                 <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
                   <BarChart3 className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-surface-900 dark:text-surface-50 mb-2">Audit en profondeur</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400">
+                <h3 className="font-semibold text-foreground mb-2">Audit en profondeur</h3>
+                <p className="text-sm text-muted-foreground">
                   Crawl de 5,000+ pages, et pas juste une. Découvrez tous les problèmes SEO.
                 </p>
               </div>
@@ -661,8 +661,8 @@ export default function AuditGratuitPage() {
                 <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
                   <TrendingUp className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-surface-900 dark:text-surface-50 mb-2">Suivi automatique</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400">
+                <h3 className="font-semibold text-foreground mb-2">Suivi automatique</h3>
+                <p className="text-sm text-muted-foreground">
                   Re-audit chaque semaine avec alertes. Restez au courant de vos performances.
                 </p>
               </div>
@@ -671,8 +671,8 @@ export default function AuditGratuitPage() {
                 <div className="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-950/30 flex items-center justify-center mb-4 text-brand-600 dark:text-brand-400">
                   <Zap className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-surface-900 dark:text-surface-50 mb-2">AI Visibility</h3>
-                <p className="text-sm text-surface-600 dark:text-surface-400">
+                <h3 className="font-semibold text-foreground mb-2">AI Visibility</h3>
+                <p className="text-sm text-muted-foreground">
                   Découvrez si votre marque apparaît dans les réponses IA et LLM.
                 </p>
               </div>
@@ -680,10 +680,10 @@ export default function AuditGratuitPage() {
 
             {/* Continuer l'analyse — outils avec URL pré-remplie */}
             <div className="mt-12 p-6 sm:p-8 bg-brand-50 dark:bg-brand-950/20 rounded-2xl border border-brand-200 dark:border-brand-800">
-              <h3 className="text-lg font-bold text-surface-900 dark:text-white mb-2">
+              <h3 className="text-lg font-bold text-foreground mb-2">
                 Continuer l&apos;analyse de {url}
               </h3>
-              <p className="text-sm text-surface-600 dark:text-surface-400 mb-6">
+              <p className="text-sm text-muted-foreground mb-6">
                 Votre audit SEO est terminé. Approfondissez avec nos outils spécialisés — l&apos;URL est déjà pré-remplie.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -702,10 +702,10 @@ export default function AuditGratuitPage() {
                   >
                     <span className="text-xl">{tool.icon}</span>
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-semibold text-surface-900 dark:text-white group-hover:text-brand-600 transition-colors">{tool.label}</div>
-                      <div className="text-xs text-surface-500 truncate">{tool.desc}</div>
+                      <div className="text-sm font-semibold text-foreground group-hover:text-brand-600 transition-colors">{tool.label}</div>
+                      <div className="text-xs text-muted-foreground truncate">{tool.desc}</div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-surface-600 dark:text-surface-400 group-hover:text-brand-500 flex-shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-brand-500 flex-shrink-0" />
                   </Link>
                 ))}
               </div>
@@ -727,10 +727,10 @@ export default function AuditGratuitPage() {
       <section id="outils" className="py-20 border-t border-surface-200 dark:border-surface-800">
         <div className="text-center mb-12">
           <span className="section-badge mb-4">Outils gratuits</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-surface-900 dark:text-white mt-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-4">
             Outils SEO gratuits pour booster votre productivité
           </h2>
-          <p className="text-surface-500 dark:text-surface-400 mt-3 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
             Automatisez vos tâches, améliorez votre positionnement et générez plus de trafic organique avec nos outils gratuits.
           </p>
         </div>
@@ -828,10 +828,10 @@ export default function AuditGratuitPage() {
                 </span>
               )}
               <div className="text-3xl mb-3">{tool.icon}</div>
-              <h3 className="text-base font-bold text-surface-900 dark:text-white mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              <h3 className="text-base font-bold text-foreground mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                 {tool.title}
               </h3>
-              <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 {tool.description}
               </p>
               <span className="text-sm font-semibold text-brand-600 dark:text-brand-400 flex items-center gap-1 group-hover:gap-2 transition-all">
