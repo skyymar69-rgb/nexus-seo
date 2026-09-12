@@ -52,11 +52,11 @@ export function AnimatedLogo({ size = 36, className, lightText = false }: Animat
         {['bg-blue-500', 'bg-red-500', 'bg-yellow-400', 'bg-green-500'].map((color, idx) => (
           <span
             key={idx}
-            className={cn('rounded-full', color)}
+            className={cn('logo-dot rounded-full', color)}
             style={{
               width: dotSize,
               height: dotSize,
-              animation: `bounceSoft 1.2s ease-in-out ${idx * 0.15}s infinite`,
+              animationDelay: `${idx * 0.15}s`,
             }}
           />
         ))}

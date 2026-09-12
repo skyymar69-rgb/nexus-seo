@@ -183,6 +183,26 @@
   button, [role="button"] { touch-action: manipulation; }
 }
 
+/* ============================================================
+   Points colores du logo
+   L'animation est declaree ici plutot que via un utilitaire Tailwind :
+   le composant la referencait en style inline, et Tailwind n'emet
+   @keyframes que si l'utilitaire correspondant figure dans le balisage.
+   ============================================================ */
+@keyframes logo-dot-bounce {
+  0%, 100% { transform: translateY(0);      opacity: 0.75; }
+  50%      { transform: translateY(-5px);   opacity: 1; }
+}
+
+.logo-dot {
+  animation: logo-dot-bounce 1.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-dot { animation: none; }
+}
+
 @layer utilities {
   .measure { max-width: 68ch; }
   .section-y { padding-top: var(--section-y); padding-bottom: var(--section-y); }
